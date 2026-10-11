@@ -1,5 +1,10 @@
 # Blitz v2.1OAI
 
+**Minimum Viable Company kit**
+
+Listen, collect, sprint.  
+Reduce cycle time.
+
 Blitz helps a founder establish and operate a minimum viable company: one bounded offer, an identified customer and payer, an evidenced delivery-and-exchange cycle, and a responsible owner able to run the next cycle within cash, capacity and applicable obligations. See [the company guide](profiles/company.md) for the exact definition and proportional gates. Planning readiness is different from operating evidence.
 
 For standalone archive use, read the [release guide](setup/release-guide.md): first use, migration, verification, package boundaries and component rights are included offline.
@@ -44,3 +49,7 @@ Outputs must be new and outside the kit. Read actual logs and results. A platfor
 Use synthetic examples and only authorized evidence. No credentials, private personal history, unrelated company rows, employer material or live project cases belong in reusable artifacts. Human owners approve consequential commitments; AI can prepare, calculate and review within the task's authority. Jurisdiction-specific legal/tax/licensing review is guidance and must be resolved before affected commitments, without an automatic compliance claim.
 
 See [CHANGELOG](CHANGELOG.md), the manifest and release evidence. v2.1 is an explicitly commissioned successor to the immutable v2 original. Ordinary company work never silently changes the package, host settings, global skills or other projects.
+
+## Choose a method
+
+Read the [skills guide](setup/skills-guide.md) for all 25 packaged methods, example requests, expected outputs and host dependencies. It distinguishes explicit source use, reference staging and native skill installation. Source availability and implicit-invocation metadata do not prove discovery or reliable automatic selection in a host.

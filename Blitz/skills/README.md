@@ -1,6 +1,6 @@
 # Method packages
 
-Blitz retains 25 method identities from the v2OAI package. They are available source packages, not installed capabilities or execution claims.
+Blitz retains 25 method identities from the v2OAI package. They are available source packages, not installed capabilities or execution claims. Read the [skills guide](../setup/skills-guide.md) for each method's purpose, example use, expected output and host prerequisites.
 
 The founder workflow chooses only the methods needed for a task. Each selected method keeps its required references, scripts, assets and notices. Host-built-in tools such as document, spreadsheet and presentation engines are external prerequisites. Inspect current capabilities before use.
 
@@ -34,4 +34,4 @@ The founder workflow chooses only the methods needed for a task. Each selected m
 
 Personal account identifiers, private editorial corpora, live-case narratives and private host records are excluded. `my-writing-style` now uses an author's expressly supplied preferences; its identity remains stable for existing references. Legal evaluation examples are independent synthetic equipment-hire scenarios.
 
-Review [provenance](provenance.md) and each package's notice before redistribution. No blanket license covers all methods. This private candidate is not a public-publication clearance.
+Review [provenance](provenance.md) and each package's notice before redistribution. No blanket license covers all methods. Review of this published snapshot does not clear later edits or arbitrary inputs for redistribution.

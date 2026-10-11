@@ -28,10 +28,14 @@ REVIEWED_PRIVATE_PATHS = {
     "Blitz/templates/context/08 Decision Frame PRIVATE.md": "70ba67354e6485adacc066872cdc3e267c56734145c2f24777c508d16bc59e15",
     "Blitz/evals/context-acquisition/cases/CA06/PRIVATE/owner-notes.md": "61e3de5e52a601bc396837556db110a68d5e9846205e39ef3ffa301c2ee42984",
 }
-# Exact reviewed source artwork only; changed bytes and other paths still fail.
+# Exact reviewed source artwork versions only, including retained Git history.
+# Changed bytes and other paths still fail.
 # Frame, metadata and authorship notes: docs/assets/README.md.
 REVIEWED_MEDIA = {
-    "docs/assets/blitz-motion.gif": "bb4153ee9d024d2e242f439b596d5dcb508154c8d7941c8d33dea427aa29a65b",
+    "docs/assets/blitz-motion.gif": frozenset({
+        "bb4153ee9d024d2e242f439b596d5dcb508154c8d7941c8d33dea427aa29a65b",
+        "6fa3b6b19fe0d2c89168870306b9cc1cf4b067648f0e9476d321532e62ee1116",
+    }),
 }
 # Existing kit restricted-term fingerprints; no private source names are embedded.
 RESTRICTED = {"324ffbadc4c9f775", "b0442c88eea3fe5d", "040974aabfd1c691", "bc9a1a86ec98507e",
@@ -93,7 +97,7 @@ def scan_bytes(path, data, depth=0):
             findings.add("invalid-or-unreadable-archive")
         return findings
     expected_media = REVIEWED_MEDIA.get(path)
-    if depth == 0 and expected_media and hashlib.sha256(data).hexdigest() == expected_media:
+    if depth == 0 and expected_media and hashlib.sha256(data).hexdigest() in expected_media:
         return findings  # Path and size checks still apply; archives get no exception.
     try:
         text = data.decode("utf-8-sig")

@@ -1,11 +1,16 @@
 <picture>
   <source media="(prefers-reduced-motion: no-preference)" srcset="docs/assets/blitz-motion.gif">
-  <img src="docs/assets/blitz-motion-poster.svg" alt="Blitz: frame the offer, test it, deliver, and prepare the next operating cycle" width="100%">
+  <img src="docs/assets/blitz-motion-poster.svg" alt="Blitz. Minimum Viable Company kit. Listen, collect, sprint. Reduce cycle time. Input becomes evidence for a bounded output." width="100%">
 </picture>
 
 # Blitz
 
-**Build the smallest company that can make a promise, deliver it, get paid and run the next cycle.**
+**Minimum Viable Company kit**
+
+Listen, collect, sprint.  
+Reduce cycle time.
+
+Build the smallest company that can make a promise, deliver it, get paid and run the next cycle.
 
 [Verification workflow](https://github.com/EauDoon/blitz/actions/workflows/verify.yml)
 
@@ -13,7 +18,7 @@ Version **v2.1OAI** · Python **3.12+** · Editable records and local tools
 
 Frame → Test → Deliver → Operate. [Static illustration](docs/assets/blitz-motion-poster.svg).
 
-[First use](#first-use) · [Workflow](#workflow) · [Worked example](#worked-example) · [Tools and contents](#tools-and-contents) · [Verification](#verification) · [Rights and distribution](#rights-and-distribution)
+[Start](#first-use) · [Outputs](#what-you-can-make) · [Run a cycle](#run-a-cycle) · [25 skills](#using-the-skills) · [Verification](#verification) · [Rights](#rights-and-distribution)
 
 Blitz is an operating kit for founders and small teams building a **minimum viable company**. It connects the offer, customer evidence, delivery, cash and decision owner in one manageable process. Use it with an editor and a human operator, or give the relevant guide and records to an assistant with appropriate tools.
 
@@ -21,11 +26,39 @@ The aim is a demonstrated customer cycle and a feasible next one. A generated fo
 
 ## Who it is for
 
-Blitz suits a founder testing a narrow offer, an operator making delivery repeatable, or a small team bringing scattered decisions and evidence into one working record. Start with one owner, one offer and one workstream. Add a document, specialist or tool when the work needs it.
+Use Blitz when you are:
+
+- A founder turning a customer problem into one testable offer.
+- An operator checking whether delivery, payment and the next cycle fit together.
+- A small team consolidating scattered evidence, responsibilities and decisions.
+
+Start with one owner, one offer and one workstream. Add a document, specialist or tool when the work needs it.
 
 This repository supplies a workflow and utilities. It does not host your business, install autonomous agents, schedule background work, form entities, send outreach, move money or determine legal compliance. A small request can remain a small request; you do not need to complete every template.
 
+## What you can make
+
+| Output | How you produce it | What it is for |
+|---|---|---|
+| Company brief | Edit the generated `company-brief.md` or its template | Define customer, payer, offer, owner, constraints and next experiment |
+| Evidence and decision record | Maintain the four generated `context/` files | Separate adopted positions, unresolved questions and consequential decisions |
+| Cash forecast | Fill `company-cash.csv`; run the cash command | Compare earned revenue, collections, costs and the closing cash floor |
+| Experiment or delivery record | Use the brief and relevant existing records | Fix criteria, save actual observations and decide the next commitment |
+| Specialist work product | Select a relevant packaged skill | Draft a research memo, proposal, workbook, diagram, presentation or review; dependencies vary |
+| Scoped handoff | Use the CSV scope or item-export tools | Share selected material with provenance and a clear authority boundary |
+
+The starter creates drafts. You supply evidence, adopt decisions and approve commitments. A skill supplies a method; producing its output also requires suitable tools and inputs.
+
 ## First use
+
+Get a working copy using Git:
+
+```sh
+git clone https://github.com/EauDoon/blitz.git
+cd blitz
+```
+
+Or choose **Code → Download ZIP** on GitHub, extract it, and open a terminal in the extracted repository folder. You should see `README.md` and the `Blitz/` directory. If you received the standalone `Blitz_v2.1OAI.zip`, follow its [release guide](Blitz/setup/release-guide.md) instead.
 
 Use **Python 3.12 or later**. The setup, calculation and packaging helpers use the standard library; no package installation is needed for this exercise. Examples use `python`; substitute your verified Python 3 command where necessary. Run commands from the repository root.
 
@@ -73,7 +106,7 @@ Prefer working manually? Copy the [company brief](Blitz/templates/company-brief.
 
 <picture>
   <source media="(max-width: 820px)" srcset="docs/assets/workflow-mobile.svg">
-  <img src="docs/assets/workflow.svg" alt="Frame the offer, test the assumption, deliver the promise, then operate the next cycle. Hold or revise when the evidence is insufficient." width="100%">
+  <img src="docs/assets/workflow.svg" alt="Frame the offer, Test the assumption, Deliver the promise, then Operate the next cycle. At each gate the owner checks evidence and authority, then records Proceed, Hold or Walk. Return to the affected gate when evidence changes." width="100%">
 </picture>
 
 The four gates describe **business evidence**, with thresholds proportionate to the next commitment's risk:
@@ -88,6 +121,25 @@ The four gates describe **business evidence**, with thresholds proportionate to 
 Record **Proceed, Hold or Walk** for the specific next commitment. A Hold pauses the dependent action while useful authorized work continues. Advancing a gate does not grant permission to spend, sign, publish or contact anyone.
 
 These gates are separate from the optional work stages in the [playbook](Blitz/PLAYBOOK.md): Ingestion, Firming, Mandate, Blitzing and Delivering. There is no mandatory 72-hour company deadline. A prepared experiment, a demonstrated MVC and demonstrated repetition are different claims.
+
+## Run a cycle
+
+Use the [synthetic service example](Blitz/examples/company/service-example.md) to practise these steps. Real work needs its own evidence and authority.
+
+1. **Frame one offer.** Fill the brief with the customer, payer, result, price, scope and owner. Identify the hardest assumption. Set the next experiment's success, change and stop criteria, with a time and cash cap.
+2. **Test that assumption.** Conduct only the permitted experiment. Save observations and source dates. Separate interest, orders, payment and accepted delivery. Record missing evidence in `09 Open Questions.md`.
+3. **Decide the next commitment.** Compare the result with the criteria. Record Proceed, Hold or Walk, its basis and owner in `10 Decision Log.md`. Adopt an actual position in `03 Position Of Record.md`; do not turn an unapproved draft into one.
+4. **Deliver within the agreed scope.** Retain the promised result, acceptance evidence, actual costs and failure or refund route. A completed internal artifact alone does not establish customer acceptance.
+5. **Check the next operating cycle.** Reconcile collections and obligations. Update the cash forecast, capacity and delivery procedure. A complete cash calculation can still show a shortfall. Decide whether the next cycle is feasible.
+6. **Leave recoverable work.** Update `00 Read Me First.md` with the governing records, owner and next permitted action. Close and reopen the records. Another session should recover the position and authority boundary without relying on chat memory.
+
+Move back to the affected gate when evidence changes. Keep the record proportionate: a useful existing document can replace another template.
+
+To work with an assistant, first give it readable access to the kit and a scoped practice folder. A starting request is:
+
+> Read `Blitz/README.md` and `Blitz/profiles/company.md`. Help me frame a fictional fixed-scope reporting service. Produce one draft offer and the smallest useful test. Label assumptions, specify the evidence to collect, and leave consequential actions for human approval. Use a relevant packaged method only when needed, and identify what you read.
+
+Then ask it to review supplied experiment evidence, prepare a delivery checklist or inspect your saved handoff. Confirm the actual files and calculations. Do not treat its completion claim as evidence that an external action happened.
 
 ## Worked example
 
@@ -105,13 +157,43 @@ If Period 3 collections slip beyond the forecast horizon, its closing cash falls
 
 The [regulated-activity example](Blitz/examples/company/regulated-hold.md) shows a different result: an options memo and simulation can be complete while a proposed customer-funds activity remains on Hold.
 
+## Using the skills
+
+The kit contains **25 method packages**. The [skills guide](Blitz/setup/skills-guide.md#all-25-packaged-skills) lists every method, its purpose, a fictional example request, expected output and dependencies. Pick a method for a concrete task; you do not need all 25 for every company.
+
+| Your task | Start with | Typical output |
+|---|---|---|
+| Investigate an offer or compare options | `research-protocol`, `reasoning-core` | Sourced findings, assumptions and a decision basis |
+| Make the economics inspectable | `calc-workbook` | An editable calculation workbook, when spreadsheet tools are available |
+| Explain or present the work | `my-writing-style`, `diagram-design`, `slide-design` | A draft, diagram or presentation suited to its audience |
+| Build a focused web surface | `frontend-taste`, `frontend-mockup`, `frontend-scroll-craft` | Design direction, a mockup or implementation, depending on tools and scope |
+| Check a consequential artifact | `gauntlet-verify` | Independent findings and a bounded review result when its review mechanism is available |
+
+### Do they trigger automatically?
+
+**Sometimes, on a host that has discovered the skill. Cloning this repository does not install the methods.**
+
+- **Source use:** ask the assistant to read the relevant `Blitz/skills/<name>/SKILL.md` and its applicable resources. This works only when it can access those files. It is an explicit source workflow.
+- **Reference staging or Thor runtime:** the setup tools prepare files and a method index for a host. They do not register native skills. The operator must make those sources available and confirm they can be read.
+- **Native host use:** separately install or expose selected methods using that host's supported route, after checking names, existing skills and dependencies. Confirm the host lists the intended version before testing selection.
+
+Each packaged method has a frontmatter description, and all 25 `agents/openai.yaml` files permit implicit invocation. These describe intended selection; they cannot guarantee that a host discovers or chooses the skill. OpenAI documents explicit selection as well as description-based matching. See the [current skill documentation](https://learn.chatgpt.com/docs/build-skills), checked 11 October 2026.
+
+If automatic selection misses, use the host's skill picker or explicit invocation. If it is not installed, request the source directly:
+
+> Read `Blitz/skills/research-protocol/SKILL.md` and its applicable references. Apply it to this fictional customer-research question. State which files you could read and which evidence remains missing.
+
+Staged OpenAI reference names include `calculation-workbook` for `calc-workbook` and `web-design-taste` for `frontend-taste`. `google-slides` requires a host capability check and is skipped by that staging tool. See the [setup and selection guide](Blitz/setup/skills-guide.md) before relying on aliases or tools.
+
+This release makes no measured automatic-selection claim for Blitz. Package validation, a metadata flag and tests of separately installed personal skills cannot establish Blitz's routing reliability. Verify selection in your actual host and retain the explicit fallback.
+
 ## Tools and contents
 
 | Location | Purpose |
 |---|---|
 | [Company profile](Blitz/profiles/company.md) | Founder workflow, evidence gates, roles, economics and scoped jurisdiction questions |
 | [Templates](Blitz/templates/) | Editable brief, cash inputs and working records; create only what is useful |
-| [25 method packages](Blitz/skills/README.md) | Research, reasoning, writing, economics, design, building and review methods with their resources and notices |
+| [25 method packages](Blitz/setup/skills-guide.md) | Research, reasoning, writing, economics, design, building and review methods with their resources and notices |
 | [Setup tools](Blitz/setup/) | Local company initialization/calculation, CSV scoping, archive verification and item export |
 | [Runtime guide](Blitz/setup/runtime.md) | Optional 17-file Thor-compatible source set and resource archive; generation does not install anything |
 | [Examples](Blitz/examples/company/), [evaluations](Blitz/evals/) and [tests](tests/) | Synthetic demonstrations and builder checks, separate from runtime context |

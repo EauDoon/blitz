@@ -1,5 +1,6 @@
 """Release safety, history scanning and actual two-build reproducibility checks."""
 import importlib.util
+import hashlib
 import io
 import json
 import os
@@ -185,6 +186,28 @@ class PublicationChecks(unittest.TestCase):
         private = ".baseline/image.gif"
         with patch.dict(scanner.REVIEWED_MEDIA, {private: scanner.REVIEWED_MEDIA[path]}):
             self.assertIn("private-or-generated-path", scanner.scan_bytes(private, data))
+
+    def test_reviewed_media_versions_preserve_bounded_history_scanning(self):
+        path = "docs/assets/blitz-motion.gif"
+        versions = (b"GIF89a\x00\xffsynthetic-first", b"GIF89a\x00\xffsynthetic-second")
+        pins = frozenset(hashlib.sha256(value).hexdigest() for value in versions)
+        with tempfile.TemporaryDirectory(prefix="blitz-media-versions-") as raw:
+            root = Path(raw)
+            git = self.synthetic_repository(root)
+            asset = root / path
+            asset.parent.mkdir(parents=True)
+            with patch.dict(scanner.REVIEWED_MEDIA, {path: pins}):
+                for index, value in enumerate(versions):
+                    asset.write_bytes(value)
+                    git("add", path)
+                    git("-c", "commit.gpgsign=false", "commit", "--quiet", "-m", f"Synthetic version {index}")
+                report = scanner.scan(root)
+                self.assertEqual(report["result"], "pass")
+                self.assertEqual(report["reachable_commits"], 3)
+                for value in versions:
+                    self.assertIn("binary-requires-human-review", scanner.scan_bytes(path, value + b"changed"))
+                    self.assertIn("binary-requires-human-review", scanner.scan_bytes("other.gif", value))
+                    self.assertIn("binary-requires-human-review", scanner.scan_bytes(path, value, depth=1))
 
     def test_changed_reviewed_media_is_found_in_index_and_history(self):
         path = "docs/assets/blitz-motion.gif"

@@ -316,9 +316,9 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 2628,
-      "sha256": "b53353171927dfa3dccae0bf693454b41da92b1f33ecbaa5aeffa23a5fa8ca9f",
-      "characters": 2628
+      "bytes": 3129,
+      "sha256": "85dca4bc4009181ae34fc79bd4bb7b4e3417f35c1ecea124afdfbbfd3dff6954",
+      "characters": 3125
     },
     {
       "path": "ENTRYPOINT.md",
@@ -334,9 +334,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 4696,
-      "sha256": "f03d0efa2e9d1ac840e5bc47ff21dbfffb93b3da8bb31c6515fba8a83ca2a518",
-      "characters": 4696
+      "bytes": 5136,
+      "sha256": "0448c507087bd9ece0628ac967d3c80563ec51326ba25a851553af8e4b58a0ce",
+      "characters": 5136
     },
     {
       "path": "evals/README.md",
@@ -856,9 +856,9 @@
     },
     {
       "path": "setup/release-guide.md",
-      "bytes": 8574,
-      "sha256": "99ae6a7529d3a2c074a7232ccbd8ee6e6d896a917f3aea92270542e50aaab5ac",
-      "characters": 8574
+      "bytes": 8990,
+      "sha256": "7d1b2d995714892cd32a4b84ba6f9400ceafc93cb43feb4bec04afaf75bc3b11",
+      "characters": 8990
     },
     {
       "path": "setup/runtime.md",
@@ -871,6 +871,12 @@
       "bytes": 10867,
       "sha256": "cba53ad03134da7c1967a94740726a4139d95fac94b83b074271712b87d2ba3d",
       "characters": 10867
+    },
+    {
+      "path": "setup/skills-guide.md",
+      "bytes": 23219,
+      "sha256": "286f0ed154ae815ad486ae7acf1c12812f0fa98639b19cabb7d76b24a4f622a0",
+      "characters": 23219
     },
     {
       "path": "setup/thor.md",
@@ -892,9 +898,9 @@
     },
     {
       "path": "skills/README.md",
-      "bytes": 2763,
-      "sha256": "c24159c3503f8d8cb8a093d075093e822290a7863a9ea99b8b93fc805b856ecf",
-      "characters": 2763
+      "bytes": 2932,
+      "sha256": "2df03d50a009c729a4f0d5d12b09a4d443961cf5e1b56c29ad0e8423a6989ed7",
+      "characters": 2932
     },
     {
       "path": "skills/anti-slop/CHANGES.md",

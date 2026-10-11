@@ -2,6 +2,8 @@
 
 ## v2.1OAI, 11-10-2026
 
+Presentation update: identifies Blitz as the Minimum Viable Company kit with the tagline “Listen, collect, sprint. / Reduce cycle time.” Adds an explicit founder walkthrough, output map and complete 25-method skills guide. Distinguishes source use, reference staging and native invocation without claiming measured automatic-selection reliability. Replaces repository artwork with an original responsive visual system and bounded motion, preserving the four business gates and all tool behavior.
+
 Founder edition based on the verified v2OAI master. Adds a proportionate minimum viable company workflow, editable brief/cash inputs, local starter and cash calculation, independently synthetic examples and first-user checks. Adds shared-CSV scope/provenance tooling and truthful working-copy handoff guidance.
 
 Preserves the 25 method identities, four core record names, evidence/authority/recovery rules, archive safety, explicit item export and reproducible Thor-compatible runtime. Generalizes owner/host wording and removes personal profiles, private account history, live-case-derived examples and unneeded private environment dependencies from the reusable edition. Original v2 bytes remain separate and unchanged.

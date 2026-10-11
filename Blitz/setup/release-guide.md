@@ -68,3 +68,7 @@ Read [method provenance](../skills/provenance.md) and each applicable notice bef
 Public visibility and license terms are separate. Earlier development history contains prior artwork copies; the current source repairs do not clear those snapshots. The approved publication route preserves that history privately and distributes only the reviewed source snapshot with fresh Git history after final checks. The archive contains the current kit rather than private development history. The repository's companion audit and history plan provide the fuller review record.
 
 Keep credentials, private terms, live customer/employer material and filled private records out of reusable exports. Review actual contents and applicable permission, not just filenames or matching hashes. Human owners approve consequential commitments; local calculation and document creation do not grant external authority.
+
+## Use the packaged methods
+
+The [skills guide](skills-guide.md) inventories all 25 methods with a purpose, fictional example request, expected output and dependencies. Start with explicit source use if your assistant can read the extracted files. Reference staging and runtime generation prepare material; they do not install native skills. Verify host discovery and use explicit invocation when selection misses.
