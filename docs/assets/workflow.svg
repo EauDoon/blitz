@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="600" viewBox="0 0 1400 600" role="img" aria-labelledby="title description">
+  <title id="title">Blitz evidence gates: Frame, Test, Deliver and Operate</title>
+  <desc id="description">Evidence before the next commitment. Frame bounds the offer and next test. Test observes customer and payer behavior. Deliver verifies delivery and acceptance. Operate reconciles cash and prepares the next cycle. Proceed requires evidence and existing authority. At any gate, Hold or revise pauses the dependent commitment; revisit the affected gate.</desc>
+  <rect width="1400" height="600" fill="#F6F8FC"/>
+  <rect x="1" y="1" width="1398" height="598" fill="none" stroke="#CED8E6" stroke-width="2"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="64" y="78" fill="#14243B" font-size="40" font-weight="600">Evidence before the next commitment</text>
+    <text x="64" y="120" fill="#40536D" font-size="26">Proceed requires evidence and existing authority.</text>
+  </g>
+  <g fill="none" stroke="#2158C4" stroke-width="3">
+    <path d="M221 199 H500 M551 199 H830 M881 199 H1160"/>
+    <path d="M488 190 L500 199 L488 208 M818 190 L830 199 L818 208 M1148 190 L1160 199 L1148 208"/>
+  </g>
+  <g fill="#F6F8FC" stroke="#2158C4" stroke-width="5">
+    <rect x="182" y="181" width="36" height="36"/>
+    <rect x="512" y="181" width="36" height="36"/>
+    <rect x="842" y="181" width="36" height="36"/>
+    <rect x="1172" y="181" width="36" height="36"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <g fill="#14243B" font-size="40" font-weight="600">
+      <text x="200" y="281">Frame</text>
+      <text x="530" y="281">Test</text>
+      <text x="860" y="281">Deliver</text>
+      <text x="1190" y="281">Operate</text>
+    </g>
+    <g fill="#40536D" font-size="26">
+      <text x="200" y="326">Bound the offer</text>
+      <text x="200" y="362">and the next test.</text>
+      <text x="530" y="326">Observe customer</text>
+      <text x="530" y="362">and payer behavior.</text>
+      <text x="860" y="326">Verify delivery</text>
+      <text x="860" y="362">and acceptance.</text>
+      <text x="1190" y="326">Reconcile cash.</text>
+      <text x="1190" y="362">Prepare the next cycle.</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#A45A08" stroke-width="3">
+    <path d="M200 392 V436 H1190 V392 M530 392 V436 M860 392 V436 M700 436 V467"/>
+    <path d="M191 404 L200 392 L209 404 M521 404 L530 392 L539 404 M851 404 L860 392 L869 404 M1181 404 L1190 392 L1199 404"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <text x="700" y="509" fill="#A45A08" font-size="32" font-weight="600">Hold / revise</text>
+    <text x="700" y="550" fill="#40536D" font-size="26">Pause the dependent commitment; revisit the affected gate.</text>
+  </g>
+</svg>

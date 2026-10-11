@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Should you write this as a skill?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;
+      --color-ink:     #2d3142;
+      --color-muted:   #4f5d75;
+      --color-accent:  #eb6c36;
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', Georgia, 'Times New Roman', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+
+    .frame { max-width: 1200px; width: 100%; }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 1.5rem;
+    }
+
+    svg { width: 100%; min-width: 900px; display: block; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Flowchart · Diagram Design</p>
+    <h1>Should you write this as a skill?</h1>
+
+    <svg viewBox="0 0 680 600" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="0.9" fill="rgba(45,49,66,0.10)"/>
+          </pattern>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+          <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+        </defs>
+
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+        <rect width="100%" height="100%" fill="url(#dots)" opacity="0.55"/>
+
+        <!-- Arrows (drawn first, behind nodes) -->
+        <!-- Start → Step -->
+        <line x1="212" y1="88" x2="212" y2="120" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <!-- Step → Diamond 1 -->
+        <line x1="212" y1="168" x2="212" y2="192" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <!-- Diamond 1 "NO" right -->
+        <line x1="312" y1="240" x2="432" y2="240" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <!-- Diamond 1 "YES" down -->
+        <line x1="212" y1="288" x2="212" y2="328" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <!-- Diamond 2 "NO" right -->
+        <line x1="312" y1="376" x2="432" y2="376" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <!-- Diamond 2 "YES" down (coral: happy path) -->
+        <line x1="212" y1="424" x2="212" y2="464" stroke="#eb6c36" stroke-width="1.4" marker-end="url(#arrow-accent)"/>
+
+        <!-- Arrow labels -->
+        <rect x="356" y="220" width="24" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="368" y="229" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.12em">NO</text>
+
+        <rect x="172" y="300" width="32" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="188" y="309" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.12em">YES</text>
+
+        <rect x="356" y="356" width="24" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="368" y="365" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.12em">NO</text>
+
+        <rect x="172" y="436" width="32" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="188" y="445" fill="#eb6c36" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.12em">YES</text>
+
+        <!-- Start oval -->
+        <path d="M156 40 H268 A24 24 0 0 1 268 88 H156 A24 24 0 0 1 156 40 Z" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+        <text x="212" y="68" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">New workflow</text>
+
+        <!-- Rectangle: Step -->
+        <rect x="132" y="120" width="160" height="48" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <text x="212" y="148" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Do it manually once</text>
+
+        <!-- Diamond 1: Repeated >3 times? -->
+        <polygon points="212,192 312,240 212,288 112,240" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <text x="212" y="238" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Will you repeat</text>
+        <text x="212" y="252" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">it >3 times?</text>
+
+        <!-- End oval: One-off -->
+        <path d="M456 216 H568 A24 24 0 0 1 568 264 H456 A24 24 0 0 1 456 216 Z" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+        <text x="512" y="240" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">One-off</text>
+        <text x="512" y="254" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">keep manual</text>
+
+        <!-- Diamond 2: Reusable across projects? -->
+        <polygon points="212,328 312,376 212,424 112,376" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <text x="212" y="374" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Reusable across</text>
+        <text x="212" y="388" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">projects?</text>
+
+        <!-- End oval: CLAUDE.md note -->
+        <path d="M456 352 H568 A24 24 0 0 1 568 400 H456 A24 24 0 0 1 456 352 Z" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+        <text x="512" y="376" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">CLAUDE.md note</text>
+        <text x="512" y="390" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">project-scoped</text>
+
+        <!-- End oval: Write a skill (coral focal) -->
+        <path d="M160 464 H264 A28 28 0 0 1 264 520 H160 A28 28 0 0 1 160 464 Z" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+        <text x="212" y="492" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Write a skill</text>
+        <text x="212" y="508" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">reusable + assets</text>
+
+        <!-- Legend -->
+        <line x1="40" y1="540" x2="640" y2="540" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+        <text x="40" y="556" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.18em">LEGEND · SHAPE CARRIES TYPE</text>
+
+        <rect x="40" y="572" width="24" height="12" rx="6" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+        <text x="72" y="582" fill="#4f5d75" font-size="8" font-family="'Geist', sans-serif">Start / end (oval)</text>
+
+        <rect x="184" y="572" width="24" height="12" rx="2" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <text x="216" y="582" fill="#4f5d75" font-size="8" font-family="'Geist', sans-serif">Step (rectangle)</text>
+
+        <polygon points="320,578 332,572 344,578 332,584" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <text x="356" y="582" fill="#4f5d75" font-size="8" font-family="'Geist', sans-serif">Decision (diamond)</text>
+
+        <line x1="468" y1="580" x2="496" y2="580" stroke="#eb6c36" stroke-width="1.4" marker-end="url(#arrow-accent)"/>
+        <text x="504" y="582" fill="#4f5d75" font-size="8" font-family="'Geist', sans-serif">Happy path</text>
+
+        <line x1="576" y1="580" x2="604" y2="580" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <text x="612" y="582" fill="#4f5d75" font-size="8" font-family="'Geist', sans-serif">Branch</text>
+      </svg>
+  </div>
+</body>
+</html>

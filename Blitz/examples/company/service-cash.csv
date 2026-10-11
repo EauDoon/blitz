@@ -1,0 +1,4 @@
+period,currency,opening_cash,cash_receipts,refunds_cash_out,variable_cash_costs,fixed_cash_costs,one_off_cash_costs,financing_cash_in,financing_cash_out,tax_cash,reserve_floor,units_delivered,earned_revenue,variable_delivery_cost,founder_delivery_hours,available_delivery_hours
+Period 1,USD,2000,600,0,78,250,200,0,0,0,1500,1,600,78,6,20
+Period 2,USD,,0,0,78,250,0,0,0,0,1500,1,600,78,6,20
+Period 3,USD,,1200,0,78,250,0,0,0,100,1500,1,600,78,6,20

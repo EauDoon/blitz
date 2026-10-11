@@ -1,0 +1,16 @@
+Scoped license for the anti-slop adaptation
+
+Effective 11-10-2026, the following two adapted files in this directory are distributed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0):
+
+- SKILL.md
+- references/post-pass.md
+
+License and complete legal code:
+https://creativecommons.org/licenses/by-sa/4.0/
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.en
+
+With the repository owner's authorization, CC BY-SA 4.0 is applied as the adapter's license to the Blitz contributions to those two files. This defined scope avoids making recipients determine which interwoven paragraph derives from the Wikipedia lineage. It does not claim that the repository owner authored or owns the upstream material.
+
+The upstream MIT grants remain applicable to their respective inherited material, with the unchanged notices preserved under licenses/. Those original grants are not revoked or replaced. Attribution, source links, previous changes and the adaptation record are in NOTICE.md. The linked CC BY-SA 4.0 legal code includes the applicable disclaimer of warranties and limitation of liability in Section 5.
+
+No license is selected here for other anti-slop files, other methods, or the repository as a whole. Existing third-party notices and grants apply to their own files as identified in NOTICE.md. This scoped statement does not establish compliance of earlier Git snapshots that omit these accompanying notices.

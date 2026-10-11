@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "item_id": "EXAMPLE-ITEM",
+  "revision": "r01",
+  "blitz_version": "2OAI",
+  "destination": "Fresh ChatGPT project, candidate receiving route not yet tested",
+  "review": {
+    "reviewed_by": "Unreviewed example; record the actual reviewer before use",
+    "approved_for_export": false,
+    "dependency_review_complete": false
+  },
+  "required_paths": [
+    "README.md",
+    "PROJECT_INSTRUCTIONS.md"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "2a245f74b9208c4882e78bad951a11edad01823800897081e0f1c44d0bf49b90",
+      "revision": "r01",
+      "classification": "public",
+      "role": "record",
+      "dependencies": []
+    },
+    {
+      "path": "PROJECT_INSTRUCTIONS.md",
+      "sha256": "8316cb93abee1223cd951e64f74496ba362bb1a8e1c66810c4d2ecd21106ecf2",
+      "revision": "r01",
+      "classification": "public",
+      "role": "runtime",
+      "dependencies": []
+    }
+  ],
+  "prerequisites": [],
+  "reference_exceptions": []
+}

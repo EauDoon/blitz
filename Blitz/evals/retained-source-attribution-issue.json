@@ -1,0 +1,14 @@
+{
+  "id": "SYN-TRIAL-01",
+  "kind": "synthetic explicit trial defect; not real incident",
+  "affected_artifact": "trials/S03/recommendation.md and proposed-delta.json",
+  "reproduction": "Batched executor consumed S03 fixture with sources SYN-A/SYN-B but no supplied subject for SYN-B.",
+  "expected": "Use source IDs and the supplied subject scope only; do not assign SYN-B to another rail.",
+  "actual": "Recommendation states 'Rail B merchant eligibility remains unconfirmed.' S03 supplies no Rail B subject; Rail B appears in separate S01 fixture.",
+  "impact": "Source-scope attribution is unsupported, despite safe stale-write blocking. S03 is not a complete pass for output fidelity.",
+  "diagnosis": "Likely cross-scenario context contamination in a batched explicit trial; not verified native or kit-runtime behavior.",
+  "correction": "Preserve original trial; supply review correction using SYN-B without unsupported subject. Source-fidelity checks required on fresh integrated trials.",
+  "acceptance": "Every recommended subject and claim traces to its own scenario's source data.",
+  "original_result": "failed_subject_fidelity",
+  "separate_correction_result": "passed_separate_correction_check"
+}

@@ -1,0 +1,13 @@
+# Launch and export evaluation contract
+
+Status: case definitions and runnable code checks are not model, Thor, or receiving-host passes.
+
+Run `python evals/test_item_export.py --report PATH.json` with a verified Python interpreter. This uses synthetic temporary files and the standard library. It checks exact allowlisted payloads, declared source revisions, hashes, required entry files, nested references, unsafe paths, case collisions, private material, incomplete prerequisites, tampered manifests, and no-overwrite publication. Per-file revisions are pinned source revisions and may differ from the item's revision. Their semantic correctness still needs source review. A filesystem symlink check that the host cannot create is BLOCKED; ZIP symlink rejection and an injected reparse-attribute guard check are distinct evidence, not substitutes for a native reparse test.
+
+The ten scenarios in `launch-export-cases.json` cover ordinary-language launch, continuation, plan-only and review-only intent, simple edits, ambiguous item selection, source injection, a missing guide, changed evidence, and scoped export. Freeze synthetic inputs and independent expected outcomes before execution. Keep expected results and generator/grader files outside the runtime provided to each executor. Preserve every attempted result, supplied instruction hash, read/action trace, produced artifact, and independent grade. Correct defects before rerunning affected cases; keep initial failures.
+
+Executors receive the real candidate instruction body and directly readable method content, their task, and only their allowed synthetic inputs. The missing-guide case intentionally receives the compact body alone. Method names or index entries are not evidence that method content was read. Separate executor and grader roles, and reject a behavioral pass unsupported by actual artifacts or read/action evidence.
+
+Use the unnamed finance commission as the sample-item producer. Independently verify its populated document, editable budget, source revisions, and sufficient continuation state before export. Run the item exporter, then give only that verified item package and declared prerequisites to a fresh controlled receiver. Ask it to perform a bounded revision and save sufficient state. A second fresh receiver must resume from that saved state. Keep the grader's expected arithmetic outside both receiving inputs.
+
+Local controlled agents cannot establish actual Thor Work routing, destination application, global configuration isolation, native skill loading, or adoption. Record those as NOT TESTED or NOT APPLIED until their named host checks occur. Test-only fixtures and hidden answers must never be included in the item export.

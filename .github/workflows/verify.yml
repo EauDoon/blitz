@@ -1,0 +1,35 @@
+name: Verify Blitz
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Parse Python without writing bytecode
+        run: python -B -c "import ast,pathlib; files=list(pathlib.Path('Blitz').rglob('*.py'))+list(pathlib.Path('tools').rglob('*.py'))+list(pathlib.Path('tests').rglob('*.py')); [ast.parse(p.read_text(encoding='utf-8-sig'), filename=str(p)) for p in files]; print(f'{len(files)} Python files parsed')"
+      - name: Scan tracked files, index and reachable history
+        run: python -B tools/check_publication.py
+      - name: Verify the complete kit
+        run: python -B Blitz/setup/verify_kit.py
+      - name: Run every registered kit suite
+        run: python -B Blitz/evals/run_all.py --kit Blitz --out .verification/ci
+      - name: Verify release safety and two independent reproducible builds
+        run: python -B -m unittest discover -s tests -p 'test_*.py' -v

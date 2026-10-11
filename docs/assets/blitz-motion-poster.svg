@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title description">
+<title id="title">Blitz, a founder operating kit</title>
+<desc id="description">Make a promise, deliver it, get paid and run the next cycle. The four evidence gates are Frame, Test, Deliver and Operate. This illustration does not establish that a gate is passed.</desc>
+<rect x="0" y="0" width="960" height="360" fill="#101C2E" stroke="none" stroke-width="1"/>
+<rect x="0.5" y="0.5" width="959" height="359" fill="none" stroke="#405571" stroke-width="1"/>
+<rect x="48" y="36" width="30" height="4" fill="#7CA6FF" stroke="none" stroke-width="1"/>
+<text x="47" y="148" font-family="Segoe UI, Arial, sans-serif" font-size="116" font-weight="700" text-anchor="start" fill="#F2F6FD">Blitz</text>
+<text x="53" y="184" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#BBC9DD">A founder operating kit</text>
+<text x="620" y="85" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#F2F6FD">Make a promise.</text>
+<text x="620" y="120" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#F2F6FD">Deliver. Get paid.</text>
+<text x="620" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#F2F6FD">Run the next cycle.</text>
+<path d="M74 261 L886 261" fill="none" stroke="#405571" stroke-width="2"/>
+<text x="74" y="231" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#BBC9DD">01</text>
+<rect x="59" y="246" width="30" height="30" fill="#101C2E" stroke="#7CA6FF" stroke-width="2"/>
+<rect x="71" y="258" width="6" height="6" fill="#7CA6FF" stroke="none" stroke-width="1"/>
+<text x="91" y="326" font-family="Segoe UI, Arial, sans-serif" font-size="31" font-weight="400" text-anchor="middle" fill="#F2F6FD">Frame</text>
+<text x="344" y="231" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#BBC9DD">02</text>
+<rect x="329" y="246" width="30" height="30" fill="#101C2E" stroke="#7CA6FF" stroke-width="2"/>
+<rect x="341" y="258" width="6" height="6" fill="#7CA6FF" stroke="none" stroke-width="1"/>
+<text x="344" y="326" font-family="Segoe UI, Arial, sans-serif" font-size="31" font-weight="400" text-anchor="middle" fill="#F2F6FD">Test</text>
+<text x="616" y="231" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#BBC9DD">03</text>
+<rect x="601" y="246" width="30" height="30" fill="#101C2E" stroke="#7CA6FF" stroke-width="2"/>
+<rect x="613" y="258" width="6" height="6" fill="#7CA6FF" stroke="none" stroke-width="1"/>
+<text x="616" y="326" font-family="Segoe UI, Arial, sans-serif" font-size="31" font-weight="400" text-anchor="middle" fill="#F2F6FD">Deliver</text>
+<text x="886" y="231" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#BBC9DD">04</text>
+<rect x="871" y="246" width="30" height="30" fill="#101C2E" stroke="#7CA6FF" stroke-width="2"/>
+<rect x="883" y="258" width="6" height="6" fill="#7CA6FF" stroke="none" stroke-width="1"/>
+<text x="869" y="326" font-family="Segoe UI, Arial, sans-serif" font-size="31" font-weight="400" text-anchor="middle" fill="#F2F6FD">Operate</text>
+</svg>

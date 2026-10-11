@@ -1,0 +1,108 @@
+{
+  "note": "Portable role suggestions only. Every current host installation requires a fresh authorized read-only inventory; no account roster is included.",
+  "skills": {
+    "doc-style": {
+      "status": "same",
+      "chatgpt_name": "doc-style"
+    },
+    "cold-read": {
+      "status": "same",
+      "chatgpt_name": "cold-read"
+    },
+    "gauntlet-verify": {
+      "status": "same",
+      "chatgpt_name": "gauntlet-verify"
+    },
+    "frontend-mockup": {
+      "status": "same",
+      "chatgpt_name": "frontend-mockup"
+    },
+    "frontend-taste": {
+      "status": "renamed",
+      "chatgpt_name": "web-design-taste"
+    },
+    "frontend-scroll-craft": {
+      "status": "same",
+      "chatgpt_name": "frontend-scroll-craft"
+    },
+    "my-writing-style": {
+      "status": "same",
+      "chatgpt_name": "my-writing-style"
+    },
+    "anti-slop": {
+      "status": "same",
+      "chatgpt_name": "anti-slop"
+    },
+    "house-style": {
+      "status": "unknown",
+      "chatgpt_name": null
+    },
+    "write-with-pyramid": {
+      "status": "unknown",
+      "chatgpt_name": null
+    },
+    "pitch-architect": {
+      "status": "same",
+      "chatgpt_name": "pitch-architect"
+    },
+    "google-slides": {
+      "status": "host_tool",
+      "chatgpt_name": null
+    },
+    "slide-design": {
+      "status": "same",
+      "chatgpt_name": "slide-design"
+    },
+    "calc-workbook": {
+      "status": "renamed",
+      "chatgpt_name": "calculation-workbook"
+    },
+    "viz-dashboards": {
+      "status": "unknown",
+      "chatgpt_name": null
+    },
+    "diagram-design": {
+      "status": "same",
+      "chatgpt_name": "diagram-design"
+    },
+    "meeting-to-action": {
+      "status": "same",
+      "chatgpt_name": "meeting-to-action"
+    },
+    "research-protocol": {
+      "status": "same",
+      "chatgpt_name": "research-protocol"
+    },
+    "metric-pull": {
+      "status": "unknown",
+      "chatgpt_name": null
+    },
+    "reasoning-core": {
+      "status": "same",
+      "chatgpt_name": "reasoning-core"
+    },
+    "legal-contract": {
+      "status": "unknown",
+      "chatgpt_name": null
+    },
+    "meta-skill": {
+      "status": "same",
+      "chatgpt_name": "meta-skill"
+    },
+    "skill-package-check": {
+      "status": "unknown",
+      "chatgpt_name": null,
+      "note": "ChatGPT lists skill-creator-workflow in the same plan row; compare roles before installing to avoid a duplicate"
+    },
+    "website-cloner": {
+      "status": "unknown",
+      "chatgpt_name": null
+    },
+    "blitz": {
+      "status": "unknown",
+      "chatgpt_name": null
+    }
+  },
+  "provenance_scope": "historical_source_record",
+  "current_host_status": "not_verified_here"
+}

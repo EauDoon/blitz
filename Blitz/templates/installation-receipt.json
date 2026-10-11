@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "not_verified_here",
+  "host": null,
+  "host_configuration": null,
+  "skill_role": null,
+  "installed_name": null,
+  "version": null,
+  "package_sha256": null,
+  "runtime_manifest_sha256": null,
+  "observed_at": null,
+  "observer": null,
+  "save_install_path": null,
+  "authority_reference": null,
+  "native_load_evidence": null,
+  "fresh_routing_evidence": null,
+  "installed_integrity_evidence": null,
+  "rollback_package": null,
+  "limitations": ["Unfilled template. No installation or current-host verification is asserted."]
+}

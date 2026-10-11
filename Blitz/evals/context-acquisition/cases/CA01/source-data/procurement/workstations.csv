@@ -1,0 +1,3 @@
+record_id,item,quantity,unit_usd,basis,as_of
+VQ01,workstation,12,1250,one-time per workstation,01-10-2026
+VQ02,installation,1,1800,one-time for the entire team,01-10-2026

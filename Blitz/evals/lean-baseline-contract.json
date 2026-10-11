@@ -1,0 +1,16 @@
+{
+  "base": "v1.1OAI",
+  "base_zip_sha256": "1fe8bbf2a1844c890ba2ae6fe9ed337fc9cfba638a480609d7d4ecf2a8ff2a38",
+  "core_record_hashes": {
+    "templates/context/00 Read Me First.md": "0f4cb9c8316b46469dfa5714d69b01d6669a7e3b9be9f980cd76f897df105370",
+    "templates/context/03 Position Of Record.md": "48434d04ed32028a44227c6c0e651694aba0c7bca1cea34c7c60b25290dbe058",
+    "templates/context/09 Open Questions.md": "e1277e8cee7a52d7b2058d88077a0502fa63cb8df26528d081ecef7b75457c7b",
+    "templates/context/10 Decision Log.md": "677c4594bfdbe34e64cfcd5f7e2f4a7aec41c19bbb55ee571f94b50923f90533"
+  },
+  "routing_hashes": {
+    "evals/routing.md": "53add6b5d36e57d0c87578be630e27d7f0e8e0729264d488b2e29f7924e35f15",
+    "evals/negative-routing.md": "646e645dd39cd4d05f4cbb85104895a8304ffe0533e53784c6ffeccda3862e5c",
+    "skills/blitz/evals/evals.md": "ad7374ec30e782d50cf4cc11f9f1812bc01ea74910bb7128930df221e1ddb69a"
+  },
+  "original_test_sha256": "2a8518c3e3495319ace7ff07d5f874ffe274527ef1e7502163ab0811d808c2b6"
+}

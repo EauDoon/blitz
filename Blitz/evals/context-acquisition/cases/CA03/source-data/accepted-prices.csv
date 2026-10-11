@@ -1,0 +1,9 @@
+record_id,option,line,amount_usd,basis,status,as_of
+CP01,Aster,setup,1000,one-time,accepted,01-10-2026
+CP02,Aster,training,300,one-time,accepted,01-10-2026
+CP03,Aster,migration credit,-200,one-time,accepted,01-10-2026
+CP04,Aster,service subscription,200,per month,accepted,01-10-2026
+CP05,Birch,setup,600,one-time,accepted,01-10-2026
+CP06,Birch,training,400,one-time,accepted,01-10-2026
+CP07,Birch,migration credit,-100,one-time,accepted,01-10-2026
+CP08,Birch,service subscription,250,per month,accepted,01-10-2026

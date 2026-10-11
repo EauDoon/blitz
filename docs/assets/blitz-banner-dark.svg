@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="400" viewBox="0 0 1400 400" role="img" aria-labelledby="title description">
+  <title id="title">Blitz, an operating kit for founders</title>
+  <desc id="description">The Blitz wordmark beside an original angular route with four square stops, a visual reference to the Frame, Test, Deliver and Operate gates.</desc>
+  <rect width="1400" height="400" fill="#101C2E"/>
+  <rect x="1" y="1" width="1398" height="398" fill="none" stroke="#33465F" stroke-width="2"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="76" y="236" fill="#F2F6FD" font-size="144" font-weight="700" letter-spacing="-5">Blitz</text>
+    <text x="83" y="292" fill="#B9C9DE" font-size="30" font-weight="400">A founder operating kit</text>
+  </g>
+  <g fill="none" stroke="#7CA6FF" stroke-width="14" stroke-linejoin="miter">
+    <path d="M908 106 H1168 L992 294 H1252"/>
+  </g>
+  <g fill="#101C2E" stroke="#7CA6FF" stroke-width="7">
+    <rect x="893" y="91" width="30" height="30"/>
+    <rect x="1153" y="91" width="30" height="30"/>
+    <rect x="977" y="279" width="30" height="30"/>
+  </g>
+  <rect x="1237" y="279" width="30" height="30" fill="#F2B968"/>
+</svg>
