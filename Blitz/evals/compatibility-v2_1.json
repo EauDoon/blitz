@@ -295,13 +295,21 @@
       "StagingTests.test_staged_adapter_paths_resolve",
       "StagingTests.test_symlink_alias_to_source_rejected"
     ],
-    "normalized_ast_sha256": "14fa86779cfbb27e2257a80a7690269727d00b6009de03265b7df12b71186adc",
+    "normalized_ast_sha256": "0e907e144472c3f1622638b5287ddb0dfda129eeb2e1db91ad90439086cf9f15",
     "authorized_optional_capability_labels": [
       "configured observation log",
       "configured method/project records",
       "configured session record"
     ],
-    "normalization": "Only the first three literal optional capability labels in test_named_optional_capability_fallbacks are replaced with fixed markers before hashing the full AST. All 42 test names and every other executable AST node remain unchanged."
+    "normalization": "Only the first three literal optional capability labels in test_named_optional_capability_fallbacks are replaced with fixed markers before hashing the full AST. The current exact fingerprint records the two reviewed founder-neutral parser-fixture string substitutions; v2_normalized_ast_sha256 preserves the earlier fingerprint. All 42 test identities and all other executable AST nodes are unchanged. Parser-fixture strings are not normalized away.",
+    "v2_normalized_ast_sha256": "14fa86779cfbb27e2257a80a7690269727d00b6009de03265b7df12b71186adc",
+    "authorized_parser_fixture_revision": {
+      "test_case": "IntegrityTests.test_frontmatter_parser_rejects_duplicates_collections_and_extra_keys",
+      "changed_ast_nodes": 2,
+      "change": "Generalize the synthetic possessive name to Owner in the valid YAML input and its expected parsed description. Retain the doubled YAML apostrophe, embedded colon, single parsed apostrophe and exact assertion.",
+      "yaml_description": "Owner''s quoted: string",
+      "parsed_description": "Owner's quoted: string"
+    }
   },
   "routing": {
     "unchanged_sha256": {
@@ -429,7 +437,7 @@
   },
   "changed_lock_rationale": {
     "four_records_byte_identical": "Authorized founder-facing wording changes the bytes. Exact original heading/table/field/format schemas and explicit permission, adoption, append-only, evidence and lane-isolation rules replace the obsolete byte claim. Added cross-item/provenance guards protect referenced records and the scope gate.",
-    "original_42_test_source_unchanged": "Only three optional capability store labels were generalized. The complete original AST fingerprint after that narrowly defined normalization, exact 42 test identities and exact current replacement labels remain required. No security assertion or native symlink test may change.",
+    "original_42_test_source_unchanged": "Three optional capability labels and the synthetic name in two quote-escaping fixture strings were generalized. The original source hash and prior normalized AST fingerprint remain recorded. Independent baseline comparison found exactly two Constant.value differences after the existing three-label normalization. The complete current AST, exact 42 test identities and current capability labels remain locked; no assertion, parser operation or native symlink test changed.",
     "routing_population_thresholds_unchanged": "Both generic routing files keep byte locks. The router fixture keeps its full text fingerprint after normalizing only the historic personal spending sentence; exact case IDs, order, expected behavior and 2-of-3/3-of-3 thresholds remain required. Separate explicit spending authority is now mandatory."
   },
   "mutation_coverage": [
@@ -444,6 +452,8 @@
     "security assertion inversion",
     "router case removal",
     "positive threshold relaxation",
-    "negative routing prohibition removal"
+    "negative routing prohibition removal",
+    "quoted YAML fixture corruption",
+    "quoted YAML expectation corruption"
   ]
 }

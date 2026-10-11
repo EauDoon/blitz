@@ -328,6 +328,13 @@ class CompatibilityMutationTests(unittest.TestCase):
                            'self.assertTrue(self.check.source_grants_authority(sources[2]["text"]))',
                            'original_repair_semantics_changed')
 
+    def test_parser_fixture_input_and_expectation_mutations_are_rejected(self):
+        rel = self.contract['repair_tests']['path']
+        self.reject_change(rel, "Owner''s quoted: string", "Owner's quoted: string",
+                           'original_repair_semantics_changed')
+        self.reject_change(rel, "\"Owner's quoted: string\"", '"Owners quoted: string"',
+                           'original_repair_semantics_changed')
+
     def test_routing_case_and_threshold_mutations_are_rejected(self):
         rel = self.contract['routing']['router_evals']
         line = next(line for line in self.payload[rel].decode().splitlines() if line.startswith('| BZ-03 |'))

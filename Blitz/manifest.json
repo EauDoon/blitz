@@ -358,9 +358,9 @@
     },
     {
       "path": "evals/compatibility-v2_1.json",
-      "bytes": 17082,
-      "sha256": "1c136f36085b3f36237b9ee13a8a3e4085624d08e3c4528f0491a5ea7d2764f0",
-      "characters": 17082
+      "bytes": 18195,
+      "sha256": "cd73e1fb0d0f68897c5652f744cfeabf9e3c4e9c148c61489595ba6a299f2fe7",
+      "characters": 18195
     },
     {
       "path": "evals/concurrency.md",
@@ -610,9 +610,9 @@
     },
     {
       "path": "evals/test_oai_lean.py",
-      "bytes": 22952,
-      "sha256": "eac3c4cab44b33ba616d67592a13152f244694d1fe7e902485603971b195b791",
-      "characters": 22952
+      "bytes": 23387,
+      "sha256": "496c4d00f30c9293e8dcea2d52468669a44e4bbf4242728995713ec203a9e1f8",
+      "characters": 23387
     },
     {
       "path": "evals/test_oai_repairs.py",
