@@ -27,6 +27,31 @@ Start with this page and the [company and department profile](profiles/company.m
 
 Keep useful state in existing records, or use the [brief](templates/company-brief.md) and four core records: **00 Read Me First**, **03 Position Of Record**, **09 Open Questions**, **10 Decision Log**. Preserve these names. Record source locations/owner/next action in 00, adopted positions in 03, consequential gaps in 09 and actual rulings in 10. Do not create paperwork without a decision or recovery need. Keep filled records outside the source kit with one canonical writer.
 
+## Set up one useful workflow
+
+Start with a small result you can inspect, such as a proposal draft from a supplied brief. The [outcome-to-method guide](setup/skills-guide.md#from-outcome-to-method) also covers follow-ups, call briefs and weekly reviews; these are illustrative uses, not ready-made automations.
+
+1. **Supply the business context.** Give the assistant the relevant offer or internal mandate, customer/user, owner, constraints and evidence. Identify the actual readable files and keep unknowns visible.
+2. **Agree the operating brief.** In a few lines, name the output, audience, permitted sources, save location, acceptance criteria and next human decision. Use the [commission brief](templates/commission-brief.md) only if it helps; do not duplicate sufficient records.
+3. **Confirm the needed tools.** Readable files may be enough. If a connector is needed, check access to the particular source and its allowed actions on the chosen host. Do not connect every account or expand access to fill a checklist. Missing access can mean a supplied file or a clearly marked gap.
+4. **Run and review the first result.** Reopen the saved draft, check its claims against sources, and decide the next permitted action. Once useful, repeat the same bounded request manually or configure an authorized schedule on a supporting host. The kit itself supplies no scheduler.
+
+Connector availability, cost, scheduling and whether work can run while your device is closed depend on the host, plan and configuration. Confirm those capabilities before relying on them. Choosing a method during a session does not arrange a future run.
+
+## Decide what the assistant may do
+
+| Responsibility | Examples for the first workflow |
+|---|---|
+| **Human owns** | The offer or service, terms, accepted risk, permissions, and decisions to spend, sign or make an external commitment |
+| **AI prepares for approval** | A proposal, exact follow-up text, sourced recommendation or proposed change to an adopted position |
+| **AI executes within explicit limits** | Read the named sources, calculate supplied inputs, or save and check a draft in the authorized folder, when the necessary tools are available |
+
+Permission to read is not permission to send, charge, delete, commit changes or agree to terms. Approval for one action does not create standing authority for later runs. Retain any selected method's stricter approval requirements; the meeting follow-up method requires approval of the exact text before sending.
+
+Before granting broader or unattended action, try representative cases and exceptions: missing evidence, a duplicate request, a failed tool and an uncertain previous result. Keep the observed results. Name the allowed action, scope and limits; obtain approval appropriate to its risk. Define how to prevent duplicates, check whether an interrupted action already happened, handle failures and pause or stop the routine. If a result is uncertain, hold an unsafe retry and ask the owner to resolve it. Two elapsed weeks or one successful run is not enough evidence. These are checks for a separately authorized host workflow, not capabilities installed by Blitz.
+
+## Create the practice records
+
 For a fictional practice workspace, use Python 3.12+ from the parent of the extracted `Blitz/` directory:
 
 ```sh
@@ -56,6 +81,7 @@ Confirm which files you could actually read. Missing source bytes are a gap;
 do not reconstruct them from a filename, prior chat or an index.
 Prepare [first offer/service and smallest useful test] with evidence,
 assumptions, acceptance/stop criteria, time/cash/resource caps and an owner.
+For this first run, prepare a draft only; do not send or schedule it.
 Keep consequential commitments for the named human decision maker.
 Use an optional method only if needed; read its full instructions and required
 resources, report missing tools, and do not install skills or alter settings.

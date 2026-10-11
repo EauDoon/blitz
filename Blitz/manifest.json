@@ -346,9 +346,9 @@
     },
     {
       "path": "START.md",
-      "bytes": 5982,
-      "sha256": "80cd270630650f4625478a0f57a15f3abc7dab52c7400add58216ddb471d3798",
-      "characters": 5982
+      "bytes": 9252,
+      "sha256": "841de0bff6a31672a07816784203ee3c562a57eb6d006255d8a4717141cf4175",
+      "characters": 9252
     },
     {
       "path": "evals/README.md",
@@ -898,9 +898,9 @@
     },
     {
       "path": "setup/skills-guide.md",
-      "bytes": 24128,
-      "sha256": "d9798e7f8f5a182de2b4c30aa5f22fac04b3dc2853de6f55836f322d79cc9c85",
-      "characters": 24128
+      "bytes": 26121,
+      "sha256": "b8112d0eab4043ba2757f24c816cb00630d1baccb1f916f731cdfaaf5225ea6f",
+      "characters": 26121
     },
     {
       "path": "setup/source-use.md",

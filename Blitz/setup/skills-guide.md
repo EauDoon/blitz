@@ -20,6 +20,19 @@ Commercial collection needs verified payment; internal budget approval is not re
 
 Target one or two days for a bounded operating baseline when inputs, capacity and permissions allow. Actual evidence determines whether a cycle is demonstrated; longer delivery or approval cycles take longer. Autoscale means make the process repeatable and expand with evidence, capacity and authority, not deploy autonomous infrastructure. A plan, prototype, package check or single successful cycle does not guarantee ARR, repeat demand, profitability, product-market fit or repeatability.
 
+## From outcome to method
+
+The method is the technique underneath a useful result. These illustrative requests work from supplied, authorized sources; none is a preconfigured background service. Read the linked method and its dependencies only when the task needs it.
+
+| What you want | Useful packaged methods | Inputs and review boundary |
+|---|---|---|
+| A prepared proposal | [pitch-architect](../skills/pitch-architect/SKILL.md), with [write-with-pyramid](../skills/write-with-pyramid/SKILL.md) for a concise decision memo | Supplied need, offer, evidence, supported costs and constraints; the owner approves the terms and any external use |
+| A follow-up awaiting approval | [meeting-to-action](../skills/meeting-to-action/SKILL.md) | Actual notes or transcript; distinguish stated commitments from inference and approve the exact text before sending |
+| A sourced call brief | [research-protocol](../skills/research-protocol/SKILL.md), with [reasoning-core](../skills/reasoning-core/SKILL.md) where analysis is needed | Call purpose and permitted sources; preserve dates, uncertainty and unanswered questions; a calendar title cannot establish what was said |
+| A short weekly review | The [Blitz operating contract](operating-contract.md) and, where continuation needs it, [Operating Loop](../skills/blitz/references/operating-loop.md) | Current delivery, decisions and cash/resource evidence; summarize changes, blockers and the next decision without inventing missing results |
+
+Start with one of these tasks, one owner and one saved output. A weekly review is an ordinary scoped request over the supplied period; the kit does not include a separate weekly-review scheduler. A connector or recurring run needs a supporting host and the owner's applicable authorization. Reading an account, selecting a method, preparing a draft and sending it are separate actions. Follow [START's responsibility boundaries](../START.md#decide-what-the-assistant-may-do) before expanding execution.
+
 ## Set up selection on your host
 
 Packaged Markdown supplies guidance. For native skill selection, the host must first discover or register the package through its supported installation route. Where the host supports implicit selection, frontmatter descriptions and invocation metadata can help it choose a method from an ordinary request. Selection still depends on the host, configuration, available listing, and request. No package guarantees reliable automatic selection everywhere.

@@ -14,7 +14,9 @@ Autoscale and quickly launch a minimum viable company or department that can sta
 
 [Verification workflow](https://github.com/EauDoon/blitz/actions/workflows/verify.yml)
 
-Version **v2.1OAI-r1** · Python **3.12+** · Editable records and local tools
+Published kit **v2.1OAI-r1** · Python **3.12+** · Editable records and local tools
+
+The `main` branch includes later explainer updates. The tagged release and its downloadable assets remain the original published snapshot.
 
 Frame → Test → Deliver → Operate. [Static illustration](docs/assets/blitz-motion-poster.svg).
 
@@ -41,22 +43,31 @@ This repository supplies a workflow and utilities. It does not host your busines
 
 ## What you can make
 
-| Output | How you produce it | What it is for |
+| Useful outcome | What you give the assistant | What you get back |
 |---|---|---|
-| Company or department brief | Adapt the generated `company-brief.md`, its template or existing records | Define customer/user, payer or accountable sponsor, offer/service, owner, constraints and next experiment |
-| Evidence and decision record | Maintain the four generated `context/` files | Separate adopted positions, unresolved questions and consequential decisions |
-| Cash forecast or resource plan | Use the cash command for its commercial cash schema; use existing budget/resource records for a department | Inspect collection timing and cash floors, or authorized budget, actual spend, available people and the next commitment |
-| Experiment or delivery record | Use the brief and relevant existing records | Fix criteria, save actual observations and decide the next commitment |
-| Specialist work product | Select a relevant packaged skill | Draft a research memo, proposal, workbook, diagram, presentation or review; dependencies vary |
-| Scoped handoff | Use the CSV scope or item-export tools | Share selected material with provenance and a clear authority boundary |
+| Prepared proposal | Customer need or internal mandate, bounded offer, supported costs and constraints | A draft with scope, acceptance criteria, evidence gaps and one decision for the owner |
+| Follow-up awaiting approval | Authorized call notes and the intended audience | A draft separating stated commitments from open questions; the human approves the exact text before sending |
+| Sourced call brief | The call's purpose, permitted background records and relevant sources | A concise brief with source dates, known facts, uncertainties and questions to resolve |
+| Short weekly review | Current delivery, decision and cash or resource records | What changed, what is blocked, and the next decision for the owner; unsupported inputs stay unknown |
 
-The starter creates drafts with company-oriented fields. You adapt them, supply evidence, adopt decisions and approve commitments. It does not allocate a department's budget or staff. Each skill also needs the inputs and tools specified in its guide.
+These are illustrative requests, not preconfigured automations or demonstrated customer results. The [skills guide](Blitz/setup/skills-guide.md#from-outcome-to-method) maps them to packaged methods and their prerequisites. Start with the one outcome you need; a proposal does not require a deck, website or full set of records.
+
+Underneath the output, keep a short company or department brief, the evidence behind it and the decisions that matter. The starter creates seven drafts, including four core records. The local cash helper calculates supplied commercial cash inputs; departments use appropriate budget and capacity records. You supply evidence, adopt decisions and approve commitments.
 
 ## First use
 
+Set up one narrow useful workflow in this order:
+
+1. **Give it business context.** Name the customer or internal user, offer or service, owner, current evidence and constraints. Use authorized source files; scattered chat memory is not a business record.
+2. **Write a short operating brief.** State the first useful outcome, where to save it, what good looks like, and what the human owns. Existing records or the [commission brief](Blitz/templates/commission-brief.md) are enough.
+3. **Check available tools.** Use readable files first. If the task needs a connector, confirm the chosen host can read the permitted source and record the allowed actions. Connectors, costs and scheduling depend on the host, plan and authorized tools. Permission to read is not permission to send, charge, delete, commit changes or agree to terms.
+4. **Run once, then decide what should recur.** Inspect the saved output and its sources. A weekly review can begin as a manual request. Selecting a skill does not create a schedule; a recurring run needs a separately configured, authorized host facility.
+
+The human owns goals, terms and consequential commitments. AI can prepare proposals, follow-ups and recommendations for approval, and execute explicitly permitted steps such as reading scoped records, calculating supplied inputs or saving a draft to the named folder. Broader action needs a narrower definition than “run the business.” [START](Blitz/START.md#decide-what-the-assistant-may-do) explains how to test and bound it.
+
 **[Download the v2.1OAI-r1 master](https://github.com/EauDoon/blitz/releases/download/v2.1OAI-r1/Blitz_v2.1OAI-r1.zip)** from the [release and checksums](https://github.com/EauDoon/blitz/releases/tag/v2.1OAI-r1), verify its digest, extract it, and open **[Blitz/START.md](Blitz/START.md)**. That single entry offers company and department routes, a small reading set and an explicit-source assistant prompt. Runtime generation, staging and all 25 methods are optional.
 
-For source development, use the same tagged version:
+For the exact published source, use the tag below. For the latest explainers, read `main`; do not assume its files match the release checksums.
 
 ```sh
 git clone --branch v2.1OAI-r1 https://github.com/EauDoon/blitz.git
@@ -180,7 +191,7 @@ The [regulated-activity example](Blitz/examples/company/regulated-hold.md) shows
 
 ## Using the skills
 
-The kit contains **25 method packages**. The [skills guide](Blitz/setup/skills-guide.md#all-25-packaged-skills) lists every method, its purpose, a fictional example request, expected output and dependencies. Pick a method for a concrete task; you do not need all 25 for every company or department.
+The kit contains **25 method packages**: reusable instructions and supporting resources for particular kinds of work. Choose the outcome first, then a method to help produce it. The [skills guide](Blitz/setup/skills-guide.md#all-25-packaged-skills) lists every method, its purpose, a fictional example request, expected output and dependencies. You do not need all 25 for every company or department.
 
 | Your task | Start with | Typical output |
 |---|---|---|
