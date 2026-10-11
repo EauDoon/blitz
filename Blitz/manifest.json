@@ -874,9 +874,9 @@
     },
     {
       "path": "setup/skills-guide.md",
-      "bytes": 23219,
-      "sha256": "286f0ed154ae815ad486ae7acf1c12812f0fa98639b19cabb7d76b24a4f622a0",
-      "characters": 23219
+      "bytes": 23265,
+      "sha256": "c161d9e2d1aef7257fffc370bf1afb519727ecb022505cb41e600bce6ff089f2",
+      "characters": 23265
     },
     {
       "path": "setup/thor.md",

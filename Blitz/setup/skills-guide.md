@@ -81,9 +81,9 @@ Checks analytical conclusions, rankings, forecasts, and valuations against evide
 - **Expected output:** A supported conclusion, criteria, uncertainty, cross-checks, and the condition most likely to change the view. Rankings do not need invented probabilities.
 - **Prerequisites:** Relevant evidence and a computation tool for material arithmetic. Independent events must not be normalized into a probability distribution.
 
-### [gauntlet-verify](../skills/gauntlet-verify/SKILL.md)
+### [gauntlet-verify](https://github.com/EauDoon/gauntlet-verify)
 
-Checks work in progress through either comparison with a named reference or isolated verification of consequential research claims.
+[Checks work in progress](../skills/gauntlet-verify/SKILL.md) through either comparison with a named reference or isolated verification of consequential research claims.
 
 - **Example:** "Verify the load-bearing claims in this unfinished synthetic pricing memo, using its supplied source pack and a bounded review budget."
 - **Expected output:** Quoted or source-backed findings, fixes or corrected claim labels, and the review trajectory with remaining gaps.

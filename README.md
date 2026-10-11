@@ -167,7 +167,7 @@ The kit contains **25 method packages**. The [skills guide](Blitz/setup/skills-g
 | Make the economics inspectable | `calc-workbook` | An editable calculation workbook, when spreadsheet tools are available |
 | Explain or present the work | `my-writing-style`, `diagram-design`, `slide-design` | A draft, diagram or presentation suited to its audience |
 | Build a focused web surface | `frontend-taste`, `frontend-mockup`, `frontend-scroll-craft` | Design direction, a mockup or implementation, depending on tools and scope |
-| Check a consequential artifact | `gauntlet-verify` | Independent findings and a bounded review result when its review mechanism is available |
+| Check a consequential artifact | [gauntlet-verify](https://github.com/EauDoon/gauntlet-verify) | Independent findings and a bounded review result when its review mechanism is available |
 
 ### Do they trigger automatically?
 
