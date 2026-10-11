@@ -340,9 +340,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 6461,
-      "sha256": "0e55eea7c7f9c66a4e9576b0ec2b619115b8580730e88e98f2e89fb53165556a",
-      "characters": 6461
+      "bytes": 6537,
+      "sha256": "8565d775929cf742525bad7b04bf5ed853914d746cba86ddc2e0fa72597274fd",
+      "characters": 6537
     },
     {
       "path": "evals/README.md",
@@ -706,9 +706,9 @@
     },
     {
       "path": "profiles/company.md",
-      "bytes": 20931,
-      "sha256": "cb63ffd7e483836e4bf9c6caad0520c591958276a0e0cb600727cffc1978b67b",
-      "characters": 20931
+      "bytes": 20764,
+      "sha256": "d09579d8aac0dd106c1495f1a7613c49ec91e9e9ae57ff639fc2025962f2deae",
+      "characters": 20764
     },
     {
       "path": "profiles/comprehensive.md",
@@ -874,9 +874,9 @@
     },
     {
       "path": "setup/release-guide.md",
-      "bytes": 11267,
-      "sha256": "2bb3b1fa9270b6611d3570894f00cf7b62e3c90dcf84489adac2e4376fa254de",
-      "characters": 11267
+      "bytes": 11314,
+      "sha256": "832727c79072f22e8ffe253ea3cfe0cd386fba0f812e488644fa6079230539e8",
+      "characters": 11314
     },
     {
       "path": "setup/runtime.md",
@@ -892,9 +892,9 @@
     },
     {
       "path": "setup/skills-guide.md",
-      "bytes": 24130,
-      "sha256": "097eb640562e8a77c35159f503f3e4bdb93e20b026f170b3e76a356f44d7daa7",
-      "characters": 24130
+      "bytes": 24120,
+      "sha256": "a3dc501c9c05444731af4ac1f997434c5c618763fa4a58a85a692029eb48c9b9",
+      "characters": 24120
     },
     {
       "path": "setup/thor.md",

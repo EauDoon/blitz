@@ -9,7 +9,14 @@ Start with the result you need: a customer or internal-user test, cash or resour
 
 The kit contains 25 skill packages. Each entry links to its actual `SKILL.md`; read that file and its required references before applying it. The examples below are synthetic requests, not customer evidence, completed work, or routing test results. Expected outputs describe the method's intended result when the necessary inputs and tools are available.
 
-Company or internal-department work follows [Frame, Test, Deliver and Operate](../profiles/company.md). Frame needs a bounded offer or service, customer/user, payer or accountable sponsor, owner, permitted test, and time/cash or resource cap. Test needs observed customer or user behavior against criteria set before the test. Deliver needs actual delivery and acceptance by the named customer or internal stakeholder, with support and failure responsibilities. Operate needs reconciled exchange or resource use, obligations, funding/capacity evidence and an owned next-cycle procedure. Commercial collection needs verified payment; internal budget approval is not revenue or cash received. Use suitable department budget/resource records or the program sections of [Economics and Budget][department-budget], rather than forcing allocations into the commercial cash calculator.
+Company and department work follows [Frame, Test, Deliver and Operate](../profiles/company.md):
+
+- **Frame:** define the offer or service, customer or user, payer or sponsor, owner, permitted test, and time, cash or resource cap.
+- **Test:** observe customer or user behavior against criteria set before the test.
+- **Deliver:** retain actual delivery and acceptance by the named customer or internal stakeholder, with support and failure responsibilities.
+- **Operate:** reconcile exchange or resource use and obligations; verify funding, capacity and the next-cycle procedure, with a named owner.
+
+Commercial collection needs verified payment; internal budget approval is not revenue or cash received. Use suitable department records or the program sections of [Economics and Budget][department-budget]. Do not force allocations into the commercial cash calculator.
 
 Target one or two days for a bounded operating baseline when inputs, capacity and permissions allow. Actual evidence determines whether a cycle is demonstrated; longer delivery or approval cycles take longer. Autoscale means make the process repeatable and expand with evidence, capacity and authority, not deploy autonomous infrastructure. A plan, prototype, package check or single successful cycle does not guarantee ARR, repeat demand, profitability, product-market fit or repeatability.
 

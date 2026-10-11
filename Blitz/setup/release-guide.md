@@ -1,6 +1,8 @@
 # Standalone release guide: v2.1OAI
 
-This guide ships inside the master archive. It is sufficient for a local first use, migration planning and verification without access to the source repository. It accompanies the [company and department guide](../profiles/company.md), [changelog](../CHANGELOG.md), manifest and component notices. Blitz connects the initial idea to a bounded operating baseline across offers/services, customer or stakeholder evidence, product, operations and decision ownership. Use it with a human operator/editor or an LLM with appropriate readable records and attached tools. Examples are fictional; a generated folder is preparation, not evidence that the unit can operate.
+This guide covers local first use, migration planning and kit verification without access to the source repository. The master archive also contains the [company and department guide](../profiles/company.md), [changelog](../CHANGELOG.md), manifest and component notices.
+
+Blitz connects an initial idea to a bounded offer or internal service, evidence, delivery and an accountable owner. Work directly with an editor and the records, or use an LLM with readable sources and appropriate attached tools. Examples are fictional. A generated folder is preparation, not evidence that the unit can operate.
 
 Aim for an operating unit in one or two days when scope, inputs, capacity and permissions allow. A demonstrated cycle requires actual delivery, named acceptance, reconciled exchange or resource use and a feasible next cycle. The target is not a guarantee; longer delivery or approval cycles take longer. Blitz guarantees no ARR, repeat demand, profitability or product-market fit. Autoscale means prepare repeatable processes and expand with evidence, capacity and authority, not deploy autonomous technical autoscaling.
 
@@ -17,10 +19,27 @@ Use Python 3.12 or later. The setup helpers use the standard library. Commands b
 ```sh
 python -B Blitz/setup/verify_kit.py
 python -B Blitz/setup/company.py init --out company-practice --name "Practice company" --owner "Example founder"
-python -B Blitz/setup/company.py cash company-practice/company-cash.csv
 ```
 
-The practice output must not exist. Its parent must exist, it must stay outside the source kit, and paths containing `..` are rejected. An absolute path is appropriate for real company or department records, which belong outside reusable source and distribution folders. Initialization creates seven drafts, including the brief, cash CSV and 00/03/09/10 records. It does not import or migrate existing work. The CLI and filenames remain company-oriented. For a department, adapt the draft brief to users, accountable sponsor, service/intake, acceptance and authorized resources; revise record 00's default `venture` type before adoption. There is no department-specific initialization mode.
+The practice output must not exist. Its parent must exist, and the output must stay outside the source kit. Paths containing `..` are rejected. Keep real company or department records outside reusable source and distribution folders, using an absolute path.
+
+Initialization creates seven drafts, including the brief, cash CSV and 00/03/09/10 records. It does not import or migrate existing work.
+
+For a department, adapt the brief to users, an accountable sponsor, service, intake route, acceptance and authorized resources. Revise record 00's default `venture` type before adoption. The CLI and filenames remain company-oriented; there is no department-specific initialization mode.
+
+Use the brief to define the first experiment:
+
+- Name the customer or internal user, payer or accountable sponsor, and operating owner.
+- Define the bounded offer or service, hardest assumption, next permitted experiment, and time, cash or resource cap.
+- Set acceptance, change and stop criteria before seeing the result.
+
+Keep adopted positions in record 03, missing evidence in 09 and consequential decisions in 10.
+
+Run the blank cash calculation:
+
+```sh
+python -B Blitz/setup/company.py cash company-practice/company-cash.csv
+```
 
 The blank cash calculation intentionally exits **2**, reports incomplete inputs and preserves unknowns. Enter `0` only for a known zero. Read the fictional example and run its complete input:
 
@@ -28,9 +47,11 @@ The blank cash calculation intentionally exits **2**, reports incomplete inputs 
 python -B Blitz/setup/company.py cash Blitz/examples/company/service-cash.csv
 ```
 
-Exit **0** means calculation completed; it can still report a cash shortfall. Exit **1** means invalid input or another handled error. Earned revenue and collections are different inputs. The tool preserves period order, requires one currency, checks closing balances and does not prove within-period liquidity or extrapolate beyond the supplied horizon. Its schema is a commercial cash forecast, not a departmental resource ledger. A budget allocation is neither earned revenue nor collected cash. Use appropriate existing records or the program sections of [Economics and Budget][department-budget] for internal allocations, commitments, actual spend and staff capacity.
+Exit **0** means calculation completed; it can still report a cash shortfall. Exit **1** means invalid input or another handled error. Earned revenue and collections are different inputs. The tool preserves period order, requires one currency, checks closing balances and does not prove within-period liquidity or extrapolate beyond the supplied horizon.
 
-In the brief, identify the customer/user, payer or accountable sponsor, bounded offer or service, hardest assumption, next permitted experiment, owner, acceptance criteria and time/cash or resource cap. Set change/stop criteria before seeing the result. Keep adopted positions in record 03, missing evidence in 09 and consequential decisions in 10. Close and reopen the files, then recover the owner, revision, next action and authority from saved content. A repeat initialization must refuse to overwrite the occupied folder.
+The schema is a commercial cash forecast, not a departmental resource ledger. A budget allocation is neither earned revenue nor collected cash. Use appropriate existing records or the program sections of [Economics and Budget][department-budget] for internal allocations, commitments, actual spend and staff capacity.
+
+Close and reopen the files, then recover the owner, revision, next action and authority from saved content. A repeat initialization must refuse to overwrite the occupied folder.
 
 Use the [service example](../examples/company/service-example.md) and [regulated-activity hold example](../examples/company/regulated-hold.md) to distinguish inquiry, order, accepted delivery and verified payment. The fictional evidence does not establish real demand. For an internal department, use actual stakeholder/user evidence, agreed acceptance and reconciled authorized resources; do not invent a commercial sale to claim an operating cycle. A licensing question or missing authority holds the affected commitment while useful independent work continues. No formation, contract, outreach, spending, filing or account action is authorized by this exercise.
 

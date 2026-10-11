@@ -6,17 +6,17 @@ Listen, collect, sprint.<br>Reduce cycle time.
 
 Autoscale and quickly launch a minimum viable company or department that can stand up in minimal time.
 
-Use this profile for a founder's minimum viable company (MVC), an internal department's operating baseline, or improvement of an existing operating loop. A human operator can work from the records with an editor, or an LLM can assist using appropriate attached tools and permitted sources. The kit supplies methods, records and local helpers; the operator still needs the actual evidence, tools, access and authority for the work.
+Use this profile to establish a minimum viable company (MVC), start an internal department, or improve an existing operating loop. Work directly with an editor and the records, or use an LLM with permitted sources and appropriate attached tools. The kit supplies methods, records and local helpers. The operator supplies the evidence, access and authority for the work.
 
-The target is a demonstrated MVC cycle and a usable operating unit in one or two days where the offer, evidence, authority, delivery/acceptance and payment timing, and available capacity permit it. Record the actual state when they do not. Here, autoscale means making a proven process repeatable and expanding only as evidence and capacity support it; the kit does not deploy autonomous infrastructure.
+Target a demonstrated company or department cycle and a usable operating unit in one or two days. That depends on the offer, evidence, authority, capacity, and time needed for delivery, acceptance and any payment. Record the actual state when these conditions prevent the target. Here, autoscale means make a proven process repeatable and expand only with evidence, capacity and authority. The kit does not deploy autonomous infrastructure.
 
 This profile builds on the [operating contract](../setup/operating-contract.md), with the same evidence, authority, privacy, one-writer, recovery and export rules. A request for a memo, review, prototype or plan keeps its narrower scope. Selecting this profile authorizes no external action by itself.
 
 ## What counts as a minimum viable company
 
-An MVC is a bounded business that has demonstrated one complete value-delivery cycle for an identified customer and payer, with an accountable human owner able to run the next cycle. Its evidence covers a clear offer, an accepted delivery, the agreed exchange, support and failure handling, delivery capacity, cash obligations and the permissions relevant to that activity and market. For a commercial offer, the exchange includes verified payment; a signed contract, invoice or expression of interest alone does not establish collection.
+An MVC is a bounded business that has demonstrated one complete value-delivery cycle for an identified customer and payer. An accountable human owner must be able to run the next cycle. Evidence must cover a clear offer, accepted delivery, agreed exchange, support and failure handling, delivery capacity, cash obligations and applicable permissions. For a commercial offer, the exchange includes verified payment. A signed contract, invoice or expression of interest alone does not establish collection.
 
-An internal department reaches its operating baseline through an observed delivery cycle for named internal users or stakeholders, accepted against agreed criteria by the designated recipient and accountable sponsor. It also needs authorized resources, reconciled actual budget/capacity use and obligations, failure handling, and an owner able to run the next cycle. Report this as a demonstrated department operating cycle; it is not evidence of paid customer demand.
+An internal department reaches its operating baseline through an observed delivery cycle for named internal users or stakeholders. The designated recipient and accountable sponsor must accept it against agreed criteria. The department also needs authorized resources, reconciled actual budget and capacity use, reconciled obligations, failure handling, and an owner able to continue. Report this as a demonstrated department operating cycle; it is not evidence of paid customer demand.
 
 An operating plan can be ready for an authorized test before an MVC is demonstrated. Use these distinct claims:
 
@@ -31,7 +31,7 @@ These are operating claims. Incorporation, a polished pack, a working prototype 
 
 ## Start with the smallest useful record
 
-Recover existing evidence and decisions first. Establish who needs the result, who authorizes the exchange or resources, the narrow offer, route to first use, minimum delivery requirements, owner, governing constraints, hardest unproven assumption and next permitted action.
+Recover existing evidence and decisions first. Use the questions below to define the offer, route to first use, delivery requirements, owner and governing constraints. Identify the hardest unproven assumption and next permitted action.
 
 | Working question | Founder / company | Internal department |
 |---|---|---|
@@ -41,7 +41,7 @@ Recover existing evidence and decisions first. Establish who needs the result, w
 | What supports delivery? | Authorized cash, evidenced capacity and the customer's agreed terms. | Approved budget/resource allocation, actually available people/tools and agreed delivery/acceptance terms. |
 | Who decides and handles failure? | Accountable founder or decision owner, with reserved decisions and support/refund obligations. | Accountable sponsor and operating owner, with delegated decisions, escalation, rework and cancellation responsibilities. |
 
-From the first idea, listen to the intended users, collect the permitted evidence, choose the smallest useful offer, and set acceptance and stop criteria before testing. Build only the product or delivery capability needed for that offer, perform the authorized cycle, then reconcile its outcome and resources. Save the short next-cycle procedure and decision ownership so another authorized operator can continue. This is the route from genesis to an MVC or department baseline; a document pack alone is not that result.
+Listen to the intended users and collect permitted evidence. Choose the smallest useful offer and set acceptance and stop criteria before testing. Build only the delivery capability needed, perform the authorized cycle, then reconcile its outcome and resources. Save a short next-cycle procedure and name the decision owner so another authorized operator can continue. A document pack alone does not establish this operating baseline.
 
 Minimum requirements say what must work for the promised outcome and how failure is detected; a full product specification is optional. Ask only about consequential gaps that cannot be resolved from authorized sources. Use a [company brief](../templates/company-brief.md) if these are scattered; existing sufficient records need no duplicate brief. For a department, explain the internal counterparts in its existing fields: sponsor/resource authority alongside the customer/user/payer field, internal service and acceptance in offer/requirements, and intake/adoption in the customer route. Mark commercial price, sales and collection questions not applicable only with a scoped basis; preserve the template and record names.
 

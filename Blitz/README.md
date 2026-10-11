@@ -5,9 +5,9 @@
 Listen, collect, sprint.  
 Reduce cycle time.
 
-Blitz helps founders and small teams quickly establish a minimum viable company (MVC) or internal department. It connects an initial idea, offer or service, customer/stakeholder evidence, product, operations and decision ownership in one manageable process. Use it with an editor and a human operator, or an LLM with the relevant readable records and attached tools.
+Blitz helps founders and small teams quickly establish a minimum viable company (MVC) or internal department. It connects an initial idea to a bounded offer or service, evidence, delivery and an accountable owner. Work directly with an editor and the records, or use an LLM with readable sources and appropriate attached tools.
 
-Target an operating baseline in one or two days when scope, inputs, people and permissions allow: one delivered and accepted cycle, reconciled exchange or resource use, and a feasible next cycle with an accountable owner. Actual evidence governs readiness; longer delivery or approval cycles take longer. A folder or plan is preparation. The kit guarantees no ARR, repeat demand, profitability or product-market fit.
+Target an operating baseline in one or two days when scope, inputs, people and permissions allow. Demonstrate one delivered and accepted cycle, reconcile its exchange or resource use, and establish a feasible next cycle with an accountable owner. Actual evidence governs readiness; longer delivery or approval cycles take longer. A folder or plan is preparation. The kit guarantees no ARR, repeat demand, profitability or product-market fit.
 
 Autoscale here means make the process repeatable and expand with evidence, capacity and authority. It does not deploy infrastructure autoscaling or autonomous operations. See [the company and department guide](profiles/company.md) for definitions, internal stakeholder/sponsor/resource counterparts and proportional gates.
 
@@ -23,7 +23,11 @@ python -B Blitz/setup/company.py init --out my-company --name "My company" --own
 python -B Blitz/setup/company.py cash my-company/company-cash.csv
 ```
 
-The output directory must be new. Blank cash inputs remain unknown. The initializer produces unadopted company-oriented drafts, not a functioning operating unit or permission to act. For a department, adapt the brief to users, an accountable sponsor, service acceptance and authorized resources; change record 00's default `venture` type before adoption. Company filenames and command names stay unchanged. You can instead fill the [company brief](templates/company-brief.md) and [cash template](templates/company-cash.csv) manually, reusing existing equivalent records. [Examples](examples/company/) are fictional and illustrate evidence standards rather than claim real validation.
+The output directory must be new. Blank cash inputs remain unknown; this calculation reports incomplete inputs and exits with code **2**. The initializer creates unadopted company-oriented drafts. It does not establish a functioning operating unit or grant permission to act.
+
+For a department, adapt the brief to users, an accountable sponsor, service acceptance and authorized resources. Change record 00's default `venture` type before adoption. Company filenames and command names stay unchanged.
+
+You can instead fill the [company brief](templates/company-brief.md) and [cash template](templates/company-cash.csv) manually, or reuse equivalent existing records. The fictional [examples](examples/company/) illustrate evidence standards; they supply no real validation.
 
 ## Preserve the useful core
 

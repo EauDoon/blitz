@@ -20,11 +20,11 @@ Frame → Test → Deliver → Operate. [Static illustration](docs/assets/blitz-
 
 [Start](#first-use) · [Outputs](#what-you-can-make) · [Run a cycle](#run-a-cycle) · [25 skills](#using-the-skills) · [Verification](#verification) · [Rights](#rights-and-distribution)
 
-Blitz is an operating kit for founders and small teams building a **minimum viable company (MVC) or department**. It connects the initial idea to an operating baseline across offers, customer or stakeholder evidence, product, operations and decision ownership in one manageable process. Use it with an editor and a human operator, or give the relevant guide and records to an LLM with appropriate attached tools.
+Blitz helps founders and small teams establish a **minimum viable company (MVC) or department**. It connects an initial idea to a bounded offer or internal service, evidence, delivery and an accountable owner. Work directly with an editor and the records, or give an LLM the relevant guides, readable records and appropriate tools.
 
-The aim is a demonstrated MVC cycle and a feasible next one. Target an operating unit in **one or two days** when the scope is small and the people, inputs and permissions are ready. Actual delivery, acceptance and funding or resource evidence determine what is demonstrated; longer external cycles take longer. A generated folder, prototype, incorporation or polished business plan is useful preparation. Move quickly from it to actual operation. Blitz does not guarantee annual recurring revenue (ARR), repeat demand, profitability or product-market fit.
+Aim to demonstrate one company or department operating cycle and establish a feasible next one. Target **one or two days** when scope, people, inputs and permissions allow. Actual delivery, acceptance and funding or resource evidence determine readiness; longer external cycles take longer. A folder, prototype, incorporation or business plan alone cannot demonstrate operation. Blitz does not guarantee annual recurring revenue (ARR), repeat demand, profitability or product-market fit.
 
-Here, **autoscale** means prepare repeatable processes and expand them when evidence, capacity and authority support the next commitment. The kit does not deploy technical autoscaling or run autonomous operations. The one-to-two-day launch target is not a guaranteed outcome or permission to skip a gate.
+Here, **autoscale** means make the process repeatable and expand when evidence, capacity and authority support the next commitment. The kit does not deploy technical autoscaling or run autonomous operations. The launch target neither guarantees an outcome nor permits skipping a gate.
 
 ## Who it is for
 
@@ -50,7 +50,7 @@ This repository supplies a workflow and utilities. It does not host your busines
 | Specialist work product | Select a relevant packaged skill | Draft a research memo, proposal, workbook, diagram, presentation or review; dependencies vary |
 | Scoped handoff | Use the CSV scope or item-export tools | Share selected material with provenance and a clear authority boundary |
 
-The starter creates drafts with company-oriented fields. You supply evidence, adapt those drafts to the operating unit, adopt decisions and approve commitments. It does not allocate a departmental budget or staff. A skill supplies a method; producing its output also requires suitable tools and inputs.
+The starter creates drafts with company-oriented fields. You adapt them, supply evidence, adopt decisions and approve commitments. It does not allocate a department's budget or staff. Each skill also needs the inputs and tools specified in its guide.
 
 ## First use
 
@@ -65,7 +65,9 @@ Or choose **Code → Download ZIP** on GitHub, extract it, and open a terminal i
 
 Use **Python 3.12 or later**. The setup, calculation and packaging helpers use the standard library; no package installation is needed for this exercise. Examples use `python`; substitute your verified Python 3 command where necessary. Run commands from the repository root.
 
-First verify the kit and create a fictional practice workspace:
+### 1. Verify and create a practice workspace
+
+Run these commands for a fictional company:
 
 ```sh
 python -B Blitz/setup/verify_kit.py
@@ -87,7 +89,17 @@ Initialization emits a JSON receipt and creates seven draft files:
     10 Decision Log.md
 ```
 
-Open the generated brief. Name the customer and payer, bounded offer, initial sales route, minimum delivery requirements, hardest assumption and next permitted experiment. For a department, adapt these prompts to the internal users, accountable sponsor, agreed service, intake route, authorized budget and people. The initializer still uses company names and defaults record 00 to `venture`; revise that unadopted draft to the actual unit type before use. Fix success, change and stop criteria before observing the result. Use `03` for an actually adopted position, `09` for missing evidence and `10` for consequential decisions. Keep one canonical writer.
+Output directories must be **new**, their parents must exist, and initialization must stay outside the `Blitz/` source kit. Occupied targets and paths containing `..` are rejected. Reuse `.work` but choose a new company directory for another initialization. The practice folder is ignored by Git. Keep real company or department records outside this source repository, using an explicit absolute output path.
+
+### 2. Frame the first experiment
+
+Open the generated brief. Name the customer and payer, bounded offer, initial sales route, minimum delivery requirements, hardest assumption and next permitted experiment. Set success, change and stop criteria before observing the result.
+
+For a department, adapt the prompts to internal users, an accountable sponsor, agreed service, intake route, authorized budget and available people. The initializer uses company names and defaults record 00 to `venture`. Revise that unadopted draft to the actual unit type before use.
+
+Keep adopted positions in `03`, missing evidence in `09` and consequential decisions in `10`. Keep one canonical writer.
+
+### 3. Check the cash inputs
 
 Calculate the blank cash template to see how missing inputs behave:
 
@@ -101,9 +113,11 @@ This intentionally reports **incomplete**, with exit code **2**. Fill supported 
 python -B Blitz/setup/company.py cash Blitz/examples/company/service-cash.csv
 ```
 
-Output directories must be **new**, their parents must exist, and initialization must stay outside the `Blitz/` source kit. Occupied targets and paths containing `..` are rejected. Reuse `.work` but choose a new company directory on another initialization. The practice folder is ignored by Git. Keep real company or departmental records outside this source repository, using an explicit absolute output path.
+For a department, keep allocations, commitments, actual spend and capacity in suitable resource records or the [Economics and Budget template][department-budget]. An approved budget is not earned revenue or collected cash; do not put it into the commercial cash CSV. The `company` filenames and commands remain compatibility names.
 
-Prefer working manually? Copy the [company brief](Blitz/templates/company-brief.md) and [cash template](Blitz/templates/company-cash.csv), or use sufficient existing records. The [company and department guide](Blitz/profiles/company.md) and [first-user walkthrough](docs/FIRST_USER.md) explain the next steps without requiring the CLI. The `company` filenames and commands remain compatibility names. An approved department budget is not earned revenue or collected cash; keep its allocations, commitments, actual spend and capacity in suitable resource records or the existing [Economics and Budget template][department-budget], instead of forcing them into the cash CSV.
+### Working without the CLI
+
+Copy the [company brief](Blitz/templates/company-brief.md) and [cash template](Blitz/templates/company-cash.csv), or use sufficient existing records. The [company and department guide](Blitz/profiles/company.md) and [first-user walkthrough](docs/FIRST_USER.md) explain the next steps.
 
 ## Workflow
 
@@ -125,7 +139,7 @@ The four gates describe **operating evidence**, with thresholds proportionate to
 
 Record **Proceed, Hold or Walk** for the specific next commitment. A Hold pauses the dependent action while useful authorized work continues. Advancing a gate does not grant permission to spend, sign, publish or contact anyone.
 
-These gates are separate from the optional work stages in the [playbook](Blitz/PLAYBOOK.md): Ingestion, Firming, Mandate, Blitzing and Delivering. The one-to-two-day launch target does not change their optional pilot timing or impose a readiness deadline. A prepared experiment, a demonstrated MVC or departmental cycle, and demonstrated repetition are different claims.
+The [playbook](Blitz/PLAYBOOK.md) has separate, optional work stages: Ingestion, Firming, Mandate, Blitzing and Delivering. The launch target does not change their pilot timing or impose a readiness deadline. A prepared experiment, a demonstrated operating cycle and demonstrated repetition are different claims.
 
 ## Run a cycle
 
