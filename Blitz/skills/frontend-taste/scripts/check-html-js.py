@@ -38,6 +38,14 @@ class Scripts(HTMLParser):
         if self.current is not None:
             self.current["body"] += data
 
+    def handle_startendtag(self, tag, attrs):
+        if tag == "script":
+            # In HTML, the self-closing slash does not end a script element.
+            self.handle_starttag(tag, attrs)
+            self.set_cdata_mode("script")
+        else:
+            super().handle_startendtag(tag, attrs)
+
     def handle_endtag(self, tag):
         if tag == "script" and self.current is not None:
             self.rows.append(self.current)

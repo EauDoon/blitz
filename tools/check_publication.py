@@ -192,7 +192,7 @@ def zip_metadata_rules(archive, data):
 
 
 def scan_bytes(path, data, depth=0):
-    findings = set(path_rules(path, data))
+    findings = set(path_rules(path, data)) | text_rules(path)
     if len(data) > MAX_BLOB:
         return findings | {"oversized-blob-not-scanned"}
     if data.startswith((b"PK\x03\x04", b"PK\x05\x06")) or path.lower().endswith(".zip"):
@@ -326,6 +326,18 @@ def scan(root):
     root_trees = {identity for identity in ref_objects if objects[identity]["kind"] == "tree"}
     commits = {identity for identity in reachable if objects[identity]["kind"] == "commit"}
     tags = {identity for identity in reachable if objects[identity]["kind"] == "tag"}
+    # Legacy grafts can prune rev-list without marking a checkout shallow.
+    # Validate the raw parent closure, unaffected by graft traversal rules.
+    for identity in sorted(commits):
+        data = objects[identity]["data"]
+        if data is None:
+            continue  # The oversized-object finding below still blocks publication.
+        for line in data.split(b"\n\n", 1)[0].split(b"\n"):
+            if line.startswith(b"parent "):
+                parent = line[7:]
+                if not re.fullmatch(rb"[0-9a-f]{40}|[0-9a-f]{64}", parent) or parent.decode("ascii") not in commits:
+                    return {"result": "fail", "reason": "incomplete-parent-history", "findings": [],
+                            "limits": "Raw commit parents are missing from the scanned history. Grafts or incomplete traversal cannot satisfy publication verification. No history was fetched."}
     for identity in sorted(commits | tags):
         obj = objects[identity]
         kind, data = obj["kind"], obj["data"]
@@ -368,6 +380,10 @@ def scan(root):
             scanned_blobs.add(identity)
         elif obj["kind"] == "tree" and obj["data"] is None:
             record("<tree-object>", None, "history-tree")
+    # Keep ordinary paths useful, but never echo recognized secret-like path text.
+    for row in findings:
+        if text_rules(row["path"]):
+            row["path"] = "<redacted-path-sha256:" + hashlib.sha256(os.fsencode(row["path"])).hexdigest() + ">"
     return {"result": "fail" if findings else "pass", "tracked_files": len(tracked),
             "reachable_commits": len(commits), "reachable_tags": len(tags),
             "reachable_objects": len(reachable), "unique_blobs": len(scanned_blobs),

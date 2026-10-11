@@ -61,7 +61,7 @@ dark: false
 ```
 
 **Reserved field semantics:**
-- `roles[j].name`: primary role label (`node-name` role at 11px, white text on the ink banner)
+- `roles[j].name`: primary role label (`node-name` role at 12px, white text on the ink banner)
 - `roles[j].code`: secondary AD-group identifier (`sublabel` role, white text at 0.85 opacity)
 - `components[i].hint`: optional right-aligned `sublabel` text in the label cell (e.g., `"SSO"`, `"S3 API"`)
 - `cells[k].level`: closed vocabulary `full | rw | read | none | unknown`. Drives fill/stroke/text-color per §2.4.
@@ -120,26 +120,26 @@ Solid paper fill across the full viewBox. No dot pattern.
 **Component-column header cell:**
 - Rect: `(comp_col_x, header_y, comp_col_w, header_h)`, fill white, stroke `ink @ 0.12` 0.8, `rx=6`
 - Two-line label centered at `(comp_col_x + comp_col_w/2, header_y+24)` and `(…, header_y+40)`:
-  - Line 1: `"Component"`, `node-name` role at 11px, ink
+  - Line 1: `"Component"`, `node-name` role at 12px, ink
   - Line 2: `"vs. AD group"`: `sublabel` role, muted
 
 **Role banners (one per role):**
 - Rect: `(role_col_x(j), header_y, role_col_w, header_h)`, fill `ink`, `rx=6`
 - Two-line label centered:
-  - Line 1 at `y=92`: `roles[j].name`, `node-name` role at 11px, white
+  - Line 1 at `y=92`: `roles[j].name`, `node-name` role at 12px, white
   - Line 2 at `y=108`: `roles[j].code`, `sublabel` role, white at opacity 0.85
 
 ### 2.3 Data row (`y = row_y(k), h = 36`)
 
 **Component label cell:**
 - Rect: `(comp_col_x, row_y(k), comp_col_w, row_h)`, fill white, stroke `ink @ 0.12` 0.8, `rx=4`
-- Name at `(comp_col_x + 12, row_y(k) + 22)`: `node-name` role at 11px, ink, left-aligned
+- Name at `(comp_col_x + 12, row_y(k) + 22)`: `node-name` role at 12px, ink, left-aligned
 - Hint (if present) at `(comp_col_x + comp_col_w − 12, row_y(k) + 22)`: `sublabel` role, muted, right-aligned
 
 **Value cells (one per role × component):**
 - Rect: `(role_col_x(j), row_y(k), role_col_w, row_h)`, `rx=4`, stroke `ink @ 0.12` 0.6
 - Fill and text-color depend on `level` (or focal flag): see §2.4
-- Value text centered at `(role_col_cx(j), row_y(k) + 22)`: `node-name` role at 10px
+- Value text centered at `(role_col_cx(j), row_y(k) + 22)`: `node-name` role at 12px
 - Focal cell uses a slightly raised primary text at `y=18` and a sub-line at `y=30` (`sublabel` role at 8px)
 
 ### 2.4 Cell style table

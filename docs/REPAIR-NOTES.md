@@ -5,12 +5,12 @@ This content revision keeps one maintained Blitz source and one primary master a
 | Finding | Repair and regression evidence |
 |---|---|
 | Preview boundary | Explicit loopback bind; canonical containment before reads; traversal, malformed URL, symlink, read and stream failure cases in `tests/node/test_preview.mjs`. |
-| ZIP scan gaps | Bounded inspection of bodies, names, comments, prefixes, trailers and supported metadata; unsupported or opaque structures require review. Synthetic cases in `tests/test_audit_security.py`. |
-| Incomplete history | Shallow repositories fail with a machine-readable reason, without fetching. Full-history removed-marker and clean-history controls remain. |
+| ZIP scan gaps | Bounded inspection of bodies, names, comments, prefixes, trailers and supported metadata; unsupported or opaque structures require review. Repository paths are also scanned and recognized sensitive path text is redacted from findings. Synthetic cases in `tests/test_audit_security.py`. |
+| Incomplete history | Shallow repositories and missing raw-parent closure fail with machine-readable reasons, without fetching. Legacy grafts cannot hide ancestors behind a complete-history pass. Full-history removed-marker and clean-history controls remain. |
 | Collection and recording | Copy-ready templates scope evidence and disclosure authority, recipients, transfer, redaction, recording permission, notes fallback and retention responsibility. |
 | Unknown permissions | Unknown and confirmed denial are separate schema values and visible states; omitted cells remain unknown. |
 | Contrast | Ordinary text requires 4.5:1; the 3:1 large-text exception uses 24 CSS px regular or 14pt bold (about 18.67 CSS px). |
-| SVG export | DOM selection preserves the outer SVG and nested icons, resolves computed presentation styles and rejects unsupported active/external dependencies. The browser regression compares the saved standalone image with its styled source. |
+| SVG export | DOM selection preserves the outer SVG and nested inline icons, resolves computed presentation/geometry styles and rejects unsupported active/external dependencies. Instance inheritance through `<use>` requires the documented PNG route. The browser regression compares the saved standalone image with its styled source. |
 | Diagram geometry | Documented data-flow, security-matrix, state, timeline and medallion geometry agrees with the existing linter. Negative controls remain; all 105 shipped HTML assets are invoked, including two explicitly skipped galleries. |
 | JavaScript checks | Both recipes use one HTML parser helper. It checks each classic/module body, distinguishes data blocks, rejects invalid syntax and reports unchecked external scripts. It does not execute scripts. |
 | Pyramid example | The fictional rewrite retains supplied facts and identifies missing decision evidence. |

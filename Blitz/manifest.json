@@ -1774,9 +1774,9 @@
     },
     {
       "path": "skills/diagram-design/references/export.md",
-      "bytes": 9315,
-      "sha256": "340dd4ca7e987d9ff82ccb91911c485db918d92ddff83f546a30d723b4303f90",
-      "characters": 9311
+      "bytes": 9795,
+      "sha256": "9b8707fa909b742b98f2b2f3f8bd30300592122cef06726dbc72ae71634358a2",
+      "characters": 9791
     },
     {
       "path": "skills/diagram-design/references/onboarding.md",
@@ -1841,7 +1841,7 @@
     {
       "path": "skills/diagram-design/references/type-dp-security-matrix.md",
       "bytes": 20952,
-      "sha256": "a302c7e8c209bbdc47f25ea17fd20f319a4d2eb044ce676fdadef1a609b92333",
+      "sha256": "9c1095ee77f6ab5c1f48e08de8b61917abfdb62e6a8e8242df24a0dd4c3dac5a",
       "characters": 20858
     },
     {
@@ -1882,9 +1882,9 @@
     },
     {
       "path": "skills/diagram-design/references/type-medallion.md",
-      "bytes": 22860,
-      "sha256": "ed797b4db9f0711a10e1dea1278a502e212e9e7ea1083dc562e6ba9cb9d85076",
-      "characters": 22755
+      "bytes": 22917,
+      "sha256": "c217cd94746fa63c588b32619269566cd9d0e2fec5b16a212a218a53d7e9af55",
+      "characters": 22811
     },
     {
       "path": "skills/diagram-design/references/type-nested.md",
@@ -1954,9 +1954,9 @@
     },
     {
       "path": "skills/diagram-design/scripts/export-svg.js",
-      "bytes": 3536,
-      "sha256": "880cb4de2055605cd93a52bc4de22c30e7d6d28c5489b219060dd79e19b04373",
-      "characters": 3536
+      "bytes": 3730,
+      "sha256": "cda05fb6fa8ff184a2fb15bd481c5040bfbdd2f60552f60cd68b3343d57c7493",
+      "characters": 3730
     },
     {
       "path": "skills/diagram-design/scripts/lint-diagram.py",
@@ -2266,9 +2266,9 @@
     },
     {
       "path": "skills/frontend-taste/scripts/check-html-js.py",
-      "bytes": 4161,
-      "sha256": "48d00515459c2185ad10a427226c2e7d3f73ba62c10d61c113808d61b7b80a0a",
-      "characters": 4161
+      "bytes": 4465,
+      "sha256": "5e2c7bcbed375a39c6e02548c096a98a4088a0f18123010fe0905a168b6cd969",
+      "characters": 4465
     },
     {
       "path": "skills/gauntlet-verify/CHANGES.md",

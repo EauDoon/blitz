@@ -112,7 +112,7 @@ header_band_h            = 40            # band from y=tier_y to y=tier_y+40 (i.
 header_band_extra        = 8             # 8-px extension below band, same tint
 
 # Inside the card (absolute y; tier_y = 80):
-title_text            at (tier_cx(i), 106)                # node-name role, 13px, weight 700, ink
+title_text            at (tier_cx(i), 106)                # node-name role, 12px, weight 700, ink
 bucket_text           at (tier_cx(i), 144)                # sublabel role, muted (accent on focal tier)
 
 field_x               = tier_x(i) + 16                    # 16-px left inset for field text
@@ -138,7 +138,7 @@ field rows (absolute y):
 
 The HTML namespace declaration on the `<div>` is required for SVG to render the inline content. Browsers and Playwright/Chromium render this faithfully; if your export target doesn't support `<foreignObject>` (some older Inkscape builds), hand-split long values into two `<tspan>` lines instead.
 
-Field labels use the `node-name` role at 11px in ink. Field values use the `sublabel` role in muted. Bucket and field values can be retinted by `color` override (§4).
+Field labels use the `node-name` role at 12px in ink. Field values use the `sublabel` role in muted. Bucket and field values can be retinted by `color` override (§4).
 
 ### 2.3 Tier styles
 
@@ -189,7 +189,7 @@ The cubic geometry: anchor y = 80 (tier top), control y = 0 (top of viewBox). Cu
 
 **Label inside the arc:**
 - Anchored at `(arc_peak_x(k), arc_label_y)` = `((arc_src_x + arc_dst_x) / 2, 50)`.
-- `arrow-label` role at 10px with `letter-spacing=0.08em`, uppercase. Color matches the arrow stroke.
+- `arrow-label` role at 9px with `letter-spacing=0.08em`, uppercase. Color matches the arrow stroke.
 - **No mask rect needed**: the cubic curve peaks at y ≈ 20 and the label sits at y=50, well below the curve. The label floats inside the open space *enclosed* by the arc, reading "X transforms into Y" with the arc itself as the visual frame.
 
 For shorter inter-tier gaps (if `tier_gap` is overridden below the default 16 px), the arc anchors `arc_inset` may need to shrink correspondingly to keep the arc visible.
@@ -211,8 +211,8 @@ path_w[1]   = 460
 
 Per-card content:
 - Container rect: white fill, `ink @ 0.20` stroke width 1, `rx=6`.
-- Tag chip: rect at `(path_x + 8, path_y + 6)`, `h=12 rx=2`, fill transparent, stroke `ink @ 0.30` width 0.8. Tag text centered inside in the `eyebrow` role with letter-spacing 0.08em, ink.
-- Title at `(path_x + 80, path_y + 30)`: `node-name` role at 11px, ink.
+- Tag chip: rect at `(path_x + 8, path_y + 8)`, `h=12 rx=2`, fill transparent, stroke `ink @ 0.30` width 0.8. Tag text centered inside in the `eyebrow` role with letter-spacing 0.08em, ink.
+- Title at `(path_x + 80, path_y + 30)`: `node-name` role at 12px, ink.
 - Sub at `(path_x + 80, path_y + 46)`: `sublabel` role, muted.
 
 ---
@@ -234,7 +234,7 @@ Add a new `<marker>` for each `color` override used in the diagram. Naming conve
 
 **Z-order:** promotion arcs draw **before** any tier card rect, so the cards layer on top and any arc overshoot is masked inside the cards.
 
-**Arc shape rule:** medallion promotions are always **cubic arcs over the top** of the tier strip, anchored at the **top-center** of source and target tiers; control points directly above anchors at y=0. No horizontal "through the gap" lines: the arc-over-top is what makes connector + label both clearly visible.
+**Arc shape rule:** medallion promotions are always **cubic arcs over the top** of the tier strip, anchored at the **grid-aligned top anchors** of source and target tiers, using `arc_anchor_x(i)` from §2; control points directly above anchors at y=0. No horizontal "through the gap" lines: the arc-over-top is what makes connector + label both clearly visible.
 
 ---
 
@@ -325,7 +325,7 @@ Before emitting SVG, verify **every** item:
 2. Each tier card at `(tier_x(i), 80)` size `172 × 380`, `rx=6`.
 3. Tier header band fills `(tier_x(i), 80, 172, 40)` plus an 8-px extension under the band.
 4. Exactly **one** focal tier; its incoming arc auto-styled to `focal`.
-5. Promotion arcs render as cubic Béziers over the top of adjacent tiers; anchors at `(tier_cx(i), 80)` → `(tier_cx(i+1), 80)`, controls at y=0. Label inside the arc at `(arc_peak_x, 50)`, no mask.
+5. Promotion arcs render as cubic Béziers over the top of adjacent tiers; anchors at `(arc_anchor_x(i), 80)` → `(arc_anchor_x(i+1), 80)`, controls at y=0. Label inside the arc at `(arc_peak_x, 50)`, no mask.
 6. Bottom path row only present when `len(paths) > 0`. Cards at `y=476`, height 56.
 7. Custom component colors ≤ 2 in addition to the focal tier. Never on arrows.
 8. All promotion arrows + label masks emitted **before** any tier rect (z-order rule: cards mask the line ends inside the cards).

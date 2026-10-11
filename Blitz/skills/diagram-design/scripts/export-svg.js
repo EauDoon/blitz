@@ -7,6 +7,9 @@ globalThis.blitzExportSvg = function (selector) {
   }
   const source = matches[0];
   if (!source.hasAttribute('viewBox')) throw new Error('A declared viewBox is required');
+  if (source.querySelector('use')) {
+    throw new Error('SVG use-instance inheritance is outside this export helper; use the verified PNG route');
+  }
   if (source.querySelector('script, foreignObject, animate, animateMotion, animateTransform, set')) {
     throw new Error('Active, animated or foreignObject content needs a separately verified route; use PNG for foreignObject');
   }
@@ -17,7 +20,8 @@ globalThis.blitzExportSvg = function (selector) {
     'stroke-miterlimit stroke-dasharray stroke-dashoffset opacity display visibility font-family font-size font-style ' +
     'font-weight font-stretch font-variant letter-spacing word-spacing text-anchor dominant-baseline alignment-baseline ' +
     'baseline-shift text-decoration white-space paint-order vector-effect stop-color stop-opacity flood-color flood-opacity ' +
-    'lighting-color clip-path clip-rule mask filter marker-start marker-mid marker-end transform transform-origin transform-box').split(' ');
+    'lighting-color clip-path clip-rule mask filter marker-start marker-mid marker-end transform transform-origin transform-box ' +
+    'x y width height cx cy r rx ry d').split(' ');
   const ids = new Set(originals.map(element => element.id).filter(Boolean));
   if (ids.size !== originals.filter(element => element.id).length) throw new Error('Duplicate SVG IDs');
   const reference = value => {

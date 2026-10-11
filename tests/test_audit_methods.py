@@ -43,6 +43,8 @@ class MethodRepairs(unittest.TestCase):
             ('<!-- <script>const = ;</script> --><script type="application/ld+json">{"x":1}</script><script type="importmap">{"imports":{}}</script>', "pass", 0),
             ('<script src="https://example.invalid/fixture.js"></script>', "partial", 0),
             ('<script>const = ;</script>', "fail", 1),
+            ('<script/>const broken = ;</script>', "fail", 1),
+            ('<script/>const markup="<p>";</script>', "pass", 1),
             ('<script type="module">export const = ;</script>', "fail", 1),
             ('<script>return 1;</script>', "fail", 1),
             ('<script>const okay=1;</script><script type="module">export const = ;</script>', "fail", 2),
@@ -88,6 +90,34 @@ class MethodRepairs(unittest.TestCase):
             result = []
             diagram.check_grid(bad, result)
             self.assertTrue(any(row[0] == "FAIL" for row in result), bad)
+
+    def test_medallion_checklist_anchors_follow_grid(self):
+        text = (KIT / "skills/diagram-design/references/type-medallion.md").read_text(encoding="utf-8")
+        constants = {name: int(re.search(r"^" + name + r"\s*=\s*(\d+)", text, re.M)[1])
+                     for name in ["tier_w", "tier_gap", "left_pad"]}
+        checklist = text.split("## 7. Reproducibility checklist", 1)[1].split("## 8.", 1)[0]
+        anchors = re.search(r"anchors at `\((\w+)\(i\), 80\)` → `\((\w+)\(i\+1\), 80\)`", checklist)
+        self.assertIsNotNone(anchors)
+        center = lambda i: constants["left_pad"] + i * (constants["tier_w"] + constants["tier_gap"]) + constants["tier_w"] / 2
+        functions = {"tier_cx": center, "arc_anchor_x": lambda i: 4 * (center(i) // 4)}
+        for tiers in [3, 5, 6]:
+            for i in range(tiers - 1):
+                start, end = functions[anchors[1]](i), functions[anchors[2]](i + 1)
+                result = []
+                diagram.check_grid(f'<path d="M {start},80 C {start},0 {end},0 {end},80"/>', result)
+                self.assertEqual(result, [], "The mandatory checklist must produce valid connector geometry")
+        chip = re.search(r"Tag chip: rect at `\(path_x \+ (\d+), path_y \+ (\d+)\)`", text)
+        self.assertIsNotNone(chip)
+        result = []
+        diagram.check_grid(f'<rect x="{16+int(chip[1])}" y="{476+int(chip[2])}" width="64" height="12" rx="2"/>', result)
+        self.assertEqual(result, [], "The documented path chip must follow the grid")
+        matrix = (KIT / "skills/diagram-design/references/type-dp-security-matrix.md").read_text(encoding="utf-8")
+        sizes = re.findall(r"role(?: at |, )(\d+)px", text + "\n" + matrix)
+        self.assertGreater(len(sizes), 8)
+        for size in sizes:
+            result = []
+            diagram.check_grid(f'<text font-size="{size}">Synthetic role label</text>', result)
+            self.assertEqual(result, [], "Documented role font size " + size)
 
     def test_all_shipped_diagrams_keep_their_geometry_gate(self):
         paths = sorted((KIT / "skills/diagram-design/assets").glob("*.html"))

@@ -9,6 +9,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 import zipfile
 
 from test_release import scanner, ROOT
@@ -84,6 +85,58 @@ class AuditSecurityChecks(unittest.TestCase):
             self.assertNotEqual(result.returncode, 0)
             self.assertEqual(json.loads(result.stdout)["reason"], "incomplete-shallow-history")
             self.assertEqual((shallow / ".git/shallow").read_bytes(), before)
+
+    def test_raw_parent_closure_rejects_grafts_and_overrides(self):
+        with tempfile.TemporaryDirectory(prefix="blitz-parent-closure-") as raw:
+            base = Path(raw)
+            source = base / "source"
+            source.mkdir()
+            env = {**os.environ, "GIT_AUTHOR_NAME": "Synthetic", "GIT_AUTHOR_EMAIL": "test@example.invalid",
+                   "GIT_COMMITTER_NAME": "Synthetic", "GIT_COMMITTER_EMAIL": "test@example.invalid"}
+            def git(*args):
+                return subprocess.check_output(["git", "-C", str(source), *args], env=env, stderr=subprocess.PIPE).strip()
+            git("init", "--quiet")
+            for value in ("gh" + "p_" + "x" * 36, "ordinary current text"):
+                (source / "sample.txt").write_text(value, encoding="utf-8")
+                git("add", ".")
+                git("-c", "commit.gpgsign=false", "commit", "--quiet", "-m", "Synthetic fixture")
+            head = git("rev-parse", "HEAD")
+            graft = source / ".git/info/grafts"
+            graft.write_bytes(head + b"\n")
+            self.assertEqual(scanner.scan(source)["reason"], "incomplete-parent-history")
+            worktree = base / "linked"
+            git("worktree", "add", "--quiet", "--detach", str(worktree), head.decode())
+            self.assertEqual(scanner.scan(worktree)["reason"], "incomplete-parent-history")
+            graft.unlink()  # Only the synthetic fixture's exact file.
+            custom = base / "custom-grafts"
+            custom.write_bytes(head + b"\n")
+            with patch.dict(os.environ, {"GIT_GRAFT_FILE": str(custom)}):
+                self.assertEqual(scanner.scan(source)["reason"], "incomplete-parent-history")
+                result = subprocess.run([sys.executable, "-B", str(ROOT / "tools/check_publication.py"), "--repo", str(source)], capture_output=True, text=True)
+                self.assertNotEqual(result.returncode, 0)
+                self.assertEqual(json.loads(result.stdout)["reason"], "incomplete-parent-history")
+            self.assertTrue(any(row["rule"] == "github-token" for row in scanner.scan(source)["findings"]))
+
+    def test_recognized_path_text_is_scanned_without_echoing_it(self):
+        with tempfile.TemporaryDirectory(prefix="blitz-path-text-") as raw:
+            source = Path(raw)
+            env = {**os.environ, "GIT_AUTHOR_NAME": "Synthetic", "GIT_AUTHOR_EMAIL": "test@example.invalid",
+                   "GIT_COMMITTER_NAME": "Synthetic", "GIT_COMMITTER_EMAIL": "test@example.invalid"}
+            def git(*args):
+                subprocess.run(["git", "-C", str(source), *args], env=env, check=True, capture_output=True)
+            git("init", "--quiet")
+            marker = "gh" + "p_" + "x" * 36
+            for relative in (marker + ".txt", "private/" + marker + ".txt"):
+                file = source / relative
+                file.parent.mkdir(exist_ok=True)
+                file.write_text("ordinary content", encoding="utf-8")
+            git("add", ".")
+            git("-c", "commit.gpgsign=false", "commit", "--quiet", "-m", "Synthetic fixture")
+            report = scanner.scan(source)
+            self.assertEqual(report["result"], "fail")
+            self.assertEqual({row["origin"] for row in report["findings"] if row["rule"] == "github-token"}, {"worktree", "index", "history"})
+            self.assertNotIn(marker, json.dumps(report))
+            self.assertTrue(all(row["path"].startswith("<redacted-path-sha256:") for row in report["findings"]))
 
     def test_preview_http_boundaries(self):
         node = shutil.which("node")

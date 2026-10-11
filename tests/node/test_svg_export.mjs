@@ -18,6 +18,7 @@ test('DOM export preserves nested SVG, page styles and internal dependencies', {
   await fs.writeFile(source, `<!doctype html><style>
     body{margin:0;font-family:Arial;color:#225577;--ink:#225577}
     .caption{font-size:24px;fill:var(--ink)} .icon{fill:currentColor}
+    .css-geometry{x:360px;y:30px;width:80px;height:80px;fill:#225577}
     main>svg{display:block;width:480px;height:240px}
     </style><main><svg id="diagram" viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg">
     <defs><linearGradient id="tone"><stop stop-color="#ee6633"/><stop offset="1" stop-color="#ffdd99"/></linearGradient>
@@ -25,6 +26,7 @@ test('DOM export preserves nested SVG, page styles and internal dependencies', {
     <rect width="480" height="240" fill="white"/>
     <rect x="20" y="20" width="220" height="120" fill="url(#tone)" clip-path="url(#window)"/>
     <svg x="260" y="30" width="80" height="80" viewBox="0 0 40 40"><circle class="icon" cx="20" cy="20" r="16"/></svg>
+    <rect class="css-geometry"/>
     <text class="caption" x="24" y="190">Nested icon and inherited style</text></svg>
     <svg id="sibling" viewBox="0 0 20 20"><text>EXCLUDED SIBLING</text></svg></main>`);
   const proc = spawn(chrome, ['--headless', '--disable-gpu', '--disable-background-networking', '--no-first-run',
@@ -78,6 +80,8 @@ test('DOM export preserves nested SVG, page styles and internal dependencies', {
   assert.ok(xml.includes('rgb(34, 85, 119)'));
   assert.ok(xml.includes('xmlns="http://www.w3.org/2000/svg"'));
   await evaluate('document.querySelector("#diagram").insertAdjacentHTML("beforeend", \'<use href="#missing"/>\')');
+  await assert.rejects(evaluate('blitzExportSvg("#diagram")'), /use-instance inheritance/);
+  await evaluate('document.querySelector("#diagram use").remove(); document.querySelector("#diagram rect").style.fill="url(#missing)"');
   await assert.rejects(evaluate('blitzExportSvg("#diagram")'), /missing SVG dependency/);
   const output = path.join(root, 'exported.svg'); await fs.writeFile(output, xml);
   await call('Page.navigate', {url: pathToFileURL(output).href}); await delay(200);
