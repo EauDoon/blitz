@@ -71,6 +71,8 @@ Blank inputs intentionally produce **incomplete**, exit 2. Unknown is not zero. 
 
 ## Use an assistant with explicit sources
 
+For the first practice run, request a draft only; do not send or schedule it.
+
 Give the assistant readable copies of the named kit files and only authorized records. Replace the brackets before use:
 
 ```text
@@ -81,7 +83,6 @@ Confirm which files you could actually read. Missing source bytes are a gap;
 do not reconstruct them from a filename, prior chat or an index.
 Prepare [first offer/service and smallest useful test] with evidence,
 assumptions, acceptance/stop criteria, time/cash/resource caps and an owner.
-For this first run, prepare a draft only; do not send or schedule it.
 Keep consequential commitments for the named human decision maker.
 Use an optional method only if needed; read its full instructions and required
 resources, report missing tools, and do not install skills or alter settings.
