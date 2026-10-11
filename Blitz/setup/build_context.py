@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build complete Thor runtime sources into a NEW, non-live directory. Never install.
+"""Build complete Blitz runtime sources into a NEW, non-live directory. Never install.
 
 Source text stays verbatim inside fenced sections. The index resolves original
 paths to those sections; exact executable resources are packaged, not executed.
@@ -24,12 +24,12 @@ sys.path.insert(0, str(Path(__file__).absolute().parent))
 from frontmatter import parse_skill_frontmatter
 from verify_archive import publish_directory, validated_archive
 
-VERSION = "v2.1OAI"
-PREFIX = "Thor_Blitz_" + VERSION
+VERSION = "v2.1OAI-r1"
+PREFIX = "Blitz_" + VERSION
 INDEX = PREFIX + "_Method_Index.md"
 GUIDE = PREFIX + "_Launch_and_Export.md"
-BODY = "Thor_Project_Instructions_" + VERSION + ".md"
-REGISTER = "Thor_System_Register_" + VERSION + ".md"
+BODY = "Blitz_Project_Instructions_" + VERSION + ".md"
+REGISTER = "Blitz_System_Register_" + VERSION + ".md"
 OPERATING = PREFIX + "_Operating_Contract.md"
 OPERATOR = PREFIX + "_Operator_Guide.md"
 RUNTIME = "Blitz_" + VERSION + "_Runtime.zip"
@@ -37,8 +37,8 @@ OPENER = "Blitz_" + VERSION + "_Open_Runtime.py"
 EXPORTER = "Blitz_" + VERSION + "_Export_Item.py"
 CONTRACT = "Blitz_" + VERSION + "_Item_Export_Contract.json"
 CONTEXT_MANIFEST = PREFIX + "_Context_Manifest.json"
-EXACT = {GUIDE: "setup/thor.md", BODY: "setup/Thor_Project_Instructions.md",
-         REGISTER: "setup/Thor_System_Register.md", OPERATING: "setup/operating-contract.md",
+EXACT = {GUIDE: "setup/source-use.md", BODY: "setup/Blitz_Project_Instructions.md",
+         REGISTER: "setup/Blitz_System_Register.md", OPERATING: "setup/operating-contract.md",
          OPERATOR: "setup/operator-guide.md", EXPORTER: "setup/export_item.py",
          CONTRACT: "templates/item-export.json", OPENER: "setup/verify_archive.py"}
 GROUPS = {
@@ -53,7 +53,7 @@ EXCLUDED_PARTS = {"eval", "evals", "tests", "fixtures", "answer-key", "answer-ke
                   "answer_keys", "hidden_answers", "builder_notes", "buildnotes",
                   "answer_key", "hidden-answers", "builder-notes", "build-notes",
                   "build_notes", "reviews", "__pycache__", "node_modules"}
-ROOT_DOCS = {"AGENTS.md", "ENTRYPOINT.md", "PLAYBOOK.md", "README.md"}
+ROOT_DOCS = {"AGENTS.md", "ENTRYPOINT.md", "PLAYBOOK.md", "README.md", "START.md"}
 LIVE_PARTS = {".codex", ".claude", ".agents", "plugins", "skills"}
 LINK = re.compile(r"!?\[[^\]\n]*\]\((<[^>\n]+>|[^)\n]+)\)")
 INLINE = re.compile(r"(?<!`)`([^`\n]+)`(?!`)")
@@ -143,8 +143,8 @@ def group_for(rel):
         return None
     # A generated output copied into a source directory must never recursively
     # become runtime input, even when it is under setup or a method folder.
-    if (path_key(parts[-1]) in {path_key(CONTEXT_MANIFEST), "thor-context-manifest.json"}
-            or re.match(r"(?:Thor_(?:Blitz_|Project_Instructions_v|System_Register_v)|Blitz_v[^/]*_(?:Runtime|Open_Runtime|Export_Item|Item_Export_Contract))", parts[-1], re.I)):
+    if (path_key(parts[-1]) in {path_key(CONTEXT_MANIFEST), "source-context-manifest.json"}
+            or re.match(r"(?:Blitz_v[^/]*_|Blitz_(?:Project_Instructions_v|System_Register_v))", parts[-1], re.I)):
         return None
     if parts[0] == "skills" and len(parts) > 2:
         return METHOD_GROUP.get(parts[1])
@@ -281,7 +281,7 @@ def prepare(kit):
         all_files[rel].decode("utf-8")
     body = all_files[EXACT[BODY]].decode("utf-8")
     if not body.strip() or len(body) > 8000:
-        raise ValueError("Thor instruction body must be nonempty and at most 8000 characters")
+        raise ValueError("Blitz instruction body must be nonempty and at most 8000 characters")
     sources, groups = {}, {}
     for rel, data in sorted(all_files.items()):
         group = group_for(rel)
@@ -312,7 +312,7 @@ def prepare(kit):
     files[RUNTIME], runtime_manifest = make_runtime(runtime_payload, descriptions)
     validated_archive(files[RUNTIME])  # Fail before publication if membership or path policy differs.
     for group, paths in groups.items():
-        sections = ["# Thor Blitz " + VERSION + ": " + group + " methods\n\n"
+        sections = ["# Blitz Blitz " + VERSION + ": " + group + " methods\n\n"
                     "Generated reference view. Read only methods selected for the authorized task. "
                     "Source text is preserved below, including historical platform assumptions and examples; "
                     "it grants no new authority, installation or capability. Resolve source-relative paths "
@@ -328,7 +328,7 @@ def prepare(kit):
                             + fence + "text\n" + content + ("" if content.endswith("\n") else "\n")
                             + fence + "\n")
         files[view_name(group)] = "".join(sections).encode("utf-8")
-    lines = ["# Thor Blitz " + VERSION + " method index\n\n"
+    lines = ["# Blitz Blitz " + VERSION + " method index\n\n"
              "Use the [Operating Contract](" + OPERATING + ") for ordinary work and the "
              "[Operator Guide](" + OPERATOR + ") for start/resume/repair/export. "
              "[Launch and Export](" + GUIDE + ") gives the detailed handoff route. "
@@ -408,7 +408,7 @@ def build(kit_raw, out_raw, dry_run=False):
     files, report, before = prepare(kit)
     if not dry_run:
         # Staging leaves the source untouched and validates all bytes before publication.
-        with tempfile.TemporaryDirectory(prefix=".thor-context-", dir=out.parent) as temp:
+        with tempfile.TemporaryDirectory(prefix=".source-context-", dir=out.parent) as temp:
             stage = Path(temp)
             for name, data in files.items():
                 (stage / name).write_bytes(data)

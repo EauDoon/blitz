@@ -21,7 +21,7 @@ The receipt hash protects its declarations from later change only when obtained 
 
 ## Prepare the explicit contract
 
-Stage only the permitted item files under one directory. Preserve the existing commission, records, and handoff meanings. Include `README.md` and `PROJECT_INSTRUCTIONS.md` at its root. The latter must bind ordinary-language and supporting triggers to this item, its included methods, its current authority, and its named destination. Root instructions must not depend on Thor history or global skill installation.
+Stage only the permitted item files under one directory. Preserve the existing commission, records, and handoff meanings. Include `README.md` and `PROJECT_INSTRUCTIONS.md` at its root. The latter must bind ordinary-language and supporting triggers to this item, its included methods, its current authority, and its named destination. Root instructions must not depend on Blitz history or global skill installation.
 
 Copy `templates/item-export.json` into a working contract outside the staged files. The template is a synthetic shape example, with reviews deliberately unapproved. Replace its identity, destination, file rows, and hashes using the actual reviewed item. A reviewer records the real export and dependency review before setting its two review booleans to true. These statements are provenance, not proof of legal permission or automated content review.
 
@@ -38,7 +38,7 @@ Every file row requires:
 
 For an external prerequisite, record `id`, `locator`, `required`, `status`, and `evidence`. Allowed statuses are `verified`, `unavailable`, and `not_tested`. Required prerequisites must be verified with evidence of the intended receiver's access or capability. Verified optional prerequisites also need evidence. An unavailable required prerequisite prevents building a complete export. Produce a gap report instead of marking it verified. Software runtimes, tools, and account permissions are not transferred by a ZIP. The manifest records when required external access remains part of the bundle's operating requirements.
 
-`reference_exceptions` permits only explicitly reviewed, nonrequired examples. Each entry identifies the exact `source`, raw link `target`, `kind: "nonrequired_example"`, and a meaningful `reason`. Do not use this escape hatch for missing required knowledge, private data, or an inaccessible required Thor reference. No exception can authorize exporting a prohibited file. Unknown contract fields are rejected so unreviewed metadata cannot quietly enter the manifest alongside the allowlist.
+`reference_exceptions` permits only explicitly reviewed, nonrequired examples. Each entry identifies the exact `source`, raw link `target`, `kind: "nonrequired_example"`, and a meaningful `reason`. Do not use this escape hatch for missing required knowledge, private data, or an inaccessible required Blitz reference. No exception can authorize exporting a prohibited file. Unknown contract fields are rejected so unreviewed metadata cannot quietly enter the manifest alongside the allowlist.
 
 ## Build and inspect
 

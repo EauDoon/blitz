@@ -1,18 +1,20 @@
-# Setup on ChatGPT / OpenAI, v2.1OAI
+# Setup on ChatGPT / OpenAI, v2.1OAI-r1
 
-For Thor, use [the final operating contract](operating-contract.md), [the Thor adapter](thor.md) and the complete source generator described in [runtime preparation](runtime.md). The account-role comparison below remains guidance for separately authorized host adaptation, not a requirement to install global skills for Thor.
+For Blitz, use [the final operating contract](operating-contract.md), [the Blitz adapter](source-use.md) and the complete source generator described in [runtime preparation](runtime.md). The account-role comparison below remains guidance for separately authorized host adaptation, not a requirement to install global skills for Blitz.
 
 Use this guide when OpenAI is the canonical host, or a second host works from an allowlisted snapshot. The original 45-minute setup estimate is a planning assumption, not a measured OAI result. Preparation, checks, installation and adoption are separate decisions.
 
-## Thor source-based route
+## Blitz source-based route
 
-For Thor, follow [setup/thor.md](thor.md). Keep Work, current memory settings, existing outside skills and global instructions unchanged. Apply only an explicitly authorized Thor source/instruction write set. The packaged `setup/Thor_Project_Instructions.md` is the exact instruction body; verify its saved readback after authorized application. Its compact intent rules bootstrap ordinary-language requests and point to the directly readable, versioned guide. Do not depend on opening the ZIP before routing can start.
+For Blitz, follow [setup/source-use.md](source-use.md). Keep Work, current memory settings, existing outside skills and global instructions unchanged. Apply only an explicitly authorized Blitz source/instruction write set. The packaged `setup/Blitz_Project_Instructions.md` is the exact instruction body; verify its saved readback after authorized application. Its compact intent rules bootstrap ordinary-language requests and point to the directly readable, versioned guide. Do not depend on opening the ZIP before routing can start.
 
 Read the selected method's actual instructions and required resources, then use observed tools. This route requires no account-wide Blitz installation or broad staging of the 25 skills. Method names, generated source views and uploaded archives do not prove native loading or live execution. Record directly readable content, executable dependencies and actual routing separately. The native installation workflow below applies only when separately requested for a named host.
 
 For commissioned item exports, reuse the existing records, commission and handoff. The item carries its own scoped `PROJECT_INSTRUCTIONS.md`, applicable automatic triggers, pinned methods and complete required dependencies. The source project remains canonical unless an explicit transfer changes the sole writer. Verified persistence is required for continuation: if direct project-file writes are unavailable, return a versioned state bundle and name the required save/upload step. A chat link or memory recall does not establish durable state or receiver access.
 
 ## Preserve host adaptations
+
+A reference stage now carries one exact master snapshot at `_blitz-source/Blitz` alongside the 24 mapped candidates. Keep the stage together so transitive context, resources and notices resolve. The snapshot is source comparison material, including builder tests/examples; it is not installed runtime or a second maintained source. Runtime compilation continues to exclude builder material. Read `STAGE.md` and verify `stage-report.json`.
 
 The portable kit supplies methods, not authority to replace current skills. Default sequence: inventory, compare, merge necessary changes, isolated checks, separately authorized installation. Keep a recoverable baseline and preserve each host-adapted skill's supported save/install route. A current adapted skill can differ materially from these Claude-derived source copies, including review roles and tool handling.
 

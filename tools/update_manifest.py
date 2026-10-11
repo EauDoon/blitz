@@ -9,7 +9,7 @@ sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
 KIT = ROOT / 'Blitz'
 sys.path.insert(0, str(KIT / 'setup'))
-from build_thor_context import inventory
+from build_context import inventory
 from verify_archive import validate_manifest
 
 

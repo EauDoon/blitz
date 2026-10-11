@@ -1,6 +1,6 @@
 # Launch and export evaluation contract
 
-Status: case definitions and runnable code checks are not model, Thor, or receiving-host passes.
+Status: case definitions and runnable code checks are not model, Blitz, or receiving-host passes.
 
 Run `python evals/test_item_export.py --report PATH.json` with a verified Python interpreter. This uses synthetic temporary files and the standard library. It checks exact allowlisted payloads, declared source revisions, hashes, required entry files, nested references, unsafe paths, case collisions, private material, incomplete prerequisites, tampered manifests, and no-overwrite publication. Per-file revisions are pinned source revisions and may differ from the item's revision. Their semantic correctness still needs source review. A filesystem symlink check that the host cannot create is BLOCKED; ZIP symlink rejection and an injected reparse-attribute guard check are distinct evidence, not substitutes for a native reparse test.
 
@@ -10,4 +10,4 @@ Executors receive the real candidate instruction body and directly readable meth
 
 Use the unnamed finance commission as the sample-item producer. Independently verify its populated document, editable budget, source revisions, and sufficient continuation state before export. Run the item exporter, then give only that verified item package and declared prerequisites to a fresh controlled receiver. Ask it to perform a bounded revision and save sufficient state. A second fresh receiver must resume from that saved state. Keep the grader's expected arithmetic outside both receiving inputs.
 
-Local controlled agents cannot establish actual Thor Work routing, destination application, global configuration isolation, native skill loading, or adoption. Record those as NOT TESTED or NOT APPLIED until their named host checks occur. Test-only fixtures and hidden answers must never be included in the item export.
+Local controlled agents cannot establish actual Blitz Work routing, destination application, global configuration isolation, native skill loading, or adoption. Record those as NOT TESTED or NOT APPLIED until their named host checks occur. Test-only fixtures and hidden answers must never be included in the item export.

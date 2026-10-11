@@ -87,7 +87,7 @@ viewBox_h        = header_h + n_lanes * lane_h + legend_h            # 4 lanes, 
 
 # Header strip (top)
 header_y         = 0                                                  # ends at header_h = 36
-step_chip_y      = 6                                                  # 16-px chip at y=6..22
+step_chip_y      = 4                                                  # 16-px chip at y=4..20
 step_label_y     = 29                                                 # text line below chip
 
 # Lane positions
@@ -99,9 +99,9 @@ lane_label_x     = label_col_w / 2                                    # 70
 step_cx(j)       = label_col_w + j * step_slot_w + step_slot_w/2      # 196, 308, 420, 532, 644
 
 # Nodes
-node_w           = 100
+node_w           = 104
 node_h           = 64
-node_x(j)        = step_cx(j) - node_w/2                              # 146, 258, 370, 482, 594
+node_x(j)        = step_cx(j) - node_w/2                              # 144, 256, 368, 480, 592
 node_y(k)        = lane_y_top(k) + 8                                  # 44, 124, 204, 284
 
 # Legend strip (bottom)
@@ -123,12 +123,12 @@ legend_row_y     = [legend_y_top + 16, legend_y_top + 37, legend_y_top + 59]
 Per step `j`:
 
 ```
-chip_x(j)        = step_cx(j) - 16        # 16×16 chip
-chip_y           = 6
+chip_x(j)        = step_cx(j) - 16        # 32×16 chip
+chip_y           = 4
 chip_w           = 32
 chip_h           = 16
 chip_rx          = 8                       # pill-shaped
-number_anchor    = (step_cx(j), 14)
+number_anchor    = (step_cx(j), 12)
 label_anchor     = (step_cx(j), 29)
 ```
 
@@ -144,16 +144,16 @@ Two-line `eyebrow` role label, both lines uppercase, fill muted:
 
 Per-lane `color` override (§4): replaces the label fill with `C` and the lane tint with `rgba(C, 0.04)` (instead of the default `ink @ 0.018`).
 
-### 2.4 Node content layout (inside the 100×64 rect)
+### 2.4 Node content layout (inside the 104×64 rect)
 
 ```
-role_chip          rect 18×10 at (node_x+4, node_y+4),  rx=3
-role_chip_text     centered at (node_x+13, node_y+9), eyebrow role, font-size=6, weight=600
+role_chip          rect 16×8 at (node_x+4, node_y+4),  rx=4
+role_chip_text     centered at (node_x+12, node_y+10), eyebrow role, font-size=7, weight=600
 title              centered at (step_cx(j), node_y+23), node-name role, font-size=9
-sub                centered at (step_cx(j), node_y+35), sublabel role, font-size=6.5, muted
-tool               centered at (step_cx(j), node_y+47), sublabel role, font-size=6.5, soft
-data chip IN       rect 16×8 at (node_x+4,   node_y+54), rx=3      # payload type entering the node
-data chip OUT      rect 16×8 at (node_x+80,  node_y+54), rx=3      # payload type leaving the node
+sub                centered at (step_cx(j), node_y+35), sublabel role, font-size=7, muted
+tool               centered at (step_cx(j), node_y+47), sublabel role, font-size=7, soft
+data chip IN       rect 16×8 at (node_x+4,   node_y+52), rx=4      # payload type entering the node
+data chip OUT      rect 16×8 at (node_x+84,  node_y+52), rx=4      # payload type leaving the node
 ```
 
 Empty cells (no node entry) render **nothing**. No placeholder rect, no role chip, no label: the cell is invisible.
@@ -188,9 +188,9 @@ Four styles, bound to topology. Connectors are drawn **before** all node rects (
 
 - **Single-bend routing:** horizontal-first, then vertical. Exit a node from the **right edge**; enter from the **left** (same-lane horizontal) or **top/bottom** (cross-lane vertical).
 - **No diagonals.** Bends use an 8-px Q-bezier corner.
-- **Same-step cross-lane (vertical)**: line directly between `(step_cx(j), lane_y_top(k_to)−12)` and `(step_cx(j), lane_y_top(k_to))`. Used for admin → engineers triggers under the same step.
-- **Cross-lane cross-step (focal)**: exit right, run horizontal past the source node's right edge to a corridor x just before the target's step, then drop vertically.
-- **Labels:** only the `accent` arrow gets a label. Use a paper-filled rect mask (opaque) 6 px behind the text. Other arrows are unlabelled.
+- **Same-step cross-lane (vertical)**: line between the source bottom edge `(step_cx(j), node_y(k_from)+node_h)` and target top edge `(step_cx(j), node_y(k_to))` for downward flow; reverse top/bottom for upward flow. Used for admin → engineers triggers under the same step.
+- **Cross-lane cross-step (focal)**: exit right, run horizontally from `(node_x(j_from)+node_w, node_y(k_from)+node_h/2)` to the target center x, then vertically to the target top edge `(step_cx(j_to), node_y(k_to))` for downward flow (bottom edge for upward flow). Keep the corridor clear; round an elbow only when both segments have at least 8 px clearance. Same-lane arrows join the source right edge to the target left edge at node mid-height.
+- **Labels:** only the `accent` arrow gets a label. Use a paper-filled rect mask (opaque) at least 8 px around the text; snap the mask rectangle to the 4-px grid. Other arrows are unlabelled.
 - **Z-order:** all arrows emitted before any node rect (the rect fills mask the line ends inside the node).
 
 ---
@@ -286,7 +286,7 @@ Before emitting SVG, verify **every** item:
 
 1. `viewBox = "0 0 {viewBox_w} {viewBox_h}"` derived from `n_steps` and `n_lanes` via §2.
 2. Header strip at `y=0..36`; legend strip at `y=legend_y_top..viewBox_h` (`legend_y_top = 36 + n_lanes * 80`).
-3. Every node at `(step_cx(j) - 50, lane_y_top(k) + 8)` size `100×64`.
+3. Every node at `(step_cx(j) - 52, lane_y_top(k) + 8)` size `104×64`.
 4. Empty cells render nothing: no placeholder rect, no text.
 5. Exactly **one** focal step (`steps[j].focal: true`).
 6. Exactly **one** focal node (`nodes[i].focal: true`).
@@ -301,10 +301,10 @@ Before emitting SVG, verify **every** item:
 
 ## 8. Data-type chips reference (input + output)
 
-Small `16×8 rx=3` badges at the bottom of each node, one for input and one for output. Position is **non-negotiable**:
+Small `16×8 rx=4` badges at the bottom of each node, one for input and one for output. Position is **non-negotiable**:
 
-- **Input chip** at `(node_x+4, node_y+54)`: bottom-**left** of the node. Represents the payload format *entering* the node from upstream.
-- **Output chip** at `(node_x+80, node_y+54)`: bottom-**right** of the node. Represents the payload format *leaving* the node toward downstream.
+- **Input chip** at `(node_x+4, node_y+52)`: bottom-**left** of the node. Represents the payload format *entering* the node from upstream.
+- **Output chip** at `(node_x+84, node_y+52)`: bottom-**right** of the node. Represents the payload format *leaving* the node toward downstream.
 
 Either chip may be omitted (e.g., a sink node has only an input chip; a source-only node has only an output chip). Reading the diagram becomes a payload-transformation trace: scan a row, read each node's input → output, and you see exactly what shape the data takes at each hand-off.
 
@@ -318,7 +318,7 @@ Either chip may be omitted (e.g., a sink node has only an input chip; a source-o
 | `FL` | `#9c6b50` (sienna) | File / Report / Export |
 | `LS` | `#4a7c59` (forest) | Live stream / Event |
 
-Text inside chip: white, `eyebrow` role at 5px, weight 700.
+Text inside chip: white, `eyebrow` role at 7px, weight 700.
 
 Data-type chip colors are a **separate semantic axis** from the per-node color override (§4). The chip colors describe *payload format*; the node color override describes *concern type* (governance, observability, …). Don't conflate them: a node can have both an `out: TB` amber chip and a rust-red border color simultaneously.
 
@@ -368,6 +368,6 @@ Above 4 lanes or 6 steps: split into two diagrams (e.g., ingestion pipeline / an
 
 ## 12. Examples
 
-- `assets/example-data-flow.html`: minimal light (the platform, 4-role × 5-step: Admin, Engineers, Scientists, Consumers). Gallery default.
+- `assets/example-data-flow.html`: minimal light (a separate 3-role × 5-step example: Engineers, Scientists, Analysts). Gallery default.
 - `assets/example-data-flow-dark.html`: same, dark skin.
 - `assets/example-data-flow-full.html`: same, editorial-card frame.

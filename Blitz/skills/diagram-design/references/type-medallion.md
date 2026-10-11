@@ -85,15 +85,16 @@ tier_x(i)        = left_pad + i * (tier_w + tier_gap)    # 16, 204, 392, 580, 76
 tier_y           = arc_band_h                            # 80: tier tops sit just below the arc band
 tier_cx(i)       = tier_x(i) + tier_w/2                  # 102, 290, 478, 666, 854
 
-# Promotion arcs (between adjacent tiers: over the top, anchored at tier top-centers)
-arc_src_x(i)     = tier_cx(i)                            # top-center of tier i      (102, 290, 478, 666)
-arc_dst_x(i)     = tier_cx(i+1)                          # top-center of tier i+1    (290, 478, 666, 854)
-arc_peak_x(i)    = (arc_src_x(i) + arc_dst_x(i)) / 2     # midpoint                  (196, 384, 572, 760)
+# Promotion arcs: snap top anchors to the grid (2 px left of center for 172-px cards)
+arc_anchor_x(i) = 4 * floor(tier_cx(i) / 4)            # 100, 288, 476, 664, 852
+arc_src_x(i)     = arc_anchor_x(i)                            # top anchor of tier i      (100, 288, 476, 664)
+arc_dst_x(i)     = arc_anchor_x(i+1)                          # top anchor of tier i+1    (288, 476, 664, 852)
+arc_peak_x(i)    = (arc_src_x(i) + arc_dst_x(i)) / 2     # midpoint                  (194, 382, 570, 758)
 arc_label_y      = 50                                    # label sits inside the arc, 30px below tier top
 
 # Path row (bottom)
 path_y           = tier_y + tier_h + path_gap            # 476
-path_w           = (viewBox_w - 2*left_pad - path_gap) / 2 if len(paths) == 2 else (viewBox_w - 2*left_pad)
+path_w           = 4 * floor((viewBox_w - 2*left_pad - path_gap) / 8) if len(paths) == 2 else (viewBox_w - 2*left_pad)
                                                           # Canonical 5-tier shape uses path_w=460 explicitly (see §2.5)
 ```
 
@@ -108,7 +109,7 @@ Each tier renders as a rounded-rect card with a tinted header band, a centered b
 ```
 tier_x(i),  tier_y       =  card top-left  (tier_y = 80, just below the arc band)
 header_band_h            = 40            # band from y=tier_y to y=tier_y+40 (i.e., 80..120)
-header_band_extra        = 10            # 10-px extension below band, same tint
+header_band_extra        = 8             # 8-px extension below band, same tint
 
 # Inside the card (absolute y; tier_y = 80):
 title_text            at (tier_cx(i), 106)                # node-name role, 13px, weight 700, ink
@@ -117,14 +118,14 @@ bucket_text           at (tier_cx(i), 144)                # sublabel role, muted
 field_x               = tier_x(i) + 16                    # 16-px left inset for field text
 field_w               = 140                               # 172-px tier_w minus two 16-px insets
 field rows (absolute y):
-  tool_label  at 180,    tool_value  at 186 (foreignObject, height 24)
-  format_label at 220,   format_value at 226 (foreignObject, height 24)
-  writer_label at 260,   writer_value at 266 (foreignObject, height 24)
+  tool_label  at 180,    tool_value  at 184 (foreignObject, height 24)
+  format_label at 220,   format_value at 224 (foreignObject, height 24)
+  writer_label at 260,   writer_value at 264 (foreignObject, height 24)
   # gap (open whitespace below writer row, above the example section)
   example_label_text at 360,  example_line_0 at 374,  example_line_1 at 388
 ```
 
-**Field-value wrapping rule:** field values (tool / format / writer) render inside an SVG `<foreignObject>` with an HTML `<div>` so they auto-wrap when text exceeds 140 px. Each `foreignObject` is 140 wide × 24 tall (fits 2 lines in the `sublabel` role at 1.25 line-height). The 26-px gap to the next field's label absorbs the second line cleanly.
+**Field-value wrapping rule:** field values (tool / format / writer) render inside an SVG `<foreignObject>` with an HTML `<div>` so they auto-wrap when text exceeds 140 px. Each `foreignObject` is 140 wide × 24 tall (fits 2 lines in the `sublabel` role at 1.25 line-height). The 12-px gap to the next field's label absorbs the second line cleanly.
 
 ```svg
 <foreignObject x="{field_x}" y="{value_top}" width="140" height="24">
@@ -156,24 +157,24 @@ Four canonical styles, picked per tier via `tiers[i].style`. Default mapping if 
 
 ### 2.4 Promotion arcs (over the top of the tiers)
 
-Each promotion is a **cubic Bézier arc** anchored at the **top-center** of each adjacent tier: `(tier_cx(i), tier_y)` to `(tier_cx(i+1), tier_y)`. The arc rises into the 80-px `arc_band` above the cards, peaking at y ≈ 20. Both the connector and its label remain fully visible: no paper masks, no overlap with card content.
+Each promotion is a **cubic Bézier arc** anchored at the **grid-aligned top anchor** of each adjacent tier: `(arc_anchor_x(i), tier_y)` to `(arc_anchor_x(i+1), tier_y)`. Text stays at the true card center; these connectors land 2 px left of it. The arc rises into the 80-px `arc_band` above the cards, peaking at y ≈ 20. Both the connector and its label remain fully visible: no paper masks, no overlap with card content.
 
 ```svg
-<path d="M {tier_cx(i)},{tier_y} C {tier_cx(i)},0 {tier_cx(i+1)},0 {tier_cx(i+1)},{tier_y}"
+<path d="M {arc_anchor_x(i)},{tier_y} C {arc_anchor_x(i)},0 {arc_anchor_x(i+1)},0 {arc_anchor_x(i+1)},{tier_y}"
       fill="none" stroke="…" stroke-width="…" marker-end="…"/>
 ```
 
-Concrete for the canonical 5-tier shape (`tier_y = 80`, tier centers at x = 102, 290, 478, 666, 854):
-- 0→1: `M 102,80 C 102,0 290,0 290,80`
-- 1→2: `M 290,80 C 290,0 478,0 478,80`
-- 2→3: `M 478,80 C 478,0 666,0 666,80`  (focal: accent)
-- 3→4: `M 666,80 C 666,0 854,0 854,80`  (lifecycle: dashed)
+Concrete for the canonical 5-tier shape (`tier_y = 80`, grid-aligned anchors at x = 100, 288, 476, 664, 852):
+- 0→1: `M 100,80 C 100,0 288,0 288,80`
+- 1→2: `M 288,80 C 288,0 476,0 476,80`
+- 2→3: `M 476,80 C 476,0 664,0 664,80`  (focal: accent)
+- 3→4: `M 664,80 C 664,0 852,0 852,80`  (lifecycle: dashed)
 
 The cubic geometry: anchor y = 80 (tier top), control y = 0 (top of viewBox). Curve peak at t=0.5 sits at y ≈ 20 (computed from `0.125·80 + 0.375·0 + 0.375·0 + 0.125·80 = 20`). Each arc spans one full tier-stride (188 px on the canonical layout), giving the connector a clearly visible vertical excursion.
 
-**Marker orientation:** `marker-end` with `orient="auto"` rotates the arrow to match the path tangent at the endpoint. The control point sits directly above the anchor so the tangent at landing is straight **down**: the arrowhead enters the top-center of tier *i+1* cleanly, pointing into the header band.
+**Marker orientation:** `marker-end` with `orient="auto"` rotates the arrow to match the path tangent at the endpoint. The control point sits directly above the anchor so the tangent at landing is straight **down**: the arrowhead enters the grid-aligned top anchor of tier *i+1* cleanly, pointing into the header band.
 
-**Chained anchors:** consecutive arcs share their meeting points (arc 0→1 ends at the same `(tier_cx(1), 80)` where arc 1→2 begins). Visually each tier's top-center acts as a "joint": data arrives at the top of the card, gets transformed inside, and leaves out the top toward the next tier. The arrow-head plunge plus the next arc's straight-up emergence read as a single payload-handoff motion.
+**Chained anchors:** consecutive arcs share their meeting points (arc 0→1 ends at the same `(arc_anchor_x(1), 80)` where arc 1→2 begins). Visually each tier's top anchor acts as a "joint": data arrives at the top of the card, gets transformed inside, and leaves out the top toward the next tier. The arrow-head plunge plus the next arc's straight-up emergence read as a single payload-handoff motion.
 
 | `style` | Stroke | Width | Dash | Marker |
 |---|---|---|---|---|
@@ -206,7 +207,7 @@ path_x[1]   = 16 + 460 + 16 = 492
 path_w[1]   = 460
 ```
 
-(Both paths land 460-wide despite the viewBox being 1040: the right pad is taken from the card's tier strip, not the path strip. Keep `path_w=460` for the canonical 5-tier shape. For other tier counts, derive `path_w = (viewBox_w - 2*left_pad - path_gap) / 2`.)
+(Both paths land 460-wide despite the viewBox being 1040: the right pad is taken from the card's tier strip, not the path strip. Keep `path_w=460` for the canonical 5-tier shape. For other tier counts, derive `path_w = 4 * floor((viewBox_w - 2*left_pad - path_gap) / 8)`.)
 
 Per-card content:
 - Container rect: white fill, `ink @ 0.20` stroke width 1, `rx=6`.
@@ -322,7 +323,7 @@ Before emitting SVG, verify **every** item:
 
 1. `viewBox = "0 0 {viewBox_w} {viewBox_h}"` derived via §2 (5 tiers + 2 paths → 1040 × 548).
 2. Each tier card at `(tier_x(i), 80)` size `172 × 380`, `rx=6`.
-3. Tier header band fills `(tier_x(i), 80, 172, 40)` plus a 10-px extension under the band.
+3. Tier header band fills `(tier_x(i), 80, 172, 40)` plus an 8-px extension under the band.
 4. Exactly **one** focal tier; its incoming arc auto-styled to `focal`.
 5. Promotion arcs render as cubic Béziers over the top of adjacent tiers; anchors at `(tier_cx(i), 80)` → `(tier_cx(i+1), 80)`, controls at y=0. Label inside the arc at `(arc_peak_x, 50)`, no mask.
 6. Bottom path row only present when `len(paths) > 0`. Cards at `y=476`, height 56.

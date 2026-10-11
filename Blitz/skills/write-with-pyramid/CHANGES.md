@@ -1,5 +1,9 @@
 # write-with-pyramid adaptation record
 
+## v2.1OAI-r1, 11-10-2026
+
+Modified by EauDoon. Replaced invented evidence in the fictional before/after example with the same supplied facts and explicit evidence gaps.
+
 ## v2.1OAI, 11-10-2026
 
 Adapted from the corresponding method in Blitz v2OAI. The method identity is retained. Personal profiles, account observations, private-case narratives and internal operating history were removed or replaced with configurable guidance and synthetic examples. The untouched v2OAI source remains a separately preserved baseline, outside this repository.

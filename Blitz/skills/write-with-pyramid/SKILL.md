@@ -123,23 +123,23 @@ A generic CEO simulation grades tone. A named-reader simulation grades whether t
 
 ## Worked example
 
-**Before.** 118 words, ask on line 9, no date.
+This fictional example supplies only the facts in the source paragraph. Missing costs, reference outcomes and deadlines remain missing.
+
+**Before.** The recommendation follows the evaluation history.
 
 > Hey Jamie, hope you had a good week. Wanted to circle back on the vendor conversation. We have been evaluating three options for the new CRM and I went deep on each over the past two weeks. Vendor A is cheapest but integrations are limited. Vendor B has better features but higher pricing. Vendor C sits in the middle. I spoke to references at each, looked at pricing carefully, and mapped our must-haves. Based on all of that I think we should probably go with Vendor B, but wanted to run it by you first.
 
-**After.** 71 words, ask on line 1, dated, three MECE points, proof attached.
+**After.** The recommendation comes first, with the same evidence limits.
 
-> Subject: CRM recommendation, Vendor B, decision needed by Fri
+> Subject: CRM recommendation: Vendor B
 >
-> Recommend Vendor B. Three reasons.
+> Jamie, I recommend Vendor B for the new CRM. Do you agree with this choice?
 >
-> One. Only option with native Salesforce and Slack integrations, which sales uses daily.
-> Two. Costs $4,200 more than Vendor A over three years, saves an estimated 12 hours per week across the team.
-> Three. All four reference customers at our scale renewed after year one.
+> Vendor B has better features and higher pricing. Vendor A is cheapest but has limited integrations; Vendor C sits in the middle.
 >
-> Decision by Friday to hold the launch date. Full analysis attached.
+> Over the past two weeks I evaluated all three, spoke to references, reviewed pricing and mapped our must-haves. The source does not quantify the tradeoff or set a decision deadline.
 
-The information is identical. The second one gets approved because the reader knows what they are deciding before they decide whether to keep reading.
+The rewrite makes the recommendation and tradeoff easier to find. It adds no vendor capabilities, savings, reference outcomes, deadline or attachment. The evidence is still too thin to establish that Vendor B is the best choice; structure alone does not earn approval.
 
 ## Composition
 

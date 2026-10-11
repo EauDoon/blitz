@@ -10,14 +10,17 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import posixpath
 import re
 import shutil
 import sys
 import tempfile
+from urllib.parse import quote, unquote, urlsplit
 
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from frontmatter import parse_skill_frontmatter
+from build_context import inventory as source_inventory
 
 KIT = Path(__file__).resolve().parents[1]
 ADAPTER_REFERENCE = "references/blitz-host-adapter.md"
@@ -26,6 +29,33 @@ ADAPTER_HEADER = ("## Host capability adapter\n\n"
                   "instructions. Preserve the host-adapted skill's supported save/install route. "
                   "This reference candidate grants no access, replacement or installation authority.\n\n")
 SAFE_NAME = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
+SOURCE_ROOT = "_blitz-source/Blitz"
+MARKDOWN_LINK = re.compile(r"(\[[^\]\n]*\]\()(<[^>\n]+>|[^)\n]+)(\))")
+
+
+def rewrite_context_links(text, source, destination, skill_root=None):
+    """Keep method-local links; route other kit references to one exact snapshot."""
+    def rewrite(match):
+        raw = match.group(2)
+        angled = raw.startswith("<")
+        pieces = re.split(r'(?=\s+["\'])', raw, maxsplit=1)
+        target = raw[1:-1] if angled else pieces[0]
+        suffix = "" if angled or len(pieces) == 1 else pieces[1]
+        parsed = urlsplit(target)
+        if parsed.scheme or parsed.netloc or not parsed.path:
+            return match.group(0)
+        resolved = (source.parent / unquote(parsed.path)).resolve()
+        if resolved != KIT and KIT not in resolved.parents:
+            raise ValueError("local reference escapes source kit")
+        if not resolved.exists():
+            raise ValueError("missing local source reference in " + source.relative_to(KIT).as_posix())
+        if skill_root and (resolved == skill_root or skill_root in resolved.parents):
+            return match.group(0)
+        mapped = SOURCE_ROOT + "/" + resolved.relative_to(KIT).as_posix()
+        path = quote(posixpath.relpath(mapped, posixpath.dirname(destination)), safe="/")
+        path += ("?" + parsed.query if parsed.query else "") + ("#" + parsed.fragment if parsed.fragment else "")
+        return match.group(1) + ("<" + path + ">" if angled else path + suffix) + match.group(3)
+    return MARKDOWN_LINK.sub(rewrite, text)
 
 
 def validate_output(raw):
@@ -113,6 +143,7 @@ def transformed_files(src, target, renames, adapter):
             t = b.decode("utf-8")
             for old, new in renames.items():
                 t = patterns[old].sub(new, t)
+            t = rewrite_context_links(t, p, target + "/" + rel, src)
             if rel == "SKILL.md":
                 metadata = parse_skill_frontmatter(t)
                 if metadata["name"] not in {src.name, target}:
@@ -129,14 +160,31 @@ def transformed_files(src, target, renames, adapter):
         files[rel] = b
     if "SKILL.md" not in files or "agents/openai.yaml" not in files:
         raise ValueError(src.name + ": SKILL.md or OpenAI metadata missing")
-    files[ADAPTER_REFERENCE] = adapter
+    files[ADAPTER_REFERENCE] = rewrite_context_links(
+        adapter.decode("utf-8"), KIT / "setup/host-adapters/openai.md",
+        target + "/" + ADAPTER_REFERENCE).encode("utf-8")
     return files
 
 
 def prepare(inventory, dry_run):
     renames, rows = load_plan(inventory)
     adapter = (KIT / "setup/host-adapters/openai.md").read_bytes()
-    all_files = {}
+    # One unchanged master-source snapshot closes transitive guides, scripts,
+    # assets and notice references. This is comparison material, not an installed
+    # runtime. Never maintain or edit it as a second canonical source.
+    original_files = source_inventory(KIT)
+    all_files = {SOURCE_ROOT + "/" + rel: data for rel, data in original_files.items()}
+    all_files["STAGE.md"] = ("# Blitz reference stage\n\n"
+        "The 24 mapped method directories are comparison candidates, not installations. "
+        "Keep this whole stage together: their context links use the single unchanged "
+        "master snapshot in `_blitz-source/Blitz`. Its tests/examples are source review "
+        "material, never runtime evidence or an instruction to execute them. "
+        "The Google Slides role is still an intentional native-capability skip.\n\n"
+        "Use the source master for general setup. Compare necessary method changes with "
+        "the current host adaptation, preserve notices and obtain separate installation "
+        "authority. Do not install the snapshot or maintain either generated copy. "
+        "`stage-report.json` pins all emitted files; the snapshot manifest describes "
+        "only that unchanged source kit. No native load or routing is proved here.\n").encode("utf-8")
     for row in rows:
         if row["historical_name_map_status"] == "host_tool":
             continue
@@ -150,6 +198,8 @@ def prepare(inventory, dry_run):
     report = {"schema_version": 1, "mode": "dry_run" if dry_run else "staged",
               "version": manifest_version, "status": "reference_candidates_only",
               "installation_performed": False,
+              "source_snapshot": {"path": SOURCE_ROOT, "files": len(original_files),
+                                  "purpose": "unchanged master source for transitive context and comparison; not an installation"},
               "source_manifest_sha256": hashlib.sha256(manifest_bytes).hexdigest(),
               "adapter_sha256": hashlib.sha256(adapter).hexdigest(),
               "inventory_sha256": hashlib.sha256(json.dumps(inventory, sort_keys=True).encode()).hexdigest() if inventory else None,

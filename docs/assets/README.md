@@ -4,7 +4,7 @@ Original editorial artwork for Blitz, a **Minimum Viable Company kit**. The exac
 
 > Listen, collect, sprint.<br>Reduce cycle time.
 
-The 11 October 2026 revision replaces the earlier small-marker animation with a visible transformation of distinct inputs into collected evidence and a bounded output. Warm paper, charcoal type and a restrained orange accent give the reusable kit a technical field-guide treatment. The composition uses one responsive hero; its descriptor is 16 pixels and its tagline is about 23 pixels when the image is displayed at 320 pixels wide.
+The 11 October 2026 revision reduces oversized display type while retaining the visible transformation of distinct inputs into collected evidence and a bounded output. Warm paper, charcoal type and a restrained orange accent give the reusable kit a technical field-guide treatment. The composition uses one responsive hero; its descriptor is 16 pixels and its tagline is about 18.7 pixels when the image is displayed at 320 pixels wide.
 
 | File | Canvas | Purpose |
 |---|---|---|
@@ -20,7 +20,7 @@ The 11 October 2026 revision replaces the earlier small-marker animation with a 
 
 The hero's three distinct fragments gather into a common evidence record, pause, and change dimensions to fit a bounded work packet. The evidence stays visible when the output is formed. Input, evidence and output labels remain fixed throughout. The orange corner marks describe a scope boundary; they are not an approval seal. The picture does not claim that demand is validated, a task is accepted, a company is demonstrated, or an action is authorized.
 
-The workflow summarizes the [company profile](../../Blitz/profiles/company.md): Frame bounds the offer and next test; Test observes customer and payer behavior; Deliver verifies the result and acceptance; Operate reconciles cash and prepares the next cycle. The four gates feed an owner check of evidence and existing authority, followed by a recorded Proceed, Hold or Walk decision for the specific next commitment. New evidence or revised scope returns to the affected gate. The shared gate group is deliberate: reading order is not automatic progression or permission. The [repository README](../../README.md) supplies the full text equivalent, including the distinctions between preparation, demonstrated MVC and repetition.
+The workflow summarizes the [company profile](../../Blitz/profiles/company.md): Frame bounds the work and next test; Test observes users and decision makers; Deliver verifies the result and acceptance; Operate reconciles resources and prepares the next cycle. Companies reconcile actual cash, exchange and obligations. Departments reconcile authorized budget, actual spend/resource use and obligations; an allocation is not revenue. The four gates feed an owner check of evidence and existing authority, followed by a recorded Proceed, Hold or Walk decision for the specific next commitment. New evidence or revised scope returns to the affected gate. The shared gate group is deliberate: reading order is not automatic progression or permission. The [repository README](../../README.md) supplies the full text equivalent, including the distinctions between preparation, demonstrated MVC and repetition.
 
 The tagline is an operating intention. It does not replace the evidence gates or promise a measured reduction in cycle time.
 
@@ -57,21 +57,23 @@ The reviewed build used Python 3.12.10, Pillow 12.0.0, and existing Windows Sego
 
 | File | Bytes | SHA-256 |
 |---|---:|---|
-| `blitz-motion.gif` | 183,052 | `6fa3b6b19fe0d2c89168870306b9cc1cf4b067648f0e9476d321532e62ee1116` |
-| `blitz-motion-poster.svg` | 4,201 | `8e34f460b1b89515d11c438d1e8cc5159138c51d194a14a6bfd54192e7b29b41` |
-| `workflow.svg` | 8,569 | `65984550df88a9afa4f9900b59120b6203d089825b508fe88675622a6c3e0ff3` |
-| `workflow-mobile.svg` | 7,358 | `a522b2baa40540c63c46d4442de894a16f86df9f702e5e8362b9517665e86c4e` |
-| `blitz-banner-light.svg` | 4,201 | `8e34f460b1b89515d11c438d1e8cc5159138c51d194a14a6bfd54192e7b29b41` |
-| `blitz-banner-dark.svg` | 4,201 | `b6e686aeb8bd77fee1bb39d6567de067f0f6aeb102301578cdab63a16b8add77` |
+| `blitz-motion.gif` | 178,196 | `cf2cac59867c7a9d72e3f26eaff1b84b9006d560a483b6bd9dc8bc8294e9e5a9` |
+| `blitz-motion-poster.svg` | 4,201 | `3739bb7e044c6133742c0c08cb1c494d573388593362969d7ac0d3352e7d7f00` |
+| `workflow.svg` | 8,721 | `46205c0394a6933fd0a829ec73c623269b33f084848ab84a58d8eaf27bb74099` |
+| `workflow-mobile.svg` | 7,507 | `660f28c6f17aad99432f6f0e4bb6d915bde4b2eabe48245af17b56476ff1734d` |
+| `blitz-banner-light.svg` | 4,201 | `3739bb7e044c6133742c0c08cb1c494d573388593362969d7ac0d3352e7d7f00` |
+| `blitz-banner-dark.svg` | 4,201 | `15ab531c61967a1467761ab7b7c7f2589bcc20d307ea3247c558b7a447dbc462` |
 
-The authoring source SHA-256 is `0ce1aea949b24e6b4c5a57babd6672267fd86fd71d66b2c01688ff670684dfd1`.
+The authoring source SHA-256 is `f189d1e076997f615a7cb21d38388b0b3d98b49102daa3e9c302af70072a057e`.
+
+The preceding 960 × 800 GIF is also retained in history: 183,052 bytes, SHA-256 `6fa3b6b19fe0d2c89168870306b9cc1cf4b067648f0e9476d321532e62ee1116`.
 
 The earlier reviewed GIF remains reachable in repository history at the same path: 59,881 bytes, 960 × 360, 63 encoded frames, 4,800 milliseconds, SHA-256 `bb4153ee9d024d2e242f439b596d5dcb508154c8d7941c8d33dea427aa29a65b`. That is a historical version, not the current output. Recording it preserves the exact provenance of the earlier public artifact.
 
 ## Inspection and limits
 
-Every encoded frame was exported and inspected in a contact sheet. Pixel checks confirm identical title and label regions across frames, exact paper-color preservation, no loop extension, and no more than 1.14% of canvas pixels changing between consecutive encoded frames. The last frame and poster share geometry; their mean absolute channel difference is at most 0.219 out of 255 because the GIF uses a palette. These are scoped pixel checks, not a clinical photosensitivity assessment.
+Every encoded frame was exported and inspected in a contact sheet. Pixel checks confirm identical title and label regions across frames, exact paper-color preservation, no loop extension, and no more than 1.2% of canvas pixels changing between consecutive encoded frames (1.139% decoded with Pillow; 1.1889% with Chrome). The last frame and poster share geometry; their mean absolute channel difference is at most 0.215 out of 255 because the GIF uses a palette. These are scoped pixel checks, not a clinical photosensitivity assessment.
 
-The text-fit check found no clipped or overlapping text. The poster, both retained banners and both workflows were rendered in local Chrome. The hero and mobile workflow were inspected at 320 pixels wide. Main ink on paper is 13.14:1, secondary ink 5.43:1, orange 4.67:1 and structural rules 3.24:1. The mobile workflow's body text is at least 17 pixels at 320 pixels wide; the hero's fixed diagram labels are 14 pixels. System-font fallbacks on other hosts can produce different typography. Standalone artwork checks do not establish how every Markdown client handles `picture` media selection.
+The text-fit check found no clipped or overlapping text. The poster, both retained banners and both workflows were rendered in local Chrome. The hero and mobile workflow were inspected at 320 pixels wide. Main ink on paper is 13.14:1, secondary ink 5.43:1, orange 4.67:1 and structural rules 3.24:1. The mobile workflow's body text is at least 16 pixels at 320 pixels wide; the hero's fixed diagram labels are 14 pixels. An independent Chrome review also passed at 896-pixel desktop and 343-pixel mobile widths, with Arial fallback and reduced motion. System-font fallbacks on other hosts can produce different typography. Standalone artwork checks do not establish how every Markdown client handles `picture` media selection.
 
 This note records provenance. It does not grant a license or change the repository's licensing position. See [rights and provenance](../PROVENANCE.md) for repository terms and retained third-party notices.

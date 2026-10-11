@@ -1,6 +1,6 @@
 # [PROJECT] 04: Economics And Budget
 
-As of [DD-MM-YYYY, time and timezone when material]. Create on first need (Blitz kit v2.1OAI).
+As of [DD-MM-YYYY, time and timezone when material]. Create on first need (Blitz kit v2.1OAI-r1).
 
 A venture fills the applicable cost, revenue and cash view. A program fills budget and cost per outcome for its KPI. Every consequential figure shows source or labelled assumption, currency, units, period and arithmetic run in code. Rough model first; expose unaffordable scope or unsupported economics before polish. A model does not establish funding, actual demand, permission to spend or company readiness.
 

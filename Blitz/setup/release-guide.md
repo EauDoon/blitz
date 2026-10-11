@@ -1,4 +1,4 @@
-# Standalone release guide: v2.1OAI
+# Standalone release guide: v2.1OAI-r1
 
 This guide covers local first use, migration planning and kit verification without access to the source repository. The master archive also contains the [company and department guide](../profiles/company.md), [changelog](../CHANGELOG.md), manifest and component notices.
 
@@ -13,6 +13,8 @@ The master contains the `Blitz/` kit: 25 method packages and their resources/not
 The source repository also contains the polished root README/artwork, detailed review and migration documents, GitHub CI, `tools/release.py`, `tools/check_publication.py` and root packaging tests. Those repository-only tools are not in this kit archive. Use a repository checkout for repository-wide publication/history scans or release builds. Do not try to infer a historical Git scan from this archive's bytes.
 
 ## First use without the repository
+
+Begin with [START](../START.md), which offers company and department paths and an explicit-source prompt. This longer guide is reference material.
 
 Use Python 3.12 or later. The setup helpers use the standard library. Commands below run from the parent of the extracted `Blitz/` directory. Substitute a verified Python command if your host uses another name. Preserve the supplied archive and its trusted digest before extracting; use the supported archive verification/extraction instructions in [runtime preparation](runtime.md) where applicable.
 
@@ -64,7 +66,7 @@ Use the [service example](../examples/company/service-example.md) and [regulated
 5. A revised working copy needs its own current revision, startup instructions and manifest. Keep its parent only as lineage, recompute current hashes and rerun affected checks. Do not retain a false byte-identity claim.
 6. Test the next actual task, save, reopen and resume with declared prerequisites. Installation, native routing and adoption need separate evidence and authority.
 
-All 25 method folder identities and the four core record names remain. Personal style methods require supplied approved examples; no bundled private writing profile is used. Export contract schema 1 and archive manifest schema 2 remain compatible. CSV scoping is optional preparation before the existing exporter. Generated source filenames use v2.1OAI; update a receiving host's v2 references only when that host change is authorized.
+All 25 method folder identities and the four core record names remain. Personal style methods require supplied approved examples; no bundled private writing profile is used. Export contract schema 1 and archive manifest schema 2 remain compatible. CSV scoping is optional preparation before the existing exporter. Generated source filenames use v2.1OAI-r1; update a receiving host's v2 references only when that host change is authorized.
 
 For rollback, stop using the new package and reopen the preserved original with its own trusted digest. Preserve legitimate company decisions and working-copy changes separately. Do not restore blank templates over them. This release performs no host installation to undo.
 
@@ -75,7 +77,7 @@ Use new output directories outside the extracted kit:
 ```sh
 python -B Blitz/setup/verify_kit.py
 python -B Blitz/evals/run_all.py --kit Blitz --out package-check-results
-python -B Blitz/setup/build_thor_context.py --kit Blitz --out package-runtime
+python -B Blitz/setup/build_context.py --kit Blitz --out package-runtime
 ```
 
 Read each actual result and log. Python 3.12+ is the supported release-test target. Windows native symlink checks may fail or be blocked by OS privilege; such results are not passes. Linux repository CI exercises those native cases. Source identity, script behavior, assistant use, native installation and actual company outcomes are separate claims. A successful integrity check is not disclosure clearance or universal compatibility with optional external libraries and tools.

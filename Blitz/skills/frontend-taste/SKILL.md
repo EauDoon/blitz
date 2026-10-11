@@ -5,7 +5,7 @@ description: 'Design gate for web surfaces: landing pages, app UI, redesigns. Us
 
 # Frontend Taste
 
-<!-- Modified Blitz adaptation of the identified taste-skill and Impeccable guidance. Attribution and MIT/Apache terms: NOTICE.md. Notice added 2026-10-11; substantive rules unchanged. -->
+<!-- Modified Blitz adaptation of taste-skill and Impeccable guidance. MIT/Apache terms: NOTICE.md. Audit corrections by EauDoon, 2026-10-11: CHANGES.md. -->
 
 The gate a marketing or product web surface passes through before code is written: read the brief, pick the foundation, hold the locks, ban the defaults, then verify at runtime.
 
@@ -135,7 +135,7 @@ Override on any of the above only when the brand brief literally names the color
 * **Italic descender clearance.** Any italic display word containing `y g j p q` needs `leading-[1.1]` minimum plus `pb-1` reserve, or the descender clips.
 * Hierarchy ratio at least 1.25 between levels. Flat hierarchy is a tell.
 * Floors: body text 14 to 16px, never under 12px. Functional text (links, labels, table cells) never under 11px. Line height at least 1.3. Letter spacing on body under 0.05em. No all caps body text.
-* Contrast WCAG AA minimum: 4.5:1 body, 3:1 large text at 18px and above.
+* Contrast WCAG AA minimum: 4.5:1 for ordinary text. The 3:1 large-text exception starts at 18pt regular (24 CSS px) or 14pt bold (approximately 18.67 CSS px). An 18px regular label at 3.5:1 fails. See [W3C contrast minimum](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
 
 ## 8. Motion
 
@@ -196,7 +196,7 @@ Forty-one named tells (surface and decoration, structure and labels, motion, pro
 
 ## 13. Pre-flight
 
-Before the code is shown, confirm the countable rules above hold: zero em and en dashes in any visible string, alt text included; eyebrows at or under `ceil(sections / 3)`; no three consecutive image plus text splits; at least four layout families across eight sections; bento cells equal to items; one marquee at most; no duplicate CTA intent; nav on one line at 80px or less; no scroll listeners; no hand rolled icon paths or div screenshots; every CTA and form control at AA; the three locks hold; reduced motion honored; empty, loading and error states exist; no tell from `references/tells.md`.
+Before showing the code, check every countable rule in sections 5 to 12, including alt text, contrast, layout counts, the three locks, interaction states, reduced motion and `references/tells.md`. Keep actual results.
 
 **Verification, run it, do not assert it**
 
@@ -205,10 +205,10 @@ python3 -c "t=open('page.html',encoding='utf-8').read();print([l for l in t.spli
 grep -c 'uppercase tracking' page.html            # eyebrow count
 grep -n 'addEventListener("scroll"' page.html      # must return nothing
 grep -n 'src="http' page.html                      # external scripts and images, see the sandbox rule
-node --check <(sed -n '/<script>/,/<\/script>/p' page.html)
+python3 <frontend-taste-path>/scripts/check-html-js.py page.html
 ```
 
-Then open it. A dead script tag passes a syntax check and still ships a blank page.
+Use the actual method path. This Python/Node helper checks inline classic/module scripts without execution and reports data/external skips. Check external files separately in their declared mode; partial is not complete verification. Then open the page: syntax success does not prove working interaction.
 
 **Sandbox rule, shared with `viz-dashboards`.** Artifacts and sandboxed viewers block CDN script loads and external images, and fail silently, which delivers a blank page or empty frames. Inline every library and image, or precompute coordinates and emit inline SVG. In a published Artifact, stylesheets may come from Google Fonts only. Verify with a grep for `<script src=` and `src="http`, do not assume.
 

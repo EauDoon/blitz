@@ -1,4 +1,4 @@
-# Blitz v2.1OAI lean profile
+# Blitz v2.1OAI-r1 lean profile
 
 ## Purpose and selection
 

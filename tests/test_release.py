@@ -34,9 +34,14 @@ class ReleaseChecks(unittest.TestCase):
             first = release.build(base / "first")
             second = release.build(base / "second")
             compared = release.compare(base / "first", base / "second")
+            identity = module("check_identity")
+            self.assertEqual(identity.scan(base / "first", artifacts=True)["result"], "pass")
             self.assertEqual(first["artifacts"], second["artifacts"])
             self.assertGreater(compared["identical_artifacts"], 2)
             self.assertTrue(first["verification"]["source_unchanged"])
+            for artifact in (base / "first").rglob("*"):
+                if artifact.is_file():
+                    self.assertEqual(scanner.scan_bytes(artifact.name, artifact.read_bytes()), set(), artifact.name)
             name = f"Blitz_v{first['version']}.zip"
             with zipfile.ZipFile(base / "first" / name) as archive:
                 for info in archive.infolist():

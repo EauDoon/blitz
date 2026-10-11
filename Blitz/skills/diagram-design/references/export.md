@@ -24,32 +24,43 @@ If the user explicitly asks for "a screenshot of the whole page including the ca
 
 ## SVG export procedure
 
-1. Read the source HTML file.
-2. Extract the **first** `<svg ...>...</svg>` block. Use a multiline regex anchored on `<svg` and `</svg>`. Most generated diagrams have only one SVG; if there are multiple, the first is the diagram (gallery files are an exception: see *Edge cases*).
-3. Make it standalone:
-   - Ensure the opening tag has `xmlns="http://www.w3.org/2000/svg"`. Add it if missing.
-   - Ensure a `viewBox` is present. The skill's templates always include one; warn the user if absent rather than guessing.
-   - Inject Google Fonts `@import` so the SVG renders with correct typography in a browser:
-     ```svg
-     <defs>
-       <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap');</style>
-     </defs>
-     ```
-     If the SVG already contains a `<defs>` block, **merge** the `<style>` into it (don't add a second `<defs>`).
-4. Prepend `<?xml version="1.0" encoding="UTF-8"?>\n` so the file is well-formed XML.
-5. Write to `<basename>.svg` next to the source (e.g. `example-architecture.html` → `example-architecture.svg`). Honour an explicit output path if the user provides one.
+1. Open the trusted source in an authorized browser, select the intended theme and wait for required fonts. Do not execute unknown HTML merely to export it. Inspect the rendered diagram first.
+2. Identify exactly one **outer SVG** with a specific selector (for example `main > svg`). If several diagrams match, select the intended one explicitly. Never extract SVG with a regular expression: nested SVG icons and sibling diagrams make tag-boundary matching unsafe.
+3. Use the included [browser helper](../scripts/export-svg.js). It clones the full selected subtree, resolves inherited page styles, custom properties and `currentColor` through computed styles, preserves internal definitions and namespaces, and validates the serialized XML. It rejects missing/external references, duplicate IDs, active content, missing `viewBox` and `foreignObject` rather than claiming a portable export.
+4. Write the returned XML to the authorized output. The following example requires Python Playwright and its Chromium browser already available. Replace paths and selector with the inspected source and method locations; the helper neither installs anything nor saves files itself.
 
-### Caveat to surface to the user
+```python
+from pathlib import Path
+from playwright.sync_api import sync_playwright
 
-Tools that don't fetch remote fonts at import time (offline Illustrator, some Figma import paths, older SVG viewers) will substitute typography. The SVG renders correctly in any modern browser. For pixel-perfect portability, recommend the PNG export.
+source = Path("diagram.html").resolve()
+helper = Path("<diagram-design-path>/scripts/export-svg.js").resolve()
+output = Path("diagram.svg")
+with sync_playwright() as p:
+    browser = p.chromium.launch()
+    page = browser.new_page()
+    page.goto(source.as_uri())
+    page.evaluate("document.fonts.ready")
+    page.add_script_tag(path=str(helper))
+    xml = page.evaluate("selector => blitzExportSvg(selector)", "main > svg")
+    with output.open("x", encoding="utf-8", newline="\n") as stream:
+        stream.write(xml)
+    browser.close()
+```
 
-**Medallion: do not export as SVG, use PNG.** `type-medallion.md` §2.2 mandates `<foreignObject>` for every wrapping field value, and `assets/example-medallion.html` carries 15 of them. Browsers render `foreignObject`; Figma, Illustrator, Inkscape and most SVG import paths drop it silently, so the tool, format and writer values vanish from every tier card and the export looks like a set of empty boxes with no error anywhere. The same warning applies to any other diagram containing a `foreignObject`. Before an SVG export, grep the source for `foreignObject`; if it is present, tell the user the SVG will lose those values and offer the PNG instead.
+5. Parse the saved file as XML, reopen it by itself and compare it with the source at the intended size and theme. Check nested icons, text, fills, gradients, clipping and markers. No surrounding HTML or sibling SVG should appear. If the output differs, repair the dependency/style gap or deliver a verified PNG; XML validity alone is not visual fidelity.
+
+### Portability limits
+
+The helper covers static SVG presentation styles; it is not a universal HTML/CSS converter. External resources must be embedded with appropriate rights or remain an explicit export blocker. It does not embed fonts. Font families can substitute offline or in another importer, and browser/importer differences still require rendering checks. Do not inject a remote font import and promise portability. For a fixed rendered appearance, use a PNG made after verifying the source fonts. If a browser or renderer is unavailable, report that export or visual verification as blocked.
+
+**Medallion: do not export as SVG, use PNG.** `type-medallion.md` §2.2 mandates `<foreignObject>` for every wrapping field value, and `assets/example-medallion.html` carries 15 of them. Browsers render `foreignObject`; Figma, Illustrator, Inkscape and most SVG import paths drop it silently, so the tool, format and writer values vanish from every tier card and the export looks like a set of empty boxes with no error anywhere. The same warning applies to any other diagram containing a `foreignObject`. Before an SVG export, grep the source for `foreignObject`; if it is present, tell the user the destination may drop those values and offer the PNG instead.
 
 This is also why the bullet at the bottom of this file forbids *adding* `foreignObject` during export. Medallion is the one type that ships with it by design, and PNG is the export path that survives it.
 
 ## PNG export procedure
 
-Render **the original HTML** (not the extracted SVG) and screenshot only the `<svg>` element's bounding box. This keeps font loading reliable (already wired in the source HTML) while satisfying the "diagram only" rule.
+Render **the original HTML** (not the extracted SVG) and screenshot only the `<svg>` element's bounding box. This uses the source page styles and its actually loaded fonts while satisfying the "diagram only" rule.
 
 **The PNG is opaque, not transparent.** Every diagram opens its SVG with a full-bleed background rect (`<rect width="100%" height="100%" fill="#f5f5f5"/>`, or the same rect sized to the viewBox), so the `paper` colour is painted *inside* the screenshot region. `omit_background=True` only drops the browser's own page background, which the rect already covers. The default export therefore carries a `#f5f5f5` field on a light diagram and `#0f0f0f` on a dark one. Placed on a slide of a different colour, that reads as a halo.
 
@@ -88,9 +99,9 @@ scale = int(sys.argv[3]) if len(sys.argv) > 3 else 2
 with sync_playwright() as p:
     browser = p.chromium.launch()
     page = browser.new_page(device_scale_factor=scale)
-    page.goto(f"file://{pathlib.Path(src).resolve()}")
-    page.wait_for_load_state("networkidle")
-    page.locator("svg").first.screenshot(path=out, omit_background=True)
+    page.goto(pathlib.Path(src).resolve().as_uri())
+    page.evaluate("document.fonts.ready")
+    page.locator("main > svg").screenshot(path=out, omit_background=True)
     browser.close()
 ```
 
@@ -101,7 +112,7 @@ Default `device_scale_factor=2` for crisp output. Accept `1` for compact assets 
 Only when the user asks for transparency. Hide the full-bleed background rect in the loaded page, then screenshot. This touches the DOM in the browser, never the source file.
 
 ```python
-    page.eval_on_selector("svg", """svg => {
+    page.eval_on_selector("main > svg", """svg => {
       const vb = svg.viewBox.baseVal;
       for (const r of svg.querySelectorAll('rect')) {
         const w = r.getAttribute('width'), h = r.getAttribute('height');
@@ -113,7 +124,7 @@ Only when the user asks for transparency. Hide the full-bleed background rect in
         }
       }
     }""")
-    page.locator("svg").first.screenshot(path=out, omit_background=True)
+    page.locator("main > svg").screenshot(path=out, omit_background=True)
 ```
 
 Warn the user that a transparent light diagram is unreadable on a dark surface and the reverse, because `ink` and `muted` are picked for contrast against `paper`. Transparency removes the guarantee. Converting the skin with `scripts/skin.py` is the correct fix for a dark surface; transparency is not.
@@ -127,7 +138,7 @@ Warn the user that a transparent light diagram is unreadable on a dark surface a
 - **Source is `assets/index.html`** (the gallery, multiple SVGs in one file): refuse the export and ask the user which specific diagram file they meant. Don't guess.
 - **No `<svg>` block found**: the source isn't a diagram file. Tell the user; don't write anything.
 - **Surrounding HTML matters to the user**: they want cards/header in the image. Tell them this skill exports diagrams only, and recommend a browser-based full-page screenshot (or a separate PDF print).
-- **Source is missing fonts at runtime**: Playwright will substitute, the screenshot will look off. Check that the source HTML has the `<link href="...fonts.googleapis.com...">` tag in `<head>`. If absent, the file isn't from a current template: fix the source rather than working around it in export.
+- **Source is missing fonts at runtime**: Playwright will substitute, the screenshot will look off. Verify the actually loaded face, not just the presence of a font link. Use an authorized local font or report substitution; an offline browser may not fetch a remote font.
 
 ## What this command never does
 

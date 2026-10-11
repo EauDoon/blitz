@@ -1,6 +1,10 @@
 # v2.1OAI, 02-10-2026
 
-Final operating contract joins ordinary requests, outcome acceptance, context acquisition, selective continuation and portable working copies. Thor uses generated project sources; no account installation is required or claimed. Measured pilot mechanics require explicit selection. See `reviews/oai-v2-release-record.md` in the master and the companion receipts for actual validation/application.
+## v2.1OAI-r1, 11-10-2026
+
+Modified by EauDoon. Renamed the current source guide and generated source identities to standalone Blitz. Core scope, authority and operating safeguards are unchanged.
+
+Final operating contract joins ordinary requests, outcome acceptance, context acquisition, selective continuation and portable working copies. Blitz uses generated project sources; no account installation is required or claimed. Measured pilot mechanics require explicit selection. See `reviews/oai-v2-release-record.md` in the master and the companion receipts for actual validation/application.
 
 # v1.4OAI, 01-10-2026
 

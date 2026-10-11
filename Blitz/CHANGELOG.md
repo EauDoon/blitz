@@ -1,12 +1,18 @@
 # Changelog
 
+## v2.1OAI-r1, 11-10-2026
+
+Repairs the independent audit findings: preview containment/error handling; ZIP metadata and complete-history publication checks; scoped collection and recording; explicit unknown permissions; contrast thresholds; nested/styled SVG export; reference geometry; classic/module JavaScript checking; evidence-faithful rewriting; and transitive staging context. Adds a company/department START route, smaller graphic headings and inclusive resource wording.
+
+Uses standalone Blitz naming across current guides, compiler entrypoint, generated startup/runtime files and references. Existing public history is preserved. This content revision has distinct archive/tag identities; it does not replace earlier bytes. Licensing terms, 25 method identities, core record names, no-overwrite safeguards and human approval boundaries remain. Actual check results are recorded against the saved candidate separately.
+
 ## v2.1OAI, 11-10-2026
 
 Presentation update: identifies Blitz as the Minimum Viable Company kit with the tagline “Listen, collect, sprint. / Reduce cycle time.” Adds an explicit founder walkthrough, output map and complete 25-method skills guide. Distinguishes source use, reference staging and native invocation without claiming measured automatic-selection reliability. Replaces repository artwork with an original responsive visual system and bounded motion, preserving the four business gates and all tool behavior.
 
 Founder edition based on the verified v2OAI master. Adds a proportionate minimum viable company workflow, editable brief/cash inputs, local starter and cash calculation, independently synthetic examples and first-user checks. Adds shared-CSV scope/provenance tooling and truthful working-copy handoff guidance.
 
-Preserves the 25 method identities, four core record names, evidence/authority/recovery rules, archive safety, explicit item export and reproducible Thor-compatible runtime. Generalizes owner/host wording and removes personal profiles, private account history, live-case-derived examples and unneeded private environment dependencies from the reusable edition. Original v2 bytes remain separate and unchanged.
+Preserves the 25 method identities, four core record names, evidence/authority/recovery rules, archive safety, explicit item export and reproducible Blitz-compatible runtime. Generalizes owner/host wording and removes personal profiles, private account history, live-case-derived examples and unneeded private environment dependencies from the reusable edition. Original v2 bytes remain separate and unchanged.
 
 Adds reproducible release packaging, CI, regression/adversarial cases and publication checks over tracked content and reachable Git history. Test outcomes are recorded separately against the actual candidate; this changelog does not certify them.
 

@@ -13,7 +13,7 @@ SUITES = {
     'operating-loop': ['evals/test_operating_loop.py'],
     'context-acquisition': ['evals/test_context_acquisition.py'],
     'item-export': ['evals/test_item_export.py'],
-    'thor-context': ['evals/test_thor_context.py'],
+    'source-context': ['evals/test_source_context.py'],
     'integrity': ['evals/test_v2_integrity.py'],
     'runtime': ['evals/test_v2_runtime.py'],
     'runner': ['evals/test_release_runner.py'],

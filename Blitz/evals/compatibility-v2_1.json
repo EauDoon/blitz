@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "2.1OAI",
+  "version": "2.1OAI-r1",
   "baseline": {
     "version": "2OAI",
     "archive_sha256": "ab7e65ecf628a034a7eba098ca5dfc05429c54150535f342f7225694f0e372d5",
@@ -421,7 +421,7 @@
     "templates/project-instructions-chatgpt.md": {
       "schema": {
         "headings": [
-          "# ChatGPT project instructions, Blitz v2.1OAI template"
+          "# ChatGPT project instructions, Blitz v2.1OAI-r1 template"
         ],
         "table_headers": [],
         "named_fields": [],

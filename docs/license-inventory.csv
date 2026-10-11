@@ -8,6 +8,7 @@ Blitz/CHANGELOG.md,documentation/template/instruction,original material only: Bl
 Blitz/ENTRYPOINT.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/PLAYBOOK.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/README.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/START.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/evals/README.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/evals/calc_answers.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/evals/calculation.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
@@ -58,7 +59,7 @@ Blitz/evals/test_oai_repairs.py,software,original material only: Blitz-Internal-
 Blitz/evals/test_operating_loop.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/evals/test_release_runner.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/evals/test_scope_csv.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
-Blitz/evals/test_thor_context.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/test_source_context.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/evals/test_v2_integrity.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/evals/test_v2_runtime.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/evals/visual.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
@@ -79,9 +80,9 @@ Blitz/reviews/oai-lean-release-record.md,documentation/template/instruction,orig
 Blitz/reviews/oai-operating-loop-release-record.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/reviews/oai-release-record.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/reviews/oai-v2-release-record.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
-Blitz/setup/Thor_Project_Instructions.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
-Blitz/setup/Thor_System_Register.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
-Blitz/setup/build_thor_context.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/Blitz_Project_Instructions.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/Blitz_System_Register.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/build_context.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/setup/capability-manifest.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/setup/chatgpt.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/setup/chatgpt_stage.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
@@ -101,7 +102,7 @@ Blitz/setup/release-guide.md,documentation/template/instruction,original materia
 Blitz/setup/runtime.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/setup/scope_csv.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/setup/skills-guide.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
-Blitz/setup/thor.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/source-use.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/setup/verify_archive.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/setup/verify_kit.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/skills/README.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
@@ -276,6 +277,7 @@ Blitz/skills/diagram-design/references/type-swimlane.md,documentation/template/i
 Blitz/skills/diagram-design/references/type-timeline.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
 Blitz/skills/diagram-design/references/type-tree.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
 Blitz/skills/diagram-design/references/type-venn.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/scripts/export-svg.js,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/skills/diagram-design/scripts/lint-diagram.py,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
 Blitz/skills/diagram-design/scripts/skin.py,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
 Blitz/skills/doc-style/CHANGES.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
@@ -327,6 +329,7 @@ Blitz/skills/frontend-taste/references/cinematic/cinematic.js,software,mixed: or
 Blitz/skills/frontend-taste/references/cinematic/example-data-story.html,software,mixed: original additions only; inherited MIT/Apache-2.0 retained,Blitz/skills/frontend-taste/NOTICE.md
 Blitz/skills/frontend-taste/references/tells.md,documentation/template/instruction,mixed: original additions only; inherited MIT/Apache-2.0 retained,Blitz/skills/frontend-taste/NOTICE.md
 Blitz/skills/frontend-taste/references/tooling.md,documentation/template/instruction,mixed: original additions only; inherited MIT/Apache-2.0 retained,Blitz/skills/frontend-taste/NOTICE.md
+Blitz/skills/frontend-taste/scripts/check-html-js.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 Blitz/skills/gauntlet-verify/CHANGES.md,documentation/template/instruction,mixed: original additions only; previous CC-BY-4.0/MIT grants retained,Blitz/skills/gauntlet-verify/NOTICE.md
 Blitz/skills/gauntlet-verify/LICENSE.txt,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/gauntlet-verify/NOTICE.md
 Blitz/skills/gauntlet-verify/NOTICE.md,component attribution/scope notice,existing terms/attributions retained; original explanatory additions only,Blitz/skills/gauntlet-verify/NOTICE.md
@@ -481,6 +484,7 @@ docs/MIGRATION.md,documentation/template/instruction,original material only: Bli
 docs/PROVENANCE.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 docs/PUBLICATION_AUDIT.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 docs/PUBLICATION_PLAN.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+docs/REPAIR-NOTES.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 docs/TEST_COMPATIBILITY.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 docs/V2_1_SCOPE.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 docs/VERIFICATION.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
@@ -493,7 +497,13 @@ docs/assets/render-blitz-motion.py,software,original material only: Blitz-Intern
 docs/assets/workflow-mobile.svg,artwork,original material only: Blitz-Internal-Use-1.0; prior grants excluded,docs/assets/README.md; LICENSE
 docs/assets/workflow.svg,artwork,original material only: Blitz-Internal-Use-1.0; prior grants excluded,docs/assets/README.md; LICENSE
 docs/license-inventory.csv,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,candidate file inventory; Git tree supplies exact content identity
+tests/node/test_preview.mjs,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+tests/node/test_svg_export.mjs,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+tests/test_audit_methods.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+tests/test_audit_security.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 tests/test_release.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+tests/test_release_identity.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+tools/check_identity.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 tools/check_publication.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 tools/release.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 tools/update_manifest.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md

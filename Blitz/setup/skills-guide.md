@@ -31,7 +31,7 @@ The [kit manifest](../manifest.json) inventories the packages and records eviden
 | Codex or another OpenAI host with native skills | Follow the [OpenAI setup guide](chatgpt.md) and [capability adapter](host-adapters/openai.md). Inspect the current listing, preserve existing adaptations, and use the target's supported install/register route when authorized. | The actual listed name, saved version, readable dependencies, native load, and fresh positive and negative routing cases. Metadata alone establishes none of these. |
 | ChatGPT project using readable sources | Use the [project instruction template](../templates/project-instructions-chatgpt.md) within the named project. Instructions can select readable method sources without installing global skills. | Applied instructions, full saved readback, source access, needed tools, and observed method use. A source read is separate from a native load. |
 | Claude | Follow [Claude setup](claude.md). Project instructions support source-based use; optional native installation has its own authorized preparation, comparison, save, and verification steps. | Current Claude capabilities and actual host results. Historical listing sizes and installed counts are not current observations. |
-| Thor | Follow [Thor setup](thor.md), its exact project instructions, and the generated `Thor_Blitz_v2.1OAI_Method_Index.md`. Read selected source sections and dependencies. Use the verified [task-local runtime](runtime.md) only when the work needs packaged resources. | Instruction readback, selected resource bytes, actual execution and saved state. Generating or opening the runtime installs nothing globally. |
+| Blitz | Follow [Blitz setup](source-use.md), its exact project instructions, and the generated `Blitz_v2.1OAI-r1_Method_Index.md`. Read selected source sections and dependencies. Use the verified [task-local runtime](runtime.md) only when the work needs packaged resources. | Instruction readback, selected resource bytes, actual execution and saved state. Generating or opening the runtime installs nothing globally. |
 
 The project router activates only for explicitly selected Blitz work, governing project instructions, or the scoped item record. Within that scope, ordinary language can select creation, continuation, review, planning, or export. Review stays review; planning stays planning. An unrelated request does not authorize project access or build actions.
 
@@ -47,7 +47,7 @@ For an explicit fallback, name the method shown by the host. If it is not regist
 |---|---|
 | `calc-workbook` | Candidate name becomes `calculation-workbook`. |
 | `frontend-taste` | Candidate name becomes `web-design-taste`. |
-| `google-slides` | Skipped as a native-tool role; actual presentation capability still needs checking. The source method remains in the kit and Thor index. |
+| `google-slides` | Skipped as a native-tool role; actual presentation capability still needs checking. The source method remains in the kit and Blitz index. |
 | Other 22 identities | Candidate names remain unchanged. This says nothing about current installation. |
 
 The helper rewrites relevant Markdown names, adds the OpenAI adapter, and validates transformed copies. It prepares 24 candidates from 25 source packages. A dry-run writes nothing; a stage writes only a new reference directory. The historical map's `same`, `renamed`, and `unknown` labels require current role comparison before any installation. Preserve an existing host adaptation's tools and save route.
@@ -268,7 +268,7 @@ Checks skill packaging: frontmatter, names, description limits, referenced files
 
 ## Keep the required resources with the method
 
-The [source inventory](../skills/README.md) and generated Thor index preserve all 25 identities. Supporting references, scripts, assets, and notices travel with selected methods. External renderers, libraries, browsers, connectors, credentials, native agents, and other named skills are not supplied merely because a method mentions them. Check the [capability contract](host-adapters/openai.md) and current tools before dependent work.
+The [source inventory](../skills/README.md) and generated Blitz index preserve all 25 identities. Supporting references, scripts, assets, and notices travel with selected methods. External renderers, libraries, browsers, connectors, credentials, native agents, and other named skills are not supplied merely because a method mentions them. Check the [capability contract](host-adapters/openai.md) and current tools before dependent work.
 
 Use the smallest sufficient method set and retain the original acceptance gates. A missing dependency needs a verified fallback or a precise limit on the affected output. Consult [provenance and notices](../skills/provenance.md) before redistributing method packages.
 

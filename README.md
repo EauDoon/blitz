@@ -14,7 +14,7 @@ Autoscale and quickly launch a minimum viable company or department that can sta
 
 [Verification workflow](https://github.com/EauDoon/blitz/actions/workflows/verify.yml)
 
-Version **v2.1OAI** · Python **3.12+** · Editable records and local tools
+Version **v2.1OAI-r1** · Python **3.12+** · Editable records and local tools
 
 Frame → Test → Deliver → Operate. [Static illustration](docs/assets/blitz-motion-poster.svg).
 
@@ -54,14 +54,16 @@ The starter creates drafts with company-oriented fields. You adapt them, supply 
 
 ## First use
 
-Get a working copy using Git:
+**[Download the v2.1OAI-r1 master](https://github.com/EauDoon/blitz/releases/download/v2.1OAI-r1/Blitz_v2.1OAI-r1.zip)** from the [release and checksums](https://github.com/EauDoon/blitz/releases/tag/v2.1OAI-r1), verify its digest, extract it, and open **[Blitz/START.md](Blitz/START.md)**. That single entry offers company and department routes, a small reading set and an explicit-source assistant prompt. Runtime generation, staging and all 25 methods are optional.
+
+For source development, use the same tagged version:
 
 ```sh
-git clone https://github.com/EauDoon/blitz.git
+git clone --branch v2.1OAI-r1 https://github.com/EauDoon/blitz.git
 cd blitz
 ```
 
-Or choose **Code → Download ZIP** on GitHub, extract it, and open a terminal in the extracted repository folder. You should see `README.md` and the `Blitz/` directory. If you received the standalone `Blitz_v2.1OAI.zip`, follow its [release guide](Blitz/setup/release-guide.md) instead.
+The commands below work from the parent of `Blitz/` in either the extracted master or a repository checkout. The [release guide](Blitz/setup/release-guide.md) includes the detailed offline instructions. Keep filled company records outside reusable source.
 
 Use **Python 3.12 or later**. The setup, calculation and packaging helpers use the standard library; no package installation is needed for this exercise. Examples use `python`; substitute your verified Python 3 command where necessary. Run commands from the repository root.
 
@@ -121,11 +123,11 @@ Copy the [company brief](Blitz/templates/company-brief.md) and [cash template](B
 
 ## Workflow
 
-The illustration uses a commercial cycle. Apply the same gates to an internal department using the counterparts in the table below.
+The same gates apply to a company or department. The table below gives the evidence for each.
 
 <picture>
   <source media="(max-width: 820px)" srcset="docs/assets/workflow-mobile.svg">
-  <img src="docs/assets/workflow.svg" alt="Frame the offer, Test the assumption, Deliver the promise, then Operate the next cycle. At each gate the owner checks evidence and authority, then records Proceed, Hold or Walk. Return to the affected gate when evidence changes." width="100%">
+  <img src="docs/assets/workflow.svg" alt="Frame the work, Test observed user behavior, Deliver and verify acceptance, then reconcile company cash or department resources for the next cycle. At each gate the owner checks evidence and authority, then records Proceed, Hold or Walk. Return to the affected gate when evidence changes." width="100%">
 </picture>
 
 The four gates describe **operating evidence**, with thresholds proportionate to the next commitment's risk:
@@ -193,7 +195,7 @@ The kit contains **25 method packages**. The [skills guide](Blitz/setup/skills-g
 **Sometimes, on a host that has discovered the skill. Cloning this repository does not install the methods.**
 
 - **Source use:** ask the assistant to read the relevant `Blitz/skills/<name>/SKILL.md` and its applicable resources. This works only when it can access those files. It is an explicit source workflow.
-- **Reference staging or Thor runtime:** the setup tools prepare files and a method index for a host. They do not register native skills. The operator must make those sources available and confirm they can be read.
+- **Reference staging or Blitz runtime:** the setup tools prepare files and a method index for a host. They do not register native skills. The operator must make those sources available and confirm they can be read.
 - **Native host use:** separately install or expose selected methods using that host's supported route, after checking names, existing skills and dependencies. Confirm the host lists the intended version before testing selection.
 
 Each packaged method has a frontmatter description, and all 25 `agents/openai.yaml` files permit implicit invocation. These describe intended selection; they cannot guarantee that a host discovers or chooses the skill. OpenAI documents explicit selection as well as description-based matching. See the [current skill documentation](https://learn.chatgpt.com/docs/build-skills), checked 11 October 2026.
@@ -214,7 +216,7 @@ This release makes no measured automatic-selection claim for Blitz. Package vali
 | [Templates](Blitz/templates/) | Editable brief, cash inputs and working records; create only what is useful |
 | [25 method packages](Blitz/setup/skills-guide.md) | Research, reasoning, writing, economics, design, building and review methods with their resources and notices |
 | [Setup tools](Blitz/setup/) | Local company initialization/calculation, CSV scoping, archive verification and item export |
-| [Runtime guide](Blitz/setup/runtime.md) | Optional 17-file Thor-compatible source set and resource archive; generation does not install anything |
+| [Runtime guide](Blitz/setup/runtime.md) | Optional 17-file Blitz-compatible source set and resource archive; generation does not install anything |
 | [Examples](Blitz/examples/company/), [evaluations](Blitz/evals/) and [tests](tests/) | Synthetic demonstrations and builder checks, separate from runtime context |
 | [Verification](docs/VERIFICATION.md), [migration](docs/MIGRATION.md) and [changelog](Blitz/CHANGELOG.md) | Check contracts, upgrade boundaries and release history |
 
@@ -223,7 +225,7 @@ The cash command emits JSON. **0** means a complete calculation, even if it repo
 For a shared CSV, the scope utility selects exact rows and named columns. After the first-use setup, this runnable example keeps only Period 1 and three columns from the verified synthetic source:
 
 ```sh
-python -B Blitz/setup/scope_csv.py create --source Blitz/examples/company/service-cash.csv --output .work/period-1 --expected-sha256 1c7d3b6a645f3d8b4534144c50b0d9eee07c67bce5d0266ebc232bd3a9b65ecc --source-revision v2.1OAI --item-column period --item-id "Period 1" --column period --column currency --column earned_revenue
+python -B Blitz/setup/scope_csv.py create --source Blitz/examples/company/service-cash.csv --output .work/period-1 --expected-sha256 1c7d3b6a645f3d8b4534144c50b0d9eee07c67bce5d0266ebc232bd3a9b65ecc --source-revision v2.1OAI-r1 --item-column period --item-id "Period 1" --column period --column currency --column earned_revenue
 ```
 
 It writes `projected.csv` and `provenance.json`, with source, filter and hash evidence. The pinned hash belongs to this exact example. Use a separately trusted source hash for other inputs and retain the returned receipt hash for inspection. `python -B Blitz/setup/scope_csv.py inspect --help` shows the verification interface. A projection and matching hash do not establish that arbitrary cell content is appropriate to disclose.

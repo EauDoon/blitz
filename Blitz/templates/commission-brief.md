@@ -22,4 +22,4 @@ Use this brief under [the operating contract](../setup/operating-contract.md). A
 
 For missing required inputs, use [context acquisition](../skills/blitz/references/context-acquisition.md). A compact inline commission suffices; ask only for material gaps remaining after focused authorized retrieval.
 
-Within Thor, apply [its intent and supporting triggers](../setup/thor.md) proportionately during active work. An exported item uses only its own scoped `PROJECT_INSTRUCTIONS.md` and included methods. Method selection preserves the requested mode and does not expand authority. Ordinary commissioned outputs use this brief and their acceptance criteria; `BUILD_PACK.md` is mandatory only for actual project skill builds.
+Within Blitz, apply [its intent and supporting triggers](../setup/source-use.md) proportionately during active work. An exported item uses only its own scoped `PROJECT_INSTRUCTIONS.md` and included methods. Method selection preserves the requested mode and does not expand authority. Ordinary commissioned outputs use this brief and their acceptance criteria; `BUILD_PACK.md` is mandatory only for actual project skill builds.

@@ -30,9 +30,9 @@ components:                             # 2..14 rows, ordered top → bottom
   - { name: "JupyterHub" }
   - { name: "NiFi" }
 
-cells:                                  # explicit (row, col) entries; omitted → defaults to "none"
+cells:                                  # explicit (row, col) entries; omitted → defaults to "unknown"
   # value = displayed text (free-form)
-  # level = visual category: full | rw | read | none  (closed vocabulary, drives styling)
+  # level = visual category: full | rw | read | none | unknown  (closed vocabulary, drives styling)
   # focal: true (max 1)           : overrides level to focal styling
   # sub: "second-line text"       , used inside focal cell
   # color: "#hex"                 , optional per-cell color override (§4)
@@ -51,11 +51,12 @@ cells:                                  # explicit (row, col) entries; omitted �
   - { row: 5, col: 0, value: "Full",       level: "full" }
   - { row: 5, col: 1, value: "R/W",        level: "rw"   }
   - { row: 5, col: 2, value: "SELECT",     level: "read" }
-  - { row: 5, col: 3, value: "SELECT only", sub: "sole consumer access", focal: true }
+  - { row: 5, col: 3, value: "SELECT only", level: "read", sub: "sole consumer access", focal: true }
 
   # ... rows 6..7 ...
 
-none_label: "No access"                 # default text rendered when a cell is omitted
+none_label: "No access"                 # explicit confirmed denial only
+unknown_label: "Unknown"                # omitted or explicitly unknown permission
 dark: false
 ```
 
@@ -63,9 +64,10 @@ dark: false
 - `roles[j].name`: primary role label (`node-name` role at 11px, white text on the ink banner)
 - `roles[j].code`: secondary AD-group identifier (`sublabel` role, white text at 0.85 opacity)
 - `components[i].hint`: optional right-aligned `sublabel` text in the label cell (e.g., `"SSO"`, `"S3 API"`)
-- `cells[k].level`: closed vocabulary `full | rw | read | none`. Drives fill/stroke/text-color per §2.4.
+- `cells[k].level`: closed vocabulary `full | rw | read | none | unknown`. Drives fill/stroke/text-color per §2.4.
+- Omitted cells and entries without a supported `level` are unknown. Use the visible `unknown_label`; retain an unverified supplied value only in notes, never as a permission claim. Contradictory value/level pairs must be resolved before rendering.
 - `cells[k].value`: free-form display text. Domain-specific labels (`"R/W"`, `"SELECT"`, `"Login"`) work without inventing new levels.
-- `cells[k].focal: true`, exactly **one** cell may declare this. Overrides `level` to focal styling.
+- `cells[k].focal: true`, exactly **one** cell may declare this. Changes styling only; it never changes the permission level or removes an Unknown label.
 - `cells[k].sub`: optional 2nd-line text (used with focal). Renders in the `sublabel` role at 8px below the primary value.
 - `cells[k].color: "#hex"`, optional per-cell color override (§4).
 
@@ -148,6 +150,7 @@ Solid paper fill across the full viewBox. No dot pattern.
 | `rw` | `#FFFFFF` | `ink @ 0.12` | `ink` | 400 |
 | `read` | `muted @ 0.08` | `ink @ 0.12` | `muted` | 400 |
 | `none` | `paper` | `ink @ 0.12` | `soft` | 400 |
+| `unknown` | `paper` | `muted`, dashed `4,4` | `muted`; visible "Unknown" | 400 |
 | **focal** | `accent @ 0.07` | `accent` (1.4) | `accent` | 600 |
 
 The focal cell can carry a 2nd line (`sub:`) rendered in `accent` with the `sublabel` role at 8px and 0.85 opacity.
@@ -157,7 +160,7 @@ The focal cell can carry a 2nd line (`sub:`) rendered in `accent` with the `subl
 Hairline separator at `legend_y_top`. Below the separator, one row of style swatches with their labels: only the styles actually used in the diagram appear in the legend.
 
 - "LEGEND" eyebrow at `(left_pad, legend_y_top + 20)`: `eyebrow` role, muted, letter-spacing 0.14em
-- Each style: swatch rect (14×12 `rx=2`) followed by a `sublabel` role label
+- Each style: swatch rect (16×12 `rx=2`) followed by a `sublabel` role label
 - Item x-positions are tabulated left-to-right with ~120-px stride; legend wraps onto a second visual row only if `n_roles ≥ 6` (otherwise fits in one line)
 
 ---
@@ -213,6 +216,7 @@ If you pick a mid-luminance hex (e.g., yellow `#c9a23a`), the text auto-flips to
 
 ### 4.4 Rules
 
+- Unknown cells always retain the visible Unknown label and dashed border in both themes, including with focal or color overrides. Color alone must not convey uncertainty.
 - **Focal cell wins.** A focal cell ignores `color` overrides: accent always.
 - **Per-cell `color` overrides `level` styling** for that one cell.
 - **Per-component / per-role overrides are scoped:** component → row label only; role → banner only. They do **not** spread into the matrix body. To flag a specific intersection, use per-cell.
@@ -235,7 +239,7 @@ Exactly **one** focal cell per diagram (or zero). The focal cell:
 - May carry a 2-line content: primary `value` at `y = row_y(k) + 18`, `sub` at `y = row_y(k) + 30`
 - Calls out the diagram's central security claim: the *one* access rule that distinguishes this platform's posture from a generic permissions table
 
-If zero or >1 `focal: true` cells are declared, halt and ask the user.
+Zero focal cells is allowed. More than one requires choosing a single focal claim before rendering.
 
 ---
 
@@ -254,6 +258,7 @@ If zero or >1 `focal: true` cells are declared, halt and ask the user.
 | R/W fill | `#FFFFFF` | `paper @ 0.06` |
 | Read fill | `muted @ 0.08` | `soft @ 0.12` |
 | No-access fill | `paper` | `paper @ 0.02` |
+| Unknown fill / text / dashed border | `paper` / `muted` / `muted` | `ink` / `soft` / `soft` |
 | Focal fill | `accent @ 0.07` | `accent @ 0.12` |
 | Focal stroke | `accent` | `accent` |
 | Custom component colors | `C` | `C_light` (lighten ~15%) |
@@ -270,10 +275,10 @@ Before emitting SVG, verify **every** item:
 4. Component label cell `rx=4`, name left-aligned at `x=24`, optional `hint` right-aligned at `x = comp_col_x + comp_col_w − 12`.
 5. Every value cell `rx=4`, stroke `ink @ 0.12` 0.6, fill + text matching §2.4 for its `level`.
 6. Exactly **one** focal cell (or zero). Focal cell stroke `accent` width 1.4. Primary value at `y = row_y(k) + 18`; `sub` (if present) at `y = row_y(k) + 30`.
-7. Cells omitted from `cells:` render as `level: "none"` with `none_label` text (default `"No access"`).
+7. Cells omitted from `cells:`, explicitly unknown, or missing `level` render as `level: "unknown"` with `unknown_label` (default `"Unknown"`). Only explicit, confirmed `none` renders `none_label` (default `"No access"`).
 8. Custom-colored cells ≤ 2 (in addition to the focal cell).
 9. No connector elements anywhere in the SVG.
-10. Legend strip at `legend_y_top`, one swatch per `level` actually used, hairline separator above.
+10. Legend strip at `legend_y_top`, one swatch per `level` actually used, including labeled Unknown separately from No access; hairline separator above.
 11. `viewBox_h` grows with `n_components`; `viewBox_w` grows with `n_roles`.
 
 ---
@@ -282,9 +287,9 @@ Before emitting SVG, verify **every** item:
 
 - **More than one focal cell**: focal exists to mark *the* critical access rule; >1 erases the signal.
 - **Connectors anywhere**: matrix is value-driven; arrows belong in DP integration / process diagrams.
-- **Freeform `level` values**: closed vocabulary is `full | rw | read | none`. Use `value` for free-form displayed text + `color` override for arbitrary tinting.
+- **Freeform `level` values**: closed vocabulary is `full | rw | read | none | unknown`. Use `value` for free-form displayed text + `color` override for arbitrary tinting.
 - **Per-row or per-column color tints**: apply `color` per cell only. Whole-row or whole-column highlighting tends to over-emphasize and collapses the matrix into a list.
-- **Using `none_label` as a placeholder for "TBD"**: `none` means *no access*. If the permission is unknown, leave the cell empty in inputs but document it elsewhere; don't render an ambiguous state.
+- **Using `none_label` as a placeholder for "TBD"**: `none` means *no access*. Use `level: "unknown", value: "Unknown"`, or omit the cell to obtain the same visible unknown state. Do not turn absence of evidence into confirmed denial.
 - **More than 6 roles**: split into two matrices (e.g., human roles vs service accounts) before exceeding 6 columns.
 - **More than 14 components**: split by domain (storage / compute / observability / governance) before exceeding 14 rows.
 - **Using the matrix to document *how* permissions are granted**: that belongs in a process or sequence diagram. The matrix shows *what* each role can do, not the grant flow.
@@ -292,6 +297,17 @@ Before emitting SVG, verify **every** item:
 ---
 
 ## 9. Examples
+
+Unknown and denial are deliberately different:
+
+```yaml
+cells:
+  - { row: 0, col: 0, value: "No access", level: "none" } # confirmed denial
+  - { row: 0, col: 1, value: "Unknown", level: "unknown" } # evidence absent
+  # omitted row 0, col 2 also renders Unknown, not No access
+```
+
+The legend includes separate "No access" and "Unknown" entries. The following fully specified historical example has confirmed permissions throughout, so it needs no Unknown cells.
 
 - `assets/example-dp-security-matrix.html`: minimal light (NatStat canonical: 4 roles × 8 components, focal at Data Consumers × Trino aggregated). Gallery default.
 - `assets/example-dp-security-matrix-dark.html`: same, dark skin.
@@ -353,7 +369,7 @@ cells:
   - { row: 5, col: 0, value: "Full",        level: "full" }
   - { row: 5, col: 1, value: "R/W",         level: "rw"   }
   - { row: 5, col: 2, value: "SELECT",      level: "read" }
-  - { row: 5, col: 3, value: "SELECT only", sub: "sole consumer access", focal: true }
+  - { row: 5, col: 3, value: "SELECT only", level: "read", sub: "sole consumer access", focal: true }
   # Row 6: JupyterHub
   - { row: 6, col: 0, value: "Admin", level: "full" }
   - { row: 6, col: 1, value: "R/W",   level: "rw"   }

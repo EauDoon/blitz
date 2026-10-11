@@ -1,6 +1,6 @@
-# Blitz v2.1OAI operating contract
+# Blitz v2.1OAI-r1 operating contract
 
-This is the governing ordinary-work method. It applies within a project that selects Blitz or Thor, or an explicitly selected portable item. Host instructions and the owner's current task govern authority. Detailed methods supply techniques; they do not enlarge the commission. The five-stage measured pilot is a separate selected workflow in [the playbook](../PLAYBOOK.md).
+This is the governing ordinary-work method. It applies within a project that selects Blitz or Blitz, or an explicitly selected portable item. Host instructions and the owner's current task govern authority. Detailed methods supply techniques; they do not enlarge the commission. The five-stage measured pilot is a separate selected workflow in [the playbook](../PLAYBOOK.md).
 
 ## Start from the requested result
 
@@ -48,9 +48,9 @@ Save the current output and only consequential decisions, completed-action recei
 
 Package only when requested or commissioned, under the [handoff contract](../templates/handoff.md). Use an explicit allowlist and the reviewed exporter. Include finished outputs/editable originals, necessary state and permitted evidence, relevant methods with complete required references/scripts/assets/licenses, README, item-scoped PROJECT_INSTRUCTIONS.md and verified manifest. Exclude unrelated items, private-lane material, credentials, raw personal history, evaluation answers and builder notes. An allowlist does not create redistribution rights.
 
-Remove Thor-only startup dependencies. Declare external tools/access as prerequisites; a required unverified prerequisite means dependency-incomplete. Verify file identities, hashes, revisions, required coverage and allowed contents. Integrity does not prove usefulness or permission. A controlled receiver must perform, save and resume representative work using only the bundle and declared prerequisites before independent usability is claimed. Actual destination-host tests are separate; a fresh same-account chat does not prove memory independence.
+Remove Blitz-only startup dependencies. Declare external tools/access as prerequisites; a required unverified prerequisite means dependency-incomplete. Verify file identities, hashes, revisions, required coverage and allowed contents. Integrity does not prove usefulness or permission. A controlled receiver must perform, save and resume representative work using only the bundle and declared prerequisites before independent usability is claimed. Actual destination-host tests are separate; a fresh same-account chat does not prove memory independence.
 
-An export is a reference copy by default and Thor retains its canonical original. If the owner authorizes developing a working copy, record that copy's identity, parent item/revision, destination and allowed writes, then maintain its own revisions without overwriting the original. Returning changes to Thor requires a revision-bound proposal and applicable write authority. Transferring the original's canonical ownership is a distinct explicit ruling naming the successor and making the former canonical copy historical. Export alone grants no destination creation, installation, publication, sending, or destination-write authority.
+An export is a reference copy by default and Blitz retains its canonical original. If the owner authorizes developing a working copy, record that copy's identity, parent item/revision, destination and allowed writes, then maintain its own revisions without overwriting the original. Returning changes to Blitz requires a revision-bound proposal and applicable write authority. Transferring the original's canonical ownership is a distinct explicit ruling naming the successor and making the former canonical copy historical. Export alone grants no destination creation, installation, publication, sending, or destination-write authority.
 
 ## Finish, and keep the core final
 

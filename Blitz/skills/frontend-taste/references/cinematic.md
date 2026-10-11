@@ -74,9 +74,10 @@ Run the `frontend-taste` pre-flight gate in full first. Then:
 
 ```bash
 grep -n '<script src="http' page.html    # sandbox rule, see section 9
-node --check <(sed -n '/<script>/,/<\/script>/p' page.html)
+python3 <frontend-taste-path>/scripts/check-html-js.py page.html
 ```
 
+* Use the actual method directory for `<frontend-taste-path>`. Check every reported external source separately in its declared classic/module mode; data blocks are explicitly skipped. A partial report is not complete verification. The helper parses inline scripts without executing them; browser behavior still needs the checks below.
 * Confirm div, table and script tags balance.
 * Charts: both background colors are `#0f0f0f`, modebar hidden, hover works.
 * Reveals fire, count-ups land on the right value, the interactive control moves a chart.

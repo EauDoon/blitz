@@ -1,4 +1,4 @@
-# Blitz v2.1OAI
+# Blitz v2.1OAI-r1
 
 **Minimum Viable Company kit**
 
@@ -11,7 +11,7 @@ Target an operating baseline in one or two days when scope, inputs, people and p
 
 Autoscale here means make the process repeatable and expand with evidence, capacity and authority. It does not deploy infrastructure autoscaling or autonomous operations. See [the company and department guide](profiles/company.md) for definitions, internal stakeholder/sponsor/resource counterparts and proportional gates.
 
-For standalone archive use, read the [release guide](setup/release-guide.md): first use, migration, verification, package boundaries and component rights are included offline.
+**[Start here](START.md)** for the company or department route, minimum reading set and explicit-source assistant prompt. The [release guide](setup/release-guide.md) adds migration, verification and package boundaries offline.
 
 ## Start
 
@@ -43,11 +43,11 @@ Keep the four core 00/03/09/10 records when continuation needs them, with one ca
 
 `setup/export_item.py` packages reviewed allowlisted item content; see [item export](setup/item-export.md). Integrity and content relevance are separate checks. Working copies need current startup instructions and their own identity/revision, with the parent retained only as lineage. Export does not authorize publication or transfer canonical ownership.
 
-`setup/build_thor_context.py` compiles the optional 17-file Thor source set, with runtime scripts, method dependencies and notices. The Thor name is a compatibility surface, not a requirement to use this package. [Runtime preparation](setup/runtime.md) describes verification and opening. Builder `evals/`, `reviews/` and answer keys stay out of runtime; their absence is not a reason to fetch the master during ordinary work.
+`setup/build_context.py` compiles the optional 17-file Blitz source set, with runtime scripts, method dependencies and notices. [Runtime preparation](setup/runtime.md) describes verification and opening. Builder `evals/`, `reviews/` and answer keys stay out of runtime; their absence is not a reason to fetch the master during ordinary work.
 
 ```sh
 python -B Blitz/evals/run_all.py --out new-check-results
-python -B Blitz/setup/build_thor_context.py --out new-thor-sources
+python -B Blitz/setup/build_context.py --out new-blitz-sources
 ```
 
 Outputs must be new and outside the kit. Read actual logs and results. A platform limitation is not a pass. Package integrity, script execution, assistant behavior, native installation and actual receiving-host success are separate claims.

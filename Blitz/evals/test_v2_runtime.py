@@ -15,7 +15,7 @@ import zipfile
 
 sys.dont_write_bytecode = True
 KIT = Path(__file__).resolve().parents[1]
-spec = importlib.util.spec_from_file_location("v2_context", KIT / "setup/build_thor_context.py")
+spec = importlib.util.spec_from_file_location("v2_context", KIT / "setup/build_context.py")
 context = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(context)
 
@@ -107,7 +107,7 @@ def main():
             ast.parse(path.read_text(encoding="utf-8-sig"), filename=str(path))
         # Reproducing from the opened runtime proves compiler-local import closure.
         clone = base / "reproduced"
-        execute(opened / "Blitz/setup/build_thor_context.py", "--kit", opened / "Blitz", "--out", clone)
+        execute(opened / "Blitz/setup/build_context.py", "--kit", opened / "Blitz", "--out", clone)
         check({p.name: p.read_bytes() for p in clone.iterdir()} ==
               {p.name: p.read_bytes() for p in out.iterdir()}, "Runtime regeneration is nondeterministic")
         # A hostile generated file placed back in selected inputs is excluded.
@@ -130,7 +130,7 @@ def main():
             return original_write(path, data)
         with patch.object(Path, "write_bytes", fail_write):
             rejected(lambda: context.build(fixture, failed))
-        check(not failed.exists() and not list(base.glob(".thor-context-*")), "Partial output leaked")
+        check(not failed.exists() and not list(base.glob(".source-context-*")), "Partial output leaked")
         context.build(fixture, failed)
         check((failed / context.CONTEXT_MANIFEST).is_file(), "Retry after failure did not work")
         occupied = base / "occupied"
@@ -147,7 +147,7 @@ def main():
         with patch.object(context, "publish_directory", occupy_then_publish):
             rejected(lambda: context.build(fixture, race))
         check((race / "sentinel").read_bytes() == b"concurrent owner", "Race replaced another writer")
-        check(not list(base.glob(".thor-context-*")), "Publication failure leaked scratch output")
+        check(not list(base.glob(".source-context-*")), "Publication failure leaked scratch output")
         # Source drift invalidates the staged output without publishing any of it.
         drift_out = base / "drifted"
         inventory = context.inventory
@@ -157,7 +157,7 @@ def main():
             if path == fixture:
                 reads += 1
                 if reads == 2:
-                    (fixture / "setup/thor.md").write_bytes(b"Changed while generating")
+                    (fixture / "setup/source-use.md").write_bytes(b"Changed while generating")
             return inventory(path)
         with patch.object(context, "inventory", change_second_source_read):
             rejected(lambda: context.build(fixture, drift_out))

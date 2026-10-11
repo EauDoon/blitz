@@ -81,7 +81,7 @@ def build(out_raw, kit=KIT):
     run_python(kit / "setup/verify_kit.py")
     manifest, before = snapshot(kit, helper)
     version = manifest.get("version")
-    helper.require(isinstance(version, str) and re.fullmatch(r"[0-9]+(?:\.[0-9]+)*OAI", version),
+    helper.require(isinstance(version, str) and re.fullmatch(r"[0-9]+(?:\.[0-9]+)*OAI(?:-r[1-9][0-9]*)?", version),
                    "unsupported release version")
     archive_name = f"Blitz_v{version}.zip"
     with tempfile.TemporaryDirectory(prefix=".blitz-release-", dir=out.parent) as temporary:
@@ -96,7 +96,7 @@ def build(out_raw, kit=KIT):
         master_hash = digest(master.read_bytes())
         checked = helper.inspect_archive(master, expected_sha256=master_hash)
         helper.require(checked["result"] == "pass", "master archive validation failed")
-        runtime_output = run_python(kit / "setup/build_thor_context.py", "--kit", kit,
+        runtime_output = run_python(kit / "setup/build_context.py", "--kit", kit,
                                     "--out", stage / "runtime")
         runtime_report = json.loads(runtime_output)
         helper.require(runtime_report.get("result") == "pass", "runtime compilation failed")

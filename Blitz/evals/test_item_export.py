@@ -34,7 +34,7 @@ def fixture(base):
     payload = {
         "README.md": "# Synthetic item\n[Start](PROJECT_INSTRUCTIONS.md). [State](context/00.md). [Brief](deliverables/brief.md). [Method](methods/SKILL.md).\n",
         "PROJECT_INSTRUCTIONS.md": "# Scope\nOnly SYNTHETIC-FINANCE-01 r01. Read [state](context/00.md) and [method](methods/SKILL.md). Do not publish or install.\n",
-        "context/00.md": "# SYNTHETIC-FINANCE-01\nGoverning revision: r01. Canonical owner: Thor. Source: [costs](../sources/costs.csv).\n",
+        "context/00.md": "# SYNTHETIC-FINANCE-01\nGoverning revision: r01. Canonical owner: Blitz. Source: [costs](../sources/costs.csv).\n",
         "deliverables/brief.md": "# Brief\nSynthetic total USD 12. [Evidence](../sources/costs.csv).\n",
         "sources/costs.csv": "component,usd\nsynthetic,12\n",
         "methods/SKILL.md": "# Method\nRead [check](references/check.md) and retain [license](LICENSE.md).\n",
@@ -274,7 +274,7 @@ def hardlink_source(base, root, contract):
         raise Blocked("Host did not permit hardlink creation: " + str(exc)) from exc
 
 
-def thor_reference(base, root, contract, declared=False, syntax="inline"):
+def blitz_reference(base, root, contract, declared=False, syntax="inline"):
     target = "https://chatgpt.com/g/g-p-synthetic/project"
     name = "methods/references/check.md"
     if syntax == "autolink":
@@ -330,15 +330,15 @@ def main():
         ("atomic_failure_cleans_temporary", None, "atomic_failure"),
         ("external_prerequisite_unavailable", external_missing, "reject"),
         ("external_prerequisite_missing_evidence", lambda b, r, c: c["prerequisites"].append({"id": "needed", "required": True, "status": "verified", "evidence": "", "locator": "connector"}), "reject"),
-        ("absolute_local_reference", lambda b, r, c: replace_file(r, c, "methods/references/check.md", "Read [required](C:/Thor/only.md).\n"), "reject"),
-        ("undeclared_thor_reference", thor_reference, "reject"),
-        ("declared_external_reference", lambda b, r, c: thor_reference(b, r, c, declared=True), "pass"),
-        ("undeclared_thor_autolink", lambda b, r, c: thor_reference(b, r, c, syntax="autolink"), "reject"),
-        ("declared_thor_autolink", lambda b, r, c: thor_reference(b, r, c, declared=True, syntax="autolink"), "pass"),
-        ("undeclared_thor_html_entity", lambda b, r, c: thor_reference(b, r, c, syntax="html_entity"), "reject"),
-        ("declared_thor_html_entity", lambda b, r, c: thor_reference(b, r, c, declared=True, syntax="html_entity"), "pass"),
-        ("undeclared_thor_encoded_path", lambda b, r, c: thor_reference(b, r, c, syntax="encoded_path"), "reject"),
-        ("declared_thor_encoded_path", lambda b, r, c: thor_reference(b, r, c, declared=True, syntax="encoded_path"), "pass"),
+        ("absolute_local_reference", lambda b, r, c: replace_file(r, c, "methods/references/check.md", "Read [required](C:/Blitz/only.md).\n"), "reject"),
+        ("undeclared_blitz_reference", blitz_reference, "reject"),
+        ("declared_external_reference", lambda b, r, c: blitz_reference(b, r, c, declared=True), "pass"),
+        ("undeclared_blitz_autolink", lambda b, r, c: blitz_reference(b, r, c, syntax="autolink"), "reject"),
+        ("declared_blitz_autolink", lambda b, r, c: blitz_reference(b, r, c, declared=True, syntax="autolink"), "pass"),
+        ("undeclared_blitz_html_entity", lambda b, r, c: blitz_reference(b, r, c, syntax="html_entity"), "reject"),
+        ("declared_blitz_html_entity", lambda b, r, c: blitz_reference(b, r, c, declared=True, syntax="html_entity"), "pass"),
+        ("undeclared_blitz_encoded_path", lambda b, r, c: blitz_reference(b, r, c, syntax="encoded_path"), "reject"),
+        ("declared_blitz_encoded_path", lambda b, r, c: blitz_reference(b, r, c, declared=True, syntax="encoded_path"), "pass"),
         ("wrong_inspect_revision", None, "wrong_revision"),
         ("wrong_inspect_identity", None, "wrong_identity"),
         ("tampered_payload_hash", None, "hash"),
@@ -372,7 +372,7 @@ def main():
     if final_exporter_hash != starting_exporter_hash:
         results.append({"id": "code_changed_during_run", "status": "fail", "detail": "Exporter changed during execution; results do not describe one candidate."})
     summary = {s: sum(r["status"] == s for r in results) for s in ["pass", "fail", "blocked"]}
-    report = {"kind": "executable_item_export_checks", "exporter_sha256": final_exporter_hash, "exporter_sha256_start": starting_exporter_hash, "test_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), "summary": summary, "cases": results, "limits": "Code checks only. No model execution, actual receiving access, Thor routing, installation or adoption is inferred. A blocked filesystem symlink test remains blocked even if ZIP symlink rejection passes."}
+    report = {"kind": "executable_item_export_checks", "exporter_sha256": final_exporter_hash, "exporter_sha256_start": starting_exporter_hash, "test_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), "summary": summary, "cases": results, "limits": "Code checks only. No model execution, actual receiving access, Blitz routing, installation or adoption is inferred. A blocked filesystem symlink test remains blocked even if ZIP symlink rejection passes."}
     if args.report:
         args.report.parent.mkdir(parents=True, exist_ok=True)
         args.report.write_text(json.dumps(report, indent=2), encoding="utf-8")

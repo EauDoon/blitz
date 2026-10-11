@@ -1,6 +1,6 @@
 # [PROJECT] 05: Regulatory Map
 
-As of [DD-MM-YYYY, time and timezone when material]. Create only when a material activity/jurisdiction issue needs a durable map (Blitz kit v2.1OAI). This is analysis and an evidence record, not legal sign-off, a complete compliance checklist or authority to operate.
+As of [DD-MM-YYYY, time and timezone when material]. Create only when a material activity/jurisdiction issue needs a durable map (Blitz kit v2.1OAI-r1). This is analysis and an evidence record, not legal sign-off, a complete compliance checklist or authority to operate.
 
 Start from the actual proposed activity, parties and money/data flows. Identify the relevant operating, customer, worker and entity locations. A profile marked unknown remains unknown; a "not regulated" label does not settle ordinary contractual, tax, privacy or registration questions. Assess only matters that can affect the next commitment. Reuse sufficient current scoped advice rather than manufacture a pack.
 

@@ -1,4 +1,4 @@
-# Blitz v2.1OAI company and department profile
+# Blitz v2.1OAI-r1 company and department profile
 
 Blitz is a **Minimum Viable Company kit**.
 

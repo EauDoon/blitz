@@ -3,10 +3,10 @@
 <desc id="description">Blitz. Minimum Viable Company kit. Listen, collect, sprint. Reduce cycle time. Distinct input fragments gather into evidence and form a bounded output. This is a process illustration, not proof of demand, completed work or approval.</desc>
 <rect x="0" y="0" width="960" height="800" fill="#252923" stroke="none" stroke-width="1"/>
 <rect x="52" y="45" width="84" height="8" fill="#FF986D" stroke="none" stroke-width="1"/>
-<text x="45" y="223" font-family="Georgia, Times New Roman, serif" font-size="184" font-weight="700" text-anchor="start" fill="#F6F1E7">Blitz</text>
+<text x="45" y="223" font-family="Georgia, Times New Roman, serif" font-size="144" font-weight="700" text-anchor="start" fill="#F6F1E7">Blitz</text>
 <text x="54" y="291" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="400" text-anchor="start" fill="#F6F1E7">Minimum Viable Company kit</text>
-<text x="50" y="406" font-family="Segoe UI, Arial, sans-serif" font-size="70" font-weight="700" text-anchor="start" fill="#F6F1E7">Listen, collect, sprint.</text>
-<text x="50" y="488" font-family="Segoe UI, Arial, sans-serif" font-size="70" font-weight="700" text-anchor="start" fill="#F6F1E7">Reduce cycle time.</text>
+<text x="50" y="406" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="700" text-anchor="start" fill="#F6F1E7">Listen, collect, sprint.</text>
+<text x="50" y="488" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="700" text-anchor="start" fill="#F6F1E7">Reduce cycle time.</text>
 <path d="M54 518 L906 518" fill="none" stroke="#9B9F93" stroke-width="1"/>
 <rect x="72" y="559" width="118" height="30" fill="none" stroke="#9B9F93" stroke-width="2"/>
 <rect x="143" y="608" width="109" height="32" fill="none" stroke="#9B9F93" stroke-width="2"/>

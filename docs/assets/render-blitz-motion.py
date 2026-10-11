@@ -36,13 +36,14 @@ HERO_DESC = ("Blitz. Minimum Viable Company kit. Listen, collect, sprint. "
              "Reduce cycle time. Distinct input fragments gather into evidence "
              "and form a bounded output. This is a process illustration, not "
              "proof of demand, completed work or approval.")
-WORKFLOW_DESC = ("Frame the offer and next test; Test observed customer and payer "
-                 "behavior; Deliver the result and verify acceptance; Operate with "
-                 "reconciled cash and a feasible next cycle. At every gate an owner "
-                 "checks evidence and existing authority. Record Proceed for the next "
-                 "permitted step, Hold to pause the dependent action, or Walk to reject "
-                 "the scoped option. New evidence or revised scope returns to the "
-                 "affected gate. A gate does not grant permission.")
+WORKFLOW_DESC = ("Frame a bounded offer or internal service and its next test; "
+                 "Test observed behavior of users and the customer/payer or internal sponsor; "
+                 "Deliver the result and verify acceptance; Operate with reconciled company "
+                 "cash and obligations, or department budget, actual resource use and obligations, "
+                 "and a feasible next cycle. At every gate an owner checks evidence and existing "
+                 "authority. Record Proceed for the next permitted step, Hold to pause the "
+                 "dependent action, or Walk to reject the scoped option. New evidence or revised "
+                 "scope returns to the affected gate. A gate does not grant permission.")
 
 
 def smooth(value):
@@ -166,10 +167,10 @@ def hero(fonts, seconds=4.8, dark=False):
     accent = "#FF986D" if dark else ORANGE
     c = Canvas(WIDTH, HEIGHT, fonts, "Blitz — Minimum Viable Company kit", HERO_DESC, bg)
     c.rect(52, 45, 84, 8, accent)
-    c.text(45, 223, "Blitz", 184, ink, "display")
+    c.text(45, 223, "Blitz", 144, ink, "display")
     c.text(54, 291, "Minimum Viable Company kit", 48, ink)
-    c.text(50, 406, "Listen, collect, sprint.", 70, ink, "bold")
-    c.text(50, 488, "Reduce cycle time.", 70, ink, "bold")
+    c.text(50, 406, "Listen, collect, sprint.", 56, ink, "bold")
+    c.text(50, 488, "Reduce cycle time.", 56, ink, "bold")
     # The fine rule separates promise from its abstract process illustration.
     c.line([(54, 518), (906, 518)], rule, 1)
     # Empty source impressions retain the provenance of the collected pieces.
@@ -202,10 +203,10 @@ def hero(fonts, seconds=4.8, dark=False):
 
 
 GATES = (
-    ("Frame", ["Bound the offer", "and next test."], ["Offer · owner · cap"]),
-    ("Test", ["Observe customer", "and payer behavior."], ["Criteria · observation"]),
+    ("Frame", ["Bound the work", "and next test."], ["Scope · owner · cap"]),
+    ("Test", ["Observe users and", "decision makers."], ["Criteria · observation"]),
     ("Deliver", ["Verify the result", "and acceptance."], ["Output · acceptance"]),
-    ("Operate", ["Reconcile cash.", "Prepare the next cycle."], ["Cash · capacity · owner"]),
+    ("Operate", ["Reconcile resources.", "Prepare the next cycle."], ["Funding · capacity · owner"]),
 )
 
 
@@ -214,7 +215,7 @@ def workflow(fonts, mobile=False):
         return workflow_mobile(fonts)
     c = Canvas(1440, 1020, fonts, "Blitz — evidence gates and owner decisions", WORKFLOW_DESC)
     c.rect(56, 44, 64, 7, ORANGE)
-    c.text(56, 115, "Evidence sets the next move.", 58, INK, "bold")
+    c.text(56, 115, "Evidence sets the next move.", 50, INK, "bold")
     c.text(56, 161, "Four gates for the specific next commitment.", 30, MUTED)
     # One evidence category group; no misleading automatic gate-passage arrows.
     c.rect(56, 203, 1328, 325, PANEL, RULE, 2)
@@ -223,7 +224,7 @@ def workflow(fonts, mobile=False):
         if i:
             c.line([(x - 24, 231), (x - 24, 500)], SOFT, 2)
         c.text(x, 257, f"0{i + 1}", 30, ORANGE, "bold")
-        c.text(x, 321, title, 49, INK, "bold")
+        c.text(x, 321, title, 44, INK, "bold")
         for j, label in enumerate(body):
             c.text(x, 376 + j * 41, label, 28, INK)
         c.line([(x, 451), (x + 281, 451)], SOFT, 2)
@@ -233,7 +234,7 @@ def workflow(fonts, mobile=False):
     c.arrow((718, 559), (718, 595), RULE, 2)
     c.rect(56, 596, 1328, 107, INK)
     c.text(84, 660, "AT EVERY GATE", 28, PAPER, "bold")
-    c.text(438, 663, "Owner checks evidence + authority", 39, PAPER, "bold")
+    c.text(438, 663, "Owner checks evidence + authority", 34, PAPER, "bold")
     c.line([(720, 703), (720, 734)], RULE, 2)
     c.line([(272, 734), (1168, 734)], RULE, 2)
     for x, name, detail in ((56, "Proceed", "Next permitted step"),
@@ -244,7 +245,7 @@ def workflow(fonts, mobile=False):
         c.text(x + 25, 811, name, 39, INK, "bold")
         c.text(x + 25, 855, detail, 27, MUTED)
     c.line([(720, 882), (720, 927)], ORANGE, 2, True)
-    c.text(84, 958, "New evidence or revised scope → revisit the affected gate", 34, INK, "bold")
+    c.text(84, 958, "New evidence or revised scope → revisit the affected gate", 30, INK, "bold")
     c.line([(57, 946), (28, 946), (28, 367)], ORANGE, 3, True)
     c.arrow((28, 367), (55, 367), ORANGE, 3, 9)
     c.text(84, 996, "Proceed uses existing authority. A gate does not grant permission.", 26, MUTED)
@@ -254,38 +255,38 @@ def workflow(fonts, mobile=False):
 def workflow_mobile(fonts):
     c = Canvas(600, 1840, fonts, "Blitz — evidence gates and owner decisions", WORKFLOW_DESC)
     c.rect(44, 35, 64, 7, ORANGE)
-    c.text(44, 104, "Evidence sets", 48, INK, "bold")
-    c.text(44, 161, "the next move.", 48, INK, "bold")
-    c.text(44, 217, "For the next commitment.", 32, MUTED)
+    c.text(44, 104, "Evidence sets", 42, INK, "bold")
+    c.text(44, 161, "the next move.", 42, INK, "bold")
+    c.text(44, 217, "For the next commitment.", 30, MUTED)
     c.rect(44, 252, 512, 748, PANEL, RULE, 2)
     for i, (title, body, _) in enumerate(GATES):
         y = 252 + i * 187
         if i:
             c.line([(67, y), (532, y)], SOFT, 2)
         c.text(68, y + 57, f"0{i + 1}", 28, ORANGE, "bold")
-        c.text(127, y + 59, title, 44, INK, "bold")
+        c.text(127, y + 59, title, 38, INK, "bold")
         for j, label in enumerate(body):
-            c.text(68, y + 111 + j * 42, label, 34, INK)
+            c.text(68, y + 111 + j * 42, label, 30, INK)
     c.arrow((300, 1000), (300, 1031), RULE, 2)
     c.rect(44, 1032, 512, 175, INK)
     c.text(68, 1077, "AT EVERY GATE", 28, PAPER, "bold")
-    c.text(68, 1131, "Owner checks evidence", 35, PAPER, "bold")
-    c.text(68, 1180, "+ existing authority", 35, PAPER, "bold")
+    c.text(68, 1131, "Owner checks evidence", 32, PAPER, "bold")
+    c.text(68, 1180, "+ existing authority", 32, PAPER, "bold")
     c.line([(300, 1207), (300, 1230), (65, 1230), (65, 1533)], RULE, 2)
     for i, (name, detail) in enumerate((("Proceed", "Next permitted step"),
                                       ("Hold", "Pause dependent action"),
                                       ("Walk", "Reject scoped option"))):
         y = 1250 + i * 122
         c.arrow((65, y + 38), (94, y + 38), RULE, 2)
-        c.text(112, y + 45, name, 40, INK, "bold")
-        c.text(112, y + 91, detail, 32, MUTED)
+        c.text(112, y + 45, name, 36, INK, "bold")
+        c.text(112, y + 91, detail, 30, MUTED)
     c.line([(44, 1630), (556, 1630)], SOFT, 2)
-    c.text(68, 1680, "New evidence / revised scope", 32, INK, "bold")
-    c.text(68, 1724, "Revisit the affected gate.", 34, INK, "bold")
+    c.text(68, 1680, "New evidence / revised scope", 30, INK, "bold")
+    c.text(68, 1724, "Revisit the affected gate.", 32, INK, "bold")
     c.line([(47, 1708), (21, 1708), (21, 626)], ORANGE, 3, True)
     c.arrow((21, 626), (43, 626), ORANGE, 3, 9)
-    c.text(68, 1785, "A gate does not grant", 32, MUTED)
-    c.text(68, 1825, "permission.", 32, MUTED)
+    c.text(68, 1785, "A gate does not grant", 30, MUTED)
+    c.text(68, 1825, "permission.", 30, MUTED)
     return c
 
 
@@ -382,9 +383,9 @@ def evidence_report(directory, canvases, gif, fonts, records):
         "contrast_ratios": {"ink_on_paper": contrast(INK, PAPER), "muted_on_paper": contrast(MUTED, PAPER),
                             "orange_on_paper": contrast(ORANGE, PAPER), "rule_on_paper": contrast(RULE, PAPER),
                             "paper_on_ink": contrast(PAPER, INK)},
-        "at_320px": {"hero_wordmark_px": round(184 / 3, 2), "hero_descriptor_px": 16,
-                     "hero_tagline_px": round(70 / 3, 2), "hero_min_stage_label_px": 14,
-                     "mobile_workflow_body_px": round(32 * 320 / 600, 2)},
+        "at_320px": {"hero_wordmark_px": round(144 / 3, 2), "hero_descriptor_px": 16,
+                     "hero_tagline_px": round(56 / 3, 2), "hero_min_stage_label_px": 14,
+                     "mobile_workflow_body_px": round(30 * 320 / 600, 2)},
         "fit": fits,
         "limits": ["Font fallback can differ on other hosts; no font is bundled.",
                    "Raster fit checks do not prove browser font fallback fit; inspect rendered SVG views.",

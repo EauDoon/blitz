@@ -1,6 +1,6 @@
 # [PROJECT] 00: Read Me First
 
-As of [DD-MM-YYYY, time and timezone when material]. Scribe: [owner]. Create when useful durable project state is needed (Blitz kit v2.1OAI).
+As of [DD-MM-YYYY, time and timezone when material]. Scribe: [owner]. Create when useful durable project state is needed (Blitz kit v2.1OAI-r1).
 
 This is a Blitz project. T0, when a measured pilot is selected: [first actionable brief, date/time/timezone]. First contact, if relevant: [date/time/timezone]. Canonical host: [authorized host and project]. No pilot clock is implied. An explicitly selected measured pilot retains its 72-hour target and dependency-based fallback forecast; record those only when applicable.
 

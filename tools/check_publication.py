@@ -12,9 +12,11 @@ import os
 from pathlib import Path, PurePosixPath
 import re
 import stat
+import struct
 import subprocess
 import sys
 import zipfile
+import zlib
 
 MAX_BLOB = 64 * 1024 * 1024
 MAX_ZIP_TOTAL = 256 * 1024 * 1024
@@ -35,6 +37,7 @@ REVIEWED_MEDIA = {
     "docs/assets/blitz-motion.gif": frozenset({
         "bb4153ee9d024d2e242f439b596d5dcb508154c8d7941c8d33dea427aa29a65b",
         "6fa3b6b19fe0d2c89168870306b9cc1cf4b067648f0e9476d321532e62ee1116",
+        "cf2cac59867c7a9d72e3f26eaff1b84b9006d560a483b6bd9dc8bc8294e9e5a9",
     }),
 }
 # Existing kit restricted-term fingerprints; no private source names are embedded.
@@ -73,11 +76,126 @@ def path_rules(path, data):
         yield "unsafe-path"
 
 
+def text_rules(text):
+    rules = {name for name, pattern in PATTERNS.items() if pattern.search(text)}
+    if "\x00" in text:
+        rules.add("binary-requires-human-review")
+    words = re.findall(r"[a-z0-9]+", text.lower())
+    grams = set(words) | {a + " " + b for a, b in zip(words, words[1:])}
+    if any(hashlib.sha256(value.encode()).hexdigest()[:16] in RESTRICTED for value in grams):
+        rules.add("restricted-term-fingerprint")
+    return rules
+
+
+def zip_metadata_rules(archive, data):
+    """Account for every non-payload span of an ordinary single-disk ZIP.
+
+    Comments/names are scanned. Extra fields, gaps and unsupported structures
+    require review; they never receive a publication pass merely as opaque bytes.
+    Payload bytes are decompressed, CRC-checked and scanned separately below.
+    """
+    rules = set()
+    def metadata(label, value, encoding="utf-8"):
+        try:
+            text = value.decode(encoding)
+        except UnicodeDecodeError:
+            rules.add(label + ":opaque-metadata-requires-review")
+            text = value.decode("latin-1") # Still detect known ASCII patterns.
+        rules.update(label + ":" + rule for rule in text_rules(text))
+    def extra(label, value):
+        if value:
+            rules.add(label + ":extra-fields-require-review")
+            metadata(label, value)
+    rows = archive.infolist()
+    cursor = 0
+    for index, row in enumerate(sorted(rows, key=lambda item: item.header_offset)):
+        label = "archive-local-" + str(index)
+        start = row.header_offset
+        if start != cursor:
+            rules.add("archive-prefix-or-unaccounted-bytes")
+            metadata(label + "-gap", data[cursor:start])
+        if start < cursor or start + 30 > len(data):
+            raise ValueError("Overlapping or truncated ZIP local header")
+        header = struct.unpack_from("<4s5H3I2H", data, start)
+        if header[0] != b"PK\x03\x04":
+            raise ValueError("Invalid ZIP local header")
+        name_end = start + 30 + header[9]
+        payload_start = name_end + header[10]
+        if payload_start > archive.start_dir:
+            raise ValueError("Truncated ZIP local metadata")
+        metadata(label + "-name", data[start + 30:name_end], "utf-8" if header[2] & 0x800 else "cp437")
+        extra(label, data[name_end:payload_start])
+        cursor = payload_start + row.compress_size
+        payload = data[payload_start:cursor]
+        if len(payload) != row.compress_size:
+            raise ValueError("Truncated ZIP payload")
+        if row.file_size > MAX_BLOB:
+            rules.add("oversized-archive-member-not-scanned")
+        elif row.compress_type == zipfile.ZIP_STORED:
+            if len(payload) != row.file_size:
+                rules.add("inconsistent-stored-archive-member")
+        elif row.compress_type == zipfile.ZIP_DEFLATED:
+            inflater = zlib.decompressobj(-15)
+            expanded = inflater.decompress(payload, MAX_BLOB + 1)
+            if not inflater.eof or inflater.unused_data or inflater.unconsumed_tail or len(expanded) != row.file_size:
+                rules.add("incomplete-or-extra-compressed-member-bytes")
+            del expanded
+        else:
+            rules.add("unsupported-archive-compression-requires-review")
+        if header[2] & 8:
+            # Supported 32-bit descriptor, with or without its optional signature.
+            if data[cursor:cursor + 4] == b"PK\x07\x08":
+                cursor += 4
+            if cursor + 12 > len(data) or struct.unpack_from("<III", data, cursor) != (row.CRC, row.compress_size, row.file_size):
+                rules.add("unsupported-archive-data-descriptor")
+            cursor += 12
+        if cursor > archive.start_dir:
+            raise ValueError("ZIP payload overlaps directory")
+    if cursor != archive.start_dir:
+        rules.add("archive-prefix-or-unaccounted-bytes")
+        metadata("archive-directory-gap", data[cursor:archive.start_dir])
+    cursor = archive.start_dir
+    for index, row in enumerate(rows):
+        if cursor + 46 > len(data):
+            raise ValueError("Truncated ZIP directory")
+        header = struct.unpack_from("<4s6H3I5H2I", data, cursor)
+        if header[0] != b"PK\x01\x02":
+            raise ValueError("Invalid ZIP directory")
+        name_end = cursor + 46 + header[10]
+        extra_end = name_end + header[11]
+        comment_end = extra_end + header[12]
+        if comment_end > len(data):
+            raise ValueError("Truncated ZIP directory metadata")
+        label = "archive-central-" + str(index)
+        metadata(label + "-name", data[cursor + 46:name_end], "utf-8" if header[3] & 0x800 else "cp437")
+        extra(label, data[name_end:extra_end])
+        metadata(label + "-comment", data[extra_end:comment_end])
+        if header[13] != 0:
+            rules.add("unsupported-multidisk-archive")
+        cursor = comment_end
+    if cursor + 22 > len(data) or data[cursor:cursor + 4] != b"PK\x05\x06":
+        # ZIP64/footer extensions are outside this bounded ordinary-ZIP contract.
+        rules.add("unsupported-archive-footer-requires-review")
+        metadata("archive-footer", data[cursor:])
+        return rules
+    end = struct.unpack_from("<4s4H2IH", data, cursor)
+    if end[1:5] != (0, 0, len(rows), len(rows)) or end[5] != cursor - archive.start_dir or end[6] != archive.start_dir:
+        rules.add("inconsistent-archive-directory")
+    archive_end = cursor + 22 + end[7]
+    if archive_end > len(data):
+        raise ValueError("Truncated ZIP comment")
+    metadata("archive-comment", data[cursor + 22:archive_end])
+    if archive_end != len(data):
+        rules.add("archive-trailing-bytes-require-review")
+        metadata("archive-trailer", data[archive_end:])
+    return rules
+
+
 def scan_bytes(path, data, depth=0):
     findings = set(path_rules(path, data))
     if len(data) > MAX_BLOB:
         return findings | {"oversized-blob-not-scanned"}
-    if data.startswith(b"PK\x03\x04") or path.lower().endswith(".zip"):
+    if data.startswith((b"PK\x03\x04", b"PK\x05\x06")) or path.lower().endswith(".zip"):
         if depth >= 2:
             return findings | {"nested-archive-limit"}
         try:
@@ -85,15 +203,19 @@ def scan_bytes(path, data, depth=0):
                 rows = archive.infolist()
                 if len(rows) > 4096 or sum(row.file_size for row in rows) > MAX_ZIP_TOTAL:
                     return findings | {"archive-size-limit"}
-                for row in rows:
-                    if row.is_dir():
-                        continue
-                    if row.flag_bits & 1 or row.file_size > MAX_BLOB or stat.S_IFMT(row.external_attr >> 16) not in {0, stat.S_IFREG}:
-                        findings.add("unscannable-archive-member:" + row.filename)
+                findings.update(zip_metadata_rules(archive, data))
+                for index, row in enumerate(rows):
+                    # Numeric member identities avoid echoing a credential-like filename.
+                    label = "archive-member-" + str(index)
+                    findings.update(label + ":name:" + rule for rule in text_rules(row.orig_filename))
+                    allowed_types = {0, stat.S_IFREG, stat.S_IFDIR} if row.is_dir() else {0, stat.S_IFREG}
+                    if row.flag_bits & 1 or row.file_size > MAX_BLOB or stat.S_IFMT(row.external_attr >> 16) not in allowed_types or (row.is_dir() and row.file_size):
+                        findings.update(label + ":" + rule for rule in path_rules(row.filename, b""))
+                        findings.add(label + ":unscannable-archive-member")
                         continue
                     for rule in scan_bytes(row.filename, archive.read(row), depth + 1):
-                        findings.add("archive-member:" + row.filename + ":" + rule)
-        except (OSError, ValueError, RuntimeError, zipfile.BadZipFile, NotImplementedError):
+                        findings.add(label + ":" + rule)
+        except (OSError, ValueError, RuntimeError, struct.error, zlib.error, zipfile.BadZipFile, NotImplementedError):
             findings.add("invalid-or-unreadable-archive")
         return findings
     expected_media = REVIEWED_MEDIA.get(path)
@@ -103,13 +225,7 @@ def scan_bytes(path, data, depth=0):
         text = data.decode("utf-8-sig")
     except UnicodeDecodeError:
         return findings | {"binary-requires-human-review"}
-    if "\x00" in text:
-        findings.add("binary-requires-human-review")
-    findings.update(name for name, pattern in PATTERNS.items() if pattern.search(text))
-    words = re.findall(r"[a-z0-9]+", text.lower())
-    grams = set(words) | {a + " " + b for a, b in zip(words, words[1:])}
-    if any(hashlib.sha256(value.encode()).hexdigest()[:16] in RESTRICTED for value in grams):
-        findings.add("restricted-term-fingerprint")
+    findings.update(text_rules(text))
     return findings
 
 
@@ -167,6 +283,9 @@ def scan(root):
     # Every query and worktree read must use the same complete repository root.
     # Git otherwise limits ls-files to a caller-supplied subtree silently.
     root = Path(os.fsdecode(git(requested, "rev-parse", "--show-toplevel")).rstrip("\r\n")).resolve(strict=True)
+    if git(root, "rev-parse", "--is-shallow-repository").strip() != b"false":
+        return {"result": "fail", "reason": "incomplete-shallow-history", "findings": [],
+                "limits": "A shallow checkout cannot satisfy publication history verification. No history was fetched."}
     tracked = [os.fsdecode(value) for value in git(root, "ls-files", "-z").split(b"\0") if value]
     if not tracked:
         raise ValueError("No tracked files; stage the intended repository files before scanning")

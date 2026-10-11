@@ -1,4 +1,4 @@
-# Setup on Claude, Blitz v2.1OAI
+# Setup on Claude, Blitz v2.1OAI-r1
 
 Use this guide only for an explicitly commissioned Claude project setup, receiving task or native installation. Ordinary work follows [the operating contract](operating-contract.md) through [the portable instruction template](../templates/project-instructions-claude.md). Instructions bootstrap source-based use without an installed router. A quick answer, review, plan or small edit does not require project setup, all four records, a source-register sweep or a skill-listing audit.
 
@@ -53,7 +53,7 @@ For independent portable usability, a controlled receiver uses only the export a
 
 ## Optional native skills and historical capability notes
 
-Blitz v2.1OAI's versioned core needs no account installation. If the owner separately requests a native skill installation, retain the current adaptation and its rollback bytes, inspect the actual role/listing, run package checks including `skills/skill-package-check/references/build-check.py`, test relevant behavior, then use the supported authorized install route. No paid routing tests. A package pass cannot establish native loading or adoption.
+Blitz v2.1OAI-r1's versioned core needs no account installation. If the owner separately requests a native skill installation, retain the current adaptation and its rollback bytes, inspect the actual role/listing, run package checks including `skills/skill-package-check/references/build-check.py`, test relevant behavior, then use the supported authorized install route. No paid routing tests. A package pass cannot establish native loading or adoption.
 
 The 30-09-2026 source reported a 28,500-character Claude listing ceiling, 27,971 characters in use and a 225-character v1.1 router description. These are historical numbers only; they must not control v2 installation or authorize deleting other skills. If a listing budget matters, measure the actual candidate/listing with the supported current route, using `skills/skill-package-check/references/suite-budget.py` only where its model matches the host.
 
@@ -65,4 +65,4 @@ Reference copies return revision-bound proposals while the original stays canoni
 
 Before retrying uncertain actions, inspect receipts and resulting state: confirmed complete means no replay; confirmed not applied permits only a still-authorized retry; unknown holds an unsafe duplicate. Preserve cancellation. Verify saved state through actual readback; if the save route is unavailable, return versioned unsaved state and the precise remaining step. A chat link or model memory is not a verified durable save route.
 
-This is v2.1OAI preparation/receiving guidance, not a Claude-tested installation receipt. Native Claude execution, automatic routing and installed integrity remain untested unless separate actual host evidence establishes them. OpenAI-only preparation does not require Claude access. The core stays frozen; ordinary item facts and authorized outputs may change. Host drift uses an existing adequate fallback or a precise limitation, not a silent core upgrade. Keep outside skills/global instructions, other projects and account settings unchanged.
+This is v2.1OAI-r1 preparation/receiving guidance, not a Claude-tested installation receipt. Native Claude execution, automatic routing and installed integrity remain untested unless separate actual host evidence establishes them. OpenAI-only preparation does not require Claude access. The core stays frozen; ordinary item facts and authorized outputs may change. Host drift uses an existing adequate fallback or a precise limitation, not a silent core upgrade. Keep outside skills/global instructions, other projects and account settings unchanged.

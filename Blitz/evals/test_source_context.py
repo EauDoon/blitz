@@ -11,9 +11,9 @@ import zipfile
 from types import SimpleNamespace
 from unittest.mock import patch
 
-MODULE = Path(__file__).resolve().parents[1] / "setup/build_thor_context.py"
+MODULE = Path(__file__).resolve().parents[1] / "setup/build_context.py"
 sys.dont_write_bytecode = True
-spec = importlib.util.spec_from_file_location("build_thor_context", MODULE)
+spec = importlib.util.spec_from_file_location("build_context", MODULE)
 context = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(context)
 
@@ -35,7 +35,7 @@ def put(root, rel, data):
 
 
 def run():
-    with tempfile.TemporaryDirectory(prefix="thor-context-check-") as temp:
+    with tempfile.TemporaryDirectory(prefix="source-context-check-") as temp:
         base = Path(temp)
         kit = base / "kit"
         for method in context.METHOD_GROUP:
@@ -48,17 +48,17 @@ def run():
         put(kit, "skills/blitz/evals/answer-key.md", b"HIDDEN_FIXTURE_ANSWER")
         put(kit, "skills/blitz/answer-key.json", b'{"answer":"HIDDEN_FIXTURE_ANSWER"}')
         put(kit, "setup/build-notes.md", b"HIDDEN_FIXTURE_BUILDER_NOTES")
-        put(kit, "setup/thor-context-manifest.json", b'{"legacy":"HIDDEN_FIXTURE_MANIFEST"}')
+        put(kit, "setup/source-context-manifest.json", b'{"legacy":"HIDDEN_FIXTURE_MANIFEST"}')
         put(kit, "setup/" + context.CONTEXT_MANIFEST, b'{"current":"HIDDEN_FIXTURE_MANIFEST"}')
         put(kit, "evals/fixtures/input.md", b"HIDDEN_FIXTURE_INPUT")
         put(kit, "templates/handoff.md", b"# Handoff\nRead the adopted revision.\n")
         put(kit, "templates/receipt.json", b'{"status":"NOT TESTED"}\n')
-        guide = b"# Launch\r\nRead Thor_Blitz_v2.1OAI_Method_Index.md.\r\n"
+        guide = b"# Launch\r\nRead Blitz_v2.1OAI-r1_Method_Index.md.\r\n"
         body = b"Exact instructions.\r\nRetain Work.\r\n"
-        put(kit, "setup/thor.md", guide)
-        put(kit, "setup/Thor_Project_Instructions.md", body)
+        put(kit, "setup/source-use.md", guide)
+        put(kit, "setup/Blitz_Project_Instructions.md", body)
         register = b"# Register\r\nNOT APPLIED. Target execution NOT TESTED.\r\n"
-        put(kit, "setup/Thor_System_Register.md", register)
+        put(kit, "setup/Blitz_System_Register.md", register)
         put(kit, "setup/operating-contract.md", b"# Operating contract\nKeep the commission.\n")
         put(kit, "setup/operator-guide.md", b"# Operator guide\nStart and resume.\n")
         put(kit, "setup/runtime.md", b"# Runtime\nInspect selected resources.\n")
@@ -126,9 +126,9 @@ def run():
             raise AssertionError("hardlink guard not exercised: " + str(exc))
         reject(lambda: context.prepare(kit), "hardlink")
         alias.unlink()
-        put(kit, "setup/Thor_Project_Instructions.md", b"x" * 8001)
+        put(kit, "setup/Blitz_Project_Instructions.md", b"x" * 8001)
         reject(lambda: context.prepare(kit), "8000")
-        put(kit, "setup/Thor_Project_Instructions.md", body)
+        put(kit, "setup/Blitz_Project_Instructions.md", body)
         (kit / "skills/blitz/SKILL.md").unlink()
         reject(lambda: context.prepare(kit), "inventory differs")
     print("PASS: 25-method coverage, exact copies, nested references, licenses, resource limits, excluded fixtures, hashes, determinism, dry run, source immutability, occupied/overlap/live/alias/reparse/hardlink guards and instruction limit.")

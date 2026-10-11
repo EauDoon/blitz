@@ -1,10 +1,10 @@
 {
   "kit": "Blitz",
-  "version": "2.1OAI",
+  "version": "2.1OAI-r1",
   "built": "11-10-2026",
   "built_from": "Verified v2OAI master, sanitized and extended for reusable minimum viable company work",
   "allowlist": {
-    "rule": "Generic master/audit package with empty project templates. Generate the runtime before Thor upload; exclude evaluations, answer keys, reviews and builder notes. Item exports use a separate reviewed allowlist. Package presence grants no disclosure or execution authority.",
+    "rule": "Generic master/audit package with empty project templates. Generate the runtime before Blitz upload; exclude evaluations, answer keys, reviews and builder notes. Item exports use a separate reviewed allowlist. Package presence grants no disclosure or execution authority.",
     "never_add": [
       "Filled context files 06, 07, 08",
       "Any file holding private terms, employer material or recordings"
@@ -316,33 +316,39 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 6154,
-      "sha256": "6d488f628922b9bb7ed6b5d76721f872c20b77b38bf214ca0d65c280561b2864",
-      "characters": 6154
+      "bytes": 6161,
+      "sha256": "b495abc773697ab5b335d5285de36d2cc3e7cf08eff122ec341e4bd0f81b1232",
+      "characters": 6161
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 3129,
-      "sha256": "85dca4bc4009181ae34fc79bd4bb7b4e3417f35c1ecea124afdfbbfd3dff6954",
-      "characters": 3125
+      "bytes": 4059,
+      "sha256": "a790a04e6534366b43e9ab9e03bd0c709db9cf4c753b0b03cb613e15ed8853c7",
+      "characters": 4055
     },
     {
       "path": "ENTRYPOINT.md",
-      "bytes": 2542,
-      "sha256": "ac9c30210f6d19849939f6d1fa0b612f526b6d44704538582ca4964c9fc93a0e",
-      "characters": 2542
+      "bytes": 2555,
+      "sha256": "f9cb4bb983fd35f772e8f38220b185cac36a75f8d3cc9dfb9fd5565a73f8c6d8",
+      "characters": 2555
     },
     {
       "path": "PLAYBOOK.md",
-      "bytes": 21672,
-      "sha256": "8cb479901ec7f8c8eb47325cf6cd121cd6a1af02a9caeffc8a56b6e0a11d2429",
-      "characters": 21672
+      "bytes": 21675,
+      "sha256": "d4e05bfde4eb600fdbbafa2e9bfe03cbab1e2566b91192dd0ccb521c464c5271",
+      "characters": 21675
     },
     {
       "path": "README.md",
-      "bytes": 6537,
-      "sha256": "8565d775929cf742525bad7b04bf5ed853914d746cba86ddc2e0fa72597274fd",
-      "characters": 6537
+      "bytes": 6502,
+      "sha256": "533fab57c54b916f3de521ac9d2eeb3b3c4f6f882c9150faa6dc0c1feb090238",
+      "characters": 6502
+    },
+    {
+      "path": "START.md",
+      "bytes": 5982,
+      "sha256": "80cd270630650f4625478a0f57a15f3abc7dab52c7400add58216ddb471d3798",
+      "characters": 5982
     },
     {
       "path": "evals/README.md",
@@ -364,9 +370,9 @@
     },
     {
       "path": "evals/compatibility-v2_1.json",
-      "bytes": 18195,
-      "sha256": "cd73e1fb0d0f68897c5652f744cfeabf9e3c4e9c148c61489595ba6a299f2fe7",
-      "characters": 18195
+      "bytes": 18201,
+      "sha256": "c812b111ed1643dbf464212c177b47fecd22df81f76a57f4b591aa0c79470f96",
+      "characters": 18201
     },
     {
       "path": "evals/concurrency.md",
@@ -520,9 +526,9 @@
     },
     {
       "path": "evals/launch-export.md",
-      "bytes": 2728,
-      "sha256": "9a9f8f26f2b464fe986a16ed386c95b8fd22ce41f4b9af6cdb9d80d53a55f814",
-      "characters": 2728
+      "bytes": 2730,
+      "sha256": "a9b05c1f455fe6d99a0b5a91c774a0f80afa7124fccd03dd0ed6ab8f4586cc18",
+      "characters": 2730
     },
     {
       "path": "evals/lean-baseline-contract.json",
@@ -586,9 +592,9 @@
     },
     {
       "path": "evals/run_all.py",
-      "bytes": 3662,
-      "sha256": "8f6740b47f0dd45fd5a9f02b6f38cdf60cf03ec6320c051e0abf7134691a2785",
-      "characters": 3662
+      "bytes": 3666,
+      "sha256": "3e2abbf1568d564d969bdac5d665cc84e32d85eba674e691f5822da304b98970",
+      "characters": 3666
     },
     {
       "path": "evals/source-conflict.md",
@@ -610,9 +616,9 @@
     },
     {
       "path": "evals/test_item_export.py",
-      "bytes": 22182,
-      "sha256": "cc9b20c0c1578300897b9a72dca138b6caf5886fba2483078b10efd4ab7a99cd",
-      "characters": 22182
+      "bytes": 22201,
+      "sha256": "9c8b37899e19e0b2e320c7d25dac7797de94e1c33b03ca4da0568899c02ffe38",
+      "characters": 22201
     },
     {
       "path": "evals/test_oai_lean.py",
@@ -645,10 +651,10 @@
       "characters": 18660
     },
     {
-      "path": "evals/test_thor_context.py",
-      "bytes": 7868,
-      "sha256": "fefc2c2f7a266def0a4cb99ee52b8fd3b13eec35da0a6f3cca5813a36203fd7a",
-      "characters": 7868
+      "path": "evals/test_source_context.py",
+      "bytes": 7870,
+      "sha256": "ea7319339b517fc3efc36379910403d0d7bce743df5ef1ed0150ef6165252f09",
+      "characters": 7870
     },
     {
       "path": "evals/test_v2_integrity.py",
@@ -659,7 +665,7 @@
     {
       "path": "evals/test_v2_runtime.py",
       "bytes": 9652,
-      "sha256": "7afa43b3952ac8331668e977d608a85e5d911babadbadebb8ea68f051d5fea58",
+      "sha256": "945282419482d1b39e5648dbfc14f93fb0b4a27087f01feb7ab702b3fcdb3cb6",
       "characters": 9652
     },
     {
@@ -706,9 +712,9 @@
     },
     {
       "path": "profiles/company.md",
-      "bytes": 20764,
-      "sha256": "d09579d8aac0dd106c1495f1a7613c49ec91e9e9ae57ff639fc2025962f2deae",
-      "characters": 20764
+      "bytes": 20767,
+      "sha256": "3dceacf1aef857d9ca1cb5f0a75ff3d41adf713050aba3678cbaf83cdd1da0dc",
+      "characters": 20767
     },
     {
       "path": "profiles/comprehensive.md",
@@ -718,9 +724,9 @@
     },
     {
       "path": "profiles/lean.md",
-      "bytes": 5906,
-      "sha256": "3ca9f8cbceace89b2cac21127849c0d502bc6043fe66a3affd84bb38382e060e",
-      "characters": 5906
+      "bytes": 5909,
+      "sha256": "ca527d039f9b60b4504231ef9ecb4cd73f91e7cfc181382d2c78ff7b76b26528",
+      "characters": 5909
     },
     {
       "path": "reviews/decisions.md",
@@ -765,46 +771,46 @@
       "characters": 641
     },
     {
-      "path": "setup/Thor_Project_Instructions.md",
-      "bytes": 7792,
-      "sha256": "a2ac889b551a30e83dd4439e2832fcd3d1cef14e0736b74e9f33d57dfcdfa17a",
-      "characters": 7792
+      "path": "setup/Blitz_Project_Instructions.md",
+      "bytes": 7798,
+      "sha256": "05be0ea9e1fe653356bf5dd043e47913af7cdc138b79b940d255f91091cebe89",
+      "characters": 7798
     },
     {
-      "path": "setup/Thor_System_Register.md",
-      "bytes": 2492,
-      "sha256": "8f512147795f75eb7b74dd63f35037bf9e266fcc57954f0a261ec778ac0783e3",
-      "characters": 2492
+      "path": "setup/Blitz_System_Register.md",
+      "bytes": 2494,
+      "sha256": "07dd2822dd117f6f10e55c6782407301d88815224fc85bb073b8b7ebd6bd5e59",
+      "characters": 2494
     },
     {
-      "path": "setup/build_thor_context.py",
-      "bytes": 24783,
-      "sha256": "0c242696cfc59bebfdbf1929fa81d9b22072baa86739831a514bd4a5bdf5fa1b",
-      "characters": 24783
+      "path": "setup/build_context.py",
+      "bytes": 24748,
+      "sha256": "165c80e5dda4a9134242e588aa625bbb386fba8402d1200b830d426f5d48a4bb",
+      "characters": 24748
     },
     {
       "path": "setup/capability-manifest.md",
-      "bytes": 7095,
-      "sha256": "2e4ec8241f0c997bcdc3e09b78674dc31522c1b64760477afb61ce24b738ff31",
-      "characters": 7095
+      "bytes": 7106,
+      "sha256": "846acf0522eb381757cd081653bcf65fb266b45ccdafb6e79e2f51d059481144",
+      "characters": 7106
     },
     {
       "path": "setup/chatgpt.md",
-      "bytes": 9123,
-      "sha256": "0fc6da7578a16450f02e5d29639806c2b5f1e7aa754210695e3befb2ab855350",
-      "characters": 9123
+      "bytes": 9591,
+      "sha256": "69ab8ac8a4daf7818124bf3bf4e2aaf0a41d2450e52621d7c933e8b84f37f14a",
+      "characters": 9591
     },
     {
       "path": "setup/chatgpt_stage.py",
-      "bytes": 9808,
-      "sha256": "baa3d88391b0bdba6ea3969faf07dc3f16293aa970f8cfe10843613f81d821d3",
-      "characters": 9808
+      "bytes": 13185,
+      "sha256": "d0cb33fe6e1fd6a1e6c73d7679004c11db5bac7c0e28cade39d41e94c2319293",
+      "characters": 13185
     },
     {
       "path": "setup/claude.md",
-      "bytes": 10728,
-      "sha256": "1acce6ee1b31ead75532f381534484f456f269bd1c9674ca580c8164609ace10",
-      "characters": 10728
+      "bytes": 10737,
+      "sha256": "104ef6804004da058ddcb54e46c8a93bcb87a5f56d7bbe3764717e88726f5610",
+      "characters": 10737
     },
     {
       "path": "setup/company.py",
@@ -826,9 +832,9 @@
     },
     {
       "path": "setup/host-adapters/openai.md",
-      "bytes": 8900,
-      "sha256": "2fa10ae8466071de83b3768fed34988fce9f9763300a6281841d44d28a124a5c",
-      "characters": 8900
+      "bytes": 8928,
+      "sha256": "ac47e00200e8fc1e037de30ca8809e84d45d03aa330affbae6f719998d843bbc",
+      "characters": 8928
     },
     {
       "path": "setup/host-inventory.example.json",
@@ -838,9 +844,9 @@
     },
     {
       "path": "setup/item-export.md",
-      "bytes": 12741,
-      "sha256": "5941efae7dc7287a27a7f7ba93212d3ecc09e99a88084fbf591e81be2e0b9f80",
-      "characters": 12737
+      "bytes": 12743,
+      "sha256": "38438875c1ade2977456cb4816e7675a0028ff29e2bc8438b2fadd11b7d0d06a",
+      "characters": 12739
     },
     {
       "path": "setup/licensing/LICENSE",
@@ -862,27 +868,27 @@
     },
     {
       "path": "setup/operating-contract.md",
-      "bytes": 10892,
-      "sha256": "96e72df291e11087cf14b2872a7a5bb8eaccf5e26f31dbdc8df95192313aa149",
-      "characters": 10892
+      "bytes": 10899,
+      "sha256": "998a6d64fcc01b4ab1b3ce17c81a6380860ed94b83deea21c78f440d743bbf74",
+      "characters": 10899
     },
     {
       "path": "setup/operator-guide.md",
-      "bytes": 5778,
-      "sha256": "052fd55c2072bc0a60ddc40bc8575c966d15df72ba730fc2fe303ce47e1309e2",
-      "characters": 5778
+      "bytes": 5802,
+      "sha256": "7ff9ab19c345c008ad1f0efc2ff851c03ef1fc43921dd08175fbdbeaf3756e74",
+      "characters": 5802
     },
     {
       "path": "setup/release-guide.md",
-      "bytes": 11314,
-      "sha256": "832727c79072f22e8ffe253ea3cfe0cd386fba0f812e488644fa6079230539e8",
-      "characters": 11314
+      "bytes": 11463,
+      "sha256": "847d1a84aea58e7c56640db36a1ab3bd787ab71c6b104fa32f425b50ef471cec",
+      "characters": 11463
     },
     {
       "path": "setup/runtime.md",
-      "bytes": 4283,
-      "sha256": "89e3d3a77c3c6ec0faab0621eea32bd85e5aeab7aca96f6064478b5f1a973761",
-      "characters": 4283
+      "bytes": 4293,
+      "sha256": "e4d939b5bfb6db00115dd879d8a39d326c638de8ab402314d9d0b56f5cee8597",
+      "characters": 4293
     },
     {
       "path": "setup/scope_csv.py",
@@ -892,15 +898,15 @@
     },
     {
       "path": "setup/skills-guide.md",
-      "bytes": 24120,
-      "sha256": "a3dc501c9c05444731af4ac1f997434c5c618763fa4a58a85a692029eb48c9b9",
-      "characters": 24120
+      "bytes": 24128,
+      "sha256": "d9798e7f8f5a182de2b4c30aa5f22fac04b3dc2853de6f55836f322d79cc9c85",
+      "characters": 24128
     },
     {
-      "path": "setup/thor.md",
-      "bytes": 9428,
-      "sha256": "567614e0385d27f91ecad4f826ecd0aa7c032d26ca84b7c572692923cc3ba3d2",
-      "characters": 9428
+      "path": "setup/source-use.md",
+      "bytes": 9488,
+      "sha256": "d366240ad2b72748fbf0e518832300e09c4856ea6c92f83640b00edf17deb7aa",
+      "characters": 9488
     },
     {
       "path": "setup/verify_archive.py",
@@ -1018,15 +1024,15 @@
     },
     {
       "path": "skills/blitz/CHANGES.md",
-      "bytes": 2097,
-      "sha256": "0e5742714f431e33ae6693cbe9d07148b7bd0a3b802db400417d390bfa57d170",
-      "characters": 2097
+      "bytes": 2295,
+      "sha256": "1e9623f03f4c48ee8a456dfa19b1bab38e3095bd8d236981bb0bd7a2d4bebf90",
+      "characters": 2295
     },
     {
       "path": "skills/blitz/SKILL.md",
-      "bytes": 17821,
-      "sha256": "4d38107078cdca76ea12b4a748256358a1702b641cddca6f83e2c9acb4f32623",
-      "characters": 17821
+      "bytes": 17831,
+      "sha256": "1d21ad26b2f0525d7fbabe8ba4ab6be424ac06c2ac3c8b2e7c4dc76b838d4161",
+      "characters": 17831
     },
     {
       "path": "skills/blitz/agents/openai.yaml",
@@ -1102,9 +1108,9 @@
     },
     {
       "path": "skills/diagram-design/CHANGES.md",
-      "bytes": 645,
-      "sha256": "f50e058edc9f018d9045ec0f06171c2f6ecf8af49293386a6412fe11df908002",
-      "characters": 645
+      "bytes": 940,
+      "sha256": "6a18f963d47442b571c95b0be0f1a6c747cc619831b113eb068cbcc8fd38d4ee",
+      "characters": 940
     },
     {
       "path": "skills/diagram-design/LICENSE",
@@ -1768,9 +1774,9 @@
     },
     {
       "path": "skills/diagram-design/references/export.md",
-      "bytes": 8075,
-      "sha256": "265d4003ede2e33bba34203b7e4d122f9768ec7e2e8dbba2b00f51086ed9bbe0",
-      "characters": 8069
+      "bytes": 9315,
+      "sha256": "340dd4ca7e987d9ff82ccb91911c485db918d92ddff83f546a30d723b4303f90",
+      "characters": 9311
     },
     {
       "path": "skills/diagram-design/references/onboarding.md",
@@ -1822,9 +1828,9 @@
     },
     {
       "path": "skills/diagram-design/references/type-data-flow.md",
-      "bytes": 21072,
-      "sha256": "6d6f1c1b2c9dee589475f62ac836846debc933358bfc0e6eb701272968c5e3cb",
-      "characters": 20994
+      "bytes": 21477,
+      "sha256": "96d7248486e9e4b9e70567c1f13d348f1e0d268adb7533185e047d4a13c04021",
+      "characters": 21401
     },
     {
       "path": "skills/diagram-design/references/type-dp-integration.md",
@@ -1834,9 +1840,9 @@
     },
     {
       "path": "skills/diagram-design/references/type-dp-security-matrix.md",
-      "bytes": 19468,
-      "sha256": "6f8baeb05dd0983705588eb5db1410ce9704181224a8e555c65dc809d654203d",
-      "characters": 19374
+      "bytes": 20952,
+      "sha256": "a302c7e8c209bbdc47f25ea17fd20f319a4d2eb044ce676fdadef1a609b92333",
+      "characters": 20858
     },
     {
       "path": "skills/diagram-design/references/type-er.md",
@@ -1876,9 +1882,9 @@
     },
     {
       "path": "skills/diagram-design/references/type-medallion.md",
-      "bytes": 22604,
-      "sha256": "72c7cf02203c0274ce6d86bc03755c2d480f0305656fe8f310092f317fc2fd56",
-      "characters": 22499
+      "bytes": 22860,
+      "sha256": "ed797b4db9f0711a10e1dea1278a502e212e9e7ea1083dc562e6ba9cb9d85076",
+      "characters": 22755
     },
     {
       "path": "skills/diagram-design/references/type-nested.md",
@@ -1919,7 +1925,7 @@
     {
       "path": "skills/diagram-design/references/type-state.md",
       "bytes": 1094,
-      "sha256": "e2eafbbca408c4879fae14622611c270dcb35f7ba607d8702751d443c5544dbf",
+      "sha256": "40256139394e69de02e4cd9f3e4c49a93f9d225db05a743ee1e36cb5ba8ab46f",
       "characters": 1085
     },
     {
@@ -1931,7 +1937,7 @@
     {
       "path": "skills/diagram-design/references/type-timeline.md",
       "bytes": 1053,
-      "sha256": "baefeb9edbb1805d2c60e1510de4017b8d4429c9bcf2eb738969519eb17c6c12",
+      "sha256": "8f846a46c55979cd1b4f7e0a56acce4835dae8287bf951de0b8cc5e8829edb06",
       "characters": 1053
     },
     {
@@ -1945,6 +1951,12 @@
       "bytes": 1635,
       "sha256": "4d3b7093cd2095a78985917d82f751da355b7b19bddedfee8f00b67fa0562a54",
       "characters": 1633
+    },
+    {
+      "path": "skills/diagram-design/scripts/export-svg.js",
+      "bytes": 3536,
+      "sha256": "880cb4de2055605cd93a52bc4de22c30e7d6d28c5489b219060dd79e19b04373",
+      "characters": 3536
     },
     {
       "path": "skills/diagram-design/scripts/lint-diagram.py",
@@ -2014,9 +2026,9 @@
     },
     {
       "path": "skills/frontend-scroll-craft/CHANGES.md",
-      "bytes": 652,
-      "sha256": "967e1226a79d073432b80a8ce3d81ca9fa38303c18768e00b329ebfa8c561d2e",
-      "characters": 652
+      "bytes": 887,
+      "sha256": "7124e6c93b2bd63eb3895f3b4c71aef939046093b5fe6057ee7ea21f5ff2c431",
+      "characters": 887
     },
     {
       "path": "skills/frontend-scroll-craft/LICENSE",
@@ -2146,9 +2158,9 @@
     },
     {
       "path": "skills/frontend-scroll-craft/scripts/serve.mjs",
-      "bytes": 2063,
-      "sha256": "afe8593d3ccdc75f5153dc7143030f4a96f3381afc3949bd85093994bed1fc90",
-      "characters": 2063
+      "bytes": 5552,
+      "sha256": "58e7217aab4472685fe37252dfa3220411bd65d7dc5bfe385a5e820fff5e76fc",
+      "characters": 5552
     },
     {
       "path": "skills/frontend-scroll-craft/scripts/shoot.mjs",
@@ -2176,9 +2188,9 @@
     },
     {
       "path": "skills/frontend-taste/CHANGES.md",
-      "bytes": 645,
-      "sha256": "09157af45168199ed62138bcf3092e7ae78f4513718efa7db16b60828e4ce5a1",
-      "characters": 645
+      "bytes": 1009,
+      "sha256": "91b9436a8d6a5ceb4fdb4b3293e590aca76b1612d7cac5865b411b1da32758bd",
+      "characters": 1009
     },
     {
       "path": "skills/frontend-taste/NOTICE.md",
@@ -2188,9 +2200,9 @@
     },
     {
       "path": "skills/frontend-taste/SKILL.md",
-      "bytes": 21697,
-      "sha256": "6c265eb9ac961f47d500fef3b556d20d78c966224ef4a4eb9e302637cf5335bf",
-      "characters": 21697
+      "bytes": 21729,
+      "sha256": "169d2b6376cec77e99de9690306525bfe09343a1b47c646237a283ac6527a25e",
+      "characters": 21729
     },
     {
       "path": "skills/frontend-taste/agents/openai.yaml",
@@ -2218,9 +2230,9 @@
     },
     {
       "path": "skills/frontend-taste/references/cinematic.md",
-      "bytes": 10275,
-      "sha256": "368f174a6add842eb361dc7b5a5325c7b8860a49f9b78433b68fb18d16e163ab",
-      "characters": 10275
+      "bytes": 10616,
+      "sha256": "efdfc102a0c82b11a8c3f16158f708c074fe1a8457ccb7a3c70e3e92b44cee6f",
+      "characters": 10616
     },
     {
       "path": "skills/frontend-taste/references/cinematic/cinematic.css",
@@ -2251,6 +2263,12 @@
       "bytes": 772,
       "sha256": "0459023a5b982f86f1d3ff29e43a599e70a5bb31518d4e7b9bb3ebabad17f87f",
       "characters": 772
+    },
+    {
+      "path": "skills/frontend-taste/scripts/check-html-js.py",
+      "bytes": 4161,
+      "sha256": "48d00515459c2185ad10a427226c2e7d3f73ba62c10d61c113808d61b7b80a0a",
+      "characters": 4161
     },
     {
       "path": "skills/gauntlet-verify/CHANGES.md",
@@ -2866,15 +2884,15 @@
     },
     {
       "path": "skills/write-with-pyramid/CHANGES.md",
-      "bytes": 649,
-      "sha256": "50bfc8bbd284574d49033382d298df379d2cd337459f5290a9f0d592df82bc68",
-      "characters": 649
+      "bytes": 820,
+      "sha256": "ef29b76c31f39ec6999076ec1bea069a2d06fd3b1f7e8c074aa177aba3745799",
+      "characters": 820
     },
     {
       "path": "skills/write-with-pyramid/SKILL.md",
-      "bytes": 10197,
-      "sha256": "bbb9ba0bb5159941e914ceac4c3e8a115ee5f8375bd01688c0231350caa92712",
-      "characters": 10197
+      "bytes": 10450,
+      "sha256": "1d01fc495fbfda9f57a00181abea8140420983dfd0ad3731768005f60b6c15d7",
+      "characters": 10450
     },
     {
       "path": "skills/write-with-pyramid/agents/openai.yaml",
@@ -2896,9 +2914,9 @@
     },
     {
       "path": "templates/acceptance-template.md",
-      "bytes": 3195,
-      "sha256": "7e0df694395bca19908fc21f216f3a145ebca7c3b1942d93d13c6170b8172e34",
-      "characters": 3195
+      "bytes": 3203,
+      "sha256": "be70f0ce08ec215003ea99c3bc5f4d9231892635c509bf9d8bd4a0a63bf4c917",
+      "characters": 3203
     },
     {
       "path": "templates/build-pack-contract.md",
@@ -2908,9 +2926,9 @@
     },
     {
       "path": "templates/call-card.md",
-      "bytes": 564,
-      "sha256": "53de521c123de57002ef096c38019618f83b2feaaba3e8f3ab9aa321c3cfe09d",
-      "characters": 564
+      "bytes": 1372,
+      "sha256": "6addc4add58f2607d694a2c2d804043a6b0b304a76e7ab4ef451b68baad13908",
+      "characters": 1372
     },
     {
       "path": "templates/capture-protocol.md",
@@ -2932,9 +2950,9 @@
     },
     {
       "path": "templates/commission-brief.md",
-      "bytes": 3350,
-      "sha256": "d338c5eab9e7cdc9b96643d74e05f07ffd6936528f218d2544bfc75852ea8b9d",
-      "characters": 3350
+      "bytes": 3357,
+      "sha256": "4b7d1c148c8396bd1f6d8dc817daa7f00f935c149e62e99a45417064ba6f7646",
+      "characters": 3357
     },
     {
       "path": "templates/company-brief.md",
@@ -2950,9 +2968,9 @@
     },
     {
       "path": "templates/context/00 Read Me First.md",
-      "bytes": 5427,
-      "sha256": "3fb64d200c828fdc227b4e242dcc9408a4a332602d25b57e699602e8136b84d4",
-      "characters": 5427
+      "bytes": 5430,
+      "sha256": "504efe92922f1c03d8e75036856a3dc9f66f7d2d8cc823aed32578e0edc55474",
+      "characters": 5430
     },
     {
       "path": "templates/context/01 Fact Base.md",
@@ -2974,15 +2992,15 @@
     },
     {
       "path": "templates/context/04 Economics And Budget.md",
-      "bytes": 4832,
-      "sha256": "15a1c68994cb54372337168946c4c6b8ec70402660366b377c72473176b34be4",
-      "characters": 4832
+      "bytes": 4835,
+      "sha256": "8ea6bf5573626175d273816a083389b56ca76185376b24746ad7dec6423e351b",
+      "characters": 4835
     },
     {
       "path": "templates/context/05 Regulatory Map.md",
-      "bytes": 2788,
-      "sha256": "49357f19dfac3ad408b94ebd3b6ef784c8af98c7b0f1bc9fb6b255140d105675",
-      "characters": 2788
+      "bytes": 2791,
+      "sha256": "64be9f37dd6f654b8c2dc339eceff4b4fe4db4d5fc80e316b4bd46b7fd65cd5a",
+      "characters": 2791
     },
     {
       "path": "templates/context/06 Terms PRIVATE.md",
@@ -3028,9 +3046,9 @@
     },
     {
       "path": "templates/counterparty-file-prompt.md",
-      "bytes": 904,
-      "sha256": "2631361ceec2e5b6ef69bb2c113222ea3d62335689d8538c7487a0432e7d5976",
-      "characters": 904
+      "bytes": 1982,
+      "sha256": "5ceb712a120476404d9abae4ecedbeb7a38ed648832eba54150579fce7a10b79",
+      "characters": 1982
     },
     {
       "path": "templates/daily-record.md",
@@ -3046,9 +3064,9 @@
     },
     {
       "path": "templates/handoff.md",
-      "bytes": 8542,
-      "sha256": "fa296618287aa4326010a584b204fdeb2c9fa8fd0652bce066c40c0a84827a67",
-      "characters": 8542
+      "bytes": 8562,
+      "sha256": "b39caf16fc5252547c51efa3bbdb6f1fa9916fac664dfe32f7b02aeb6e9ffc5e",
+      "characters": 8562
     },
     {
       "path": "templates/installation-receipt.json",
@@ -3070,15 +3088,15 @@
     },
     {
       "path": "templates/project-instructions-chatgpt.md",
-      "bytes": 8152,
-      "sha256": "8558cd3512c829f95bcc9d5df81360f2f24255893335fa979846da6dc7889f5f",
-      "characters": 8152
+      "bytes": 8167,
+      "sha256": "8227b21aa9e37c3ddc73c262be88fdf4a79cc40f0a0631db0ecb39c4d6a31858",
+      "characters": 8167
     },
     {
       "path": "templates/project-instructions-claude.md",
-      "bytes": 8514,
-      "sha256": "8dc4a3b2147686650ca1abaac47a31092a629404fde879feb30bda0e905a014c",
-      "characters": 8514
+      "bytes": 8524,
+      "sha256": "402582fc0a62c9249fa6917611694258c194115c4f3461063c09e72ea53c9390",
+      "characters": 8524
     },
     {
       "path": "templates/records/claim.md",
@@ -3145,7 +3163,7 @@
       "evals/run_all.py",
       "evals/test_oai_lean.py",
       "evals/test_oai_repairs.py",
-      "evals/test_thor_context.py",
+      "evals/test_source_context.py",
       "profiles/comprehensive.md",
       "profiles/lean.md",
       "reviews/decisions.md",
@@ -3155,9 +3173,9 @@
       "reviews/oai-operating-loop-release-record.md",
       "reviews/oai-release-record.md",
       "reviews/oai-v2-release-record.md",
-      "setup/Thor_Project_Instructions.md",
-      "setup/Thor_System_Register.md",
-      "setup/build_thor_context.py",
+      "setup/Blitz_Project_Instructions.md",
+      "setup/Blitz_System_Register.md",
+      "setup/build_context.py",
       "setup/capability-manifest.md",
       "setup/chatgpt.md",
       "setup/claude.md",
@@ -3167,7 +3185,7 @@
       "setup/operating-contract.md",
       "setup/operator-guide.md",
       "setup/runtime.md",
-      "setup/thor.md",
+      "setup/source-use.md",
       "skills/README.md",
       "skills/anti-slop/CHANGES.md",
       "skills/anti-slop/NOTICE.md",
@@ -3313,11 +3331,11 @@
     "scope": "Founder workflow, neutral reusable content, bounded local utilities, export isolation and reproducible release",
     "removed": []
   },
-  "thor_workflow": {
-    "guide": "setup/thor.md",
-    "instruction_body": "setup/Thor_Project_Instructions.md",
+  "blitz_workflow": {
+    "guide": "setup/source-use.md",
+    "instruction_body": "setup/Blitz_Project_Instructions.md",
     "exporter": "setup/export_item.py",
-    "context_generator": "setup/build_thor_context.py",
+    "context_generator": "setup/build_context.py",
     "route": "project-instruction-driven, no account installation",
     "applied": "not_applied",
     "runtime_status": "Generated runtime, exact identity and controlled host results require the companion test/application receipts. No native installation claim.",

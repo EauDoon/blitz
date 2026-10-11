@@ -1,4 +1,4 @@
-# Blitz v2.1OAI playbook
+# Blitz v2.1OAI-r1 playbook
 
 The stage-by-stage method. Source: Blitz Master Plan v0.2, section 6, with the owner's decisions of 30-09-2026. The README gives the overview; this file gives the steps, rules and tables a session works from.
 

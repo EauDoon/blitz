@@ -1,56 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="1840" viewBox="0 0 600 1840" role="img" aria-labelledby="title description">
 <title id="title">Blitz — evidence gates and owner decisions</title>
-<desc id="description">Frame the offer and next test; Test observed customer and payer behavior; Deliver the result and verify acceptance; Operate with reconciled cash and a feasible next cycle. At every gate an owner checks evidence and existing authority. Record Proceed for the next permitted step, Hold to pause the dependent action, or Walk to reject the scoped option. New evidence or revised scope returns to the affected gate. A gate does not grant permission.</desc>
+<desc id="description">Frame a bounded offer or internal service and its next test; Test observed behavior of users and the customer/payer or internal sponsor; Deliver the result and verify acceptance; Operate with reconciled company cash and obligations, or department budget, actual resource use and obligations, and a feasible next cycle. At every gate an owner checks evidence and existing authority. Record Proceed for the next permitted step, Hold to pause the dependent action, or Walk to reject the scoped option. New evidence or revised scope returns to the affected gate. A gate does not grant permission.</desc>
 <rect x="0" y="0" width="600" height="1840" fill="#F6F1E7" stroke="none" stroke-width="1"/>
 <rect x="44" y="35" width="64" height="7" fill="#C13F17" stroke="none" stroke-width="1"/>
-<text x="44" y="104" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="700" text-anchor="start" fill="#252923">Evidence sets</text>
-<text x="44" y="161" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="700" text-anchor="start" fill="#252923">the next move.</text>
-<text x="44" y="217" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="400" text-anchor="start" fill="#60635B">For the next commitment.</text>
+<text x="44" y="104" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" text-anchor="start" fill="#252923">Evidence sets</text>
+<text x="44" y="161" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" text-anchor="start" fill="#252923">the next move.</text>
+<text x="44" y="217" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="start" fill="#60635B">For the next commitment.</text>
 <rect x="44" y="252" width="512" height="748" fill="#FFFCF6" stroke="#85877E" stroke-width="2"/>
 <text x="68" y="309" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#C13F17">01</text>
-<text x="127" y="311" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="700" text-anchor="start" fill="#252923">Frame</text>
-<text x="68" y="363" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="400" text-anchor="start" fill="#252923">Bound the offer</text>
-<text x="68" y="405" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="400" text-anchor="start" fill="#252923">and next test.</text>
+<text x="127" y="311" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" text-anchor="start" fill="#252923">Frame</text>
+<text x="68" y="363" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="start" fill="#252923">Bound the work</text>
+<text x="68" y="405" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="start" fill="#252923">and next test.</text>
 <path d="M67 439 L532 439" fill="none" stroke="#DAD8CD" stroke-width="2"/>
 <text x="68" y="496" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#C13F17">02</text>
-<text x="127" y="498" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="700" text-anchor="start" fill="#252923">Test</text>
-<text x="68" y="550" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="400" text-anchor="start" fill="#252923">Observe customer</text>
-<text x="68" y="592" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="400" text-anchor="start" fill="#252923">and payer behavior.</text>
+<text x="127" y="498" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" text-anchor="start" fill="#252923">Test</text>
+<text x="68" y="550" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="start" fill="#252923">Observe users and</text>
+<text x="68" y="592" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="start" fill="#252923">decision makers.</text>
 <path d="M67 626 L532 626" fill="none" stroke="#DAD8CD" stroke-width="2"/>
 <text x="68" y="683" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#C13F17">03</text>
-<text x="127" y="685" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="700" text-anchor="start" fill="#252923">Deliver</text>
-<text x="68" y="737" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="400" text-anchor="start" fill="#252923">Verify the result</text>
-<text x="68" y="779" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="400" text-anchor="start" fill="#252923">and acceptance.</text>
+<text x="127" y="685" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" text-anchor="start" fill="#252923">Deliver</text>
+<text x="68" y="737" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="start" fill="#252923">Verify the result</text>
+<text x="68" y="779" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="start" fill="#252923">and acceptance.</text>
 <path d="M67 813 L532 813" fill="none" stroke="#DAD8CD" stroke-width="2"/>
 <text x="68" y="870" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#C13F17">04</text>
-<text x="127" y="872" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="700" text-anchor="start" fill="#252923">Operate</text>
-<text x="68" y="924" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="400" text-anchor="start" fill="#252923">Reconcile cash.</text>
-<text x="68" y="966" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="400" text-anchor="start" fill="#252923">Prepare the next cycle.</text>
+<text x="127" y="872" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" text-anchor="start" fill="#252923">Operate</text>
+<text x="68" y="924" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="start" fill="#252923">Reconcile resources.</text>
+<text x="68" y="966" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="start" fill="#252923">Prepare the next cycle.</text>
 <path d="M300 1000 L300 1031" fill="none" stroke="#85877E" stroke-width="2"/>
 <path d="M294.918 1023.572 L300 1031 L305.082 1023.572" fill="none" stroke="#85877E" stroke-width="2"/>
 <rect x="44" y="1032" width="512" height="175" fill="#252923" stroke="none" stroke-width="1"/>
 <text x="68" y="1077" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#F6F1E7">AT EVERY GATE</text>
-<text x="68" y="1131" font-family="Segoe UI, Arial, sans-serif" font-size="35" font-weight="700" text-anchor="start" fill="#F6F1E7">Owner checks evidence</text>
-<text x="68" y="1180" font-family="Segoe UI, Arial, sans-serif" font-size="35" font-weight="700" text-anchor="start" fill="#F6F1E7">+ existing authority</text>
+<text x="68" y="1131" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700" text-anchor="start" fill="#F6F1E7">Owner checks evidence</text>
+<text x="68" y="1180" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700" text-anchor="start" fill="#F6F1E7">+ existing authority</text>
 <path d="M300 1207 L300 1230 L65 1230 L65 1533" fill="none" stroke="#85877E" stroke-width="2"/>
 <path d="M65 1288 L94 1288" fill="none" stroke="#85877E" stroke-width="2"/>
 <path d="M86.572 1293.082 L94 1288 L86.572 1282.918" fill="none" stroke="#85877E" stroke-width="2"/>
-<text x="112" y="1295" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="700" text-anchor="start" fill="#252923">Proceed</text>
-<text x="112" y="1341" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="400" text-anchor="start" fill="#60635B">Next permitted step</text>
+<text x="112" y="1295" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" text-anchor="start" fill="#252923">Proceed</text>
+<text x="112" y="1341" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="start" fill="#60635B">Next permitted step</text>
 <path d="M65 1410 L94 1410" fill="none" stroke="#85877E" stroke-width="2"/>
 <path d="M86.572 1415.082 L94 1410 L86.572 1404.918" fill="none" stroke="#85877E" stroke-width="2"/>
-<text x="112" y="1417" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="700" text-anchor="start" fill="#252923">Hold</text>
-<text x="112" y="1463" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="400" text-anchor="start" fill="#60635B">Pause dependent action</text>
+<text x="112" y="1417" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" text-anchor="start" fill="#252923">Hold</text>
+<text x="112" y="1463" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="start" fill="#60635B">Pause dependent action</text>
 <path d="M65 1532 L94 1532" fill="none" stroke="#85877E" stroke-width="2"/>
 <path d="M86.572 1537.082 L94 1532 L86.572 1526.918" fill="none" stroke="#85877E" stroke-width="2"/>
-<text x="112" y="1539" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="700" text-anchor="start" fill="#252923">Walk</text>
-<text x="112" y="1585" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="400" text-anchor="start" fill="#60635B">Reject scoped option</text>
+<text x="112" y="1539" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" text-anchor="start" fill="#252923">Walk</text>
+<text x="112" y="1585" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="start" fill="#60635B">Reject scoped option</text>
 <path d="M44 1630 L556 1630" fill="none" stroke="#DAD8CD" stroke-width="2"/>
-<text x="68" y="1680" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700" text-anchor="start" fill="#252923">New evidence / revised scope</text>
-<text x="68" y="1724" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start" fill="#252923">Revisit the affected gate.</text>
+<text x="68" y="1680" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" text-anchor="start" fill="#252923">New evidence / revised scope</text>
+<text x="68" y="1724" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700" text-anchor="start" fill="#252923">Revisit the affected gate.</text>
 <path d="M47 1708 L21 1708 L21 626" fill="none" stroke="#C13F17" stroke-width="3" stroke-dasharray="7 7"/>
 <path d="M21 626 L43 626" fill="none" stroke="#C13F17" stroke-width="3"/>
 <path d="M35.572 631.082 L43 626 L35.572 620.918" fill="none" stroke="#C13F17" stroke-width="3"/>
-<text x="68" y="1785" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="400" text-anchor="start" fill="#60635B">A gate does not grant</text>
-<text x="68" y="1825" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="400" text-anchor="start" fill="#60635B">permission.</text>
+<text x="68" y="1785" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="start" fill="#60635B">A gate does not grant</text>
+<text x="68" y="1825" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="start" fill="#60635B">permission.</text>
 </svg>
