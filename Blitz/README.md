@@ -5,7 +5,11 @@
 Listen, collect, sprint.  
 Reduce cycle time.
 
-Blitz helps a founder establish and operate a minimum viable company: one bounded offer, an identified customer and payer, an evidenced delivery-and-exchange cycle, and a responsible owner able to run the next cycle within cash, capacity and applicable obligations. See [the company guide](profiles/company.md) for the exact definition and proportional gates. Planning readiness is different from operating evidence.
+Blitz helps founders and small teams quickly establish a minimum viable company (MVC) or internal department. It connects an initial idea, offer or service, customer/stakeholder evidence, product, operations and decision ownership in one manageable process. Use it with an editor and a human operator, or an LLM with the relevant readable records and attached tools.
+
+Target an operating baseline in one or two days when scope, inputs, people and permissions allow: one delivered and accepted cycle, reconciled exchange or resource use, and a feasible next cycle with an accountable owner. Actual evidence governs readiness; longer delivery or approval cycles take longer. A folder or plan is preparation. The kit guarantees no ARR, repeat demand, profitability or product-market fit.
+
+Autoscale here means make the process repeatable and expand with evidence, capacity and authority. It does not deploy infrastructure autoscaling or autonomous operations. See [the company and department guide](profiles/company.md) for definitions, internal stakeholder/sponsor/resource counterparts and proportional gates.
 
 For standalone archive use, read the [release guide](setup/release-guide.md): first use, migration, verification, package boundaries and component rights are included offline.
 
@@ -19,7 +23,7 @@ python -B Blitz/setup/company.py init --out my-company --name "My company" --own
 python -B Blitz/setup/company.py cash my-company/company-cash.csv
 ```
 
-The output directory must be new. Blank cash inputs remain unknown. The initializer produces unadopted local drafts, not a functioning company or permission to act. You can instead fill the [company brief](templates/company-brief.md) and [cash template](templates/company-cash.csv) manually, reusing existing equivalent records. [Examples](examples/company/) are fictional and illustrate evidence standards rather than claim real validation.
+The output directory must be new. Blank cash inputs remain unknown. The initializer produces unadopted company-oriented drafts, not a functioning operating unit or permission to act. For a department, adapt the brief to users, an accountable sponsor, service acceptance and authorized resources; change record 00's default `venture` type before adoption. Company filenames and command names stay unchanged. You can instead fill the [company brief](templates/company-brief.md) and [cash template](templates/company-cash.csv) manually, reusing existing equivalent records. [Examples](examples/company/) are fictional and illustrate evidence standards rather than claim real validation.
 
 ## Preserve the useful core
 
@@ -31,7 +35,7 @@ Keep the four core 00/03/09/10 records when continuation needs them, with one ca
 
 ## Tools and boundaries
 
-`setup/company.py` initializes local company drafts and computes a cash forecast. `setup/scope_csv.py` projects explicit item rows/columns from shared CSV sources with provenance. Neither verifies source truth, business readiness or disclosure rights.
+`setup/company.py` initializes local company-oriented drafts and computes a commercial cash forecast. It has no department-specific mode or budget/resource allocator. Use existing department records or the program sections of [Economics and Budget][department-budget] for allocations, commitments, actual spend and staff capacity; a budget approval is not revenue or collected cash. `setup/scope_csv.py` projects explicit item rows/columns from shared CSV sources with provenance. Neither verifies source truth, operating readiness or disclosure rights.
 
 `setup/export_item.py` packages reviewed allowlisted item content; see [item export](setup/item-export.md). Integrity and content relevance are separate checks. Working copies need current startup instructions and their own identity/revision, with the parent retained only as lineage. Export does not authorize publication or transfer canonical ownership.
 
@@ -48,8 +52,10 @@ Outputs must be new and outside the kit. Read actual logs and results. A platfor
 
 Use synthetic examples and only authorized evidence. No credentials, private personal history, unrelated company rows, employer material or live project cases belong in reusable artifacts. Human owners approve consequential commitments; AI can prepare, calculate and review within the task's authority. Jurisdiction-specific legal/tax/licensing review is guidance and must be resolved before affected commitments, without an automatic compliance claim.
 
-See [CHANGELOG](CHANGELOG.md), the manifest and release evidence. v2.1 is an explicitly commissioned successor to the immutable v2 original. Ordinary company work never silently changes the package, host settings, global skills or other projects.
+See [CHANGELOG](CHANGELOG.md), the manifest and release evidence. v2.1 is an explicitly commissioned successor to the immutable v2 original. Ordinary company or departmental work never silently changes the package, host settings, global skills or other projects.
 
 ## Choose a method
 
 Read the [skills guide](setup/skills-guide.md) for all 25 packaged methods, example requests, expected outputs and host dependencies. It distinguishes explicit source use, reference staging and native skill installation. Source availability and implicit-invocation metadata do not prove discovery or reliable automatic selection in a host.
+
+[department-budget]: templates/context/04%20Economics%20And%20Budget.md

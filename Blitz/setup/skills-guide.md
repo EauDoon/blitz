@@ -5,11 +5,13 @@ Reduce cycle time.
 
 ## Choose a method for the work
 
-Start with the result you need: a customer test, cash model, document, screen, or checked decision. Use the relevant methods below. Small edits can stay small.
+Start with the result you need: a customer or internal-user test, cash or resource model, document, screen, or checked decision. Use the relevant methods below. Small edits can stay small.
 
 The kit contains 25 skill packages. Each entry links to its actual `SKILL.md`; read that file and its required references before applying it. The examples below are synthetic requests, not customer evidence, completed work, or routing test results. Expected outputs describe the method's intended result when the necessary inputs and tools are available.
 
-Company work follows [Frame, Test, Deliver and Operate](../profiles/company.md). Frame needs a bounded offer, customer and payer, accountable owner, permitted test, and cash/time cap. Test needs observed customer behavior against criteria set before the test. Deliver needs actual delivery and acceptance evidence, with support and failure responsibilities. Operate needs reconciled exchange and obligations, cash and capacity evidence, and an owned next-cycle procedure. Commercial collection needs verified payment. A plan, prototype, package check, or single successful cycle cannot establish repeatability.
+Company or internal-department work follows [Frame, Test, Deliver and Operate](../profiles/company.md). Frame needs a bounded offer or service, customer/user, payer or accountable sponsor, owner, permitted test, and time/cash or resource cap. Test needs observed customer or user behavior against criteria set before the test. Deliver needs actual delivery and acceptance by the named customer or internal stakeholder, with support and failure responsibilities. Operate needs reconciled exchange or resource use, obligations, funding/capacity evidence and an owned next-cycle procedure. Commercial collection needs verified payment; internal budget approval is not revenue or cash received. Use suitable department budget/resource records or the program sections of [Economics and Budget][department-budget], rather than forcing allocations into the commercial cash calculator.
+
+Target one or two days for a bounded operating baseline when inputs, capacity and permissions allow. Actual evidence determines whether a cycle is demonstrated; longer delivery or approval cycles take longer. Autoscale means make the process repeatable and expand with evidence, capacity and authority, not deploy autonomous infrastructure. A plan, prototype, package check or single successful cycle does not guarantee ARR, repeat demand, profitability, product-market fit or repeatability.
 
 ## Set up selection on your host
 
@@ -262,3 +264,5 @@ Checks skill packaging: frontmatter, names, description limits, referenced files
 The [source inventory](../skills/README.md) and generated Thor index preserve all 25 identities. Supporting references, scripts, assets, and notices travel with selected methods. External renderers, libraries, browsers, connectors, credentials, native agents, and other named skills are not supplied merely because a method mentions them. Check the [capability contract](host-adapters/openai.md) and current tools before dependent work.
 
 Use the smallest sufficient method set and retain the original acceptance gates. A missing dependency needs a verified fallback or a precise limit on the affected output. Consult [provenance and notices](../skills/provenance.md) before redistributing method packages.
+
+[department-budget]: ../templates/context/04%20Economics%20And%20Budget.md

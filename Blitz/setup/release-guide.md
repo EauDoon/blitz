@@ -1,10 +1,12 @@
 # Standalone release guide: v2.1OAI
 
-This guide ships inside the master archive. It is sufficient for a local first use, migration planning and verification without access to the source repository. It accompanies the [company guide](../profiles/company.md), [changelog](../CHANGELOG.md), manifest and component notices. Examples are fictional; a generated folder is preparation, not evidence that a company can operate.
+This guide ships inside the master archive. It is sufficient for a local first use, migration planning and verification without access to the source repository. It accompanies the [company and department guide](../profiles/company.md), [changelog](../CHANGELOG.md), manifest and component notices. Blitz connects the initial idea to a bounded operating baseline across offers/services, customer or stakeholder evidence, product, operations and decision ownership. Use it with a human operator/editor or an LLM with appropriate readable records and attached tools. Examples are fictional; a generated folder is preparation, not evidence that the unit can operate.
+
+Aim for an operating unit in one or two days when scope, inputs, capacity and permissions allow. A demonstrated cycle requires actual delivery, named acceptance, reconciled exchange or resource use and a feasible next cycle. The target is not a guarantee; longer delivery or approval cycles take longer. Blitz guarantees no ARR, repeat demand, profitability or product-market fit. Autoscale means prepare repeatable processes and expand with evidence, capacity and authority, not deploy autonomous technical autoscaling.
 
 ## What the archive contains
 
-The master contains the `Blitz/` kit: 25 method packages and their resources/notices, setup utilities, templates, company guidance, synthetic examples and builder evaluations. Runtime generation produces 17 files; its context/resources exclude builder evaluations, answer keys, reviews and worked examples. Generated runtime content does not install anything.
+The master contains the `Blitz/` kit: 25 method packages and their resources/notices, setup utilities, templates, company/department guidance, synthetic examples and builder evaluations. Runtime generation produces 17 files; its context/resources exclude builder evaluations, answer keys, reviews and worked examples. Generated runtime content does not install anything.
 
 The source repository also contains the polished root README/artwork, detailed review and migration documents, GitHub CI, `tools/release.py`, `tools/check_publication.py` and root packaging tests. Those repository-only tools are not in this kit archive. Use a repository checkout for repository-wide publication/history scans or release builds. Do not try to infer a historical Git scan from this archive's bytes.
 
@@ -18,7 +20,7 @@ python -B Blitz/setup/company.py init --out company-practice --name "Practice co
 python -B Blitz/setup/company.py cash company-practice/company-cash.csv
 ```
 
-The practice output must not exist. Its parent must exist, it must stay outside the source kit, and paths containing `..` are rejected. An absolute path is appropriate for real company records, which belong outside reusable source and distribution folders. Initialization creates seven drafts, including the brief, cash CSV and 00/03/09/10 records. It does not import or migrate existing work.
+The practice output must not exist. Its parent must exist, it must stay outside the source kit, and paths containing `..` are rejected. An absolute path is appropriate for real company or department records, which belong outside reusable source and distribution folders. Initialization creates seven drafts, including the brief, cash CSV and 00/03/09/10 records. It does not import or migrate existing work. The CLI and filenames remain company-oriented. For a department, adapt the draft brief to users, accountable sponsor, service/intake, acceptance and authorized resources; revise record 00's default `venture` type before adoption. There is no department-specific initialization mode.
 
 The blank cash calculation intentionally exits **2**, reports incomplete inputs and preserves unknowns. Enter `0` only for a known zero. Read the fictional example and run its complete input:
 
@@ -26,11 +28,11 @@ The blank cash calculation intentionally exits **2**, reports incomplete inputs 
 python -B Blitz/setup/company.py cash Blitz/examples/company/service-cash.csv
 ```
 
-Exit **0** means calculation completed; it can still report a cash shortfall. Exit **1** means invalid input or another handled error. Earned revenue and collections are different inputs. The tool preserves period order, requires one currency, checks closing balances and does not prove within-period liquidity or extrapolate beyond the supplied horizon.
+Exit **0** means calculation completed; it can still report a cash shortfall. Exit **1** means invalid input or another handled error. Earned revenue and collections are different inputs. The tool preserves period order, requires one currency, checks closing balances and does not prove within-period liquidity or extrapolate beyond the supplied horizon. Its schema is a commercial cash forecast, not a departmental resource ledger. A budget allocation is neither earned revenue nor collected cash. Use appropriate existing records or the program sections of [Economics and Budget][department-budget] for internal allocations, commitments, actual spend and staff capacity.
 
-In the brief, identify the customer and payer, bounded offer, hardest assumption, next permitted experiment, owner, acceptance criteria and time/cash cap. Set change/stop criteria before seeing the result. Keep adopted positions in record 03, missing evidence in 09 and consequential decisions in 10. Close and reopen the files, then recover the owner, revision, next action and authority from saved content. A repeat initialization must refuse to overwrite the occupied folder.
+In the brief, identify the customer/user, payer or accountable sponsor, bounded offer or service, hardest assumption, next permitted experiment, owner, acceptance criteria and time/cash or resource cap. Set change/stop criteria before seeing the result. Keep adopted positions in record 03, missing evidence in 09 and consequential decisions in 10. Close and reopen the files, then recover the owner, revision, next action and authority from saved content. A repeat initialization must refuse to overwrite the occupied folder.
 
-Use the [service example](../examples/company/service-example.md) and [regulated-activity hold example](../examples/company/regulated-hold.md) to distinguish inquiry, order, accepted delivery and verified payment. The fictional evidence does not establish real demand. A licensing question or missing authority holds the affected commitment while useful independent work continues. No formation, contract, outreach, spending, filing or account action is authorized by this exercise.
+Use the [service example](../examples/company/service-example.md) and [regulated-activity hold example](../examples/company/regulated-hold.md) to distinguish inquiry, order, accepted delivery and verified payment. The fictional evidence does not establish real demand. For an internal department, use actual stakeholder/user evidence, agreed acceptance and reconciled authorized resources; do not invent a commercial sale to claim an operating cycle. A licensing question or missing authority holds the affected commitment while useful independent work continues. No formation, contract, outreach, spending, filing or account action is authorized by this exercise.
 
 ## Migrate existing v2OAI work
 
@@ -72,3 +74,5 @@ Keep credentials, private terms, live customer/employer material and filled priv
 ## Use the packaged methods
 
 The [skills guide](skills-guide.md) inventories all 25 methods with a purpose, fictional example request, expected output and dependencies. Start with explicit source use if your assistant can read the extracted files. Reference staging and runtime generation prepare material; they do not install native skills. Verify host discovery and use explicit invocation when selection misses.
+
+[department-budget]: ../templates/context/04%20Economics%20And%20Budget.md

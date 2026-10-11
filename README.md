@@ -10,7 +10,7 @@
 Listen, collect, sprint.  
 Reduce cycle time.
 
-Build the smallest company that can make a promise, deliver it, get paid and run the next cycle.
+Autoscale and quickly launch a minimum viable company or department that can stand up in minimal time.
 
 [Verification workflow](https://github.com/EauDoon/blitz/actions/workflows/verify.yml)
 
@@ -20,19 +20,22 @@ Frame → Test → Deliver → Operate. [Static illustration](docs/assets/blitz-
 
 [Start](#first-use) · [Outputs](#what-you-can-make) · [Run a cycle](#run-a-cycle) · [25 skills](#using-the-skills) · [Verification](#verification) · [Rights](#rights-and-distribution)
 
-Blitz is an operating kit for founders and small teams building a **minimum viable company**. It connects the offer, customer evidence, delivery, cash and decision owner in one manageable process. Use it with an editor and a human operator, or give the relevant guide and records to an assistant with appropriate tools.
+Blitz is an operating kit for founders and small teams building a **minimum viable company (MVC) or department**. It connects the initial idea to an operating baseline across offers, customer or stakeholder evidence, product, operations and decision ownership in one manageable process. Use it with an editor and a human operator, or give the relevant guide and records to an LLM with appropriate attached tools.
 
-The aim is a demonstrated customer cycle and a feasible next one. A generated folder, prototype, incorporation or polished business plan is useful preparation; none establishes that a business can operate. One successful cycle also does not establish repeat demand, profitability or product-market fit.
+The aim is a demonstrated MVC cycle and a feasible next one. Target an operating unit in **one or two days** when the scope is small and the people, inputs and permissions are ready. Actual delivery, acceptance and funding or resource evidence determine what is demonstrated; longer external cycles take longer. A generated folder, prototype, incorporation or polished business plan is useful preparation. Move quickly from it to actual operation. Blitz does not guarantee annual recurring revenue (ARR), repeat demand, profitability or product-market fit.
+
+Here, **autoscale** means prepare repeatable processes and expand them when evidence, capacity and authority support the next commitment. The kit does not deploy technical autoscaling or run autonomous operations. The one-to-two-day launch target is not a guaranteed outcome or permission to skip a gate.
 
 ## Who it is for
 
 Use Blitz when you are:
 
 - A founder turning a customer problem into one testable offer.
-- An operator checking whether delivery, payment and the next cycle fit together.
+- A department lead turning a stakeholder need into an agreed internal service or result.
+- An operator checking whether delivery, funding, resources and the next cycle fit together.
 - A small team consolidating scattered evidence, responsibilities and decisions.
 
-Start with one owner, one offer and one workstream. Add a document, specialist or tool when the work needs it.
+Start with one accountable owner, one offer or internal service, and one workstream. For a department, name the users, accepting stakeholder and sponsor who can authorize its budget and resources. Add a document, specialist or tool when the work needs it.
 
 This repository supplies a workflow and utilities. It does not host your business, install autonomous agents, schedule background work, form entities, send outreach, move money or determine legal compliance. A small request can remain a small request; you do not need to complete every template.
 
@@ -40,14 +43,14 @@ This repository supplies a workflow and utilities. It does not host your busines
 
 | Output | How you produce it | What it is for |
 |---|---|---|
-| Company brief | Edit the generated `company-brief.md` or its template | Define customer, payer, offer, owner, constraints and next experiment |
+| Company or department brief | Adapt the generated `company-brief.md`, its template or existing records | Define customer/user, payer or accountable sponsor, offer/service, owner, constraints and next experiment |
 | Evidence and decision record | Maintain the four generated `context/` files | Separate adopted positions, unresolved questions and consequential decisions |
-| Cash forecast | Fill `company-cash.csv`; run the cash command | Compare earned revenue, collections, costs and the closing cash floor |
+| Cash forecast or resource plan | Use the cash command for its commercial cash schema; use existing budget/resource records for a department | Inspect collection timing and cash floors, or authorized budget, actual spend, available people and the next commitment |
 | Experiment or delivery record | Use the brief and relevant existing records | Fix criteria, save actual observations and decide the next commitment |
 | Specialist work product | Select a relevant packaged skill | Draft a research memo, proposal, workbook, diagram, presentation or review; dependencies vary |
 | Scoped handoff | Use the CSV scope or item-export tools | Share selected material with provenance and a clear authority boundary |
 
-The starter creates drafts. You supply evidence, adopt decisions and approve commitments. A skill supplies a method; producing its output also requires suitable tools and inputs.
+The starter creates drafts with company-oriented fields. You supply evidence, adapt those drafts to the operating unit, adopt decisions and approve commitments. It does not allocate a departmental budget or staff. A skill supplies a method; producing its output also requires suitable tools and inputs.
 
 ## First use
 
@@ -84,7 +87,7 @@ Initialization emits a JSON receipt and creates seven draft files:
     10 Decision Log.md
 ```
 
-Open the generated brief. Name the customer and payer, bounded offer, initial sales route, minimum delivery requirements, hardest assumption and next permitted experiment. Fix its success, change and stop criteria before observing the result. Use `03` for an actually adopted position, `09` for missing evidence and `10` for consequential decisions. Keep one canonical writer.
+Open the generated brief. Name the customer and payer, bounded offer, initial sales route, minimum delivery requirements, hardest assumption and next permitted experiment. For a department, adapt these prompts to the internal users, accountable sponsor, agreed service, intake route, authorized budget and people. The initializer still uses company names and defaults record 00 to `venture`; revise that unadopted draft to the actual unit type before use. Fix success, change and stop criteria before observing the result. Use `03` for an actually adopted position, `09` for missing evidence and `10` for consequential decisions. Keep one canonical writer.
 
 Calculate the blank cash template to see how missing inputs behave:
 
@@ -98,42 +101,44 @@ This intentionally reports **incomplete**, with exit code **2**. Fill supported 
 python -B Blitz/setup/company.py cash Blitz/examples/company/service-cash.csv
 ```
 
-Output directories must be **new**, their parents must exist, and initialization must stay outside the `Blitz/` source kit. Occupied targets and paths containing `..` are rejected. Reuse `.work` but choose a new company directory on another initialization. The practice folder is ignored by Git. Keep real company records outside this source repository, using an explicit absolute output path.
+Output directories must be **new**, their parents must exist, and initialization must stay outside the `Blitz/` source kit. Occupied targets and paths containing `..` are rejected. Reuse `.work` but choose a new company directory on another initialization. The practice folder is ignored by Git. Keep real company or departmental records outside this source repository, using an explicit absolute output path.
 
-Prefer working manually? Copy the [company brief](Blitz/templates/company-brief.md) and [cash template](Blitz/templates/company-cash.csv), or use sufficient existing records. The [company guide](Blitz/profiles/company.md) and [first-user walkthrough](docs/FIRST_USER.md) explain the next steps without requiring the CLI.
+Prefer working manually? Copy the [company brief](Blitz/templates/company-brief.md) and [cash template](Blitz/templates/company-cash.csv), or use sufficient existing records. The [company and department guide](Blitz/profiles/company.md) and [first-user walkthrough](docs/FIRST_USER.md) explain the next steps without requiring the CLI. The `company` filenames and commands remain compatibility names. An approved department budget is not earned revenue or collected cash; keep its allocations, commitments, actual spend and capacity in suitable resource records or the existing [Economics and Budget template][department-budget], instead of forcing them into the cash CSV.
 
 ## Workflow
+
+The illustration uses a commercial cycle. Apply the same gates to an internal department using the counterparts in the table below.
 
 <picture>
   <source media="(max-width: 820px)" srcset="docs/assets/workflow-mobile.svg">
   <img src="docs/assets/workflow.svg" alt="Frame the offer, Test the assumption, Deliver the promise, then Operate the next cycle. At each gate the owner checks evidence and authority, then records Proceed, Hold or Walk. Return to the affected gate when evidence changes." width="100%">
 </picture>
 
-The four gates describe **business evidence**, with thresholds proportionate to the next commitment's risk:
+The four gates describe **operating evidence**, with thresholds proportionate to the next commitment's risk:
 
 | Gate | What you establish | Useful evidence |
 |---|---|---|
-| **Frame** | A customer, payer, problem, bounded offer, accountable owner and permitted test | Observed problem, clear price/scope, acceptance criteria, time and cash cap |
-| **Test** | Whether the hardest assumption survives an actual experiment | Customer behavior against predeclared criteria; distinguish interest, orders and payment |
-| **Deliver** | Whether the promised result was delivered and accepted | Actual output, customer acceptance, delivery costs, support and failure/refund route |
-| **Operate** | Whether the exchange is reconciled and the next cycle is feasible | Receipts, obligations, contribution, cash timing, capacity, owner and repeatable procedure |
+| **Frame** | A customer/user, payer or accountable sponsor, problem, bounded offer/service, owner and permitted test | Observed need, price or authorized resources, scope, acceptance criteria, time and cash/budget cap |
+| **Test** | Whether the hardest assumption survives an actual experiment | Customer or user behavior against predeclared criteria; distinguish interest from orders, committed resources or actual use |
+| **Deliver** | Whether the promised result was delivered and accepted | Actual output, acceptance by the named customer or internal stakeholder, costs, support and failure/remedy route |
+| **Operate** | Whether exchange or resource use is reconciled and the next cycle is feasible | Commercial receipts, obligations and cash timing; or authorized budget, actual spend and resource use; capacity, owner and repeatable procedure for either |
 
 Record **Proceed, Hold or Walk** for the specific next commitment. A Hold pauses the dependent action while useful authorized work continues. Advancing a gate does not grant permission to spend, sign, publish or contact anyone.
 
-These gates are separate from the optional work stages in the [playbook](Blitz/PLAYBOOK.md): Ingestion, Firming, Mandate, Blitzing and Delivering. There is no mandatory 72-hour company deadline. A prepared experiment, a demonstrated MVC and demonstrated repetition are different claims.
+These gates are separate from the optional work stages in the [playbook](Blitz/PLAYBOOK.md): Ingestion, Firming, Mandate, Blitzing and Delivering. The one-to-two-day launch target does not change their optional pilot timing or impose a readiness deadline. A prepared experiment, a demonstrated MVC or departmental cycle, and demonstrated repetition are different claims.
 
 ## Run a cycle
 
 Use the [synthetic service example](Blitz/examples/company/service-example.md) to practise these steps. Real work needs its own evidence and authority.
 
-1. **Frame one offer.** Fill the brief with the customer, payer, result, price, scope and owner. Identify the hardest assumption. Set the next experiment's success, change and stop criteria, with a time and cash cap.
-2. **Test that assumption.** Conduct only the permitted experiment. Save observations and source dates. Separate interest, orders, payment and accepted delivery. Record missing evidence in `09 Open Questions.md`.
+1. **Frame one offer or internal service.** Fill the brief with the customer/user, payer or sponsor, result, price or authorized resources, scope and owner. Identify the hardest assumption. Set the next experiment's success, change and stop criteria, with a time and cash/budget cap.
+2. **Test that assumption.** Conduct only the permitted experiment. Save observations and source dates. Separate interest, commercial orders/payment, internal resource commitments, actual use and accepted delivery. Record missing evidence in `09 Open Questions.md`.
 3. **Decide the next commitment.** Compare the result with the criteria. Record Proceed, Hold or Walk, its basis and owner in `10 Decision Log.md`. Adopt an actual position in `03 Position Of Record.md`; do not turn an unapproved draft into one.
-4. **Deliver within the agreed scope.** Retain the promised result, acceptance evidence, actual costs and failure or refund route. A completed internal artifact alone does not establish customer acceptance.
-5. **Check the next operating cycle.** Reconcile collections and obligations. Update the cash forecast, capacity and delivery procedure. A complete cash calculation can still show a shortfall. Decide whether the next cycle is feasible.
+4. **Deliver within the agreed scope.** Retain the promised result, acceptance evidence, actual costs and failure/remedy route, including refunds where applicable. A completed artifact alone does not establish acceptance by the named customer or internal stakeholder.
+5. **Check the next operating cycle.** Reconcile collections and obligations for a commercial offer, or actual spend and resource use against the department's authorized budget and capacity. Update the appropriate forecast and delivery procedure. A complete calculation can still show a shortfall. Decide whether the next cycle is feasible.
 6. **Leave recoverable work.** Update `00 Read Me First.md` with the governing records, owner and next permitted action. Close and reopen the records. Another session should recover the position and authority boundary without relying on chat memory.
 
-Move back to the affected gate when evidence changes. Keep the record proportionate: a useful existing document can replace another template.
+Move back to the affected gate when evidence changes. Keep the record proportionate: a useful existing document can replace another template. For a department, one accepted internal request and an evidenced, resourced next cycle can demonstrate the bounded operating baseline; it does not establish external sales or paid demand.
 
 To work with an assistant, first give it readable access to the kit and a scoped practice folder. A starting request is:
 
@@ -159,7 +164,7 @@ The [regulated-activity example](Blitz/examples/company/regulated-hold.md) shows
 
 ## Using the skills
 
-The kit contains **25 method packages**. The [skills guide](Blitz/setup/skills-guide.md#all-25-packaged-skills) lists every method, its purpose, a fictional example request, expected output and dependencies. Pick a method for a concrete task; you do not need all 25 for every company.
+The kit contains **25 method packages**. The [skills guide](Blitz/setup/skills-guide.md#all-25-packaged-skills) lists every method, its purpose, a fictional example request, expected output and dependencies. Pick a method for a concrete task; you do not need all 25 for every company or department.
 
 | Your task | Start with | Typical output |
 |---|---|---|
@@ -191,7 +196,7 @@ This release makes no measured automatic-selection claim for Blitz. Package vali
 
 | Location | Purpose |
 |---|---|
-| [Company profile](Blitz/profiles/company.md) | Founder workflow, evidence gates, roles, economics and scoped jurisdiction questions |
+| [Company and department profile](Blitz/profiles/company.md) | Launch workflow, evidence gates, roles, economics/resources and scoped jurisdiction questions |
 | [Templates](Blitz/templates/) | Editable brief, cash inputs and working records; create only what is useful |
 | [25 method packages](Blitz/setup/skills-guide.md) | Research, reasoning, writing, economics, design, building and review methods with their resources and notices |
 | [Setup tools](Blitz/setup/) | Local company initialization/calculation, CSV scoping, archive verification and item export |
@@ -213,9 +218,9 @@ Selected methods may need external libraries, document renderers, fonts, browser
 
 ## Privacy and authority
 
-Keep credentials, real customer records, private terms and company instances out of tracked files. Use explicit allowlists for exports, inspect their actual contents, and follow the [item-export contract](Blitz/setup/item-export.md). A private filename is a label, not access control.
+Keep credentials, real customer or employee records, private terms and company/department instances out of tracked files. Use explicit allowlists for exports, inspect their actual contents, and follow the [item-export contract](Blitz/setup/item-export.md). A private filename is a label, not access control.
 
-Evidence informs decisions; a human owns consequential commitments. Company formation, contracts, spending, outreach, account changes and deployment require applicable authority. Activity and jurisdiction determine which legal, tax, licensing, data and insurance questions need current evidence or qualified review. A founder's approval cannot supply a missing permission. Interrupted external actions must be reconciled before retrying.
+Evidence informs decisions; a human owns consequential commitments. Company formation, contracts, spending, outreach, account changes and deployment require applicable authority. Activity and jurisdiction determine which legal, tax, licensing, data and insurance questions need current evidence or qualified review. A founder's or sponsor's approval cannot supply a missing permission. Interrupted external actions must be reconciled before retrying.
 
 ## Verification
 
@@ -234,10 +239,12 @@ The build produces the versioned master ZIP, runtime source set and `release-man
 
 ## Contributing
 
-Propose a concrete user problem and the smallest change that addresses it. Follow [repository instructions](AGENTS.md), preserve useful existing interfaces and method notices, and keep examples independently synthetic. Include affected checks and actual results with the change. Do not attach real company data or credentials to an issue, pull request or fixture. A method or document should earn its place through a task, dependency or demonstrated failure.
+Propose a concrete user problem and the smallest change that addresses it. Follow [repository instructions](AGENTS.md), preserve useful existing interfaces and method notices, and keep examples independently synthetic. Include affected checks and actual results with the change. Do not attach real company, departmental or employee data, or credentials, to an issue, pull request or fixture. A method or document should earn its place through a task, dependency or demonstrated failure.
 
 ## Rights and distribution
 
 This edition carries component-specific license and attribution notices, plus original generic symbols in place of product logos. Public distribution uses a reviewed source snapshot with fresh Git history; earlier development history and source originals remain private. Read the [rights audit](docs/PUBLICATION_AUDIT.md) and [publication record](docs/PUBLICATION_PLAN.md). No repository-wide license has been selected; this edition is not represented as open source.
 
 Blitz derives from the v2OAI package; this edition preserves its method identities and reviewed mechanisms while replacing private material with reusable guidance and synthetic fixtures. Read [rights and provenance](docs/PROVENANCE.md) and the applicable component notices before redistribution. Publication checks are bounded checks of reviewed content and history, not clearance for arbitrary future inputs.
+
+[department-budget]: Blitz/templates/context/04%20Economics%20And%20Budget.md
