@@ -5,6 +5,8 @@ description: 'Design gate for web surfaces: landing pages, app UI, redesigns. Us
 
 # Frontend Taste
 
+<!-- Modified Blitz adaptation of the identified taste-skill and Impeccable guidance. Attribution and MIT/Apache terms: NOTICE.md. Notice added 2026-10-11; substantive rules unchanged. -->
+
 The gate a marketing or product web surface passes through before code is written: read the brief, pick the foundation, hold the locks, ban the defaults, then verify at runtime.
 
 Sources: impeccable.style/slop (66 tells, 61 deterministic), tasteskill.dev v2 (Leonxlnx/taste-skill, MIT), 21st.dev community registry. History and the 04-09-2026 conflict log are in `CHANGES.md`.

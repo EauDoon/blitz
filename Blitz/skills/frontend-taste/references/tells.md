@@ -1,5 +1,7 @@
 # The tells, banned outright
 
+<!-- Modified Blitz adaptation of the identified taste-skill and Impeccable guidance. Attribution and MIT/Apache terms: ../NOTICE.md. Notice added 2026-10-11; substantive rules unchanged. -->
+
 Merged from impeccable.style/slop and taste-skill section 9. None of these ship unless the brief explicitly asks for one.
 
 **Surface and decoration**

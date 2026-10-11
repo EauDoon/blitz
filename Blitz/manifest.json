@@ -35,6 +35,8 @@
     "rule": "Resolve the actual installed role through a current capability observation. Required dependencies block only dependent work; optional dependencies use the declared fallback. Import grants no access or install authority."
   },
   "licenses": [
+    "setup/licensing/LICENSE",
+    "setup/licensing/NOTICE.md",
     "skills/anti-slop/LICENSE.txt",
     "skills/anti-slop/NOTICE.md",
     "skills/anti-slop/licenses/aasha/LICENSE.txt",
@@ -49,6 +51,10 @@
     "skills/diagram-design/LICENSE",
     "skills/diagram-design/THIRD_PARTY_LICENSES.md",
     "skills/frontend-scroll-craft/LICENSE",
+    "skills/frontend-taste/NOTICE.md",
+    "skills/frontend-taste/licenses/impeccable/LICENSE.txt",
+    "skills/frontend-taste/licenses/impeccable/NOTICE.md",
+    "skills/frontend-taste/licenses/taste-skill/LICENSE.txt",
     "skills/gauntlet-verify/LICENSE.txt",
     "skills/gauntlet-verify/NOTICE.md",
     "skills/google-slides/LICENSE.txt",
@@ -837,6 +843,18 @@
       "characters": 12737
     },
     {
+      "path": "setup/licensing/LICENSE",
+      "bytes": 5552,
+      "sha256": "f0731ffa87cfcfa93b5228cb7b37dd247ddcafeb983b56ca65c4d6450779eb80",
+      "characters": 5550
+    },
+    {
+      "path": "setup/licensing/NOTICE.md",
+      "bytes": 5420,
+      "sha256": "822c7e1f6e2efd5fd99dfb64b1563651d9af8f9487dbb01cf23409baf3d86e91",
+      "characters": 5419
+    },
+    {
       "path": "setup/name-map.json",
       "bytes": 2674,
       "sha256": "8ea89bb06c978a5577b509a4dd2f6db456b80642676ee9977328caea2fad8703",
@@ -856,9 +874,9 @@
     },
     {
       "path": "setup/release-guide.md",
-      "bytes": 10724,
-      "sha256": "5ffc361aac1e1f1a5077f01f2b042b4ddb2fcb4f0bf7a2173cabda5b363cee01",
-      "characters": 10724
+      "bytes": 11267,
+      "sha256": "2bb3b1fa9270b6611d3570894f00cf7b62e3c90dcf84489adac2e4376fa254de",
+      "characters": 11267
     },
     {
       "path": "setup/runtime.md",
@@ -2163,10 +2181,16 @@
       "characters": 645
     },
     {
+      "path": "skills/frontend-taste/NOTICE.md",
+      "bytes": 2586,
+      "sha256": "1dd5b1db9c29fa66adc6439981e2f2ee04e097d365b971499716bc131d60edd9",
+      "characters": 2586
+    },
+    {
       "path": "skills/frontend-taste/SKILL.md",
-      "bytes": 21507,
-      "sha256": "b4dfdedc9eb42fc641839a7bab03d7c3ef31b9ee779e25bb85c0d228a24442b9",
-      "characters": 21507
+      "bytes": 21697,
+      "sha256": "6c265eb9ac961f47d500fef3b556d20d78c966224ef4a4eb9e302637cf5335bf",
+      "characters": 21697
     },
     {
       "path": "skills/frontend-taste/agents/openai.yaml",
@@ -2175,10 +2199,28 @@
       "characters": 42
     },
     {
+      "path": "skills/frontend-taste/licenses/impeccable/LICENSE.txt",
+      "bytes": 10766,
+      "sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
+      "characters": 10766
+    },
+    {
+      "path": "skills/frontend-taste/licenses/impeccable/NOTICE.md",
+      "bytes": 503,
+      "sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb",
+      "characters": 503
+    },
+    {
+      "path": "skills/frontend-taste/licenses/taste-skill/LICENSE.txt",
+      "bytes": 1065,
+      "sha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df",
+      "characters": 1065
+    },
+    {
       "path": "skills/frontend-taste/references/cinematic.md",
-      "bytes": 10082,
-      "sha256": "3e1ceecd6a323133e650c540e2ecf1454120ef40621dc77eb6410fba56bdbf33",
-      "characters": 10082
+      "bytes": 10275,
+      "sha256": "368f174a6add842eb361dc7b5a5325c7b8860a49f9b78433b68fb18d16e163ab",
+      "characters": 10275
     },
     {
       "path": "skills/frontend-taste/references/cinematic/cinematic.css",
@@ -2200,9 +2242,9 @@
     },
     {
       "path": "skills/frontend-taste/references/tells.md",
-      "bytes": 2741,
-      "sha256": "b36733ca6a98129be8c6402e1cf05628690993d02daf626ab61afd65534d1c4b",
-      "characters": 2741
+      "bytes": 2934,
+      "sha256": "9d0897b44ab6cf7e2cb149c328518c45a6e14890aad8838760263156d0447291",
+      "characters": 2934
     },
     {
       "path": "skills/frontend-taste/references/tooling.md",
@@ -2662,9 +2704,9 @@
     },
     {
       "path": "skills/provenance.md",
-      "bytes": 3538,
-      "sha256": "13bd949faa07205fd2d3586256b0879da22eba21bc3553c5e404020a6ac0c431",
-      "characters": 3530
+      "bytes": 3949,
+      "sha256": "901c21102e71ba28f0f6b53e6ecaecead7811add7f1d74ceebda71baf648f8f1",
+      "characters": 3941
     },
     {
       "path": "skills/reasoning-core/CHANGES.md",

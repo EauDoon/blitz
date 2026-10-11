@@ -1,0 +1,110 @@
+Blitz Internal Use License 1.0
+
+Copyright (c) 2026 EauDoon
+Source: https://github.com/EauDoon/blitz
+Permission requests: daniel@danieloon.ai
+
+1. Scope
+
+This license applies only to original material for which EauDoon holds the
+necessary rights in this repository, including documentation, templates,
+skill instructions, software and artwork (the "Covered Material"). It does
+not apply to third-party material or to material already offered under a
+separate license. Existing licenses, attribution, notices and rights for that
+material remain unchanged. In a mixed file, this license covers only the
+original contributions not already separately licensed, not the entire file.
+Nothing here limits any prior grant, applicable hosting-platform permission,
+or right available under law.
+The component scope and notices are recorded in
+Blitz/setup/licensing/NOTICE.md and docs/license-inventory.csv.
+
+2. Free internal use
+
+Subject to these terms, EauDoon grants you a worldwide, non-exclusive,
+royalty-free copyright license to use, reproduce and modify the Covered
+Material for your own internal purposes if you are:
+
+(a) an individual acting for your own account; or
+(b) a startup with fewer than 100 employees OR a valuation below
+    US$50,000,000.
+
+Either startup threshold is sufficient. Both thresholds are strict: exactly
+100 employees does not satisfy the employee threshold, and exactly
+US$50,000,000 does not satisfy the valuation threshold. An unknown valuation
+does not prevent reliance on the employee threshold. An unknown employee
+count does not prevent reliance on the valuation threshold.
+
+Use on behalf of an organization is that organization's use. An employee or
+other individual cannot use the individual permission to bypass the
+organization's eligibility. No age, revenue, funding-stage, profitability or
+incorporation requirement is added to the startup thresholds.
+
+Assess eligibility at the time of use in good faith using reasonably available, current
+information about the startup and, for valuation, a reasonably supportable
+company valuation expressed in US dollars. No public disclosure of private
+business information or independent appraisal is required. If neither
+threshold can be established, obtain written permission before use. If a
+startup satisfies neither alternative, obtain written permission
+before continuing internal use. Past use while eligible remains permitted.
+
+3. Other organizations and uses
+
+Organizations outside section 2 need prior written permission from
+daniel@danieloon.ai for internal use. Asking for permission does not itself
+grant permission. The written permission controls its specific scope.
+
+You may not provide the Covered Material, a modified version of it, or access
+to its functionality as a service to third parties or as consulting work,
+whether paid or unpaid. Eligibility for internal use does not permit these
+activities. You may not sell, sublicense or otherwise redistribute the
+Covered Material or its adaptations outside your own internal use under
+this license. Public availability of the repository is not such permission.
+
+You may share internal copies with people working on your permitted internal
+activities, provided that they retain the notices and comply with these
+terms. That does not give them independent permission to provide Blitz as a
+service or consulting offering. Separate third-party licenses remain
+available for their own material, including their redistribution rights.
+
+4. Attribution and modifications
+
+Keep this license and all applicable copyright, attribution and third-party
+notices with copies or substantial portions of the Covered Material,
+including internal copies. Credit the original material as:
+
+    Blitz by EauDoon — https://github.com/EauDoon/blitz
+
+Mark modified files as changed by you and retain earlier modification
+notices. Do not imply that EauDoon or an upstream author endorses your work.
+Attribution may appear in an accompanying README, project notice or credits
+file that stays with the material; it need not appear on every screen.
+
+5. Your work and rights outside this license
+
+This license does not claim ownership of your independent work, business
+records, data or outputs merely because you used Blitz to create them. It
+continues to apply to protected Covered Material copied into an output.
+Using Blitz internally to operate your own business does not, by itself,
+make your independent products or outputs a prohibited Blitz service.
+
+No restriction in this license applies to an idea, fact, public-domain
+material, fair use, fair dealing or any other use that the law permits
+without a license. No trademark, endorsement or patent rights are granted.
+
+6. Duration and compliance
+
+The permissions in this license last for the duration of the applicable
+copyright and are irrevocable while you comply with these terms, including
+the eligibility and use limits. A later license change or withdrawal of the
+repository does not revoke compliant permissions for copies already
+obtained. A use outside these terms is not licensed. Written permission for
+additional use does not change anyone else's existing license.
+
+7. Warranty and liability
+
+To the extent permitted by law, the Covered Material is provided "as is",
+without warranties, including warranties of title, non-infringement,
+merchantability or fitness for a particular purpose. To that same extent,
+EauDoon is not liable for damages arising from use of the Covered Material.
+These terms do not exclude liability or rights that cannot lawfully be
+excluded.

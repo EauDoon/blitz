@@ -1,6 +1,6 @@
 # Component rights and artwork audit
 
-This edition retains component-specific licenses and attribution. It does not apply a repository-wide license or infer authorship from possession of the source archive. Public viewing and broader reuse rights are separate. This is a bounded source review, not a guarantee about unrecorded lineage or future downstream use.
+This edition retains component-specific licenses and attribution. The custom [Blitz Internal Use License 1.0](../LICENSE) now covers original material only, excluding third-party material and prior separate grants. The [licensing guide](LICENSING.md) and [file inventory](license-inventory.csv) record that scope; no authorship is inferred merely from possession of the source archive. Public viewing, permitted internal use and broader redistribution remain separate. This is a bounded source review, not a guarantee about unrecorded lineage or future downstream use.
 
 ## Component notices
 
@@ -12,6 +12,7 @@ This edition retains component-specific licenses and attribution. It does not ap
 | Google Slides | Both consulting-deck and executive-slide-skill Apache source licenses are retained, with the consulting-deck NOTICE, copyright attributions and adaptation marker. See [NOTICE](../Blitz/skills/google-slides/NOTICE.md). |
 | Diagram Design | The main method's Cathryn Lavery MIT notice and the retained generic Tabler icon MIT notice remain. Product-specific artwork is replaced with generic functional symbols. See [icon provenance](../Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md). |
 | Frontend Scroll Craft and Website Cloner | Their identified upstream MIT attributions remain with the components. See [method provenance](../Blitz/skills/provenance.md). |
+| Frontend Taste | The licensing inventory identified a previously omitted taste-skill MIT and Impeccable Apache-2.0 attribution chain in the inherited source statements. Pinned license texts, the Impeccable notice and modification notices are now retained. See [NOTICE](../Blitz/skills/frontend-taste/NOTICE.md). |
 
 ### Anti-slop attribution chain
 
@@ -41,4 +42,4 @@ The README artwork and motion illustration have separate [source and generation 
 
 Current-source repairs do not retroactively clear older raw snapshots. Public distribution therefore uses a fresh reviewed source snapshot, with earlier development history and originals kept private under the approved [publication procedure](PUBLICATION_PLAN.md). Required current component notices remain in the master kit and runtime resource closure.
 
-No additional named imported implementation was identified by the bounded attribution-marker review beyond the recorded sources. That result cannot prove authorship of every unrecorded byte. Optional renderers, connectors, libraries, fonts and external tools are not granted or bundled merely because a method mentions them. Consult the applicable component notice and task-specific rights before dependent use.
+The later licensing inventory identified the Frontend Taste source chain in addition to the earlier recorded components and added its notices. No further named bundled implementation was identified by that bounded attribution-marker review. That result cannot prove authorship of every unrecorded byte. Optional renderers, connectors, libraries, fonts and external tools are not granted or bundled merely because a method mentions them. Consult the applicable component notice and task-specific rights before dependent use.

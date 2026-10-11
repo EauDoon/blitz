@@ -1,5 +1,7 @@
 # Cinematic Frontends
 
+<!-- Modified Blitz adaptation of the identified taste-skill and Impeccable guidance. Attribution and MIT/Apache terms: ../NOTICE.md. Notice added 2026-10-11; substantive rules unchanged. -->
+
 Folded in from the cinematic-frontends skill on 11-09-2026; loaded only when the design read selects the cinematic family.
 
 One dark aesthetic family, not a default. `frontend-taste` runs the design read and the pre-flight gate; this file is what it loads when the read lands on cinematic, film grade, near black, or Higgsfield style. Four surfaces share the system: dashboard, data story, HTML slide deck, landing site.

@@ -1,0 +1,499 @@
+path,material_type,license_scope,evidence
+.gitattributes,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+.github/workflows/verify.yml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+.gitignore,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+AGENTS.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/AGENTS.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/CHANGELOG.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/ENTRYPOINT.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/PLAYBOOK.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/README.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/README.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/calc_answers.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/calculation.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/compatibility-v2_1.json,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/concurrency.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition-cases.json,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/README.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/answer-key/expected-results.json,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA01/TASK.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA01/source-data/INDEX.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA01/source-data/operations/service-costs.csv,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA01/source-data/procurement/workstations.csv,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA02/TASK.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA02/source-data/current-capacity.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA02/source-data/old-estimate.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA03/TASK.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA03/source-data/accepted-prices.csv,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA03/source-data/existing-draft.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA04/TASK.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA04/source-data/count-a.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA04/source-data/count-b.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA04/source-data/target-and-price.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA05/TASK.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA06/PRIVATE/owner-notes.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA06/TASK.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/context-acquisition/cases/CA06/source-data/capacity-ledger.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/document.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/fixture_checks.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/launch-export-cases.json,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/launch-export.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/lean-baseline-contract.json,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/lean-cases.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/lean_fixture_checks.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/negative-routing.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/operating-loop-cases.json,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/recovery.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/regression-fixtures.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/repair-cases.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/retained-source-attribution-issue.json,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/routing.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/run_all.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/source-conflict.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/test_company.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/test_context_acquisition.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/test_item_export.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/test_oai_lean.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/test_oai_repairs.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/test_operating_loop.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/test_release_runner.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/test_scope_csv.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/test_thor_context.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/test_v2_integrity.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/test_v2_runtime.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/evals/visual.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/examples/company/regulated-hold.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/examples/company/service-cash.csv,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/examples/company/service-example.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/examples/non-finance-run.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/examples/program-run.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/examples/synthetic-venture-run.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/manifest.json,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/profiles/company.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/profiles/comprehensive.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/profiles/lean.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/reviews/decisions.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/reviews/oai-context-acquisition-release-record.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/reviews/oai-launch-export-release-record.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/reviews/oai-lean-release-record.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/reviews/oai-operating-loop-release-record.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/reviews/oai-release-record.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/reviews/oai-v2-release-record.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/Thor_Project_Instructions.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/Thor_System_Register.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/build_thor_context.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/capability-manifest.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/chatgpt.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/chatgpt_stage.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/claude.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/company.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/export_item.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/frontmatter.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/host-adapters/openai.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/host-inventory.example.json,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/item-export.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/licensing/LICENSE,custom license text,operative terms for covered original material,LICENSE
+Blitz/setup/licensing/NOTICE.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/name-map.json,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/operating-contract.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/operator-guide.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/release-guide.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/runtime.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/scope_csv.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/skills-guide.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/thor.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/verify_archive.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/setup/verify_kit.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/README.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/anti-slop/CHANGES.md,documentation/template/instruction,mixed: original additions only; inherited material retains MIT/CC-BY-SA,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/anti-slop/LICENSE.txt,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/anti-slop/NOTICE.md,component attribution/scope notice,existing terms/attributions retained; original explanatory additions only,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/anti-slop/SKILL.md,documentation/template/instruction,excluded in full: CC-BY-SA-4.0 adapted file; upstream MIT retained,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/anti-slop/agents/openai.yaml,data/configuration,mixed: original additions only; inherited material retains MIT/CC-BY-SA,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/anti-slop/licenses/aasha/LICENSE.txt,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/anti-slop/licenses/brandon-wise/LICENSE.txt,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/anti-slop/licenses/conor-bronsdon/LICENSE.txt,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/anti-slop/licenses/conor-bronsdon/NOTICE.md,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/anti-slop/licenses/hardik-pandya/LICENSE.txt,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/anti-slop/licenses/kevin-magnan/LICENSE.txt,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/anti-slop/licenses/kevin-magnan/NOTICE.md,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/anti-slop/licenses/peter-yang/LICENSE.txt,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/anti-slop/licenses/siqi-chen/LICENSE.txt,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/anti-slop/references/history.md,documentation/template/instruction,mixed: original additions only; inherited material retains MIT/CC-BY-SA,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/anti-slop/references/post-pass.md,documentation/template/instruction,excluded in full: CC-BY-SA-4.0 adapted file; upstream MIT retained,Blitz/skills/anti-slop/NOTICE.md
+Blitz/skills/blitz/CHANGES.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/blitz/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/blitz/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/blitz/evals/evals.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/blitz/references/context-acquisition.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/blitz/references/operating-loop.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/calc-workbook/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/calc-workbook/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/calc-workbook/references/calc-workbook.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/cold-read/CHANGES.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/cold-read/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/cold-read/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/cold-read/evals/evals.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/cold-read/references/loop-rules.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/diagram-design/CHANGES.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/LICENSE,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/SKILL.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md,component attribution/scope notice,existing terms/attributions retained; original explanatory additions only,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/agents/openai.yaml,data/configuration,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-architecture-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-architecture-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-architecture-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-architecture.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-data-flow-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-data-flow-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-data-flow-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-data-flow.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-datalake-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-datalake-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-datalake-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-datalake.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-dp-integration-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-dp-integration-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-dp-integration-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-dp-integration.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-dp-security-matrix-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-dp-security-matrix-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-dp-security-matrix-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-dp-security-matrix.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-er-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-er-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-er-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-er.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-flowchart-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-flowchart-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-flowchart-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-flowchart.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-high-level-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-high-level-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-high-level-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-high-level-vertical-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-high-level-vertical-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-high-level-vertical-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-high-level-vertical.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-high-level.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-it-state-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-it-state-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-it-state-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-it-state.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-layers-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-layers-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-layers-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-layers.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-loop-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-loop-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-loop-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-loop-terminal.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-loop.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-medallion-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-medallion-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-medallion-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-medallion.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-nested-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-nested-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-nested-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-nested.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-org-chart-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-org-chart-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-org-chart-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-org-chart.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-process-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-process-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-process-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-process.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-pyramid-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-pyramid-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-pyramid-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-pyramid.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-quadrant-consultant.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-quadrant-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-quadrant-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-quadrant-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-quadrant.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-sequence-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-sequence-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-sequence-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-sequence.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-state-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-state-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-state-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-state.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-swimlane-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-swimlane-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-swimlane-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-swimlane.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-timeline-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-timeline-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-timeline-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-timeline.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-tree-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-tree-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-tree-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-tree.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-venn-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-venn-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-venn-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/example-venn.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/icons.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/index.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/template-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/template-full-dark.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/template-full.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/template-terminal.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/assets/template.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/evals/evals.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/export.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/onboarding.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/primitive-annotation.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/primitive-icons.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/primitive-sketchy.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/primitive-terminal.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/primitives-core.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/style-guide.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-architecture.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-data-flow.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-dp-integration.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-dp-security-matrix.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-er.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-flowchart.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-high-level.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-it-state.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-layers.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-loop.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-medallion.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-nested.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-org-chart.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-process.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-pyramid.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-quadrant.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-sequence.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-state.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-swimlane.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-timeline.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-tree.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/references/type-venn.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/scripts/lint-diagram.py,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/diagram-design/scripts/skin.py,software,mixed: original additions only; inherited MIT retained,Blitz/skills/diagram-design/THIRD_PARTY_LICENSES.md
+Blitz/skills/doc-style/CHANGES.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/doc-style/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/doc-style/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/doc-style/references/build-reference.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/doc-style/references/namesweep.sh,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/doc-style/references/styles.js,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/doc-style/references/verify.sh,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/frontend-mockup/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/frontend-mockup/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/frontend-scroll-craft/CHANGES.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/LICENSE,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/SKILL.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/agents/openai.yaml,data/configuration,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/engine/scrollcraft.css,software,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/engine/scrollcraft.js,software,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/references/approved-collection.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/references/assets.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/references/brief.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/references/device-diag.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/references/devices.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/references/feel.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/references/hero-depth.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/references/taste.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/references/template.html,software,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/references/uniqueness.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/references/verify.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/references/worldflight.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/references/worlds.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/scripts/doctor.mjs,software,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/scripts/encode.sh,software,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/scripts/kie.mjs,software,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/scripts/serve.mjs,software,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/scripts/shoot.mjs,software,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/scripts/workspace.mjs,software,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/scripts/worldflight-assert.mjs,software,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-scroll-craft/templates/FINGERPRINTS.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/frontend-scroll-craft/LICENSE
+Blitz/skills/frontend-taste/CHANGES.md,documentation/template/instruction,mixed: original additions only; inherited MIT/Apache-2.0 retained,Blitz/skills/frontend-taste/NOTICE.md
+Blitz/skills/frontend-taste/NOTICE.md,component attribution/scope notice,existing terms/attributions retained; original explanatory additions only,Blitz/skills/frontend-taste/NOTICE.md
+Blitz/skills/frontend-taste/SKILL.md,documentation/template/instruction,mixed: original additions only; inherited MIT/Apache-2.0 retained,Blitz/skills/frontend-taste/NOTICE.md
+Blitz/skills/frontend-taste/agents/openai.yaml,data/configuration,mixed: original additions only; inherited MIT/Apache-2.0 retained,Blitz/skills/frontend-taste/NOTICE.md
+Blitz/skills/frontend-taste/licenses/impeccable/LICENSE.txt,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/frontend-taste/NOTICE.md
+Blitz/skills/frontend-taste/licenses/impeccable/NOTICE.md,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/frontend-taste/NOTICE.md
+Blitz/skills/frontend-taste/licenses/taste-skill/LICENSE.txt,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/frontend-taste/NOTICE.md
+Blitz/skills/frontend-taste/references/cinematic.md,documentation/template/instruction,mixed: original additions only; inherited MIT/Apache-2.0 retained,Blitz/skills/frontend-taste/NOTICE.md
+Blitz/skills/frontend-taste/references/cinematic/cinematic.css,software,mixed: original additions only; inherited MIT/Apache-2.0 retained,Blitz/skills/frontend-taste/NOTICE.md
+Blitz/skills/frontend-taste/references/cinematic/cinematic.js,software,mixed: original additions only; inherited MIT/Apache-2.0 retained,Blitz/skills/frontend-taste/NOTICE.md
+Blitz/skills/frontend-taste/references/cinematic/example-data-story.html,software,mixed: original additions only; inherited MIT/Apache-2.0 retained,Blitz/skills/frontend-taste/NOTICE.md
+Blitz/skills/frontend-taste/references/tells.md,documentation/template/instruction,mixed: original additions only; inherited MIT/Apache-2.0 retained,Blitz/skills/frontend-taste/NOTICE.md
+Blitz/skills/frontend-taste/references/tooling.md,documentation/template/instruction,mixed: original additions only; inherited MIT/Apache-2.0 retained,Blitz/skills/frontend-taste/NOTICE.md
+Blitz/skills/gauntlet-verify/CHANGES.md,documentation/template/instruction,mixed: original additions only; previous CC-BY-4.0/MIT grants retained,Blitz/skills/gauntlet-verify/NOTICE.md
+Blitz/skills/gauntlet-verify/LICENSE.txt,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/gauntlet-verify/NOTICE.md
+Blitz/skills/gauntlet-verify/NOTICE.md,component attribution/scope notice,existing terms/attributions retained; original explanatory additions only,Blitz/skills/gauntlet-verify/NOTICE.md
+Blitz/skills/gauntlet-verify/SKILL.md,documentation/template/instruction,mixed: original additions only; previous CC-BY-4.0/MIT grants retained,Blitz/skills/gauntlet-verify/NOTICE.md
+Blitz/skills/gauntlet-verify/agents/openai.yaml,data/configuration,mixed: original additions only; previous CC-BY-4.0/MIT grants retained,Blitz/skills/gauntlet-verify/NOTICE.md
+Blitz/skills/gauntlet-verify/evals/evals.md,documentation/template/instruction,mixed: original additions only; previous CC-BY-4.0/MIT grants retained,Blitz/skills/gauntlet-verify/NOTICE.md
+Blitz/skills/gauntlet-verify/references/showing-the-reference.md,documentation/template/instruction,mixed: original additions only; previous CC-BY-4.0/MIT grants retained,Blitz/skills/gauntlet-verify/NOTICE.md
+Blitz/skills/google-slides/LICENSE.txt,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/google-slides/NOTICE.md
+Blitz/skills/google-slides/NOTICE.md,component attribution/scope notice,existing terms/attributions retained; original explanatory additions only,Blitz/skills/google-slides/NOTICE.md
+Blitz/skills/google-slides/SKILL.md,documentation/template/instruction,mixed: original additions only; inherited Apache-2.0 retained,Blitz/skills/google-slides/NOTICE.md
+Blitz/skills/google-slides/agents/openai.yaml,data/configuration,mixed: original additions only; inherited Apache-2.0 retained,Blitz/skills/google-slides/NOTICE.md
+Blitz/skills/google-slides/evals/evals.md,documentation/template/instruction,mixed: original additions only; inherited Apache-2.0 retained,Blitz/skills/google-slides/NOTICE.md
+Blitz/skills/google-slides/references/active-context.md,documentation/template/instruction,mixed: original additions only; inherited Apache-2.0 retained,Blitz/skills/google-slides/NOTICE.md
+Blitz/skills/google-slides/references/bridge.md,documentation/template/instruction,mixed: original additions only; inherited Apache-2.0 retained,Blitz/skills/google-slides/NOTICE.md
+Blitz/skills/google-slides/upstream/executive-slide-skill/LICENSE.txt,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/google-slides/NOTICE.md
+Blitz/skills/house-style/CHANGES.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/house-style/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/house-style/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/house-style/evals/evals.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/CHANGES.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/evals/evals.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/evals/fixtures/brief-A.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/evals/fixtures/brief-C.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/evals/fixtures/build_fixture.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/evals/fixtures/build_fixture2.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/references/docx-mechanics.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/references/redline-and-signing.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/references/review-checklist.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/references/sg-residential-tenancy.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/scripts/align_gate.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/scripts/amend.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/scripts/page_gate.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/legal-contract/scripts/structure_gate.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/meeting-to-action/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/meeting-to-action/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/meta-skill/CHANGES.md,documentation/template/instruction,mixed: original additions only; inherited Apache-2.0 retained,Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/LICENSE.txt,retained license/notice,existing terms/attributions retained; no custom restriction,Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/NOTICE.md,component attribution/scope notice,existing terms/attributions retained; original explanatory additions only,Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/SKILL.md,documentation/template/instruction,mixed: original additions only; inherited Apache-2.0 retained,Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/agents/analyzer.md,documentation/template/instruction,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/agents/comparator.md,documentation/template/instruction,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/agents/grader.md,documentation/template/instruction,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/agents/openai.yaml,data/configuration,mixed: original additions only; inherited Apache-2.0 retained,Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/assets/eval_review.html,software,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/eval-viewer/generate_review.py,software,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/eval-viewer/viewer.html,software,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/evals/evals.md,documentation/template/instruction,mixed: original additions only; inherited Apache-2.0 retained,Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/references/eval-runbook.md,documentation/template/instruction,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/references/evolution.md,documentation/template/instruction,mixed: original additions only; inherited Apache-2.0 retained,Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/references/refinement.md,documentation/template/instruction,mixed: original additions only; inherited Apache-2.0 retained,Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/references/schemas.md,documentation/template/instruction,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/scripts/__init__.py,software,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/scripts/aggregate_benchmark.py,software,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/scripts/generate_report.py,software,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/scripts/improve_description.py,software,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/scripts/package_skill.py,software,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/scripts/quick_validate.py,software,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/scripts/run_eval.py,software,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/scripts/run_loop.py,software,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/meta-skill/scripts/utils.py,software,"excluded in full: Apache-2.0, including current adaptation",Blitz/skills/meta-skill/NOTICE.md
+Blitz/skills/metric-pull/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/metric-pull/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/metric-pull/evals/evals.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/metric-pull/references/vendor-notes.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/my-writing-style/CHANGES.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/my-writing-style/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/my-writing-style/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/pitch-architect/CHANGES.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/pitch-architect/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/pitch-architect/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/pitch-architect/references/design-system.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/pitch-architect/references/evidence.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/pitch-architect/references/persuasion.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/provenance.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/reasoning-core/CHANGES.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/reasoning-core/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/reasoning-core/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/reasoning-core/evals/evals.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/research-protocol/CHANGES.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/research-protocol/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/research-protocol/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/research-protocol/evals/evals.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/skill-package-check/CHANGES.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/skill-package-check/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/skill-package-check/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/skill-package-check/references/build-check.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/skill-package-check/references/suite-budget.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/slide-design/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/slide-design/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/viz-dashboards/CHANGES.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/viz-dashboards/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/viz-dashboards/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/viz-dashboards/evals/evals.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/website-cloner/NOTICE.md,component attribution/scope notice,existing terms/attributions retained; original explanatory additions only,Blitz/skills/website-cloner/NOTICE.md
+Blitz/skills/website-cloner/SKILL.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/website-cloner/NOTICE.md
+Blitz/skills/website-cloner/agents/openai.yaml,data/configuration,mixed: original additions only; inherited MIT retained,Blitz/skills/website-cloner/NOTICE.md
+Blitz/skills/website-cloner/references/extraction.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/website-cloner/NOTICE.md
+Blitz/skills/website-cloner/references/pitfalls.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/website-cloner/NOTICE.md
+Blitz/skills/website-cloner/references/setup.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/website-cloner/NOTICE.md
+Blitz/skills/website-cloner/references/spec-template.md,documentation/template/instruction,mixed: original additions only; inherited MIT retained,Blitz/skills/website-cloner/NOTICE.md
+Blitz/skills/write-with-pyramid/CHANGES.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/write-with-pyramid/SKILL.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/write-with-pyramid/agents/openai.yaml,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/write-with-pyramid/evals/evals.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/skills/write-with-pyramid/references/provenance.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/acceptance-template.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/build-pack-contract.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/call-card.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/capture-protocol.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/change-impact-register.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/checkpoint.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/commission-brief.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/company-brief.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/company-cash.csv,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/context/00 Read Me First.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/context/01 Fact Base.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/context/02 People And Counterparties.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/context/03 Position Of Record.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/context/04 Economics And Budget.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/context/05 Regulatory Map.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/context/06 Terms PRIVATE.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/context/07 Guardrails PRIVATE.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/context/08 Decision Frame PRIVATE.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/context/09 Open Questions.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/context/10 Decision Log.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/context/11 Timeline And Deadlines.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/context/12 Delta Buffer.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/counterparty-file-prompt.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/daily-record.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/experiment-card.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/handoff.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/installation-receipt.json,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/item-export.json,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/pilot-measures.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/project-instructions-chatgpt.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/project-instructions-claude.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/records/claim.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/records/decision.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/records/deliverable.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/records/requirement.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/records/source.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/records/task.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/recovery-runbook.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+Blitz/templates/release-manifest.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+LICENSE,custom license text,operative terms for covered original material,LICENSE
+README.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+docs/FIRST_USER.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+docs/LICENSING.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+docs/MIGRATION.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+docs/PROVENANCE.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+docs/PUBLICATION_AUDIT.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+docs/PUBLICATION_PLAN.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+docs/TEST_COMPATIBILITY.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+docs/V2_1_SCOPE.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+docs/VERIFICATION.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+docs/assets/README.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,docs/assets/README.md; LICENSE
+docs/assets/blitz-banner-dark.svg,artwork,original material only: Blitz-Internal-Use-1.0; prior grants excluded,docs/assets/README.md; LICENSE
+docs/assets/blitz-banner-light.svg,artwork,original material only: Blitz-Internal-Use-1.0; prior grants excluded,docs/assets/README.md; LICENSE
+docs/assets/blitz-motion-poster.svg,artwork,original material only: Blitz-Internal-Use-1.0; prior grants excluded,docs/assets/README.md; LICENSE
+docs/assets/blitz-motion.gif,artwork,original material only: Blitz-Internal-Use-1.0; prior grants excluded,docs/assets/README.md; LICENSE
+docs/assets/render-blitz-motion.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,docs/assets/README.md; LICENSE
+docs/assets/workflow-mobile.svg,artwork,original material only: Blitz-Internal-Use-1.0; prior grants excluded,docs/assets/README.md; LICENSE
+docs/assets/workflow.svg,artwork,original material only: Blitz-Internal-Use-1.0; prior grants excluded,docs/assets/README.md; LICENSE
+docs/license-inventory.csv,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,candidate file inventory; Git tree supplies exact content identity
+tests/test_release.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+tools/check_publication.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+tools/release.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+tools/update_manifest.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
