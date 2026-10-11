@@ -2,8 +2,7 @@
 
 Original editorial artwork for Blitz, a **Minimum Viable Company kit**. The exact two-line tagline is:
 
-> Listen, collect, sprint.<br>
-> Reduce cycle time.
+> Listen, collect, sprint.<br>Reduce cycle time.
 
 The 11 October 2026 revision replaces the earlier small-marker animation with a visible transformation of distinct inputs into collected evidence and a bounded output. Warm paper, charcoal type and a restrained orange accent give the reusable kit a technical field-guide treatment. The composition uses one responsive hero; its descriptor is 16 pixels and its tagline is about 23 pixels when the image is displayed at 320 pixels wide.
 
