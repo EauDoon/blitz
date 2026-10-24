@@ -498,9 +498,9 @@ docs/assets/render-blitz-motion.py,software,original material only: Blitz-Intern
 docs/assets/workflow-mobile.svg,artwork,original material only: Blitz-Internal-Use-1.0; prior grants excluded,docs/assets/README.md; LICENSE
 docs/assets/workflow.svg,artwork,original material only: Blitz-Internal-Use-1.0; prior grants excluded,docs/assets/README.md; LICENSE
 docs/license-inventory.csv,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,candidate file inventory; Git tree supplies exact content identity
-tests/evals/customer-discovery-scoring-v2/README.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
-tests/evals/customer-discovery-scoring-v2/corrections.json,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
-tests/evals/customer-discovery-scoring-v2/prepare.py,source code,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+tests/evals/customer-discovery-scoring-v3/README.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+tests/evals/customer-discovery-scoring-v3/corrections.json,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+tests/evals/customer-discovery-scoring-v3/prepare.py,source code,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 tests/evals/customer-discovery/COVERAGE.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 tests/evals/customer-discovery/FREEZE.json,data/configuration,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 tests/evals/customer-discovery/README.md,documentation/template/instruction,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md

@@ -34,35 +34,35 @@ def prepare(out):
     scorer = json.loads(scorer_path.read_text())
     for change in patch["corrections"]:
         ref = next(row for row in refs if row["case_id"] == change["case_id"])
-        ref["version"] = "v2"
+        ref["version"] = patch["version"]
         ref["provenance"]["scoring_correction"] = change["reason"]
         anchor = next(row for row in ref["expected"]["criteria"] if row["anchor_id"] == change["anchor_id"])
         anchor["requirement"] = change["requirement"]
         ref["expected"]["valid_alternatives"].append(change["valid_alternative"])
-        if "numeric_key" in change:
-            key = change["numeric_key"]
-            ref["expected"].setdefault("accepted_numeric_values", {})[key] = change["accepted_values"]
+        for numeric in change.get("numeric_alternatives", []):
+            key = numeric["key"]
+            ref["expected"].setdefault("accepted_numeric_values", {})[key] = numeric["accepted_values"]
             criterion = next(row for row in scorer["criteria"] if row["criterion_id"] == change["case_id"] + "-" + key)
             criterion.update(operator="one_of", expected_key="/accepted_numeric_values/" + key)
     refs_path.write_text("\n".join(json.dumps(row, ensure_ascii=False, sort_keys=True) for row in refs) + "\n")
-    scorer["version"] = "v2"
+    scorer["version"] = patch["version"]
     scorer_path.write_text(json.dumps(scorer, indent=2) + "\n")
     contract_path = out / "contract.json"
     contract = json.loads(contract_path.read_text())
-    contract["version"] = "v2"
+    contract["version"] = patch["version"]
     contract["reference_revision"] = patch
     contract_path.write_text(json.dumps(contract, indent=2) + "\n")
     # Retain parent freeze evidence under explicit lineage names, never as a
     # false identity for the corrected evaluator.
     (out / "FREEZE.json").rename(out / "PARENT_FREEZE_V1.json")
     (out / "SHA256SUMS").rename(out / "PARENT_SHA256SUMS_V1")
-    receipt = {"version": "v2", "parent_inventory_sha256": patch["base_inventory_sha256"],
+    receipt = {"version": patch["version"], "parent_inventory_sha256": patch["base_inventory_sha256"],
                "unchanged_cases_sha256": hashlib.sha256((out / "cases.jsonl").read_bytes()).hexdigest(),
                "corrections": patch["corrections"],
                "files": {str(p.relative_to(out)): hashlib.sha256(p.read_bytes()).hexdigest()
                          for p in sorted(out.rglob("*")) if p.is_file()}}
     (out / "EVALUATOR_REVISION.json").write_text(json.dumps(receipt, indent=2) + "\n")
-    return {"result": "prepared", "version": "v2", "cases_unchanged": True, "corrections": len(patch["corrections"])}
+    return {"result": "prepared", "version": patch["version"], "cases_unchanged": True, "corrections": len(patch["corrections"])}
 
 
 if __name__ == "__main__":

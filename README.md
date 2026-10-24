@@ -18,7 +18,7 @@ Version **v2.1OAI-r1** · Python **3.12+** · Editable records and local tools
 
 The `main` branch includes later explainer updates and unreleased [customer-discovery and price-testing guidance](Blitz/profiles/customer-discovery.md). The tagged release and its downloadable assets remain the original published snapshot.
 
-The discovery update has [100 frozen behavioral cases](tests/evals/customer-discovery/README.md). Use the [v2 scoring corrections](tests/evals/customer-discovery-scoring-v2/README.md) with those unchanged tasks; case authoring and static checks alone do not establish a successful behavioral run.
+The discovery update has [100 frozen behavioral cases](tests/evals/customer-discovery/README.md). Use the [v2 scoring corrections](tests/evals/customer-discovery-scoring-v3/README.md) with those unchanged tasks; case authoring and static checks alone do not establish a successful behavioral run.
 
 Frame → Test → Deliver → Operate. [Static illustration](docs/assets/blitz-motion-poster.svg).
 

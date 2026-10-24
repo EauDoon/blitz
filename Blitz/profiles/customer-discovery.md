@@ -18,7 +18,7 @@ Identify user, champion, payer, approver and acceptance owner where those roles 
 
 ## Test a specific offer
 
-Separate the discovery conversation from a subsequent sales ask. When authorized, state the outcome, scope/exclusions, delivery/acceptance, exact currency/price/billing unit, relevant fees and payment/cancellation terms. Ask for one observable commitment by a stated date. A one-time service, subscription or other appropriate model can be tested; monthly pricing is not a default requirement.
+Separate the discovery conversation from a subsequent sales ask. When authorized, state the outcome, scope/exclusions, delivery/acceptance, exact currency/price/billing unit, relevant fees and payment/cancellation terms. Ask for one observable commitment by a stated date. A one-time service, subscription or other appropriate model can be tested; monthly pricing is not a default requirement. Keep billing frequency, invoice date, payment due date and verified collection separate. An invoice at the start of a period does not establish cash paid or due then. If payment timing is missing, compare total costs and label any cash-timing scenario as conditional; confirm the due dates before recommending a choice on liquidity.
 
 Capture the offer revision, who saw it, what they actually did and the source/date. If they decline, ask for the reason before choosing a revision. Distinguish a stated price objection from timing, trust, missing requirements, switching effort or procurement. Do not automatically discount, infer the reason for silence, or claim that a combined price-and-scope change isolates price sensitivity. Preserve the original test and label changed terms separately.
 

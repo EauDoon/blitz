@@ -23,7 +23,7 @@ Use for a customer-discovery or price test under [Frame/Test](../profiles/compan
 |---|---|
 | Target segment and buying unit | Who, in what situation; user/payer/approver roles; individual or independent buying unit used for counting |
 | Current alternative and cost | Existing supplier, manual work or inaction; spend, staff time and consequence; units/periods and reported/evidenced/estimated status |
-| Offer revision and exact price | Outcome, scope/exclusions, acceptance and delivery time; currency, price, billing unit/period, applicable setup/tax terms, payment timing and cancellation/refund conditions |
+| Offer revision and exact price | Outcome, scope/exclusions, acceptance and delivery time; currency, price, billing unit/period, applicable setup/tax terms, invoice and payment due dates, collection evidence and cancellation/refund conditions |
 | Requested behavior | Specific observable commitment, by whom and by when; distinguish discovery from the sales ask |
 | Sample and observation window | Recruitment source, selection limits, dates; relevant counts for contacted, interviewed, shown this exact offer and observed commitments; deduplicate at the chosen buying unit |
 | Response and evidence | Exact response or labeled paraphrase, date and source; separate interest, pilot requests, agreed terms, verified payment, accepted delivery, refunds and repeat use |
