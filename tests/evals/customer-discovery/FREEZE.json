@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "eval_id": "BLITZ-CUSTOMER-DISCOVERY",
+  "version": "v1",
+  "case_ids": "CD001-CD100",
+  "case_count": 100,
+  "families": 10,
+  "roles": "development/regression; no untouched holdouts",
+  "frozen_at_utc": "2026-10-24T03:12:01.949565+00:00",
+  "baseline_commit": "0001346002eff505b4f20b78674fc0763768bbc2",
+  "product_implementation_state": "not started when this authoring package was frozen",
+  "inventory": "SHA256SUMS",
+  "inventory_sha256": "6962266e9e224c5d21545d7bb0997f62cbe36a61e6fff67dbde13c7395afda62",
+  "file_count": 35,
+  "helper_package_digest": "b0a9968b5651ecfe67aa3742f68d7c1d198b444f025cdd73de94c7d36ac9ea3b",
+  "executor_projection_sha256": "86ed3dc7b080911824c91eac3927f5d4e7adc6bda6286dbdb0fdcbd231d2ad03",
+  "limitations": "Hashes establish byte identity only. References and controls have no human review. Required semantic criteria remain separately reviewable; authored-control helper checks are not product performance.",
+  "inventory_rule": "SHA256SUMS covers every portable payload file except itself and this FREEZE.json; the digest above anchors the inventory. Runtime receipts and target responses remain outside this package."
+}

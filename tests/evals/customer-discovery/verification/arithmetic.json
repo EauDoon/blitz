@@ -1,0 +1,487 @@
+{
+  "schema_version": 1,
+  "method": "Exact rational evaluation of two declared arithmetic derivations",
+  "checks": [
+    {
+      "case_id": "CD006",
+      "key": "observed_audit_labor_usd",
+      "unit": "USD per observed audit",
+      "primary": "2*3*40",
+      "second_derivation": "(40+40+40)*2",
+      "exact_fraction": "240",
+      "expected": 240
+    },
+    {
+      "case_id": "CD011",
+      "key": "staff_time_value_usd",
+      "unit": "USD/month",
+      "primary": "6*60",
+      "second_derivation": "60+60+60+60+60+60",
+      "exact_fraction": "360",
+      "expected": 360
+    },
+    {
+      "case_id": "CD011",
+      "key": "combined_economic_burden_usd",
+      "unit": "USD/month",
+      "primary": "600+6*60",
+      "second_derivation": "600+360",
+      "exact_fraction": "960",
+      "expected": 960
+    },
+    {
+      "case_id": "CD012",
+      "key": "required_hours",
+      "unit": "hours",
+      "primary": "8*4",
+      "second_derivation": "8+8+8+8",
+      "exact_fraction": "32",
+      "expected": 32
+    },
+    {
+      "case_id": "CD012",
+      "key": "imputed_labor_usd",
+      "unit": "USD economic value",
+      "primary": "8*4*50",
+      "second_derivation": "32*(25+25)",
+      "exact_fraction": "1600",
+      "expected": 1600
+    },
+    {
+      "case_id": "CD012",
+      "key": "capacity_shortfall_hours",
+      "unit": "hours",
+      "primary": "8*4-20",
+      "second_derivation": "32-20",
+      "exact_fraction": "12",
+      "expected": 12
+    },
+    {
+      "case_id": "CD013",
+      "key": "stay_cost_usd",
+      "unit": "USD/3 months",
+      "primary": "400*3",
+      "second_derivation": "400+400+400",
+      "exact_fraction": "1200",
+      "expected": 1200
+    },
+    {
+      "case_id": "CD013",
+      "key": "switch_cost_usd",
+      "unit": "USD/3 months",
+      "primary": "250*3+500+300",
+      "second_derivation": "750+800",
+      "exact_fraction": "1550",
+      "expected": 1550
+    },
+    {
+      "case_id": "CD013",
+      "key": "switch_extra_cost_usd",
+      "unit": "USD/3 months",
+      "primary": "250*3+500+300-400*3",
+      "second_derivation": "1550-1200",
+      "exact_fraction": "350",
+      "expected": 350
+    },
+    {
+      "case_id": "CD014",
+      "key": "annual_response_cost_usd",
+      "unit": "USD/year",
+      "primary": "1*300",
+      "second_derivation": "300",
+      "exact_fraction": "300",
+      "expected": 300
+    },
+    {
+      "case_id": "CD014",
+      "key": "annual_subscription_usd",
+      "unit": "USD/year",
+      "primary": "100*12",
+      "second_derivation": "100*6+100*6",
+      "exact_fraction": "1200",
+      "expected": 1200
+    },
+    {
+      "case_id": "CD016",
+      "key": "current_labor_value_usd",
+      "unit": "USD/month",
+      "primary": "6*40",
+      "second_derivation": "240",
+      "exact_fraction": "240",
+      "expected": 240
+    },
+    {
+      "case_id": "CD016",
+      "key": "break_even_hours",
+      "unit": "hours/month",
+      "primary": "150/40",
+      "second_derivation": "15/4",
+      "exact_fraction": "15/4",
+      "expected": 3.75
+    },
+    {
+      "case_id": "CD017",
+      "key": "current_capacity_customers",
+      "unit": "customers/week",
+      "primary": "10/5",
+      "second_derivation": "2",
+      "exact_fraction": "2",
+      "expected": 2
+    },
+    {
+      "case_id": "CD017",
+      "key": "hypothetical_capacity_customers",
+      "unit": "customers/week",
+      "primary": "10/2",
+      "second_derivation": "5",
+      "exact_fraction": "5",
+      "expected": 5
+    },
+    {
+      "case_id": "CD019",
+      "key": "A_annual_usd",
+      "unit": "USD/year",
+      "primary": "1200",
+      "second_derivation": "100*12",
+      "exact_fraction": "1200",
+      "expected": 1200
+    },
+    {
+      "case_id": "CD019",
+      "key": "B_annual_usd",
+      "unit": "USD/year",
+      "primary": "100*12+200",
+      "second_derivation": "1400",
+      "exact_fraction": "1400",
+      "expected": 1400
+    },
+    {
+      "case_id": "CD019",
+      "key": "A_initial_cash_usd",
+      "unit": "USD at start",
+      "primary": "1200",
+      "second_derivation": "1200",
+      "exact_fraction": "1200",
+      "expected": 1200
+    },
+    {
+      "case_id": "CD019",
+      "key": "B_initial_cash_usd",
+      "unit": "USD at start",
+      "primary": "100+200",
+      "second_derivation": "300",
+      "exact_fraction": "300",
+      "expected": 300
+    },
+    {
+      "case_id": "CD020",
+      "key": "manual_minutes",
+      "unit": "minutes",
+      "primary": "3*20",
+      "second_derivation": "60",
+      "exact_fraction": "60",
+      "expected": 60
+    },
+    {
+      "case_id": "CD020",
+      "key": "available_minutes",
+      "unit": "minutes",
+      "primary": "2*60",
+      "second_derivation": "120",
+      "exact_fraction": "120",
+      "expected": 120
+    },
+    {
+      "case_id": "CD033",
+      "key": "monthly_twelve_month_total",
+      "unit": "USD",
+      "primary": "300*12+200",
+      "second_derivation": "300*3+300*9+200",
+      "exact_fraction": "3800",
+      "expected": 3800
+    },
+    {
+      "case_id": "CD033",
+      "key": "annual_twelve_month_total",
+      "unit": "USD",
+      "primary": "3000+200",
+      "second_derivation": "(3000/12+200/12)*12",
+      "exact_fraction": "3200",
+      "expected": 3200
+    },
+    {
+      "case_id": "CD033",
+      "key": "annual_saving",
+      "unit": "USD",
+      "primary": "300*12+200-(3000+200)",
+      "second_derivation": "(300-3000/12)*12",
+      "exact_fraction": "600",
+      "expected": 600
+    },
+    {
+      "case_id": "CD037",
+      "key": "proposed_cohort_hours",
+      "unit": "hours",
+      "primary": "4*(2+5+1)",
+      "second_derivation": "4*2+4*5+4",
+      "exact_fraction": "32",
+      "expected": 32
+    },
+    {
+      "case_id": "CD037",
+      "key": "available_engagement_hours",
+      "unit": "hours",
+      "primary": "38-10",
+      "second_derivation": "(38-10-3*8)+3*8",
+      "exact_fraction": "28",
+      "expected": 28
+    },
+    {
+      "case_id": "CD037",
+      "key": "capacity_shortfall",
+      "unit": "hours",
+      "primary": "4*(2+5+1)-(38-10)",
+      "second_derivation": "3*8+8+10-38",
+      "exact_fraction": "4",
+      "expected": 4
+    },
+    {
+      "case_id": "CD041",
+      "key": "gross_collections",
+      "unit": "USD",
+      "primary": "2*250+750",
+      "second_derivation": "1000+250",
+      "exact_fraction": "1250",
+      "expected": 1250
+    },
+    {
+      "case_id": "CD041",
+      "key": "earned_revenue",
+      "unit": "USD",
+      "primary": "1*1000",
+      "second_derivation": "250+750",
+      "exact_fraction": "1000",
+      "expected": 1000
+    },
+    {
+      "case_id": "CD041",
+      "key": "undelivered_deposit",
+      "unit": "USD",
+      "primary": "2*250+750-1000",
+      "second_derivation": "250*(2-1)",
+      "exact_fraction": "250",
+      "expected": 250
+    },
+    {
+      "case_id": "CD046",
+      "key": "contribution",
+      "unit": "USD",
+      "primary": "2000-600",
+      "second_derivation": "500+1500-200-400",
+      "exact_fraction": "1400",
+      "expected": 1400
+    },
+    {
+      "case_id": "CD046",
+      "key": "closing_cash_before",
+      "unit": "USD",
+      "primary": "1000+500-200-300",
+      "second_derivation": "1000+(500-(200+300))",
+      "exact_fraction": "1000",
+      "expected": 1000
+    },
+    {
+      "case_id": "CD046",
+      "key": "cash_above_floor",
+      "unit": "USD",
+      "primary": "1000+500-200-300-800",
+      "second_derivation": "(1000-800)+(500-200-300)",
+      "exact_fraction": "200",
+      "expected": 200
+    },
+    {
+      "case_id": "CD046",
+      "key": "closing_cash_after",
+      "unit": "USD",
+      "primary": "1000+500-200-300-450",
+      "second_derivation": "1000-450+(500-200-300)",
+      "exact_fraction": "550",
+      "expected": 550
+    },
+    {
+      "case_id": "CD051",
+      "key": "buying_unit_purchase_rate",
+      "unit": "percent",
+      "primary": "3/8*100",
+      "second_derivation": "100-(8-3)/8*100",
+      "exact_fraction": "75/2",
+      "expected": 37.5
+    },
+    {
+      "case_id": "CD051",
+      "key": "buying_unit_response_rate",
+      "unit": "percent",
+      "primary": "5/8*100",
+      "second_derivation": "100-(8-5)/8*100",
+      "exact_fraction": "125/2",
+      "expected": 62.5
+    },
+    {
+      "case_id": "CD054",
+      "key": "may_cohort_purchase_rate",
+      "unit": "percent",
+      "primary": "3/10*100",
+      "second_derivation": "(10-4-3)/10*100",
+      "exact_fraction": "30",
+      "expected": 30
+    },
+    {
+      "case_id": "CD054",
+      "key": "june_cohort_purchase_rate",
+      "unit": "percent",
+      "primary": "2/8*100",
+      "second_derivation": "(8-5-1)/8*100",
+      "exact_fraction": "25",
+      "expected": 25
+    },
+    {
+      "case_id": "CD056",
+      "key": "response_rate",
+      "unit": "percent",
+      "primary": "20/40*100",
+      "second_derivation": "100-(40-20)/40*100",
+      "exact_fraction": "50",
+      "expected": 50
+    },
+    {
+      "case_id": "CD056",
+      "key": "respondent_budget_claim_rate",
+      "unit": "percent",
+      "primary": "12/20*100",
+      "second_derivation": "100-(20-12)/20*100",
+      "exact_fraction": "60",
+      "expected": 60
+    },
+    {
+      "case_id": "CD056",
+      "key": "all_approached_inquiry_rate",
+      "unit": "percent",
+      "primary": "4/40*100",
+      "second_derivation": "4/20*(20/40)*100",
+      "exact_fraction": "10",
+      "expected": 10
+    },
+    {
+      "case_id": "CD058",
+      "key": "quote_to_purchase_rate",
+      "unit": "percent",
+      "primary": "4/10*100",
+      "second_derivation": "100-(10-4)/10*100",
+      "exact_fraction": "40",
+      "expected": 40
+    },
+    {
+      "case_id": "CD058",
+      "key": "qualified_lead_to_purchase_rate",
+      "unit": "percent",
+      "primary": "4/40*100",
+      "second_derivation": "(4/10)*(10/40)*100",
+      "exact_fraction": "10",
+      "expected": 10
+    },
+    {
+      "case_id": "CD070",
+      "key": "new_elapsed_minutes",
+      "unit": "minutes",
+      "primary": "20+40",
+      "second_derivation": "80-(80-20-40)",
+      "exact_fraction": "60",
+      "expected": 60
+    },
+    {
+      "case_id": "CD070",
+      "key": "reduction_pct",
+      "unit": "percent",
+      "primary": "(80-20-40)*100/80",
+      "second_derivation": "100-(20+40)*100/80",
+      "exact_fraction": "25",
+      "expected": 25
+    },
+    {
+      "case_id": "CD083",
+      "key": "cost_per_accepted_brief_usd",
+      "unit": "USD per accepted brief",
+      "primary": "(800+400)/8",
+      "second_derivation": "800/8+400/8",
+      "exact_fraction": "150",
+      "expected": 150
+    },
+    {
+      "case_id": "CD083",
+      "key": "uncommitted_allocation_usd",
+      "unit": "USD",
+      "primary": "2000-800-400",
+      "second_derivation": "2000-(800+400)",
+      "exact_fraction": "800",
+      "expected": 800
+    },
+    {
+      "case_id": "CD084",
+      "key": "required_hours",
+      "unit": "staff hours",
+      "primary": "18+4+2",
+      "second_derivation": "24-(24-18-4-2)",
+      "exact_fraction": "24",
+      "expected": 24
+    },
+    {
+      "case_id": "CD084",
+      "key": "spare_hours",
+      "unit": "staff hours",
+      "primary": "24-(18+4+2)",
+      "second_derivation": "24-18-4-2",
+      "exact_fraction": "0",
+      "expected": 0
+    },
+    {
+      "case_id": "CD086",
+      "key": "total_committed_resources_usd",
+      "unit": "USD",
+      "primary": "700+400+700",
+      "second_derivation": "2*700+400",
+      "exact_fraction": "1800",
+      "expected": 1800
+    },
+    {
+      "case_id": "CD086",
+      "key": "funding_gap_usd",
+      "unit": "USD",
+      "primary": "700+400+700-1500",
+      "second_derivation": "(700+400)-(1500-700)",
+      "exact_fraction": "300",
+      "expected": 300
+    },
+    {
+      "case_id": "CD090",
+      "key": "external_contribution_usd",
+      "unit": "USD",
+      "primary": "800-300",
+      "second_derivation": "(800-500)+(500-300)",
+      "exact_fraction": "500",
+      "expected": 500
+    },
+    {
+      "case_id": "CD090",
+      "key": "uncollected_invoice_usd",
+      "unit": "USD",
+      "primary": "800-500",
+      "second_derivation": "(800+500)-2*500",
+      "exact_fraction": "300",
+      "expected": 300
+    }
+  ],
+  "count": 53,
+  "result": "all matched",
+  "human_review": "not_reviewed",
+  "limitation": "This verifies arithmetic on synthetic inputs only; units and task reasoning remain subject to semantic review."
+}

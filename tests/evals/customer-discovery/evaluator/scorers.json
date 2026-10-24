@@ -1,0 +1,2337 @@
+{
+  "schema_version": 1,
+  "scorer_id": "BLITZ-CD-SCORER",
+  "version": "v1",
+  "criteria": [
+    {
+      "criterion_id": "CD001-identity",
+      "case_id": "CD001",
+      "reference_id": "R-CD001",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD001-substance",
+      "case_id": "CD001",
+      "reference_id": "R-CD001",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD002-identity",
+      "case_id": "CD002",
+      "reference_id": "R-CD002",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD002-substance",
+      "case_id": "CD002",
+      "reference_id": "R-CD002",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD003-identity",
+      "case_id": "CD003",
+      "reference_id": "R-CD003",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD003-substance",
+      "case_id": "CD003",
+      "reference_id": "R-CD003",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD004-identity",
+      "case_id": "CD004",
+      "reference_id": "R-CD004",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD004-substance",
+      "case_id": "CD004",
+      "reference_id": "R-CD004",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD005-identity",
+      "case_id": "CD005",
+      "reference_id": "R-CD005",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD005-substance",
+      "case_id": "CD005",
+      "reference_id": "R-CD005",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD006-identity",
+      "case_id": "CD006",
+      "reference_id": "R-CD006",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD006-substance",
+      "case_id": "CD006",
+      "reference_id": "R-CD006",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD006-observed_audit_labor_usd",
+      "case_id": "CD006",
+      "reference_id": "R-CD006",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/observed_audit_labor_usd",
+      "expected_key": "/calculations/observed_audit_labor_usd"
+    },
+    {
+      "criterion_id": "CD007-identity",
+      "case_id": "CD007",
+      "reference_id": "R-CD007",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD007-substance",
+      "case_id": "CD007",
+      "reference_id": "R-CD007",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD008-identity",
+      "case_id": "CD008",
+      "reference_id": "R-CD008",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD008-substance",
+      "case_id": "CD008",
+      "reference_id": "R-CD008",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD009-identity",
+      "case_id": "CD009",
+      "reference_id": "R-CD009",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD009-substance",
+      "case_id": "CD009",
+      "reference_id": "R-CD009",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD010-identity",
+      "case_id": "CD010",
+      "reference_id": "R-CD010",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD010-substance",
+      "case_id": "CD010",
+      "reference_id": "R-CD010",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD011-identity",
+      "case_id": "CD011",
+      "reference_id": "R-CD011",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD011-substance",
+      "case_id": "CD011",
+      "reference_id": "R-CD011",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD011-staff_time_value_usd",
+      "case_id": "CD011",
+      "reference_id": "R-CD011",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/staff_time_value_usd",
+      "expected_key": "/calculations/staff_time_value_usd"
+    },
+    {
+      "criterion_id": "CD011-combined_economic_burden_usd",
+      "case_id": "CD011",
+      "reference_id": "R-CD011",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/combined_economic_burden_usd",
+      "expected_key": "/calculations/combined_economic_burden_usd"
+    },
+    {
+      "criterion_id": "CD012-identity",
+      "case_id": "CD012",
+      "reference_id": "R-CD012",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD012-substance",
+      "case_id": "CD012",
+      "reference_id": "R-CD012",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD012-required_hours",
+      "case_id": "CD012",
+      "reference_id": "R-CD012",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/required_hours",
+      "expected_key": "/calculations/required_hours"
+    },
+    {
+      "criterion_id": "CD012-imputed_labor_usd",
+      "case_id": "CD012",
+      "reference_id": "R-CD012",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/imputed_labor_usd",
+      "expected_key": "/calculations/imputed_labor_usd"
+    },
+    {
+      "criterion_id": "CD012-capacity_shortfall_hours",
+      "case_id": "CD012",
+      "reference_id": "R-CD012",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/capacity_shortfall_hours",
+      "expected_key": "/calculations/capacity_shortfall_hours"
+    },
+    {
+      "criterion_id": "CD013-identity",
+      "case_id": "CD013",
+      "reference_id": "R-CD013",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD013-substance",
+      "case_id": "CD013",
+      "reference_id": "R-CD013",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD013-stay_cost_usd",
+      "case_id": "CD013",
+      "reference_id": "R-CD013",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/stay_cost_usd",
+      "expected_key": "/calculations/stay_cost_usd"
+    },
+    {
+      "criterion_id": "CD013-switch_cost_usd",
+      "case_id": "CD013",
+      "reference_id": "R-CD013",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/switch_cost_usd",
+      "expected_key": "/calculations/switch_cost_usd"
+    },
+    {
+      "criterion_id": "CD013-switch_extra_cost_usd",
+      "case_id": "CD013",
+      "reference_id": "R-CD013",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/switch_extra_cost_usd",
+      "expected_key": "/calculations/switch_extra_cost_usd"
+    },
+    {
+      "criterion_id": "CD014-identity",
+      "case_id": "CD014",
+      "reference_id": "R-CD014",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD014-substance",
+      "case_id": "CD014",
+      "reference_id": "R-CD014",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD014-annual_response_cost_usd",
+      "case_id": "CD014",
+      "reference_id": "R-CD014",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/annual_response_cost_usd",
+      "expected_key": "/calculations/annual_response_cost_usd"
+    },
+    {
+      "criterion_id": "CD014-annual_subscription_usd",
+      "case_id": "CD014",
+      "reference_id": "R-CD014",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/annual_subscription_usd",
+      "expected_key": "/calculations/annual_subscription_usd"
+    },
+    {
+      "criterion_id": "CD015-identity",
+      "case_id": "CD015",
+      "reference_id": "R-CD015",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD015-substance",
+      "case_id": "CD015",
+      "reference_id": "R-CD015",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD016-identity",
+      "case_id": "CD016",
+      "reference_id": "R-CD016",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD016-substance",
+      "case_id": "CD016",
+      "reference_id": "R-CD016",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD016-current_labor_value_usd",
+      "case_id": "CD016",
+      "reference_id": "R-CD016",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/current_labor_value_usd",
+      "expected_key": "/calculations/current_labor_value_usd"
+    },
+    {
+      "criterion_id": "CD016-break_even_hours",
+      "case_id": "CD016",
+      "reference_id": "R-CD016",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/break_even_hours",
+      "expected_key": "/calculations/break_even_hours"
+    },
+    {
+      "criterion_id": "CD017-identity",
+      "case_id": "CD017",
+      "reference_id": "R-CD017",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD017-substance",
+      "case_id": "CD017",
+      "reference_id": "R-CD017",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD017-current_capacity_customers",
+      "case_id": "CD017",
+      "reference_id": "R-CD017",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/current_capacity_customers",
+      "expected_key": "/calculations/current_capacity_customers"
+    },
+    {
+      "criterion_id": "CD017-hypothetical_capacity_customers",
+      "case_id": "CD017",
+      "reference_id": "R-CD017",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/hypothetical_capacity_customers",
+      "expected_key": "/calculations/hypothetical_capacity_customers"
+    },
+    {
+      "criterion_id": "CD018-identity",
+      "case_id": "CD018",
+      "reference_id": "R-CD018",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD018-substance",
+      "case_id": "CD018",
+      "reference_id": "R-CD018",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD019-identity",
+      "case_id": "CD019",
+      "reference_id": "R-CD019",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD019-substance",
+      "case_id": "CD019",
+      "reference_id": "R-CD019",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD019-A_annual_usd",
+      "case_id": "CD019",
+      "reference_id": "R-CD019",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/A_annual_usd",
+      "expected_key": "/calculations/A_annual_usd"
+    },
+    {
+      "criterion_id": "CD019-B_annual_usd",
+      "case_id": "CD019",
+      "reference_id": "R-CD019",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/B_annual_usd",
+      "expected_key": "/calculations/B_annual_usd"
+    },
+    {
+      "criterion_id": "CD019-A_initial_cash_usd",
+      "case_id": "CD019",
+      "reference_id": "R-CD019",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/A_initial_cash_usd",
+      "expected_key": "/calculations/A_initial_cash_usd"
+    },
+    {
+      "criterion_id": "CD019-B_initial_cash_usd",
+      "case_id": "CD019",
+      "reference_id": "R-CD019",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/B_initial_cash_usd",
+      "expected_key": "/calculations/B_initial_cash_usd"
+    },
+    {
+      "criterion_id": "CD020-identity",
+      "case_id": "CD020",
+      "reference_id": "R-CD020",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD020-substance",
+      "case_id": "CD020",
+      "reference_id": "R-CD020",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD020-manual_minutes",
+      "case_id": "CD020",
+      "reference_id": "R-CD020",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/manual_minutes",
+      "expected_key": "/calculations/manual_minutes"
+    },
+    {
+      "criterion_id": "CD020-available_minutes",
+      "case_id": "CD020",
+      "reference_id": "R-CD020",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/available_minutes",
+      "expected_key": "/calculations/available_minutes"
+    },
+    {
+      "criterion_id": "CD021-identity",
+      "case_id": "CD021",
+      "reference_id": "R-CD021",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD021-substance",
+      "case_id": "CD021",
+      "reference_id": "R-CD021",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD022-identity",
+      "case_id": "CD022",
+      "reference_id": "R-CD022",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD022-substance",
+      "case_id": "CD022",
+      "reference_id": "R-CD022",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD023-identity",
+      "case_id": "CD023",
+      "reference_id": "R-CD023",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD023-substance",
+      "case_id": "CD023",
+      "reference_id": "R-CD023",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD024-identity",
+      "case_id": "CD024",
+      "reference_id": "R-CD024",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD024-substance",
+      "case_id": "CD024",
+      "reference_id": "R-CD024",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD025-identity",
+      "case_id": "CD025",
+      "reference_id": "R-CD025",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD025-substance",
+      "case_id": "CD025",
+      "reference_id": "R-CD025",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD026-identity",
+      "case_id": "CD026",
+      "reference_id": "R-CD026",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD026-substance",
+      "case_id": "CD026",
+      "reference_id": "R-CD026",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD027-identity",
+      "case_id": "CD027",
+      "reference_id": "R-CD027",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD027-substance",
+      "case_id": "CD027",
+      "reference_id": "R-CD027",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD028-identity",
+      "case_id": "CD028",
+      "reference_id": "R-CD028",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD028-substance",
+      "case_id": "CD028",
+      "reference_id": "R-CD028",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD029-identity",
+      "case_id": "CD029",
+      "reference_id": "R-CD029",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD029-substance",
+      "case_id": "CD029",
+      "reference_id": "R-CD029",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD030-identity",
+      "case_id": "CD030",
+      "reference_id": "R-CD030",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD030-substance",
+      "case_id": "CD030",
+      "reference_id": "R-CD030",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD031-identity",
+      "case_id": "CD031",
+      "reference_id": "R-CD031",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD031-substance",
+      "case_id": "CD031",
+      "reference_id": "R-CD031",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD032-identity",
+      "case_id": "CD032",
+      "reference_id": "R-CD032",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD032-substance",
+      "case_id": "CD032",
+      "reference_id": "R-CD032",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD033-identity",
+      "case_id": "CD033",
+      "reference_id": "R-CD033",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD033-substance",
+      "case_id": "CD033",
+      "reference_id": "R-CD033",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD033-monthly_twelve_month_total",
+      "case_id": "CD033",
+      "reference_id": "R-CD033",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/monthly_twelve_month_total",
+      "expected_key": "/calculations/monthly_twelve_month_total"
+    },
+    {
+      "criterion_id": "CD033-annual_twelve_month_total",
+      "case_id": "CD033",
+      "reference_id": "R-CD033",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/annual_twelve_month_total",
+      "expected_key": "/calculations/annual_twelve_month_total"
+    },
+    {
+      "criterion_id": "CD033-annual_saving",
+      "case_id": "CD033",
+      "reference_id": "R-CD033",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/annual_saving",
+      "expected_key": "/calculations/annual_saving"
+    },
+    {
+      "criterion_id": "CD034-identity",
+      "case_id": "CD034",
+      "reference_id": "R-CD034",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD034-substance",
+      "case_id": "CD034",
+      "reference_id": "R-CD034",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD035-identity",
+      "case_id": "CD035",
+      "reference_id": "R-CD035",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD035-substance",
+      "case_id": "CD035",
+      "reference_id": "R-CD035",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD036-identity",
+      "case_id": "CD036",
+      "reference_id": "R-CD036",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD036-substance",
+      "case_id": "CD036",
+      "reference_id": "R-CD036",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD037-identity",
+      "case_id": "CD037",
+      "reference_id": "R-CD037",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD037-substance",
+      "case_id": "CD037",
+      "reference_id": "R-CD037",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD037-proposed_cohort_hours",
+      "case_id": "CD037",
+      "reference_id": "R-CD037",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/proposed_cohort_hours",
+      "expected_key": "/calculations/proposed_cohort_hours"
+    },
+    {
+      "criterion_id": "CD037-available_engagement_hours",
+      "case_id": "CD037",
+      "reference_id": "R-CD037",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/available_engagement_hours",
+      "expected_key": "/calculations/available_engagement_hours"
+    },
+    {
+      "criterion_id": "CD037-capacity_shortfall",
+      "case_id": "CD037",
+      "reference_id": "R-CD037",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/capacity_shortfall",
+      "expected_key": "/calculations/capacity_shortfall"
+    },
+    {
+      "criterion_id": "CD038-identity",
+      "case_id": "CD038",
+      "reference_id": "R-CD038",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD038-substance",
+      "case_id": "CD038",
+      "reference_id": "R-CD038",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD039-identity",
+      "case_id": "CD039",
+      "reference_id": "R-CD039",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD039-substance",
+      "case_id": "CD039",
+      "reference_id": "R-CD039",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD040-identity",
+      "case_id": "CD040",
+      "reference_id": "R-CD040",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD040-substance",
+      "case_id": "CD040",
+      "reference_id": "R-CD040",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD041-identity",
+      "case_id": "CD041",
+      "reference_id": "R-CD041",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD041-substance",
+      "case_id": "CD041",
+      "reference_id": "R-CD041",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD041-gross_collections",
+      "case_id": "CD041",
+      "reference_id": "R-CD041",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/gross_collections",
+      "expected_key": "/calculations/gross_collections"
+    },
+    {
+      "criterion_id": "CD041-earned_revenue",
+      "case_id": "CD041",
+      "reference_id": "R-CD041",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/earned_revenue",
+      "expected_key": "/calculations/earned_revenue"
+    },
+    {
+      "criterion_id": "CD041-undelivered_deposit",
+      "case_id": "CD041",
+      "reference_id": "R-CD041",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/undelivered_deposit",
+      "expected_key": "/calculations/undelivered_deposit"
+    },
+    {
+      "criterion_id": "CD042-identity",
+      "case_id": "CD042",
+      "reference_id": "R-CD042",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD042-substance",
+      "case_id": "CD042",
+      "reference_id": "R-CD042",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD043-identity",
+      "case_id": "CD043",
+      "reference_id": "R-CD043",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD043-substance",
+      "case_id": "CD043",
+      "reference_id": "R-CD043",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD044-identity",
+      "case_id": "CD044",
+      "reference_id": "R-CD044",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD044-substance",
+      "case_id": "CD044",
+      "reference_id": "R-CD044",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD045-identity",
+      "case_id": "CD045",
+      "reference_id": "R-CD045",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD045-substance",
+      "case_id": "CD045",
+      "reference_id": "R-CD045",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD046-identity",
+      "case_id": "CD046",
+      "reference_id": "R-CD046",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD046-substance",
+      "case_id": "CD046",
+      "reference_id": "R-CD046",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD046-contribution",
+      "case_id": "CD046",
+      "reference_id": "R-CD046",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/contribution",
+      "expected_key": "/calculations/contribution"
+    },
+    {
+      "criterion_id": "CD046-closing_cash_before",
+      "case_id": "CD046",
+      "reference_id": "R-CD046",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/closing_cash_before",
+      "expected_key": "/calculations/closing_cash_before"
+    },
+    {
+      "criterion_id": "CD046-cash_above_floor",
+      "case_id": "CD046",
+      "reference_id": "R-CD046",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/cash_above_floor",
+      "expected_key": "/calculations/cash_above_floor"
+    },
+    {
+      "criterion_id": "CD046-closing_cash_after",
+      "case_id": "CD046",
+      "reference_id": "R-CD046",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/closing_cash_after",
+      "expected_key": "/calculations/closing_cash_after"
+    },
+    {
+      "criterion_id": "CD047-identity",
+      "case_id": "CD047",
+      "reference_id": "R-CD047",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD047-substance",
+      "case_id": "CD047",
+      "reference_id": "R-CD047",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD048-identity",
+      "case_id": "CD048",
+      "reference_id": "R-CD048",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD048-substance",
+      "case_id": "CD048",
+      "reference_id": "R-CD048",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD049-identity",
+      "case_id": "CD049",
+      "reference_id": "R-CD049",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD049-substance",
+      "case_id": "CD049",
+      "reference_id": "R-CD049",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD050-identity",
+      "case_id": "CD050",
+      "reference_id": "R-CD050",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD050-substance",
+      "case_id": "CD050",
+      "reference_id": "R-CD050",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD051-identity",
+      "case_id": "CD051",
+      "reference_id": "R-CD051",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD051-substance",
+      "case_id": "CD051",
+      "reference_id": "R-CD051",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD051-buying_unit_purchase_rate",
+      "case_id": "CD051",
+      "reference_id": "R-CD051",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/buying_unit_purchase_rate",
+      "expected_key": "/calculations/buying_unit_purchase_rate"
+    },
+    {
+      "criterion_id": "CD051-buying_unit_response_rate",
+      "case_id": "CD051",
+      "reference_id": "R-CD051",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/buying_unit_response_rate",
+      "expected_key": "/calculations/buying_unit_response_rate"
+    },
+    {
+      "criterion_id": "CD052-identity",
+      "case_id": "CD052",
+      "reference_id": "R-CD052",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD052-substance",
+      "case_id": "CD052",
+      "reference_id": "R-CD052",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD053-identity",
+      "case_id": "CD053",
+      "reference_id": "R-CD053",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD053-substance",
+      "case_id": "CD053",
+      "reference_id": "R-CD053",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD054-identity",
+      "case_id": "CD054",
+      "reference_id": "R-CD054",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD054-substance",
+      "case_id": "CD054",
+      "reference_id": "R-CD054",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD054-may_cohort_purchase_rate",
+      "case_id": "CD054",
+      "reference_id": "R-CD054",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/may_cohort_purchase_rate",
+      "expected_key": "/calculations/may_cohort_purchase_rate"
+    },
+    {
+      "criterion_id": "CD054-june_cohort_purchase_rate",
+      "case_id": "CD054",
+      "reference_id": "R-CD054",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/june_cohort_purchase_rate",
+      "expected_key": "/calculations/june_cohort_purchase_rate"
+    },
+    {
+      "criterion_id": "CD055-identity",
+      "case_id": "CD055",
+      "reference_id": "R-CD055",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD055-substance",
+      "case_id": "CD055",
+      "reference_id": "R-CD055",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD056-identity",
+      "case_id": "CD056",
+      "reference_id": "R-CD056",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD056-substance",
+      "case_id": "CD056",
+      "reference_id": "R-CD056",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD056-response_rate",
+      "case_id": "CD056",
+      "reference_id": "R-CD056",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/response_rate",
+      "expected_key": "/calculations/response_rate"
+    },
+    {
+      "criterion_id": "CD056-respondent_budget_claim_rate",
+      "case_id": "CD056",
+      "reference_id": "R-CD056",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/respondent_budget_claim_rate",
+      "expected_key": "/calculations/respondent_budget_claim_rate"
+    },
+    {
+      "criterion_id": "CD056-all_approached_inquiry_rate",
+      "case_id": "CD056",
+      "reference_id": "R-CD056",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/all_approached_inquiry_rate",
+      "expected_key": "/calculations/all_approached_inquiry_rate"
+    },
+    {
+      "criterion_id": "CD057-identity",
+      "case_id": "CD057",
+      "reference_id": "R-CD057",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD057-substance",
+      "case_id": "CD057",
+      "reference_id": "R-CD057",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD058-identity",
+      "case_id": "CD058",
+      "reference_id": "R-CD058",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD058-substance",
+      "case_id": "CD058",
+      "reference_id": "R-CD058",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD058-quote_to_purchase_rate",
+      "case_id": "CD058",
+      "reference_id": "R-CD058",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/quote_to_purchase_rate",
+      "expected_key": "/calculations/quote_to_purchase_rate"
+    },
+    {
+      "criterion_id": "CD058-qualified_lead_to_purchase_rate",
+      "case_id": "CD058",
+      "reference_id": "R-CD058",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/qualified_lead_to_purchase_rate",
+      "expected_key": "/calculations/qualified_lead_to_purchase_rate"
+    },
+    {
+      "criterion_id": "CD059-identity",
+      "case_id": "CD059",
+      "reference_id": "R-CD059",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD059-substance",
+      "case_id": "CD059",
+      "reference_id": "R-CD059",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD060-identity",
+      "case_id": "CD060",
+      "reference_id": "R-CD060",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD060-substance",
+      "case_id": "CD060",
+      "reference_id": "R-CD060",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD061-identity",
+      "case_id": "CD061",
+      "reference_id": "R-CD061",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD061-substance",
+      "case_id": "CD061",
+      "reference_id": "R-CD061",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD062-identity",
+      "case_id": "CD062",
+      "reference_id": "R-CD062",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD062-substance",
+      "case_id": "CD062",
+      "reference_id": "R-CD062",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD063-identity",
+      "case_id": "CD063",
+      "reference_id": "R-CD063",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD063-substance",
+      "case_id": "CD063",
+      "reference_id": "R-CD063",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD064-identity",
+      "case_id": "CD064",
+      "reference_id": "R-CD064",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD064-substance",
+      "case_id": "CD064",
+      "reference_id": "R-CD064",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD065-identity",
+      "case_id": "CD065",
+      "reference_id": "R-CD065",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD065-substance",
+      "case_id": "CD065",
+      "reference_id": "R-CD065",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD066-identity",
+      "case_id": "CD066",
+      "reference_id": "R-CD066",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD066-substance",
+      "case_id": "CD066",
+      "reference_id": "R-CD066",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD067-identity",
+      "case_id": "CD067",
+      "reference_id": "R-CD067",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD067-substance",
+      "case_id": "CD067",
+      "reference_id": "R-CD067",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD068-identity",
+      "case_id": "CD068",
+      "reference_id": "R-CD068",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD068-substance",
+      "case_id": "CD068",
+      "reference_id": "R-CD068",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD069-identity",
+      "case_id": "CD069",
+      "reference_id": "R-CD069",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD069-substance",
+      "case_id": "CD069",
+      "reference_id": "R-CD069",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD070-identity",
+      "case_id": "CD070",
+      "reference_id": "R-CD070",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD070-substance",
+      "case_id": "CD070",
+      "reference_id": "R-CD070",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD070-new_elapsed_minutes",
+      "case_id": "CD070",
+      "reference_id": "R-CD070",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/new_elapsed_minutes",
+      "expected_key": "/calculations/new_elapsed_minutes"
+    },
+    {
+      "criterion_id": "CD070-reduction_pct",
+      "case_id": "CD070",
+      "reference_id": "R-CD070",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/reduction_pct",
+      "expected_key": "/calculations/reduction_pct"
+    },
+    {
+      "criterion_id": "CD071-identity",
+      "case_id": "CD071",
+      "reference_id": "R-CD071",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD071-substance",
+      "case_id": "CD071",
+      "reference_id": "R-CD071",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD072-identity",
+      "case_id": "CD072",
+      "reference_id": "R-CD072",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD072-substance",
+      "case_id": "CD072",
+      "reference_id": "R-CD072",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD073-identity",
+      "case_id": "CD073",
+      "reference_id": "R-CD073",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD073-substance",
+      "case_id": "CD073",
+      "reference_id": "R-CD073",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD074-identity",
+      "case_id": "CD074",
+      "reference_id": "R-CD074",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD074-substance",
+      "case_id": "CD074",
+      "reference_id": "R-CD074",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD075-identity",
+      "case_id": "CD075",
+      "reference_id": "R-CD075",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD075-substance",
+      "case_id": "CD075",
+      "reference_id": "R-CD075",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD076-identity",
+      "case_id": "CD076",
+      "reference_id": "R-CD076",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD076-substance",
+      "case_id": "CD076",
+      "reference_id": "R-CD076",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD077-identity",
+      "case_id": "CD077",
+      "reference_id": "R-CD077",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD077-substance",
+      "case_id": "CD077",
+      "reference_id": "R-CD077",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD078-identity",
+      "case_id": "CD078",
+      "reference_id": "R-CD078",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD078-substance",
+      "case_id": "CD078",
+      "reference_id": "R-CD078",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD079-identity",
+      "case_id": "CD079",
+      "reference_id": "R-CD079",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD079-substance",
+      "case_id": "CD079",
+      "reference_id": "R-CD079",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD080-identity",
+      "case_id": "CD080",
+      "reference_id": "R-CD080",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD080-substance",
+      "case_id": "CD080",
+      "reference_id": "R-CD080",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD081-identity",
+      "case_id": "CD081",
+      "reference_id": "R-CD081",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD081-substance",
+      "case_id": "CD081",
+      "reference_id": "R-CD081",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD082-identity",
+      "case_id": "CD082",
+      "reference_id": "R-CD082",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD082-substance",
+      "case_id": "CD082",
+      "reference_id": "R-CD082",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD083-identity",
+      "case_id": "CD083",
+      "reference_id": "R-CD083",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD083-substance",
+      "case_id": "CD083",
+      "reference_id": "R-CD083",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD083-cost_per_accepted_brief_usd",
+      "case_id": "CD083",
+      "reference_id": "R-CD083",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/cost_per_accepted_brief_usd",
+      "expected_key": "/calculations/cost_per_accepted_brief_usd"
+    },
+    {
+      "criterion_id": "CD083-uncommitted_allocation_usd",
+      "case_id": "CD083",
+      "reference_id": "R-CD083",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/uncommitted_allocation_usd",
+      "expected_key": "/calculations/uncommitted_allocation_usd"
+    },
+    {
+      "criterion_id": "CD084-identity",
+      "case_id": "CD084",
+      "reference_id": "R-CD084",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD084-substance",
+      "case_id": "CD084",
+      "reference_id": "R-CD084",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD084-required_hours",
+      "case_id": "CD084",
+      "reference_id": "R-CD084",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/required_hours",
+      "expected_key": "/calculations/required_hours"
+    },
+    {
+      "criterion_id": "CD084-spare_hours",
+      "case_id": "CD084",
+      "reference_id": "R-CD084",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/spare_hours",
+      "expected_key": "/calculations/spare_hours"
+    },
+    {
+      "criterion_id": "CD085-identity",
+      "case_id": "CD085",
+      "reference_id": "R-CD085",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD085-substance",
+      "case_id": "CD085",
+      "reference_id": "R-CD085",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD086-identity",
+      "case_id": "CD086",
+      "reference_id": "R-CD086",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD086-substance",
+      "case_id": "CD086",
+      "reference_id": "R-CD086",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD086-total_committed_resources_usd",
+      "case_id": "CD086",
+      "reference_id": "R-CD086",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/total_committed_resources_usd",
+      "expected_key": "/calculations/total_committed_resources_usd"
+    },
+    {
+      "criterion_id": "CD086-funding_gap_usd",
+      "case_id": "CD086",
+      "reference_id": "R-CD086",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/funding_gap_usd",
+      "expected_key": "/calculations/funding_gap_usd"
+    },
+    {
+      "criterion_id": "CD087-identity",
+      "case_id": "CD087",
+      "reference_id": "R-CD087",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD087-substance",
+      "case_id": "CD087",
+      "reference_id": "R-CD087",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD088-identity",
+      "case_id": "CD088",
+      "reference_id": "R-CD088",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD088-substance",
+      "case_id": "CD088",
+      "reference_id": "R-CD088",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD089-identity",
+      "case_id": "CD089",
+      "reference_id": "R-CD089",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD089-substance",
+      "case_id": "CD089",
+      "reference_id": "R-CD089",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD090-identity",
+      "case_id": "CD090",
+      "reference_id": "R-CD090",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD090-substance",
+      "case_id": "CD090",
+      "reference_id": "R-CD090",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD090-external_contribution_usd",
+      "case_id": "CD090",
+      "reference_id": "R-CD090",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/external_contribution_usd",
+      "expected_key": "/calculations/external_contribution_usd"
+    },
+    {
+      "criterion_id": "CD090-uncollected_invoice_usd",
+      "case_id": "CD090",
+      "reference_id": "R-CD090",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/calculations/uncollected_invoice_usd",
+      "expected_key": "/calculations/uncollected_invoice_usd"
+    },
+    {
+      "criterion_id": "CD091-identity",
+      "case_id": "CD091",
+      "reference_id": "R-CD091",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD091-substance",
+      "case_id": "CD091",
+      "reference_id": "R-CD091",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD092-identity",
+      "case_id": "CD092",
+      "reference_id": "R-CD092",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD092-substance",
+      "case_id": "CD092",
+      "reference_id": "R-CD092",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD093-identity",
+      "case_id": "CD093",
+      "reference_id": "R-CD093",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD093-substance",
+      "case_id": "CD093",
+      "reference_id": "R-CD093",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD094-identity",
+      "case_id": "CD094",
+      "reference_id": "R-CD094",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD094-substance",
+      "case_id": "CD094",
+      "reference_id": "R-CD094",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD095-identity",
+      "case_id": "CD095",
+      "reference_id": "R-CD095",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD095-substance",
+      "case_id": "CD095",
+      "reference_id": "R-CD095",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD096-identity",
+      "case_id": "CD096",
+      "reference_id": "R-CD096",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD096-substance",
+      "case_id": "CD096",
+      "reference_id": "R-CD096",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD097-identity",
+      "case_id": "CD097",
+      "reference_id": "R-CD097",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD097-substance",
+      "case_id": "CD097",
+      "reference_id": "R-CD097",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD098-identity",
+      "case_id": "CD098",
+      "reference_id": "R-CD098",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD098-substance",
+      "case_id": "CD098",
+      "reference_id": "R-CD098",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD099-identity",
+      "case_id": "CD099",
+      "reference_id": "R-CD099",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD099-substance",
+      "case_id": "CD099",
+      "reference_id": "R-CD099",
+      "critical": true,
+      "required": true,
+      "operator": "review"
+    },
+    {
+      "criterion_id": "CD100-identity",
+      "case_id": "CD100",
+      "reference_id": "R-CD100",
+      "critical": false,
+      "required": true,
+      "operator": "equals",
+      "path": "/case_id",
+      "expected_key": "/case_id"
+    },
+    {
+      "criterion_id": "CD100-substance",
+      "case_id": "CD100",
+      "reference_id": "R-CD100",
+      "critical": false,
+      "required": true,
+      "operator": "review"
+    }
+  ]
+}

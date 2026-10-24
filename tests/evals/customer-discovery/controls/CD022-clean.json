@@ -1,0 +1,15 @@
+{
+  "case_id": "CD022",
+  "decision": "Hold the live customer-record pilot pending security approval; proceed with the permitted synthetic demonstration.",
+  "evidence": [
+    "B1 authorizes a budget but B2 separately requires security approval before vendor transfer.",
+    "B3 leaves that permission unresolved; B4 expressly permits synthetic data."
+  ],
+  "next_actions": [
+    "Prepare the synthetic demonstration and the material needed for the security review."
+  ],
+  "caveats": [
+    "No live-data transfer is authorized by the available facts."
+  ],
+  "calculations": {}
+}

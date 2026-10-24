@@ -1,0 +1,15 @@
+{
+  "case_id": "CD022",
+  "decision": "Keep the live-data pilot on Hold and use tomorrow to complete a review-ready security packet.",
+  "evidence": [
+    "The required approval is pending even though funding is approved.",
+    "A synthetic demonstration is permitted, but it need not consume time if the approval packet is the bottleneck."
+  ],
+  "next_actions": [
+    "Draft the proposed data flow and a review-ready security packet for the responsible owner; do not transfer customer data."
+  ],
+  "caveats": [
+    "Approval remains an open dependency; drafting a packet does not grant it."
+  ],
+  "calculations": {}
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "authoring structure, projection inspection, exact synthetic arithmetic and authored-control calibration; no target performance",
+  "case_count": 100,
+  "reference_count": 100,
+  "family_count": 10,
+  "cases_per_family": 10,
+  "holdout_count": 0,
+  "numeric_case_count": 22,
+  "numeric_field_count": 53,
+  "reference_human_review": "not_reviewed for all 100",
+  "distinctness_review": "Author integration reviewed all case facts and anchors; replaced three near-duplicate tasks before freeze with delegated purchasing authority, optional coordination-call applicability and a nonmandatory interview-count case. Clarified one offer commitment-window ambiguity.",
+  "projection_inspection": "100 cases, exact bounded response contract, no evaluator metadata or forbidden keys; no fixtures. Shared-filesystem isolation is not established.",
+  "structural_validation": {
+    "status": "structurally_valid",
+    "cases": 100,
+    "criteria": 253,
+    "package_digest": "b0a9968b5651ecfe67aa3742f68d7c1d198b444f025cdd73de94c7d36ac9ea3b",
+    "note": "Structure and declared provenance checked; truth and review identity are not attested."
+  },
+  "controls": {
+    "count": 9,
+    "kinds": [
+      "clean",
+      "defective",
+      "alternative"
+    ],
+    "author_semantic_expectations": "6 satisfy; 3 fail, per-anchor self-review in controls/calibration.json",
+    "helper_deterministic_scored": 15,
+    "helper_deterministic_passed": 13,
+    "helper_deterministic_failed": 2,
+    "helper_required_reviews_ungraded": 9,
+    "helper_accepted_units": 0,
+    "interpretation": "The known defective numeric answer fails both numeric checks. The helper leaves every semantic review unresolved, including clean and valid-alternative controls. Author semantics are separate and not independent."
+  },
+  "python_version": "3.12.14",
+  "product_runs": 0
+}
