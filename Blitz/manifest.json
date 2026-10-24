@@ -322,9 +322,9 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 4059,
-      "sha256": "a790a04e6534366b43e9ab9e03bd0c709db9cf4c753b0b03cb613e15ed8853c7",
-      "characters": 4055
+      "bytes": 4970,
+      "sha256": "94f060d60676310ffc550b72b816e27162b740afdde42f92ab579d461352ba79",
+      "characters": 4966
     },
     {
       "path": "ENTRYPOINT.md",
@@ -712,15 +712,21 @@
     },
     {
       "path": "profiles/company.md",
-      "bytes": 20767,
-      "sha256": "3dceacf1aef857d9ca1cb5f0a75ff3d41adf713050aba3678cbaf83cdd1da0dc",
-      "characters": 20767
+      "bytes": 21371,
+      "sha256": "0bfc8f5fd0456b99710cc728c293e59c8994c7c69984eab3a81752e9df5bb559",
+      "characters": 21371
     },
     {
       "path": "profiles/comprehensive.md",
       "bytes": 2427,
       "sha256": "885dfe799db7cafa1b598eea78055a785036740b8224b60f2bda90f903a275c7",
       "characters": 2427
+    },
+    {
+      "path": "profiles/customer-discovery.md",
+      "bytes": 7327,
+      "sha256": "7728c54e0887e38a15899b9ae0f59e5b661196a6da95a1ebb9b3bb4b181933d8",
+      "characters": 7327
     },
     {
       "path": "profiles/lean.md",
@@ -2926,9 +2932,9 @@
     },
     {
       "path": "templates/call-card.md",
-      "bytes": 1372,
-      "sha256": "6addc4add58f2607d694a2c2d804043a6b0b304a76e7ab4ef451b68baad13908",
-      "characters": 1372
+      "bytes": 2960,
+      "sha256": "3a2ffd6b76c7af6076f59c1a6e06e1da7e6eab54b81a5035e8d5653c7f67844e",
+      "characters": 2960
     },
     {
       "path": "templates/capture-protocol.md",
@@ -3058,9 +3064,9 @@
     },
     {
       "path": "templates/experiment-card.md",
-      "bytes": 443,
-      "sha256": "6c203d5b140f3d1d849282103763406ada9ec18a0c7701d5eb2bd7fb3fa19583",
-      "characters": 443
+      "bytes": 3137,
+      "sha256": "924e9d6e242a4991af1715158cc3b5216352a5d3499adaca912efa677c2d45e6",
+      "characters": 3137
     },
     {
       "path": "templates/handoff.md",

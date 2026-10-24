@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "version": "v3",
+  "base_inventory_sha256": "6962266e9e224c5d21545d7bb0997f62cbe36a61e6fff67dbde13c7395afda62",
+  "scope": "Reference/scorer corrections only; the 100 frozen v1 case inputs and original target outputs remain unchanged. New target runs must be identified separately.",
+  "corrections": [
+    {
+      "case_id": "CD019",
+      "anchor_id": "A2",
+      "reason": "Billing frequency and invoice date do not establish payment due dates. The original reference assumed immediate payment for both offers; v2 repaired only B.",
+      "requirement": "Separates annual cost from initial cash. A costs USD 1200 annually, but billing at year start does not specify when payment is due. B has USD 200 setup paid at start; its first monthly payment date is unknown. Any initial-cash scenario must state its payment-timing assumptions for both offers, retain unknown due dates, and avoid an unconditional liquidity ranking.",
+      "valid_alternative": "For numeric fields, A_initial_cash_usd may be 1200 under an explicit pay-on-billing scenario or 0 as only a confirmed minimum, never a known zero total. B_initial_cash_usd may be 300 if the first monthly payment is explicitly assumed due at start or 200 as confirmed setup/minimum, never a settled total. The answer must explain the interpretation and confirm both unknown due dates before a cash-timing decision; numeric values alone cannot pass.",
+      "numeric_alternatives": [
+        {
+          "key": "A_initial_cash_usd",
+          "accepted_values": [
+            0,
+            1200
+          ]
+        },
+        {
+          "key": "B_initial_cash_usd",
+          "accepted_values": [
+            200,
+            300
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "CD031",
+      "anchor_id": "A1",
+      "reason": "The facts identify the COO as controlling purchasing, not as the paying person or entity.",
+      "requirement": "Drafts a bounded one-week exception-report offer for the manager and identifies the COO's purchasing/approval role. Does not assert an unprovided payer identity.",
+      "valid_alternative": "Referring to COO approval, purchasing authority or the buying decision is valid without naming a payer. Unknown billing-party details may be resolved before contracting."
+    },
+    {
+      "case_id": "CD046",
+      "anchor_id": "A2",
+      "reason": "The numeric field cash_above_floor does not specify whether to use cash before or after the proposed payment.",
+      "requirement": "Computes contribution USD 1400, cash before payment USD 1000 and after payment USD 550, retaining next-month receivable/payable. Cash above the USD 800 floor can be USD 200 before or negative USD 250 after the payment if the interpretation is made clear. The USD 450 payment still breaches the floor.",
+      "valid_alternative": "cash_above_floor may be 200 with pre-payment headroom explained, or -250 with post-payment shortfall explained. An unlabeled or contradictory interpretation fails substantive review.",
+      "numeric_alternatives": [
+        {
+          "key": "cash_above_floor",
+          "accepted_values": [
+            200,
+            -250
+          ]
+        }
+      ]
+    }
+  ],
+  "base_freeze_sha256": "188e4132783629865e2c01f583518b801a7f9fd9d42c75fe59e9df6d3edde5a2"
+}

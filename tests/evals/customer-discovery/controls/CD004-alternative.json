@@ -1,0 +1,15 @@
+{
+  "case_id": "CD004",
+  "decision": "Hold an offer for now; retain the record as a possible one-time migration segment rather than subscription demand.",
+  "evidence": [
+    "The only observed purchase was a resolved one-off USD 100 job three years ago.",
+    "No current repeat problem supports this monthly offer."
+  ],
+  "next_actions": [
+    "Do no further sales work for this prospect unless a concrete new migration appears."
+  ],
+  "caveats": [
+    "A future one-time service is only a hypothesis; no present intent is established."
+  ],
+  "calculations": {}
+}

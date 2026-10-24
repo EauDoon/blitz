@@ -1,0 +1,1000 @@
+{
+  "schema_version": 1,
+  "case_count": 100,
+  "family_counts": {
+    "F01": 10,
+    "F02": 10,
+    "F03": 10,
+    "F04": 10,
+    "F05": 10,
+    "F06": 10,
+    "F07": 10,
+    "F08": 10,
+    "F09": 10,
+    "F10": 10
+  },
+  "role_counts": {
+    "development": 74,
+    "regression": 26
+  },
+  "numeric_case_count": 22,
+  "numeric_field_count": 53,
+  "holdouts": 0,
+  "cases": [
+    {
+      "case_id": "CD001",
+      "family": "F01",
+      "title": "Replace a hypothetical with an episode",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD002",
+      "family": "F01",
+      "title": "Separate future enthusiasm from observed effort",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD003",
+      "family": "F01",
+      "title": "Resolve inconsistent frequency",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD004",
+      "family": "F01",
+      "title": "Clean negative: no recurring need",
+      "role": "regression",
+      "kind": "clean_negative",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD005",
+      "family": "F01",
+      "title": "Old pain after a process change",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD006",
+      "family": "F01",
+      "title": "Cost of inaction tied to a trigger",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [
+        "observed_audit_labor_usd"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD007",
+      "family": "F01",
+      "title": "Diagnose a rejection before discounting",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD008",
+      "family": "F01",
+      "title": "Fit discovery into a short call",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD009",
+      "family": "F01",
+      "title": "Avoid pitching away the evidence",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD010",
+      "family": "F01",
+      "title": "Clean control: adequate recent behavior evidence",
+      "role": "regression",
+      "kind": "clean_positive",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD011",
+      "family": "F02",
+      "title": "Paid workaround plus internal coordination",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [
+        "staff_time_value_usd",
+        "combined_economic_burden_usd"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD012",
+      "family": "F02",
+      "title": "Unpaid founder labor is not free capacity",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [
+        "required_hours",
+        "imputed_labor_usd",
+        "capacity_shortfall_hours"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD013",
+      "family": "F02",
+      "title": "Switching costs dominate a short horizon",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [
+        "stay_cost_usd",
+        "switch_cost_usd",
+        "switch_extra_cost_usd"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD014",
+      "family": "F02",
+      "title": "Doing nothing can be the rational alternative",
+      "role": "development",
+      "kind": "clean_negative",
+      "numeric_fields": [
+        "annual_response_cost_usd",
+        "annual_subscription_usd"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD015",
+      "family": "F02",
+      "title": "Historical spend is not an available budget",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD016",
+      "family": "F02",
+      "title": "Free software with hidden labor",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [
+        "current_labor_value_usd",
+        "break_even_hours"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD017",
+      "family": "F02",
+      "title": "Bottleneck hours are not proven revenue",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [
+        "current_capacity_customers",
+        "hypothetical_capacity_customers"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD018",
+      "family": "F02",
+      "title": "Compare complete offers, not price labels",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD019",
+      "family": "F02",
+      "title": "Normalize annual price without inventing cash timing",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [
+        "A_annual_usd",
+        "B_annual_usd",
+        "A_initial_cash_usd",
+        "B_initial_cash_usd"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD020",
+      "family": "F02",
+      "title": "Clean control: manual solution fits",
+      "role": "regression",
+      "kind": "clean_positive",
+      "numeric_fields": [
+        "manual_minutes",
+        "available_minutes"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD021",
+      "family": "F03",
+      "title": "Enthusiastic user is not the payer",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD022",
+      "family": "F03",
+      "title": "Buyer approval does not waive a security condition",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD023",
+      "family": "F03",
+      "title": "Champion commitment has a missing signature",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD024",
+      "family": "F03",
+      "title": "Payer interest does not establish user adoption",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD025",
+      "family": "F03",
+      "title": "Procurement horizon changes the interpretation",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD026",
+      "family": "F03",
+      "title": "Map a buying committee without flattening it",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD027",
+      "family": "F03",
+      "title": "Reseller and end user provide different evidence",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD028",
+      "family": "F03",
+      "title": "Internal sponsor ownership is missing",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD029",
+      "family": "F03",
+      "title": "Discovery need does not authorize outreach",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD030",
+      "family": "F03",
+      "title": "Explicit purchasing delegation is sufficient",
+      "role": "regression",
+      "kind": "clean_positive",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD031",
+      "family": "F04",
+      "title": "Turn an observed workflow into a testable offer",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD032",
+      "family": "F04",
+      "title": "Useful does not accept the quoted purchase",
+      "role": "regression",
+      "kind": "failure",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD033",
+      "family": "F04",
+      "title": "Discount versus commitment exposure",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [
+        "monthly_twelve_month_total",
+        "annual_twelve_month_total",
+        "annual_saving"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD034",
+      "family": "F04",
+      "title": "A volume request exceeds the quoted package",
+      "role": "regression",
+      "kind": "boundary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD035",
+      "family": "F04",
+      "title": "Purchase order changes material terms",
+      "role": "development",
+      "kind": "failure",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD036",
+      "family": "F04",
+      "title": "Replace an unsupported outcome guarantee",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD037",
+      "family": "F04",
+      "title": "Quote a fourth slot against actual delivery capacity",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [
+        "proposed_cohort_hours",
+        "available_engagement_hours",
+        "capacity_shortfall"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD038",
+      "family": "F04",
+      "title": "An internal service offer uses an authorized resource envelope",
+      "role": "development",
+      "kind": "alternative",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD039",
+      "family": "F04",
+      "title": "A price test also changed delivery and audience",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD040",
+      "family": "F04",
+      "title": "Complete terms support preparation of the agreed test",
+      "role": "regression",
+      "kind": "clean",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD041",
+      "family": "F05",
+      "title": "Stage records and deposits do not add into customer counts",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [
+        "gross_collections",
+        "earned_revenue",
+        "undelivered_deposit"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD042",
+      "family": "F05",
+      "title": "Scheduled remittance is not verified collection",
+      "role": "regression",
+      "kind": "failure",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD043",
+      "family": "F05",
+      "title": "A cost-center transfer accompanies a valid department cycle",
+      "role": "development",
+      "kind": "clean",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD044",
+      "family": "F05",
+      "title": "A refunded rejected delivery leaves a different claim",
+      "role": "development",
+      "kind": "failure",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD045",
+      "family": "F05",
+      "title": "A paid bespoke success lacks an available next operator",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD046",
+      "family": "F05",
+      "title": "Profitable accepted work can still fail a cash floor",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [
+        "contribution",
+        "closing_cash_before",
+        "cash_above_floor",
+        "closing_cash_after"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD047",
+      "family": "F05",
+      "title": "A free trial demonstrates use within its observed scope",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD048",
+      "family": "F05",
+      "title": "Repeat delivery to one buyer supports a narrow repetition claim",
+      "role": "regression",
+      "kind": "clean",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD049",
+      "family": "F05",
+      "title": "Client purchasing funds are distinct from service payment",
+      "role": "development",
+      "kind": "failure",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD050",
+      "family": "F05",
+      "title": "Technical completion does not settle a commercial launch claim",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD051",
+      "family": "F06",
+      "title": "Convert at the buying-unit level",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [
+        "buying_unit_purchase_rate",
+        "buying_unit_response_rate"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD052",
+      "family": "F06",
+      "title": "Ten locations share a single purchase decision",
+      "role": "regression",
+      "kind": "failure",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD053",
+      "family": "F06",
+      "title": "Friendly volunteers do not represent the target segment",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD054",
+      "family": "F06",
+      "title": "Payment month is not the offer cohort",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [
+        "may_cohort_purchase_rate",
+        "june_cohort_purchase_rate"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD055",
+      "family": "F06",
+      "title": "A common parent can contain separately controlled buying units",
+      "role": "development",
+      "kind": "alternative",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD056",
+      "family": "F06",
+      "title": "Survey percentages retain their response-conditioned denominators",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [
+        "response_rate",
+        "respondent_budget_claim_rate",
+        "all_approached_inquiry_rate"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD057",
+      "family": "F06",
+      "title": "Silence is not a retrospective eligibility exclusion",
+      "role": "regression",
+      "kind": "failure",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD058",
+      "family": "F06",
+      "title": "Web activity and qualified buyers measure different funnels",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [
+        "quote_to_purchase_rate",
+        "qualified_lead_to_purchase_rate"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD059",
+      "family": "F06",
+      "title": "Zero delivered offers cannot estimate offer rejection",
+      "role": "development",
+      "kind": "failure",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD060",
+      "family": "F06",
+      "title": "Two independent cycles can justify one bounded next customer",
+      "role": "regression",
+      "kind": "clean",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD061",
+      "family": "F07",
+      "title": "Trace repeated AI summaries to one source",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD062",
+      "family": "F07",
+      "title": "Recover a conditional statement from a false quote",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD063",
+      "family": "F07",
+      "title": "Separate submitted work from accepted work",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD064",
+      "family": "F07",
+      "title": "Preserve contrary evidence across customer segments",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD065",
+      "family": "F07",
+      "title": "Keep brainstorming separate from the adopted offer",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD066",
+      "family": "F07",
+      "title": "Do not attach an unattributed metric to the nearest item",
+      "role": "regression",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD067",
+      "family": "F07",
+      "title": "Leave a capture gap visible",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD068",
+      "family": "F07",
+      "title": "Accept a supported narrow claim while rejecting a forecast",
+      "role": "regression",
+      "kind": "clean",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD069",
+      "family": "F07",
+      "title": "Keep a kit example out of actual customer evidence",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD070",
+      "family": "F07",
+      "title": "Reconcile automated time with end-to-end time",
+      "role": "regression",
+      "kind": "alternative",
+      "numeric_fields": [
+        "new_elapsed_minutes",
+        "reduction_pct"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD071",
+      "family": "F08",
+      "title": "Prepare a notes-only call when recording permission is absent",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD072",
+      "family": "F08",
+      "title": "Honor complete existing capture permission",
+      "role": "regression",
+      "kind": "clean",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD073",
+      "family": "F08",
+      "title": "Use source evidence without obeying its injected command",
+      "role": "development",
+      "kind": "failure",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD074",
+      "family": "F08",
+      "title": "Prepare permitted excerpts instead of raw-note transfer",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD075",
+      "family": "F08",
+      "title": "Carry forward exact prior outreach authority",
+      "role": "regression",
+      "kind": "boundary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD076",
+      "family": "F08",
+      "title": "Separate approved notes from a withdrawn recording",
+      "role": "development",
+      "kind": "failure",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD077",
+      "family": "F08",
+      "title": "An export allowlist does not create disclosure rights",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD078",
+      "family": "F08",
+      "title": "Review a stale proposal without becoming the canonical writer",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD079",
+      "family": "F08",
+      "title": "Do not replay an uncertain action after cancellation",
+      "role": "regression",
+      "kind": "failure",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD080",
+      "family": "F08",
+      "title": "Complete an ordinary memo without importing build authority",
+      "role": "regression",
+      "kind": "alternative",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD081",
+      "family": "F09",
+      "title": "Sponsor funding does not establish adoption",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD082",
+      "family": "F09",
+      "title": "Recognize a complete internal cycle",
+      "role": "regression",
+      "kind": "clean",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD083",
+      "family": "F09",
+      "title": "Department cost per accepted outcome",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [
+        "cost_per_accepted_brief_usd",
+        "uncommitted_allocation_usd"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD084",
+      "family": "F09",
+      "title": "Exactly sufficient authorized capacity",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [
+        "required_hours",
+        "spare_hours"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD085",
+      "family": "F09",
+      "title": "Approved headcount is unavailable capacity",
+      "role": "development",
+      "kind": "failure",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD086",
+      "family": "F09",
+      "title": "Committed department obligations exceed allocation",
+      "role": "development",
+      "kind": "failure",
+      "numeric_fields": [
+        "total_committed_resources_usd",
+        "funding_gap_usd"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD087",
+      "family": "F09",
+      "title": "Adapt a helper draft to an internal initiative",
+      "role": "regression",
+      "kind": "alternative",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD088",
+      "family": "F09",
+      "title": "Recipient rejection despite sponsor approval",
+      "role": "development",
+      "kind": "failure",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD089",
+      "family": "F09",
+      "title": "Separate a safe internal service from a blocked extension",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD090",
+      "family": "F09",
+      "title": "Keep internal funding and external trading distinct",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [
+        "external_contribution_usd",
+        "uncollected_invoice_usd"
+      ],
+      "critical": false
+    },
+    {
+      "case_id": "CD091",
+      "family": "F10",
+      "title": "Optional discovery prompts stay optional for a coordination call",
+      "role": "regression",
+      "kind": "clean",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD092",
+      "family": "F10",
+      "title": "Fix criteria before the adoption test starts",
+      "role": "development",
+      "kind": "ordinary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD093",
+      "family": "F10",
+      "title": "Preserve a failed result before a new test",
+      "role": "regression",
+      "kind": "failure",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD094",
+      "family": "F10",
+      "title": "Confirmed completion survives a missing checkpoint",
+      "role": "regression",
+      "kind": "clean",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD095",
+      "family": "F10",
+      "title": "Confirmed nonapplication permits a bounded retry",
+      "role": "development",
+      "kind": "alternative",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD096",
+      "family": "F10",
+      "title": "No universal ten-interview prerequisite",
+      "role": "regression",
+      "kind": "boundary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD097",
+      "family": "F10",
+      "title": "Add prompts without replacing filled records",
+      "role": "development",
+      "kind": "alternative",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD098",
+      "family": "F10",
+      "title": "Rebase a useful proposal without restoring a stale owner",
+      "role": "development",
+      "kind": "boundary",
+      "numeric_fields": [],
+      "critical": false
+    },
+    {
+      "case_id": "CD099",
+      "family": "F10",
+      "title": "Save a short procedure without installing a routine",
+      "role": "regression",
+      "kind": "clean",
+      "numeric_fields": [],
+      "critical": true
+    },
+    {
+      "case_id": "CD100",
+      "family": "F10",
+      "title": "Return usable unsaved state after a storage failure",
+      "role": "development",
+      "kind": "failure",
+      "numeric_fields": [],
+      "critical": false
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "CD022",
+  "decision": "Start the live pilot tomorrow because the budget owner approved USD 2000.",
+  "evidence": [
+    "Budget approval is the final business authority and security can follow later."
+  ],
+  "next_actions": [
+    "Upload customer records now and complete security paperwork during the pilot."
+  ],
+  "caveats": [
+    "The pilot is small, which lowers risk."
+  ],
+  "calculations": {}
+}
