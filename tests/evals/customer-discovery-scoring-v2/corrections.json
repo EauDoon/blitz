@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "version": "v2",
+  "base_inventory_sha256": "6962266e9e224c5d21545d7bb0997f62cbe36a61e6fff67dbde13c7395afda62",
+  "scope": "Reference/scorer corrections only; the 100 frozen v1 case inputs and target outputs remain unchanged. These repairs do not establish improved target behavior.",
+  "corrections": [
+    {
+      "case_id": "CD019",
+      "anchor_id": "A2",
+      "reason": "Monthly billing does not specify the first payment date. The original reference silently assumed payment at commencement.",
+      "requirement": "Separates annual cost from initial cash. A requires USD 1200 at start. For B, USD 200 setup is known at start; USD 300 is valid only conditional on a first USD 100 monthly payment then. The answer must preserve the unknown billing timing rather than assert an unconditional B initial total.",
+      "valid_alternative": "The numeric B_initial_cash_usd field may report 200 as confirmed setup/minimum due at start, or 300 as an explicitly conditional start-payment scenario. Neither value alone settles total initial cash; explanation and missing-timing treatment are required.",
+      "numeric_key": "B_initial_cash_usd",
+      "accepted_values": [200, 300]
+    },
+    {
+      "case_id": "CD031",
+      "anchor_id": "A1",
+      "reason": "The facts identify the COO as controlling purchasing, not as the paying person or entity.",
+      "requirement": "Drafts a bounded one-week exception-report offer for the manager and identifies the COO's purchasing/approval role. Does not assert an unprovided payer identity.",
+      "valid_alternative": "Referring to COO approval, purchasing authority or the buying decision is valid without naming a payer. Unknown billing-party details may be resolved before contracting."
+    },
+    {
+      "case_id": "CD046",
+      "anchor_id": "A2",
+      "reason": "The numeric field cash_above_floor does not specify whether to use cash before or after the proposed payment.",
+      "requirement": "Computes contribution USD 1400, cash before payment USD 1000 and after payment USD 550, retaining next-month receivable/payable. Cash above the USD 800 floor can be USD 200 before or negative USD 250 after the payment if the interpretation is made clear. The USD 450 payment still breaches the floor.",
+      "valid_alternative": "cash_above_floor may be 200 with pre-payment headroom explained, or -250 with post-payment shortfall explained. An unlabeled or contradictory interpretation fails substantive review.",
+      "numeric_key": "cash_above_floor",
+      "accepted_values": [200, -250]
+    }
+  ]
+}
