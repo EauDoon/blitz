@@ -16,7 +16,7 @@ Autoscale and quickly launch a minimum viable company or department that can sta
 
 Version **v2.1OAI-r1** · Python **3.12+** · Editable records and local tools
 
-The `main` branch includes later explainer updates. The tagged release and its downloadable assets remain the original published snapshot.
+The `main` branch includes later explainer updates and unreleased [customer-discovery and price-testing guidance](Blitz/profiles/customer-discovery.md). The tagged release and its downloadable assets remain the original published snapshot.
 
 Frame → Test → Deliver → Operate. [Static illustration](docs/assets/blitz-motion-poster.svg).
 

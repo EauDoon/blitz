@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased source update, 24-10-2026
+
+Adds an optional customer-discovery and price-testing guide within the existing Frame/Test gates, selected past-behavior prompts in the call card, and commercial experiment fields for exact offers, buying units, evidence and objections. Clarifies that the call-card debrief clock belongs to a selected measured pilot. Preserves the lean default, department route, 25 method identities, four core record names and source/authority/recovery rules.
+
+The 100 synthetic behavioral cases in `tests/evals/customer-discovery` were frozen before implementation. Case authoring, actual runs and semantic review are distinct evidence; results are reported separately. This is a source revision on main, not a replacement of the v2.1OAI-r1 tag, published archives or installed host copies.
+
 ## v2.1OAI-r1, 11-10-2026
 
 Repairs the independent audit findings: preview containment/error handling; ZIP metadata and complete-history publication checks; scoped collection and recording; explicit unknown permissions; contrast thresholds; nested/styled SVG export; reference geometry; classic/module JavaScript checking; evidence-faithful rewriting; and transitive staging context. Adds a company/department START route, smaller graphic headings and inclusive resource wording.
