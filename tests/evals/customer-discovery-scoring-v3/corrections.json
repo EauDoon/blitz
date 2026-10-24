@@ -50,5 +50,6 @@
         }
       ]
     }
-  ]
+  ],
+  "base_freeze_sha256": "188e4132783629865e2c01f583518b801a7f9fd9d42c75fe59e9df6d3edde5a2"
 }

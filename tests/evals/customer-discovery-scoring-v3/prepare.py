@@ -14,20 +14,34 @@ def prepare(out):
     inventory = base / "SHA256SUMS"
     if hashlib.sha256(inventory.read_bytes()).hexdigest() != patch["base_inventory_sha256"]:
         raise ValueError("frozen inventory differs")
+    freeze = base / "FREEZE.json"
+    if hashlib.sha256(freeze.read_bytes()).hexdigest() != patch["base_freeze_sha256"]:
+        raise ValueError("frozen metadata differs")
+    verified = {"SHA256SUMS", "FREEZE.json"}
     for line in inventory.read_text().splitlines():
         digest, name = line.split("  ", 1)
+        verified.add(name)
         path = base / name
         if path.is_symlink() or not path.resolve().is_relative_to(base.resolve()):
             raise ValueError("unsafe frozen payload path")
         if hashlib.sha256(path.read_bytes()).hexdigest() != digest:
             raise ValueError("frozen payload differs: " + name)
+    expected_dirs = {str(parent) for name in verified for parent in Path(name).parents if str(parent) != "."}
+    for entry in base.rglob("*"):
+        name = str(entry.relative_to(base))
+        if entry.is_symlink() or (entry.is_file() and name not in verified) or (entry.is_dir() and name not in expected_dirs):
+            raise ValueError("unlisted or symlink source entry: " + name)
     out = Path(out).absolute()
     if out.exists() or out.is_symlink() or not out.parent.is_dir():
         raise ValueError("output must be new with an existing parent")
     repo = here.parents[2]
     if any(out.resolve().is_relative_to(source.resolve()) for source in (base, here, repo / "Blitz")):
         raise ValueError("output must stay outside the source kit and evaluator sources")
-    shutil.copytree(base, out, ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
+    out.mkdir()
+    for name in sorted(verified):
+        destination = out / name
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(base / name, destination)
     refs_path = out / "evaluator/references.jsonl"
     refs = [json.loads(line) for line in refs_path.read_text().splitlines()]
     scorer_path = out / "evaluator/scorers.json"

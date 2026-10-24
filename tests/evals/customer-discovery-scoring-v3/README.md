@@ -10,7 +10,7 @@ From the repository root, prepare an output directory outside the source kit who
 python -B tests/evals/customer-discovery-scoring-v3/prepare.py --out .verification/customer-discovery-evaluator-v3
 ```
 
-The command verifies the original frozen payload, refuses an occupied destination, copies it and applies only the declared reference/scorer corrections. It retains the original freeze as lineage and emits a fresh evaluator inventory. It neither generates target responses nor changes the 100 task inputs.
+The command verifies the original frozen payload and metadata, rejects unlisted entries and symlinks, refuses an occupied destination, copies only verified files and applies only the declared reference/scorer corrections. It retains the original freeze as lineage and emits a fresh evaluator inventory. It neither generates target responses nor changes the 100 task inputs.
 
 Validate the prepared package with the eval-workflow offline helper when available. Regrade preserved actual outputs under a new scoring run, recording their original generation conditions; this is not a fresh target execution or evidence of improved model behavior. Required natural-language review remains a separate evidence-backed assessment. Do not expose answer keys, controls or previous outputs to task-solving executors. Native generation, arithmetic checks, semantic review and host installation remain separate claims.
 

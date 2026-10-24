@@ -542,6 +542,7 @@ tests/node/test_preview.mjs,software,original material only: Blitz-Internal-Use-
 tests/node/test_svg_export.mjs,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 tests/test_audit_methods.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 tests/test_audit_security.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
+tests/test_customer_discovery_scoring.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 tests/test_release.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 tests/test_release_identity.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
 tools/check_identity.py,software,original material only: Blitz-Internal-Use-1.0; prior grants excluded,LICENSE; docs/PROVENANCE.md
