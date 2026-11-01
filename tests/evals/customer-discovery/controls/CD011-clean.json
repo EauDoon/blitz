@@ -1,0 +1,18 @@
+{
+  "case_id": "CD011",
+  "decision": "Test what the tool actually replaces before making a savings claim.",
+  "evidence": [
+    "N1 is USD 600/month cash spend; N2 adds 6 × USD 60 = USD 360/month imputed staff time.",
+    "Combined economic burden is USD 960/month. A USD 500 tool does not yet prove either burden disappears."
+  ],
+  "next_actions": [
+    "Measure residual coordination and confirm whether the outside provider can be canceled."
+  ],
+  "caveats": [
+    "USD 460 is a conditional economic difference only, not verified cash savings."
+  ],
+  "calculations": {
+    "staff_time_value_usd": 360,
+    "combined_economic_burden_usd": 960
+  }
+}

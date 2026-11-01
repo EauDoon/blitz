@@ -1,0 +1,16 @@
+{
+  "case_id": "CD011",
+  "decision": "Buy the tool; it saves USD 500 cash every month.",
+  "evidence": [
+    "Six staff hours at USD 60 are USD 400; combined cash spend is USD 1000.",
+    "The USD 500 tool eliminates the provider and employee work."
+  ],
+  "next_actions": [
+    "Promise the buyer USD 500 monthly savings."
+  ],
+  "caveats": [],
+  "calculations": {
+    "staff_time_value_usd": 400,
+    "combined_economic_burden_usd": 1000
+  }
+}

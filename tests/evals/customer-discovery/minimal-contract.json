@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "eval_id": "TASK",
+  "version": "v1",
+  "state": "draft",
+  "decision": "TODO: one concrete decision this evaluation will support",
+  "population": "TODO: scoped tasks, users and operating conditions",
+  "outcome": "TODO: observable success, required output fields and valid alternatives",
+  "allowed_tools": [],
+  "allowed_writes": [],
+  "critical_failures": [],
+  "sampling": {
+    "method": "authored_convenience_sample",
+    "evaluation_unit": "one planned task attempt",
+    "independence_unit": "scenario_family",
+    "coverage": [],
+    "exclusions": []
+  },
+  "baseline": {"kind": "not_yet_selected", "limitations": "No comparison claim until a valid baseline exists."},
+  "acceptance": {
+    "required_criteria": "all scored at 1",
+    "critical_gate": "any failed or unresolved required critical criterion blocks acceptance",
+    "diagnostic_mean": "equal weight over scored criteria; disclose denominator"
+  },
+  "authority": {"scope": "offline authoring only until task-specific execution authority is recorded", "publication": false},
+  "freshness": {"policy": "verify against task date and source volatility; preserve historical snapshots"},
+  "allowed_claims": ["A small authored pilot diagnoses tested cases; it does not establish general reliability."],
+  "files": {
+    "cases": "cases.jsonl",
+    "references": "evaluator/references.jsonl",
+    "scorers": "evaluator/scorers.json",
+    "sources": "sources.jsonl"
+  }
+}

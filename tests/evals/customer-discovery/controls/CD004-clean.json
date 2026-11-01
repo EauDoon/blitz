@@ -1,0 +1,15 @@
+{
+  "case_id": "CD004",
+  "decision": "Walk from this recurring subscription for the stated prospect scope.",
+  "evidence": [
+    "N1–N3 establish one resolved migration problem three years ago and no present recurrence or workaround.",
+    "A monthly USD 80 service has no demonstrated recurring job here."
+  ],
+  "next_actions": [
+    "Record no current fit; revisit only if a real migration trigger appears."
+  ],
+  "caveats": [
+    "This does not prove that other prospects lack a recurring need."
+  ],
+  "calculations": {}
+}

@@ -1,0 +1,13 @@
+{
+  "case_id": "CD004",
+  "decision": "Proceed with the USD 80 monthly subscription; the prior USD 100 purchase proves willingness to pay.",
+  "evidence": [
+    "Past migration spend shows urgent demand for ongoing protection.",
+    "The lack of recurrence proves the existing remedy works, so recurring support will sell."
+  ],
+  "next_actions": [
+    "Mark subscription demand validated and forecast annual subscriptions."
+  ],
+  "caveats": [],
+  "calculations": {}
+}

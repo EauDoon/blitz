@@ -1,0 +1,18 @@
+{
+  "case_id": "CD011",
+  "decision": "Prepare a trial framed around reduced coordination burden; defer the claim that it replaces the provider.",
+  "evidence": [
+    "Current cash spend is USD 600/month, with USD 360 of imputed staff effort for a total USD 960 economic burden.",
+    "Even if the tool helps staff, USD 500 additional cash may be unattractive while the provider remains."
+  ],
+  "next_actions": [
+    "Check a current workflow, measure remaining hours and establish the provider cancellation terms."
+  ],
+  "caveats": [
+    "A useful time saving may be real without becoming cash savings."
+  ],
+  "calculations": {
+    "staff_time_value_usd": 360,
+    "combined_economic_burden_usd": 960
+  }
+}
