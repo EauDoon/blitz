@@ -22,7 +22,9 @@ Both are covered by a negative test at the bottom of this file: run
 `python3 build-check.py --selftest` to confirm the checker still catches them.
 The selftest also covers two quoting faults that load wrong: a bare apostrophe
 inside single quotes, which the YAML parser rejects, and an unquoted " #", which
-YAML reads as a comment and so silently truncates the description.
+YAML reads as a comment and so silently truncates the description. It also covers
+an unquoted value that starts with YAML syntax ("[", "&", "!" and similar), a
+quote closed before the end of the value, and a valid '>' block scalar.
 """
 
 import io
@@ -35,6 +37,12 @@ MAX_DESC = 1024
 WARN_DESC = 220  # suite target set by meta-skill, 30-09-2026 (300 from 25-09-2026)
 REQUIRED = ("name", "description")
 NAME_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+# A YAML block scalar header: '|' or '>', optional indent digit and chomping sign,
+# optional comment. The value is then the indented lines under it.
+BLOCK_HEADER = re.compile(r"[|>](?:[1-9][+-]?|[+-][1-9]?)?(?:[ \t]+#.*)?")
+# First characters that start YAML syntax, not text, in an unquoted value. '#' and
+# ': ' have their own checks; '-' and '?' count only before whitespace or the end.
+INDICATORS = "[]{},&*!|>%@`"
 
 errors = []
 warnings = []
@@ -164,6 +172,15 @@ def check_skill_md(root, text):
 
     if "description" in fields:
         raw, quote = fields["description"]
+        head, _, rest = raw.partition("\n")
+        block = quote is None and BLOCK_HEADER.fullmatch(head) is not None
+        if block:
+            # A '|' or '>' header line: the value is the indented text under it,
+            # where ': ' and '#' are ordinary text.
+            raw = rest
+            if not raw.strip():
+                err("description is a '%s' block scalar with no indented text under it."
+                    % head[0])
         desc = " ".join(raw.split())
         n = len(desc)
         if n > MAX_DESC:
@@ -174,13 +191,24 @@ def check_skill_md(root, text):
                  "Re-run the trigger eval, because trimming to fit can drop the sentence "
                  "carrying the routing." % (n, WARN_DESC, MAX_DESC))
 
-        if quote is None and (": " in raw or raw.rstrip().endswith(":")):
-            err("description contains an unquoted ': ' which breaks the YAML. The skill "
-                "will fail to load with no error at all. Single-quote the description.")
-        if quote is None and re.search(r"(?:^|\s)#", raw):
-            err("description contains an unquoted '#' at its start or after whitespace. "
-                "YAML reads it as a comment and silently cuts the description short "
-                "there. Remove the '#' or single-quote the description.")
+        if quote is None and not block and raw.startswith(("'", '"')):
+            err("description starts with a quote but does not end with the same quote. "
+                "YAML ends the value at the matching quote, so the text after it breaks "
+                "the YAML or is dropped as a comment. Put the whole description inside "
+                "one pair of quotes.")
+        elif quote is None and not block:
+            if ": " in raw or raw.rstrip().endswith(":"):
+                err("description contains an unquoted ': ' which breaks the YAML. The skill "
+                    "will fail to load with no error at all. Single-quote the description.")
+            if re.search(r"(?:^|\s)#", raw):
+                err("description contains an unquoted '#' at its start or after whitespace. "
+                    "YAML reads it as a comment and silently cuts the description short "
+                    "there. Remove the '#' or single-quote the description.")
+            if raw and (raw[0] in INDICATORS or (raw[0] in "-?" and raw[1:2].strip() == "")):
+                err("description starts with %r, which YAML reads as syntax (a list, map, "
+                    "anchor, alias, tag, block marker or reserved character), not as text. "
+                    "The skill fails to load or loads the wrong words. Single-quote the "
+                    "description." % raw[0])
         if quote == "'" and not re.fullmatch(r"(?:[^']|'')*", raw):
             err("description is single-quoted but contains a bare apostrophe. Escape it "
                 "by doubling it, or switch to double quotes.")
@@ -296,6 +324,14 @@ def selftest():
     if check(build(comment)) == 0:
         failures.append("did not catch an unquoted ' #'")
 
+    indicator = "description: [beta] Use this when asked, and not otherwise."
+    if check(build(indicator)) == 0:
+        failures.append("did not catch a leading YAML indicator")
+
+    early_quote = "description: 'Use this' when asked"
+    if check(build(early_quote)) == 0:
+        failures.append("did not catch text after the closing quote")
+
     good = "description: 'Use this when the user says do the thing, and not otherwise.'"
     if check(build(good)) != 0:
         failures.append("rejected a valid package")
@@ -304,11 +340,15 @@ def selftest():
     if check(build(doubled)) != 0:
         failures.append("rejected a correctly doubled apostrophe")
 
+    block = "description: >-\n  Use this when: the owner asks, #1 priority."
+    if check(build(block)) != 0:
+        failures.append("rejected a valid block scalar")
+
     if failures:
         for f in failures:
             sys.stderr.write("SELFTEST FAIL  %s\n" % f)
         return 1
-    sys.stderr.write("SELFTEST OK    6/6\n")
+    sys.stderr.write("SELFTEST OK    9/9\n")
     return 0
 
 

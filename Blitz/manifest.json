@@ -2782,15 +2782,15 @@
     },
     {
       "path": "skills/skill-package-check/CHANGES.md",
-      "bytes": 1454,
-      "sha256": "e99ceb04548743549cf7e12ba1a12dc2c7b9a96b56a81e819541c6afb1a1619a",
-      "characters": 1454
+      "bytes": 2245,
+      "sha256": "3e81e0fd2e0549212cea0cfbbc5cdc6c69346b9743b4719ab9bbfc84ff2c501b",
+      "characters": 2245
     },
     {
       "path": "skills/skill-package-check/SKILL.md",
-      "bytes": 7332,
-      "sha256": "04a414cf2527cb51b98752adbebb7a41f7d219dbb5435264e5f24bcbe28e9467",
-      "characters": 7332
+      "bytes": 7728,
+      "sha256": "3c2fbd99edf9ba730bbe377d65084b5c6b6a123ad40d540b082ff6ca77df1d7d",
+      "characters": 7728
     },
     {
       "path": "skills/skill-package-check/agents/openai.yaml",
@@ -2800,9 +2800,9 @@
     },
     {
       "path": "skills/skill-package-check/references/build-check.py",
-      "bytes": 11254,
-      "sha256": "eb789aaf502587f0c6e56a47c2e6ccec751bb891ea7c28a187b5f932d9707c31",
-      "characters": 11254
+      "bytes": 13623,
+      "sha256": "0dd23a429c349c9505c462200a0f7558911f84632c722271c1674e891a906697",
+      "characters": 13623
     },
     {
       "path": "skills/skill-package-check/references/suite-budget.py",
