@@ -20,6 +20,9 @@ looks like a failure at the time:
 
 Both are covered by a negative test at the bottom of this file: run
 `python3 build-check.py --selftest` to confirm the checker still catches them.
+The selftest also covers two quoting faults that load wrong: a bare apostrophe
+inside single quotes, which the YAML parser rejects, and an unquoted " #", which
+YAML reads as a comment and so silently truncates the description.
 """
 
 import io
@@ -174,7 +177,11 @@ def check_skill_md(root, text):
         if quote is None and (": " in raw or raw.rstrip().endswith(":")):
             err("description contains an unquoted ': ' which breaks the YAML. The skill "
                 "will fail to load with no error at all. Single-quote the description.")
-        if quote == "'" and "''" not in raw and "'" in raw:
+        if quote is None and re.search(r"(?:^|\s)#", raw):
+            err("description contains an unquoted '#' at its start or after whitespace. "
+                "YAML reads it as a comment and silently cuts the description short "
+                "there. Remove the '#' or single-quote the description.")
+        if quote == "'" and not re.fullmatch(r"(?:[^']|'')*", raw):
             err("description is single-quoted but contains a bare apostrophe. Escape it "
                 "by doubling it, or switch to double quotes.")
         if quote == '"':
@@ -260,7 +267,7 @@ def finish():
 
 
 def selftest():
-    """Negative tests for the two failure modes that have actually happened."""
+    """Negative tests for the failure modes that have actually happened, plus valid controls."""
     import tempfile
 
     def build(desc_line, name="demo-skill"):
@@ -281,15 +288,27 @@ def selftest():
     if check(build(colon)) == 0:
         failures.append("did not catch an unquoted colon")
 
+    apostrophe = "description: 'it''s the owner's call'"
+    if check(build(apostrophe)) == 0:
+        failures.append("did not catch a bare apostrophe inside single quotes")
+
+    comment = "description: Use for deal pricing #1 priority, and nothing else"
+    if check(build(comment)) == 0:
+        failures.append("did not catch an unquoted ' #'")
+
     good = "description: 'Use this when the user says do the thing, and not otherwise.'"
     if check(build(good)) != 0:
         failures.append("rejected a valid package")
+
+    doubled = "description: 'Use when it''s the owner''s call, and not otherwise.'"
+    if check(build(doubled)) != 0:
+        failures.append("rejected a correctly doubled apostrophe")
 
     if failures:
         for f in failures:
             sys.stderr.write("SELFTEST FAIL  %s\n" % f)
         return 1
-    sys.stderr.write("SELFTEST OK    3/3\n")
+    sys.stderr.write("SELFTEST OK    6/6\n")
     return 0
 
 
