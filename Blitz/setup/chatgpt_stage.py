@@ -64,8 +64,10 @@ def validate_output(raw):
         raise ValueError("--out must not overlap the kit or its ancestors")
     if out == Path.home() or out == Path(out.anchor):
         raise ValueError("--out must not be a home or filesystem root")
+    # Same live-store set as verify_archive.LIVE_PARTS, compared case-insensitively:
+    # a case-insensitive filesystem treats ~/.CLAUDE/skills as the live store.
     for part in out.parts:
-        if part in {".agents", ".codex", ".claude"}:
+        if part.casefold() in {".agents", ".codex", ".claude", ".aws", ".ssh", "plugins", "skills"}:
             raise ValueError("--out must not be inside a live skill store")
     if Path(raw).expanduser().is_symlink() or out.exists():
         raise ValueError("--out is occupied; choose a new folder; nothing was removed")

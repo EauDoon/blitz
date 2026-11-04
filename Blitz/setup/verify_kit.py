@@ -139,7 +139,10 @@ def check_skills(fails):
         if not os.path.exists(sm):
             fails.append("skills: %s has no SKILL.md" % name)
             continue
-        t = open(sm, encoding="utf-8").read()
+        # Measure the bytes on disk: text mode turns CRLF into LF and would undercount.
+        with open(sm, "rb") as stream:
+            raw = stream.read()
+        t = raw.decode("utf-8").replace("\r\n", "\n")
         try:
             metadata = parse_skill_frontmatter(t)
         except ValueError as exc:
@@ -150,7 +153,7 @@ def check_skills(fails):
         desc = metadata["description"]
         if not desc or len(desc) > 1024:
             fails.append("skills: %s description length %d" % (name, len(desc)))
-        if len(t) > 22000 or len(t.encode("utf-8")) > 22000:
+        if len(raw.decode("utf-8")) > 22000 or len(raw) > 22000:
             fails.append("skills: %s SKILL.md over 22,000 characters or bytes" % name)
         if not os.path.exists(os.path.join(d, "agents", "openai.yaml")):
             fails.append("skills: %s has no agents/openai.yaml" % name)

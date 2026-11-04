@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Modified for Blitz v2.1OAI on 2026-10-11: provenance notice added.
+# Modified for Blitz on 2026-11-04: symlinks are skipped, never followed into the archive.
 # Adapted from Anthropic skill-creator; see NOTICE.md, CHANGES.md and LICENSE.txt in the package root.
 """
 Skill Packager - Creates a distributable .skill file of a skill folder
@@ -93,6 +94,11 @@ def package_skill(skill_path, output_dir=None):
         with zipfile.ZipFile(skill_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
             # Walk through the skill directory, excluding build artifacts
             for file_path in skill_path.rglob('*'):
+                # zipf.write follows a link and would pack its target, which can sit
+                # outside the skill (a credentials file); skip links outright.
+                if file_path.is_symlink() or any(p.is_symlink() for p in file_path.parents if skill_path in p.parents):
+                    print(f"  Skipped symlink: {file_path.relative_to(skill_path.parent)}")
+                    continue
                 if not file_path.is_file():
                     continue
                 arcname = file_path.relative_to(skill_path.parent)
