@@ -162,14 +162,24 @@ class MethodRepairs(unittest.TestCase):
             chatgpt_stage.rewrite_context_links("[escape](../../../../outside.md)", source, "blitz/references/adapter.md")
 
     def test_package_check_rejects_descriptions_that_yaml_misreads(self):
-        # Exit 1: YAML raises on a bare apostrophe or reads an unquoted " #" as a comment.
+        # Exit 1: YAML raises, or loads other words, for each of these descriptions.
         cases = {
             "description: 'it''s the owner's call'": 1,
             "description: Use for deal pricing #1 priority, and nothing else": 1,
             "description: #1 priority": 1,
+            "description: [beta] Use this when asked": 1,
+            "description: &anchor Use this when asked": 1,
+            "description: !!str Use this when asked": 1,
+            "description: - Use this when asked": 1,
+            "description: 'Use this' when asked": 1,
+            "description: \"Use this\" when asked": 1,
+            "description: >": 1,
             "description: 'Use when it''s the owner''s call, and not otherwise.'": 0,
             "description: 'Use for deal pricing #1 priority, and nothing else.'": 0,
             "description: Use for C# builds, and not otherwise.": 0,
+            "description: -x builds, a[b] and a&b, and not otherwise.": 0,
+            "description: >-\n  Use when: the owner asks, #1 priority.": 0,
+            "description: |\n  Use when: the owner asks.": 0,
         }
         with tempfile.TemporaryDirectory(prefix="blitz-package-check-") as raw:
             for number, (line, expected) in enumerate(cases.items()):
@@ -182,7 +192,7 @@ class MethodRepairs(unittest.TestCase):
             env = dict(os.environ, TMPDIR=raw, TEMP=raw, TMP=raw)
             result = subprocess.run([sys.executable, "-B", str(PACKAGE_CHECK), "--selftest"], capture_output=True, text=True, encoding="utf-8", env=env, timeout=60)
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertIn("SELFTEST OK    6/6", result.stderr)
+        self.assertIn("SELFTEST OK    9/9", result.stderr)
 
 
 if __name__ == "__main__":
