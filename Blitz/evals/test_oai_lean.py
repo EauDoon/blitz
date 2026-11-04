@@ -57,7 +57,10 @@ def repair_semantics(content):
         raise ValueError('Optional capability labels must be literal strings')
     for index in range(3):
         loop.iter.elts[index] = ast.Constant(value='OPTIONAL_CAPABILITY_' + str(index + 1))
-    fingerprint = hashlib.sha256(ast.dump(tree, include_attributes=False).encode('utf-8')).hexdigest()
+    # Python 3.13 stopped printing empty fields by default; show them so the pinned
+    # 3.12 fingerprint holds on every supported interpreter.
+    options = {'show_empty': True} if sys.version_info >= (3, 13) else {}
+    fingerprint = hashlib.sha256(ast.dump(tree, include_attributes=False, **options).encode('utf-8')).hexdigest()
     return cases, labels, fingerprint
 
 

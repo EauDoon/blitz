@@ -622,9 +622,9 @@
     },
     {
       "path": "evals/test_oai_lean.py",
-      "bytes": 23387,
-      "sha256": "496c4d00f30c9293e8dcea2d52468669a44e4bbf4242728995713ec203a9e1f8",
-      "characters": 23387
+      "bytes": 23617,
+      "sha256": "a1572b14111ea4dbb9ff56de1aa09eadfd3a097b98d05a69a7fffff2ce1d385e",
+      "characters": 23617
     },
     {
       "path": "evals/test_oai_repairs.py",
@@ -658,9 +658,9 @@
     },
     {
       "path": "evals/test_v2_integrity.py",
-      "bytes": 22368,
-      "sha256": "c5945c9e741645cb8dc747e90b574638b96376993f74aed18a7572b78cf1ecef",
-      "characters": 22368
+      "bytes": 22662,
+      "sha256": "faa9cd06b197838d89bad9b30686a83fc8cdc8e9d21c6f6819f48c097a9baa0c",
+      "characters": 22662
     },
     {
       "path": "evals/test_v2_runtime.py",
@@ -790,9 +790,9 @@
     },
     {
       "path": "setup/build_context.py",
-      "bytes": 24748,
-      "sha256": "165c80e5dda4a9134242e588aa625bbb386fba8402d1200b830d426f5d48a4bb",
-      "characters": 24748
+      "bytes": 24736,
+      "sha256": "698848052d3071145be8222f57ae376ebd5f96c4e5d1ad8ea0b03405209b7db2",
+      "characters": 24736
     },
     {
       "path": "setup/capability-manifest.md",
@@ -808,9 +808,9 @@
     },
     {
       "path": "setup/chatgpt_stage.py",
-      "bytes": 13185,
-      "sha256": "d0cb33fe6e1fd6a1e6c73d7679004c11db5bac7c0e28cade39d41e94c2319293",
-      "characters": 13185
+      "bytes": 13397,
+      "sha256": "c6b581fe2fc19ec0040b2171f70e4b3be20bfcd24c3759321f059bb5ff17ba8d",
+      "characters": 13397
     },
     {
       "path": "setup/claude.md",
@@ -916,15 +916,15 @@
     },
     {
       "path": "setup/verify_archive.py",
-      "bytes": 13062,
-      "sha256": "b04c013e19418d82047b9ae60cdbff6bff4e764fb8c5efc680fd7574cc4ff544",
-      "characters": 13062
+      "bytes": 13711,
+      "sha256": "aee81e7e11da39e7c067ab6c56a6d54a4f38718c3869b02f2ef2a7da8e6d9f94",
+      "characters": 13711
     },
     {
       "path": "setup/verify_kit.py",
-      "bytes": 8323,
-      "sha256": "51a164d310f0cd96617905a6434bdda1f7d5a2def167c3a7d304f4935d787b49",
-      "characters": 8319
+      "bytes": 8494,
+      "sha256": "161917762ce70a8793cac559d41a798b45a0ae584fbd595a6947ffd54fbd9c2b",
+      "characters": 8490
     },
     {
       "path": "skills/README.md",
@@ -1078,9 +1078,9 @@
     },
     {
       "path": "skills/calc-workbook/references/calc-workbook.py",
-      "bytes": 13548,
-      "sha256": "1cc0943d8ed93c7ecf6f278a175ffbec4602cf4b05a7f4a321e01f2d3ec1ebfc",
-      "characters": 13548
+      "bytes": 14110,
+      "sha256": "e3b424f44d130aafd3de63af5c393288a4318d411c7a69e3b8379550e3f3ac7d",
+      "characters": 14110
     },
     {
       "path": "skills/cold-read/CHANGES.md",
@@ -2500,9 +2500,9 @@
     },
     {
       "path": "skills/meta-skill/CHANGES.md",
-      "bytes": 641,
-      "sha256": "9a3dc96684c0f6b09d722c32972e3eb9bed44e7678cd9a53ddb1cdd8c9a0d053",
-      "characters": 641
+      "bytes": 963,
+      "sha256": "9bd73ef2e19d1af27beb3b428f7ca50c8da35a17b19a81d505f69c464fa4c995",
+      "characters": 963
     },
     {
       "path": "skills/meta-skill/LICENSE.txt",
@@ -2620,9 +2620,9 @@
     },
     {
       "path": "skills/meta-skill/scripts/package_skill.py",
-      "bytes": 4406,
-      "sha256": "601f7524c5dd1a1df45d3b6f4b34aa12fdbe44116388f355959b6ca717668273",
-      "characters": 4386
+      "bytes": 4902,
+      "sha256": "22a189e081ff9dd3d542b3f94e3df0afbe5a66d194181d2abbff3340d0f48e9f",
+      "characters": 4882
     },
     {
       "path": "skills/meta-skill/scripts/quick_validate.py",

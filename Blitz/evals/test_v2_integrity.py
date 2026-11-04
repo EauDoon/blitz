@@ -287,7 +287,11 @@ class ExtractionTests(unittest.TestCase):
             if Path(path).name.startswith(".blitz-open-"):
                 raise PermissionError("synthetic cleanup failure")
             return original(path, *args, **kwargs)
-        with patch.object(shutil, "rmtree", denied):
+        with contextlib.ExitStack() as stack:
+            stack.enter_context(patch.object(shutil, "rmtree", denied))
+            # Some 3.12 builds bind tempfile._rmtree at import, past the shutil patch.
+            if getattr(tempfile, "_rmtree", None) is original:
+                stack.enter_context(patch.object(tempfile, "_rmtree", denied))
             with patch.object(archive, "publish_directory", side_effect=OSError("original publication failure")):
                 failed = self.invoke()
             passed = self.invoke()

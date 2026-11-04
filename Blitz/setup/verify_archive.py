@@ -9,6 +9,7 @@ import ctypes
 import hashlib
 import io
 import json
+import ntpath
 import os
 from pathlib import Path, PurePosixPath, PureWindowsPath
 import re
@@ -24,6 +25,9 @@ MAX_TOTAL = 256 * 1024 * 1024
 MAX_FILES = 4096
 MAX_ARCHIVE = MAX_TOTAL + (MAX_FILES + 1) * 1024
 LIVE_PARTS = {".codex", ".claude", ".agents", ".aws", ".ssh", "plugins", "skills"}
+# Local secrets and interpreter caches the repository ignores; a manifest that lists one
+# would carry it into every release built from that manifest.
+IGNORED_PART = re.compile(r"(\.env(\..*)?|\.ds_store|__pycache__|.*\.py[cod])")
 LIMITS = ("Integrity and safe opening only; no content execution, installation, "
           "native loading, routing, permission or secret-free certification. "
           "Use a stable local filesystem, not an adversarially changing directory.")
@@ -93,6 +97,8 @@ def validate_manifest(manifest):
                 and set(row) <= {"path", "bytes", "sha256", "characters"}, "malformed file row")
         name = row["path"]
         require(safe_relative(name), "unsafe path:" + str(name))
+        require(not any(IGNORED_PART.fullmatch(part.casefold()) for part in PurePosixPath(name).parts),
+                "ignored local file in manifest:" + name)
         require(PurePosixPath(name).parts[0].casefold() != "manifest.json", "self-referential manifest row")
         require(name not in files, "duplicate manifest row:" + name)
         require(isinstance(row["sha256"], str) and re.fullmatch(r"[0-9a-f]{64}", row["sha256"]),
@@ -123,6 +129,13 @@ def validate_payload(name, data, row):
         require(characters == row["characters"], "character count mismatch:" + name)
 
 
+def windows_reserved(component):
+    """Windows device-name check on every host; 3.13+ deprecates the pathlib form."""
+    if hasattr(ntpath, "isreserved"):
+        return ntpath.isreserved(component)
+    return PureWindowsPath(component).is_reserved()
+
+
 def guard_local_path(raw, must_exist=True):
     """Reject host aliases and every existing symlink/reparse ancestor."""
     text = os.fspath(raw)
@@ -132,7 +145,7 @@ def guard_local_path(raw, must_exist=True):
             continue
         require(component not in {".", ".."} and not component.endswith((".", " "))
                 and not re.search(r'[\x00-\x1f\x7f:*?"<>|]', component)
-                and not PureWindowsPath(component).is_reserved(), "unsafe local path component:" + component)
+                and not windows_reserved(component), "unsafe local path component:" + component)
     path = Path(text).absolute()
     for part in [*reversed(path.parents), path]:
         if os.path.lexists(part):

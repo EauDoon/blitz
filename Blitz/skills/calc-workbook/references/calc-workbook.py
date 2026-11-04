@@ -302,11 +302,14 @@ class Workbook:
             if key in sheet.refs:
                 return sheet.addr(key)
             for other in self.sheets.values():
-                if key in other.refs:
-                    return "'%s'!%s" % (other.ws.title, other.addr(key))
+                # Anchors first, as on the same sheet: an input_block name is in both, and
+                # refs would point at the entry column (the note) instead of the value.
+                # A quote inside a sheet title is doubled inside the quoted name.
+                title = other.ws.title.replace("'", "''")
                 if (other.ws.title, key) in self.anchors:
-                    return "'%s'!%s" % (other.ws.title,
-                                        self.anchors[(other.ws.title, key)])
+                    return "'%s'!%s" % (title, self.anchors[(other.ws.title, key)])
+                if key in other.refs:
+                    return "'%s'!%s" % (title, other.addr(key))
             raise KeyError("unresolved reference %r in %r on %s"
                            % (key, template, sheet.ws.title))
         return _REF_TOKEN.sub(sub, template)
@@ -314,7 +317,12 @@ class Workbook:
     def save(self, path):
         for s in self.sheets.values():
             for (r, c, template) in s._pending:
-                s.ws.cell(r, c).value = self._resolve(s, template)
+                cell = s.ws.cell(r, c)
+                cell.value = self._resolve(s, template)
+                # Link ink is decided by the resolved text: {REF} to another tab only
+                # gains its quoted sheet name here, after the font was first chosen.
+                if "'!" in cell.value and cell.font == F_CALC:
+                    cell.font = F_LINK
         self.wb.save(path)
         return path
 

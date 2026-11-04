@@ -9,7 +9,7 @@ import hashlib
 import io
 import json
 import os
-from pathlib import Path, PurePosixPath, PureWindowsPath
+from pathlib import Path, PurePosixPath
 import posixpath
 import re
 import stat
@@ -22,7 +22,7 @@ from urllib.parse import quote, unquote, urlsplit
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(Path(__file__).absolute().parent))
 from frontmatter import parse_skill_frontmatter
-from verify_archive import publish_directory, validated_archive
+from verify_archive import publish_directory, validated_archive, windows_reserved
 
 VERSION = "v2.1OAI-r1"
 PREFIX = "Blitz_" + VERSION
@@ -79,7 +79,7 @@ def guard_path(raw, must_exist=True):
         if (component in {".", ".."} or component.endswith((".", " "))
                 or unicodedata.normalize("NFC", component) != component
                 or any(ord(c) < 32 or ord(c) == 127 or c in ':*?"<>|' for c in component)
-                or PureWindowsPath(component).is_reserved()):
+                or windows_reserved(component)):
             raise ValueError("unsafe or aliased path component: " + component)
     path = Path(text).absolute()
     for part in [*reversed(path.parents), path]:

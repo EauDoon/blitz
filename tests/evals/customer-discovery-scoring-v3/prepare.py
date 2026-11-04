@@ -10,7 +10,7 @@ import shutil
 def prepare(out):
     here = Path(__file__).resolve().parent
     base = here.parent / "customer-discovery"
-    patch = json.loads((here / "corrections.json").read_text())
+    patch = json.loads((here / "corrections.json").read_text(encoding="utf-8"))
     inventory = base / "SHA256SUMS"
     if hashlib.sha256(inventory.read_bytes()).hexdigest() != patch["base_inventory_sha256"]:
         raise ValueError("frozen inventory differs")
@@ -18,7 +18,7 @@ def prepare(out):
     if hashlib.sha256(freeze.read_bytes()).hexdigest() != patch["base_freeze_sha256"]:
         raise ValueError("frozen metadata differs")
     verified = {"SHA256SUMS", "FREEZE.json"}
-    for line in inventory.read_text().splitlines():
+    for line in inventory.read_text(encoding="utf-8").splitlines():
         digest, name = line.split("  ", 1)
         verified.add(name)
         path = base / name
@@ -28,7 +28,7 @@ def prepare(out):
             raise ValueError("frozen payload differs: " + name)
     expected_dirs = {str(parent) for name in verified for parent in Path(name).parents if str(parent) != "."}
     for entry in base.rglob("*"):
-        name = str(entry.relative_to(base))
+        name = entry.relative_to(base).as_posix()
         if entry.is_symlink() or (entry.is_file() and name not in verified) or (entry.is_dir() and name not in expected_dirs):
             raise ValueError("unlisted or symlink source entry: " + name)
     out = Path(out).absolute()
@@ -43,9 +43,9 @@ def prepare(out):
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(base / name, destination)
     refs_path = out / "evaluator/references.jsonl"
-    refs = [json.loads(line) for line in refs_path.read_text().splitlines()]
+    refs = [json.loads(line) for line in refs_path.read_text(encoding="utf-8").splitlines()]
     scorer_path = out / "evaluator/scorers.json"
-    scorer = json.loads(scorer_path.read_text())
+    scorer = json.loads(scorer_path.read_text(encoding="utf-8"))
     for change in patch["corrections"]:
         ref = next(row for row in refs if row["case_id"] == change["case_id"])
         ref["version"] = patch["version"]
@@ -58,14 +58,14 @@ def prepare(out):
             ref["expected"].setdefault("accepted_numeric_values", {})[key] = numeric["accepted_values"]
             criterion = next(row for row in scorer["criteria"] if row["criterion_id"] == change["case_id"] + "-" + key)
             criterion.update(operator="one_of", expected_key="/accepted_numeric_values/" + key)
-    refs_path.write_text("\n".join(json.dumps(row, ensure_ascii=False, sort_keys=True) for row in refs) + "\n")
+    refs_path.write_text("\n".join(json.dumps(row, ensure_ascii=False, sort_keys=True) for row in refs) + "\n", encoding="utf-8", newline="\n")
     scorer["version"] = patch["version"]
-    scorer_path.write_text(json.dumps(scorer, indent=2) + "\n")
+    scorer_path.write_text(json.dumps(scorer, indent=2) + "\n", encoding="utf-8", newline="\n")
     contract_path = out / "contract.json"
-    contract = json.loads(contract_path.read_text())
+    contract = json.loads(contract_path.read_text(encoding="utf-8"))
     contract["version"] = patch["version"]
     contract["reference_revision"] = patch
-    contract_path.write_text(json.dumps(contract, indent=2) + "\n")
+    contract_path.write_text(json.dumps(contract, indent=2) + "\n", encoding="utf-8", newline="\n")
     # Retain parent freeze evidence under explicit lineage names, never as a
     # false identity for the corrected evaluator.
     (out / "FREEZE.json").rename(out / "PARENT_FREEZE_V1.json")
@@ -73,9 +73,9 @@ def prepare(out):
     receipt = {"version": patch["version"], "parent_inventory_sha256": patch["base_inventory_sha256"],
                "unchanged_cases_sha256": hashlib.sha256((out / "cases.jsonl").read_bytes()).hexdigest(),
                "corrections": patch["corrections"],
-               "files": {str(p.relative_to(out)): hashlib.sha256(p.read_bytes()).hexdigest()
+               "files": {p.relative_to(out).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
                          for p in sorted(out.rglob("*")) if p.is_file()}}
-    (out / "EVALUATOR_REVISION.json").write_text(json.dumps(receipt, indent=2) + "\n")
+    (out / "EVALUATOR_REVISION.json").write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8", newline="\n")
     return {"result": "prepared", "version": patch["version"], "cases_unchanged": True, "corrections": len(patch["corrections"])}
 
 
