@@ -41,12 +41,16 @@ test('DOM export preserves nested SVG, page styles and internal dependencies', {
     await fs.rm(root, {recursive: true, force: true, maxRetries: 10, retryDelay: 100}).catch(() => {});
   });
   const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-  let port;
-  for (let i = 0; i < 100; i++) {
+  // A cold CI runner can take over 10 s to create a fresh profile; allow 30 s, but stop
+  // at once if the browser exits, so a crash still fails fast and names its exit code.
+  let port, exited = null;
+  proc.once('exit', code => { exited = code; });
+  for (let i = 0; i < 300 && exited === null; i++) {
     try {port = (await fs.readFile(path.join(profile, 'DevToolsActivePort'), 'utf8')).split('\n')[0]; break;}
     catch {await delay(100);}
   }
-  assert.ok(port, 'Browser did not expose its isolated endpoint');
+  assert.ok(port, exited === null ? 'Browser did not expose its isolated endpoint within 30 s'
+    : 'Browser exited with code ' + exited + ' before exposing its endpoint');
   const tabs = await (await fetch('http://127.0.0.1:' + port + '/json/list')).json();
   socket = new WebSocket(tabs.find(tab => tab.type === 'page').webSocketDebuggerUrl);
   await new Promise((resolve, reject) => {socket.onopen = resolve; socket.onerror = reject;});
