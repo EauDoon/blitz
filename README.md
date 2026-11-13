@@ -233,6 +233,10 @@ Staged OpenAI reference names include `calculation-workbook` for `calc-workbook`
 
 This release makes no measured automatic-selection claim for Blitz. Package validation, a metadata flag and tests of separately installed personal skills cannot establish Blitz's routing reliability. Verify selection in your actual host and retain the explicit fallback.
 
+### Compare cash scenarios
+
+Run `python -B Blitz/setup/company.py stress Blitz/examples/company/service-cash.csv --scenarios Blitz/examples/company/cash-scenarios.json` to compare the synthetic baseline with delayed collections, cash-cost increases and a combined downside. The read-only report shows period calculations, ending-cash differences, deferred receipts and closing reserve gaps. [Scenario guide](Blitz/setup/cash-scenarios.md) documents assumptions and missing-input behavior.
+
 ## Tools and contents
 
 | Location | Purpose |
