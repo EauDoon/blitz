@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "scenarios": [
+    {"name": "Collections one period late", "receipt_delay_periods": 1},
+    {"name": "Cash costs rise 20 percent", "cash_cost_multiplier": "1.2"},
+    {"name": "Combined downside", "receipts_multiplier": "0.8", "cash_cost_multiplier": "1.2", "receipt_delay_periods": 1}
+  ]
+}

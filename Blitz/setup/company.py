@@ -264,6 +264,11 @@ def decimal_string(value):
 def forecast(raw_input):
     data = read_local(raw_input)
     rows = parse_rows(data)
+    return calculate_rows(rows, hashlib.sha256(data).hexdigest())
+
+
+def calculate_rows(rows, input_sha256):
+    """Calculate parsed rows without mutating them; shared by scenario analysis."""
     periods, previous_close = [], None
     with localcontext() as context:
         context.prec = 64
@@ -329,7 +334,7 @@ def forecast(raw_input):
     return {
         "result": "complete" if all(p["result"] == "complete" for p in periods) else "incomplete",
         "evidence_status": "calculated_from_supplied_unverified_inputs",
-        "input_sha256": hashlib.sha256(data).hexdigest(),
+        "input_sha256": input_sha256,
         "currency": next((p["currency"] for p in periods if p["currency"]), None),
         "forecast_horizon_periods": len(periods), "period_order": "as_supplied",
         "cash_observations_complete": complete_cash,
@@ -358,9 +363,18 @@ def main(argv=None):
     init.add_argument("--owner", required=True)
     cash = commands.add_parser("cash", help="calculate a supplied CSV forecast; blank means unknown")
     cash.add_argument("input")
+    stress = commands.add_parser("stress", help="compare a forecast with local cash scenarios")
+    stress.add_argument("input")
+    stress.add_argument("--scenarios", required=True, help="scenario JSON; see cash-scenarios.md")
     args = parser.parse_args(argv)
     try:
-        result = initialize(args.out, args.name, args.owner) if args.command == "init" else forecast(args.input)
+        if args.command == "init":
+            result = initialize(args.out, args.name, args.owner)
+        elif args.command == "stress":
+            from cash_scenarios import compare
+            result = compare(args.input, args.scenarios)
+        else:
+            result = forecast(args.input)
     except (OSError, ValueError, UnicodeError, csv.Error) as exc:
         result = {"result": "error", "errors": [str(exc)]}
         if getattr(exc, "cleanup_warning", None):

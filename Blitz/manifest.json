@@ -322,9 +322,9 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 4970,
-      "sha256": "94f060d60676310ffc550b72b816e27162b740afdde42f92ab579d461352ba79",
-      "characters": 4966
+      "bytes": 5511,
+      "sha256": "f878fe19783d0d8470bb629cf705ef37c04b2e9abed9a908016306dbc850a707",
+      "characters": 5507
     },
     {
       "path": "ENTRYPOINT.md",
@@ -675,6 +675,12 @@
       "characters": 866
     },
     {
+      "path": "examples/company/cash-scenarios.json",
+      "bytes": 319,
+      "sha256": "c2f319663f2e5b3cb96f30f412158de7be2521cfbb977e81a89d106602ea0171",
+      "characters": 319
+    },
+    {
       "path": "examples/company/regulated-hold.md",
       "bytes": 4600,
       "sha256": "89fcc7e65c162eb344ce072e1f27fd7205fdc84eca025eb5e7fb4e4b3e3a0466",
@@ -801,6 +807,18 @@
       "characters": 7106
     },
     {
+      "path": "setup/cash-scenarios.md",
+      "bytes": 2333,
+      "sha256": "b9bf16023eb5af08cc340e8b12fcd5e481006ad89bc8c051f4a475e3d5db059e",
+      "characters": 2333
+    },
+    {
+      "path": "setup/cash_scenarios.py",
+      "bytes": 6189,
+      "sha256": "f87cca40964aa4638fea7d31b810569ac7a051f69139109e204a2ec2a1973058",
+      "characters": 6189
+    },
+    {
       "path": "setup/chatgpt.md",
       "bytes": 9591,
       "sha256": "69ab8ac8a4daf7818124bf3bf4e2aaf0a41d2450e52621d7c933e8b84f37f14a",
@@ -820,9 +838,9 @@
     },
     {
       "path": "setup/company.py",
-      "bytes": 20750,
-      "sha256": "04b44c26fad5eae6f8b0668d6125b15c1181ef9ceed7427121c3eddae2e581f6",
-      "characters": 20750
+      "bytes": 21336,
+      "sha256": "1d2e3a194e0d7da59e9163ea6b5e824ad8cd779854b03851a63f64a5132dc98e",
+      "characters": 21336
     },
     {
       "path": "setup/export_item.py",

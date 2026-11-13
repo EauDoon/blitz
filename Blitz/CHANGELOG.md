@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased cash scenarios, 13-11-2026
+
+Adds a read-only `company.py stress` command with named collection-delay, receipt-multiplier and cash-cost scenarios. Reports complete period calculations, deferred collections, baseline differences and closing reserve gaps. Reuses the Decimal forecast engine, validates baseline cash continuity, retains unknown amounts and leaves input files unchanged. Includes a synthetic scenario set, usage guide and regression tests. This source change does not replace tagged archives or publish a release.
+
 ## Unreleased source update, 24-10-2026
 
 Adds an optional customer-discovery and price-testing guide within the existing Frame/Test gates, selected past-behavior prompts in the call card, and commercial experiment fields for exact offers, buying units, evidence and objections. Distinguishes billing dates, payment due dates and collections when comparing cash timing. Clarifies that the call-card debrief clock belongs to a selected measured pilot. Preserves the lean default, department route, 25 method identities, four core record names and source/authority/recovery rules.
