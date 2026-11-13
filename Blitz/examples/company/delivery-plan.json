@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "periods": ["Week 1", "Week 2", "Week 3"],
+  "resources": [
+    {"id": "analyst", "name": "Example analyst", "available_hours": {"Week 1": "8", "Week 2": "8", "Week 3": "8"}},
+    {"id": "reviewer", "name": "Example reviewer", "available_hours": {"Week 1": "4", "Week 2": "4", "Week 3": "4"}}
+  ],
+  "work_items": [
+    {"id": "discovery", "name": "Synthetic intake review", "owner": "Example lead", "due_period": "Week 1", "depends_on": [], "required_hours": {"analyst": "6", "reviewer": "2"}},
+    {"id": "delivery", "name": "Synthetic service delivery", "owner": "Example lead", "due_period": "Week 2", "depends_on": ["discovery"], "required_hours": {"analyst": "10", "reviewer": "4"}},
+    {"id": "support", "name": "Synthetic support obligation", "owner": "Example lead", "due_period": "Week 2", "depends_on": [], "required_hours": {"analyst": "3"}}
+  ],
+  "allocations": [
+    {"work_item": "discovery", "resource": "analyst", "period": "Week 1", "hours": "6"},
+    {"work_item": "discovery", "resource": "reviewer", "period": "Week 1", "hours": "2"},
+    {"work_item": "delivery", "resource": "analyst", "period": "Week 2", "hours": "8"},
+    {"work_item": "delivery", "resource": "analyst", "period": "Week 3", "hours": "2"},
+    {"work_item": "delivery", "resource": "reviewer", "period": "Week 2", "hours": "4"},
+    {"work_item": "support", "resource": "analyst", "period": "Week 2", "hours": "3"}
+  ]
+}

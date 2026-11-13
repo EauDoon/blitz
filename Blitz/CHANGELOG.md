@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased delivery capacity, 13-11-2026
+
+Added a separate read-only resource planning module for ventures and departments. `company.py capacity` assesses supplied hours across shared resources and ordered periods, reports capacity overloads with contributing work, compares required effort with planned and by-due hours, and checks finish-to-start dependencies. Strict versioned JSON rejects ambiguous references, cycles, duplicates and misspelled fields. Unknown capacity and effort remain explicit; known conflicts remain visible alongside missing inputs. Calculations use exact decimals and include an input digest. Added a synthetic plan, schema/interpretation guide and regression coverage for hours, dependencies, unknowns and CLI exits. This is an unreleased source addition; published v2.1OAI-r1 archives remain unchanged.
+
 ## Unreleased cash scenarios, 13-11-2026
 
 Adds a read-only `company.py stress` command with named collection-delay, receipt-multiplier and cash-cost scenarios. Reports complete period calculations, deferred collections, baseline differences and closing reserve gaps. Reuses the Decimal forecast engine, validates baseline cash continuity, retains unknown amounts and leaves input files unchanged. Includes a synthetic scenario set, usage guide and regression tests. This source change does not replace tagged archives or publish a release.

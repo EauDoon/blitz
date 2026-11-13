@@ -22,7 +22,7 @@ Run the meaningful repository packaging tests as specified by CI, including two 
 
 1. Verify the recovered original before editing and retain a before/after inventory.
 2. Validate the new kit manifest, archive safety, method/resource closure, 17-source regeneration and runtime exclusion of evaluations/answer keys.
-3. Exercise local company initialization and cash calculations, including unknown inputs, collection delays, reserve shortfalls, negative/nonfinite values, currency and period errors, and occupied/path-unsafe outputs.
+3. Exercise local company initialization and cash calculations, including unknown inputs, collection delays, reserve shortfalls, negative/nonfinite values, currency and period errors, and occupied/path-unsafe outputs. Exercise delivery capacity with shared-resource overloads, effort coverage and deadlines, dependency order/cycles, explicit unknowns, exact decimals and CLI exit codes.
 4. Exercise shared CSV row/column isolation and trusted provenance, including mixed-item data, malformed input and tampering. Review truthful working-copy startup/lineage separately from file hashes.
 5. Perform the first-user walkthrough from the saved candidate with a fresh reader who has not authored it. Record actual use and limitations; synthetic inputs do not validate a real company.
 6. Review the exact saved commit independently, then confirm the same commit was pushed to the private repository and its CI result. Scan reachable history as well as current files before publication.
