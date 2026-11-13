@@ -368,6 +368,8 @@ def main(argv=None):
     stress.add_argument("--scenarios", required=True, help="scenario JSON; see cash-scenarios.md")
     capacity = commands.add_parser("capacity", help="assess a supplied delivery resource plan")
     capacity.add_argument("input", help="plan JSON; see delivery-capacity.md")
+    calendar = commands.add_parser("calendar", help="inspect event-level liquidity and settlement order")
+    calendar.add_argument("input", help="calendar JSON; see cash-calendar.md")
     args = parser.parse_args(argv)
     try:
         if args.command == "init":
@@ -375,12 +377,15 @@ def main(argv=None):
         elif args.command == "stress":
             from cash_scenarios import compare
             result = compare(args.input, args.scenarios)
+        elif args.command == "calendar":
+            from cash_calendar import assess
+            result = assess(args.input)
         elif args.command == "capacity":
             from delivery_capacity import assess
             result = assess(args.input)
         else:
             result = forecast(args.input)
-    except (OSError, ValueError, UnicodeError, csv.Error) as exc:
+    except (OSError, ValueError, UnicodeError, csv.Error, RecursionError) as exc:
         result = {"result": "error", "errors": [str(exc)]}
         if getattr(exc, "cleanup_warning", None):
             result["cleanup_warning"] = exc.cleanup_warning
