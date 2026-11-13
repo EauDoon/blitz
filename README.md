@@ -16,7 +16,7 @@ Autoscale and quickly launch a minimum viable company or department that can sta
 
 Version **v2.1OAI-r1** · Python **3.12+** · Editable records and local tools
 
-The `main` branch includes later explainer updates, unreleased [customer-discovery and price-testing guidance](Blitz/profiles/customer-discovery.md), [cash scenarios](Blitz/setup/cash-scenarios.md), and [delivery-capacity assessment](Blitz/setup/delivery-capacity.md). The tagged release and its downloadable assets remain the original published snapshot; use a current source checkout for these later tools.
+The `main` branch includes later explainer updates, unreleased [customer-discovery and price-testing guidance](Blitz/profiles/customer-discovery.md), [cash scenarios](Blitz/setup/cash-scenarios.md), and [delivery-capacity assessment](Blitz/setup/delivery-capacity.md), and an [event-level cash calendar](Blitz/setup/cash-calendar.md). The tagged release and its downloadable assets remain the original published snapshot; use a current source checkout for these later tools.
 
 The discovery update has [100 frozen behavioral cases](tests/evals/customer-discovery/README.md). Use the [versioned scoring corrections](tests/evals/customer-discovery-scoring-v3/README.md) with those unchanged tasks; case authoring and static checks alone do not establish a successful behavioral run.
 
@@ -138,6 +138,20 @@ python -B Blitz/setup/company.py cash Blitz/examples/company/service-cash.csv
 ```
 
 For a department, keep allocations, commitments, actual spend and capacity in suitable resource records or the [Economics and Budget template][department-budget]. An approved budget is not earned revenue or collected cash; do not put it into the commercial cash CSV. The `company` filenames and commands remain compatibility names.
+
+### Check cash timing inside a period
+
+A positive month-end balance can hide an earlier funding gap. The cash calendar
+orders supplied settlements by date and explicit intraday sequence, then reports
+the minimum balance and additional opening cash needed to preserve a stated floor.
+
+```sh
+python -B Blitz/setup/company.py calendar Blitz/examples/company/service-cash-calendar.json
+```
+
+The synthetic example ends at USD 500 but briefly reaches USD -200 before a
+collection. Unknown amounts remain unknown. Read the [input and interpretation
+contract](Blitz/setup/cash-calendar.md) before using your own local schedule.
 
 ### Working without the CLI
 

@@ -693,6 +693,12 @@
       "characters": 4600
     },
     {
+      "path": "examples/company/service-cash-calendar.json",
+      "bytes": 524,
+      "sha256": "477cdee1da00fdbdb6533bec9e970ae163cff31c08999c5b919e399b8b8193d1",
+      "characters": 524
+    },
+    {
       "path": "examples/company/service-cash.csv",
       "bytes": 447,
       "sha256": "1c7d3b6a645f3d8b4534144c50b0d9eee07c67bce5d0266ebc232bd3a9b65ecc",
@@ -813,10 +819,22 @@
       "characters": 7106
     },
     {
+      "path": "setup/cash-calendar.md",
+      "bytes": 3554,
+      "sha256": "24400e403f67556cf10d980318d62e3b358177a0d8be20790978c4c5e707d15b",
+      "characters": 3554
+    },
+    {
       "path": "setup/cash-scenarios.md",
       "bytes": 2333,
       "sha256": "b9bf16023eb5af08cc340e8b12fcd5e481006ad89bc8c051f4a475e3d5db059e",
       "characters": 2333
+    },
+    {
+      "path": "setup/cash_calendar.py",
+      "bytes": 7673,
+      "sha256": "faee688d846f78d4a073ba16da9a03cfd1e4e6dbd7dfe43ae038b69c2db3c7cf",
+      "characters": 7673
     },
     {
       "path": "setup/cash_scenarios.py",
@@ -844,9 +862,9 @@
     },
     {
       "path": "setup/company.py",
-      "bytes": 21641,
-      "sha256": "09e43cb2994de69d0c7c7100a1756b117716c8e58e46ee47ad28951dcc0ab643",
-      "characters": 21641
+      "bytes": 21968,
+      "sha256": "c08fefc7426d462a37ac82ba3c302fbb2bab5eab1986a41f67da3f9b33a868ee",
+      "characters": 21968
     },
     {
       "path": "setup/delivery-capacity.md",

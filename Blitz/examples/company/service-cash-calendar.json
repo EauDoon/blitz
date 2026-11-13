@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "currency": "USD",
+  "start_date": "2026-10-01",
+  "end_date": "2026-10-31",
+  "opening_cash": "300",
+  "reserve_floor": "100",
+  "events": [
+    {"id": "synthetic-supplier-payment", "date": "2026-10-05", "sequence": 1, "direction": "out", "amount": "500"},
+    {"id": "synthetic-customer-collection", "date": "2026-10-05", "sequence": 2, "direction": "in", "amount": "800"},
+    {"id": "synthetic-monthly-overhead", "date": "2026-10-20", "sequence": 1, "direction": "out", "amount": "100"}
+  ]
+}
