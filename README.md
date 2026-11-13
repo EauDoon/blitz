@@ -16,7 +16,7 @@ Autoscale and quickly launch a minimum viable company or department that can sta
 
 Version **v2.1OAI-r1** · Python **3.12+** · Editable records and local tools
 
-The `main` branch includes later explainer updates and unreleased [customer-discovery and price-testing guidance](Blitz/profiles/customer-discovery.md). The tagged release and its downloadable assets remain the original published snapshot.
+The `main` branch includes later explainer updates, unreleased [customer-discovery and price-testing guidance](Blitz/profiles/customer-discovery.md), [cash scenarios](Blitz/setup/cash-scenarios.md), and [delivery-capacity assessment](Blitz/setup/delivery-capacity.md). The tagged release and its downloadable assets remain the original published snapshot; use a current source checkout for these later tools.
 
 The discovery update has [100 frozen behavioral cases](tests/evals/customer-discovery/README.md). Use the [versioned scoring corrections](tests/evals/customer-discovery-scoring-v3/README.md) with those unchanged tasks; case authoring and static checks alone do not establish a successful behavioral run.
 
@@ -58,7 +58,7 @@ The [skills guide](Blitz/setup/skills-guide.md#from-outcome-to-method) maps thes
 |---|---|---|
 | Company or department brief | Adapt the generated `company-brief.md`, its template or existing records | Define customer/user, payer or accountable sponsor, offer/service, owner, constraints and next experiment |
 | Evidence and decision record | Maintain the four generated `context/` files | Separate adopted positions, unresolved questions and consequential decisions |
-| Cash forecast or resource plan | Use the cash command for its commercial cash schema; use existing budget/resource records for a department | Inspect collection timing and cash floors, or authorized budget, actual spend, available people and the next commitment |
+| Cash forecast or resource plan | Use the cash command for its commercial cash schema; use the capacity command for delivery hours and existing budget records for funding | Inspect collection timing, cash floors, shared-resource bottlenecks, due periods and work dependencies |
 | Experiment or delivery record | Use the brief and relevant existing records | Fix criteria, save actual observations and decide the next commitment |
 | Specialist work product | Select a relevant packaged skill | Draft a research memo, proposal, workbook, diagram, presentation or review; dependencies vary |
 | Scoped handoff | Use the CSV scope or item-export tools | Share selected material with provenance and a clear authority boundary |
@@ -236,6 +236,10 @@ This release makes no measured automatic-selection claim for Blitz. Package vali
 ### Compare cash scenarios
 
 Run `python -B Blitz/setup/company.py stress Blitz/examples/company/service-cash.csv --scenarios Blitz/examples/company/cash-scenarios.json` to compare the synthetic baseline with delayed collections, cash-cost increases and a combined downside. The read-only report shows period calculations, ending-cash differences, deferred receipts and closing reserve gaps. [Scenario guide](Blitz/setup/cash-scenarios.md) documents assumptions and missing-input behavior.
+
+### Check delivery capacity
+
+Run `python -B Blitz/setup/company.py capacity Blitz/examples/company/delivery-plan.json` to assess a supplied multi-resource plan for a venture or department. The synthetic example exposes 3 excess analyst hours in Week 2 and a delivery planned after its due period. The report checks all shared-resource loads, required effort, due periods and finish-to-start dependencies; missing capacity or effort remains unknown. Inputs stay unchanged. Read the [capacity guide](Blitz/setup/delivery-capacity.md) for the schema and assumptions. A complete calculation can report conflicts, and a plan within supplied limits still needs evidence, acceptance and authority.
 
 ## Tools and contents
 

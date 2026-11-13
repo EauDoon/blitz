@@ -69,6 +69,8 @@ python -B Blitz/setup/company.py cash company-practice/company-cash.csv
 
 Blank inputs intentionally produce **incomplete**, exit 2. Unknown is not zero. The command calculates supplied commercial cash inputs; it does not verify their truth or prove readiness. Departments should not enter allocations as customer receipts. See the [release guide](setup/release-guide.md) for complete examples, exit codes and limitations.
 
+For either route, the optional [capacity command](setup/delivery-capacity.md) checks supplied delivery hours across shared resources, due periods and dependencies. Run the synthetic example with `python -B Blitz/setup/company.py capacity Blitz/examples/company/delivery-plan.json`. It reports conflicts and unknowns without assigning staff or changing the plan. This tool is available in the updated source kit, not the original tagged archive.
+
 ## Use an assistant with explicit sources
 
 For the first practice run, request a draft only; do not send or schedule it.

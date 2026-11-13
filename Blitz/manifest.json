@@ -322,9 +322,9 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 5511,
-      "sha256": "f878fe19783d0d8470bb629cf705ef37c04b2e9abed9a908016306dbc850a707",
-      "characters": 5507
+      "bytes": 6347,
+      "sha256": "aae5ab234a2e19c91a403d25f6666c83ce2b276b951164328ace1d895ea7e350",
+      "characters": 6343
     },
     {
       "path": "ENTRYPOINT.md",
@@ -346,9 +346,9 @@
     },
     {
       "path": "START.md",
-      "bytes": 9261,
-      "sha256": "261f8cec372d1e523a1cfecb945394214c5c09450f2430e452a50dae9e6f083b",
-      "characters": 9261
+      "bytes": 9707,
+      "sha256": "78d97cdae2be9783e815721d386955fad39c6bd5c7e0e2170fd25f4ebbd44726",
+      "characters": 9707
     },
     {
       "path": "evals/README.md",
@@ -681,6 +681,12 @@
       "characters": 319
     },
     {
+      "path": "examples/company/delivery-plan.json",
+      "bytes": 1442,
+      "sha256": "a98c4486b20086eeb60efb303836f2e4a1764efe6741eefa13d781f230761efa",
+      "characters": 1442
+    },
+    {
       "path": "examples/company/regulated-hold.md",
       "bytes": 4600,
       "sha256": "89fcc7e65c162eb344ce072e1f27fd7205fdc84eca025eb5e7fb4e4b3e3a0466",
@@ -718,9 +724,9 @@
     },
     {
       "path": "profiles/company.md",
-      "bytes": 21371,
-      "sha256": "0bfc8f5fd0456b99710cc728c293e59c8994c7c69984eab3a81752e9df5bb559",
-      "characters": 21371
+      "bytes": 21966,
+      "sha256": "92578e24543b3f2e28e0f5c8c58d93e01dc78f146138ec3bce6dd7c97ea94b21",
+      "characters": 21966
     },
     {
       "path": "profiles/comprehensive.md",
@@ -838,9 +844,21 @@
     },
     {
       "path": "setup/company.py",
-      "bytes": 21336,
-      "sha256": "1d2e3a194e0d7da59e9163ea6b5e824ad8cd779854b03851a63f64a5132dc98e",
-      "characters": 21336
+      "bytes": 21641,
+      "sha256": "09e43cb2994de69d0c7c7100a1756b117716c8e58e46ee47ad28951dcc0ab643",
+      "characters": 21641
+    },
+    {
+      "path": "setup/delivery-capacity.md",
+      "bytes": 6310,
+      "sha256": "efec2e685226ea100219fde3e4abe003ac44a37e87f3e0bdde7803b1a6d2b138",
+      "characters": 6310
+    },
+    {
+      "path": "setup/delivery_capacity.py",
+      "bytes": 14423,
+      "sha256": "0795da7c8d649afed6d1dd01722f0495842d105f832e77de0d641620eb91cf64",
+      "characters": 14423
     },
     {
       "path": "setup/export_item.py",

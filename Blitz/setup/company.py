@@ -366,6 +366,8 @@ def main(argv=None):
     stress = commands.add_parser("stress", help="compare a forecast with local cash scenarios")
     stress.add_argument("input")
     stress.add_argument("--scenarios", required=True, help="scenario JSON; see cash-scenarios.md")
+    capacity = commands.add_parser("capacity", help="assess a supplied delivery resource plan")
+    capacity.add_argument("input", help="plan JSON; see delivery-capacity.md")
     args = parser.parse_args(argv)
     try:
         if args.command == "init":
@@ -373,6 +375,9 @@ def main(argv=None):
         elif args.command == "stress":
             from cash_scenarios import compare
             result = compare(args.input, args.scenarios)
+        elif args.command == "capacity":
+            from delivery_capacity import assess
+            result = assess(args.input)
         else:
             result = forecast(args.input)
     except (OSError, ValueError, UnicodeError, csv.Error) as exc:
