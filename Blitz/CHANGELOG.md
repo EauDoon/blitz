@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased tool input fixes, 27-11-2026
+
+Fixes three tool defects found by running the commands with malformed input. `company.py stress` now reports a deeply nested scenario file as a handled error with exit code 1; it previously ended in an uncaught `RecursionError` traceback. The shared `verify_archive.load_json` helper converts the same condition to a `ValueError`, so `scope_csv.py inspect` reports a deeply nested receipt as a failed check. The repository tool `tools/update_manifest.py` now parses its arguments before writing, so `--help` or a mistyped flag no longer rewrites `manifest.json`. The root README states that directory-creating commands support Windows and Linux only and that paths with a `.` or `..` component are rejected. Calculations, schemas, method identities and record names are unchanged. This is an unreleased source change; published v2.1OAI-r1 archives remain unchanged.
+
 ## Unreleased delivery capacity, 13-11-2026
 
 Added a separate read-only resource planning module for ventures and departments. `company.py capacity` assesses supplied hours across shared resources and ordered periods, reports capacity overloads with contributing work, compares required effort with planned and by-due hours, and checks finish-to-start dependencies. Strict versioned JSON rejects ambiguous references, cycles, duplicates and misspelled fields. Unknown capacity and effort remain explicit; known conflicts remain visible alongside missing inputs. Calculations use exact decimals and include an input digest. Added a synthetic plan, schema/interpretation guide and regression coverage for hours, dependencies, unknowns and CLI exits. This is an unreleased source addition; published v2.1OAI-r1 archives remain unchanged.

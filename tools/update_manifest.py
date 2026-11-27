@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Refresh only the candidate payload inventory after reviewed source edits."""
+"""Refresh only the candidate payload inventory after reviewed source edits.
+
+Takes no arguments and rewrites Blitz/manifest.json in place.
+"""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -13,7 +17,9 @@ from build_context import inventory
 from verify_archive import validate_manifest
 
 
-def main():
+def main(argv=None):
+    # Parse first: --help or a mistyped flag must never rewrite the manifest.
+    argparse.ArgumentParser(description=__doc__).parse_args(argv)
     files = inventory(KIT)
     manifest = json.loads(files.pop('manifest.json'))
     rows = []

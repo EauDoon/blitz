@@ -87,7 +87,7 @@ cd blitz
 
 The commands below work from the parent of `Blitz/` in either the extracted master or a repository checkout. The [release guide](Blitz/setup/release-guide.md) includes the detailed offline instructions. Keep filled company records outside reusable source.
 
-Use **Python 3.12 or later**. The setup, calculation and packaging helpers use the standard library; no package installation is needed for this exercise. Examples use `python`; substitute your verified Python 3 command where necessary. Run commands from the repository root.
+Use **Python 3.12 or later**. The setup, calculation and packaging helpers use the standard library; no package installation is needed for this exercise. Commands that create a directory (`company.py init`, `scope_csv.py create` and the release build) publish it with an atomic no-replace rename that supports **Windows and Linux only**. On another platform, macOS included, they stop with a handled error and write nothing; follow [Working without the CLI](#working-without-the-cli) there. The read-only `cash`, `stress` and `capacity` calculations do not publish a directory. Examples use `python`; substitute your verified Python 3 command where necessary. Run commands from the repository root.
 
 ### 1. Verify and create a practice workspace
 
@@ -113,7 +113,7 @@ Initialization emits a JSON receipt and creates seven draft files:
     10 Decision Log.md
 ```
 
-Output directories must be **new**, their parents must exist, and initialization must stay outside the `Blitz/` source kit. Occupied targets and paths containing `..` are rejected. Reuse `.work` but choose a new company directory for another initialization. The practice folder is ignored by Git. Keep real company or department records outside this source repository, using an explicit absolute output path.
+Output directories must be **new**, their parents must exist, and initialization must stay outside the `Blitz/` source kit. Occupied targets are rejected. So is any input or output path with a `.` or `..` component: write `Blitz/examples/company/service-cash.csv`, not `./Blitz/examples/company/service-cash.csv`. Reuse `.work` but choose a new company directory for another initialization. The practice folder is ignored by Git. Keep real company or department records outside this source repository, using an explicit absolute output path.
 
 ### 2. Frame the first experiment
 
