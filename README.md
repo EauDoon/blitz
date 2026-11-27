@@ -1,7 +1,4 @@
-<picture>
-  <source media="(prefers-reduced-motion: no-preference)" srcset="docs/assets/blitz-motion.gif">
-  <img src="docs/assets/blitz-motion-poster.svg" alt="Blitz. Minimum Viable Company kit. Listen, collect, sprint. Reduce cycle time. Input becomes evidence for a bounded output." width="100%">
-</picture>
+<p align="center"><img src=".github/assets/banner.svg" alt="Blitz. Minimum Viable Company kit. Listen, collect, sprint. Reduce cycle time. The cycle is frame, test, deliver, operate. Shown as one offer passing through four gates, each lighting green once it is passed." width="100%"></p>
 
 # Blitz
 
