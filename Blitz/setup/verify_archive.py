@@ -76,7 +76,10 @@ def load_json(data):
         return result
     def nonfinite(value):
         raise ValueError("nonfinite JSON value:" + value)
-    return json.loads(data, object_pairs_hook=unique, parse_constant=nonfinite)
+    try:
+        return json.loads(data, object_pairs_hook=unique, parse_constant=nonfinite)
+    except RecursionError as exc:
+        raise ValueError("JSON nesting is too deep") from exc
 
 
 def validate_manifest(manifest):

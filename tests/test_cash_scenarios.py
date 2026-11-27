@@ -107,6 +107,17 @@ class CashScenarioTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "opening_cash differs"):
             compare(self.source, self.spec)
 
+    def test_deeply_nested_scenario_json_is_a_handled_error(self):
+        self.spec.write_text("[" * 100000 + "]" * 100000)
+        with self.assertRaisesRegex(ValueError, "nesting is too deep"):
+            compare(self.source, self.spec)
+        result = subprocess.run([sys.executable, "-B", str(ROOT / "Blitz/setup/company.py"),
+                                 "stress", str(self.source), "--scenarios", str(self.spec)],
+                                capture_output=True, text=True)
+        self.assertEqual(result.returncode, 1, result.stderr)
+        self.assertEqual(result.stderr, "")
+        self.assertEqual(json.loads(result.stdout)["result"], "error")
+
 
 if __name__ == "__main__":
     unittest.main()
