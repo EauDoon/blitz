@@ -28,7 +28,10 @@ def _factor(value, field):
 
 
 def parse_scenarios(data):
-    specification = json.loads(data.decode("utf-8-sig"), object_pairs_hook=_unique_object)
+    try:
+        specification = json.loads(data.decode("utf-8-sig"), object_pairs_hook=_unique_object)
+    except RecursionError as exc:
+        raise ValueError("scenario JSON nesting is too deep") from exc
     require(isinstance(specification, dict) and set(specification) == {"schema_version", "scenarios"},
             "scenario file requires only schema_version and scenarios")
     require(type(specification["schema_version"]) is int and specification["schema_version"] == 1,

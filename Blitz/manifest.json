@@ -322,9 +322,9 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 6347,
-      "sha256": "aae5ab234a2e19c91a403d25f6666c83ce2b276b951164328ace1d895ea7e350",
-      "characters": 6343
+      "bytes": 7258,
+      "sha256": "810716238c1de9f6d82c8c9ffd50f5cf1a1806b4b3d7c8966787f5533cfba009",
+      "characters": 7254
     },
     {
       "path": "ENTRYPOINT.md",
@@ -820,9 +820,9 @@
     },
     {
       "path": "setup/cash_scenarios.py",
-      "bytes": 6189,
-      "sha256": "f87cca40964aa4638fea7d31b810569ac7a051f69139109e204a2ec2a1973058",
-      "characters": 6189
+      "bytes": 6307,
+      "sha256": "1a9869f1df415d5f678d8d9b607cedfaed724563bb4543d137c07193020bff79",
+      "characters": 6307
     },
     {
       "path": "setup/chatgpt.md",
@@ -952,9 +952,9 @@
     },
     {
       "path": "setup/verify_archive.py",
-      "bytes": 13711,
-      "sha256": "aee81e7e11da39e7c067ab6c56a6d54a4f38718c3869b02f2ef2a7da8e6d9f94",
-      "characters": 13711
+      "bytes": 13820,
+      "sha256": "0122c732589549bc18e590a20f7bcdb419e74083fee85fe1b3d8d03cc8802ee8",
+      "characters": 13820
     },
     {
       "path": "setup/verify_kit.py",
