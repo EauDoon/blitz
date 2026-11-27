@@ -45,6 +45,7 @@ The whole listing has a budget too. Claude Code gives the skill listing 1% of th
 | `description` at or under 1024 characters | fail |
 | `description` containing `: ` is quoted | fail |
 | Quoting is internally consistent, no bare apostrophe inside single quotes | fail |
+| Unquoted `description` has no `#` at its start or after whitespace (YAML reads a comment and truncates) | fail |
 | Every `references/...` path named in the body exists in the package | warn |
 | `description` over 220 characters (suite target) | warn |
 | Listing total over 28,500 with the package applied (`suite-budget.py`) | fail |
@@ -57,7 +58,7 @@ A missing reference is a warning and not a failure on purpose. Skills legitimate
 python3 references/build-check.py --selftest
 ```
 
-Three cases: an over-cap description, an unquoted colon, and a valid package. It must print `SELFTEST OK` followed by `3/3`. Run this after any edit to `build-check.py`, because a checker that has quietly stopped checking is worse than no checker.
+Six cases: an over-cap description, an unquoted colon, a bare apostrophe inside single quotes, an unquoted ` #`, a valid package, and a correctly doubled apostrophe. It must print `SELFTEST OK` followed by `6/6`. Run this after any edit to `build-check.py`, because a checker that has quietly stopped checking is worse than no checker.
 
 `python3 references/suite-budget.py --selftest` must print `SELFTEST OK` followed by `10/10`: exact arithmetic, the ceiling in both directions, a new skill's cost, a missing manifest, three frontmatter forms, an unclosed quote, `when_to_use`, and a listing that already shows a bare name. Run it after any edit to `suite-budget.py`.
 

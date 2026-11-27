@@ -1,6 +1,9 @@
 """Executable method and staged-reference regressions; no live host claims."""
+import contextlib
 import importlib.util
+import io
 import json
+import os
 from pathlib import Path, PurePosixPath
 import posixpath
 import re
@@ -26,6 +29,8 @@ def load(path, name):
 
 js = load(KIT / "skills/frontend-taste/scripts/check-html-js.py", "html_js")
 diagram = load(KIT / "skills/diagram-design/scripts/lint-diagram.py", "diagram_lint")
+PACKAGE_CHECK = KIT / "skills/skill-package-check/references/build-check.py"
+package_check = load(PACKAGE_CHECK, "build_check")
 
 
 class MethodRepairs(unittest.TestCase):
@@ -155,6 +160,29 @@ class MethodRepairs(unittest.TestCase):
         self.assertIn("04%20Economics%20And%20Budget.md#scope", transformed)
         with self.assertRaises(ValueError):
             chatgpt_stage.rewrite_context_links("[escape](../../../../outside.md)", source, "blitz/references/adapter.md")
+
+    def test_package_check_rejects_descriptions_that_yaml_misreads(self):
+        # Exit 1: YAML raises on a bare apostrophe or reads an unquoted " #" as a comment.
+        cases = {
+            "description: 'it''s the owner's call'": 1,
+            "description: Use for deal pricing #1 priority, and nothing else": 1,
+            "description: #1 priority": 1,
+            "description: 'Use when it''s the owner''s call, and not otherwise.'": 0,
+            "description: 'Use for deal pricing #1 priority, and nothing else.'": 0,
+            "description: Use for C# builds, and not otherwise.": 0,
+        }
+        with tempfile.TemporaryDirectory(prefix="blitz-package-check-") as raw:
+            for number, (line, expected) in enumerate(cases.items()):
+                folder = Path(raw) / str(number) / "demo-skill"
+                folder.mkdir(parents=True)
+                (folder / "SKILL.md").write_text("---\nname: demo-skill\n%s\n---\n\n# Demo\n\nBody.\n" % line, encoding="utf-8")
+                with contextlib.redirect_stderr(io.StringIO()):
+                    self.assertEqual(package_check.check(str(folder)), expected, line)
+            # The shipped selftest must still pass; keep its scratch folders inside raw.
+            env = dict(os.environ, TMPDIR=raw, TEMP=raw, TMP=raw)
+            result = subprocess.run([sys.executable, "-B", str(PACKAGE_CHECK), "--selftest"], capture_output=True, text=True, encoding="utf-8", env=env, timeout=60)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("SELFTEST OK    6/6", result.stderr)
 
 
 if __name__ == "__main__":

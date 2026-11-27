@@ -47,15 +47,19 @@ def inspect(path, data, report, depth=0):
 def scan(root, artifacts=False):
     root = Path(root).resolve()
     if artifacts:
-        paths = sorted(path for path in root.rglob("*") if path.is_file())
+        paths = sorted(root.rglob("*"))
     else:
         names = subprocess.check_output(["git", "-C", str(root), "ls-files", "-z", "--cached", "--others", "--exclude-standard"]).decode().split("\0")
-        paths = [root / name for name in sorted(set(names)) if name and (root / name).is_file()]
+        paths = [root / name for name in sorted(set(names)) if name]
     report = {"files_checked": 0, "findings": [], "binary_review_required": [],
               "scope": "emitted artifact names and decompressed bytes" if artifacts else "current source paths and text; no Git history"}
     for path in paths:
+        # Check every entry before the is_file() filter: is_file() follows links, so
+        # a symlinked directory would otherwise drop out unexamined.
         if path.is_symlink():
             raise ValueError("Identity scan does not follow symlinks")
+        if not path.is_file():
+            continue
         inspect(path.relative_to(root).as_posix(), path.read_bytes(), report)
     report["result"] = "fail" if report["findings"] else ("partial" if report["binary_review_required"] else "pass")
     return report
