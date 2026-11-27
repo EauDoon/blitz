@@ -34,6 +34,24 @@ class ToolInputTests(unittest.TestCase):
         self.assertEqual(report["result"], "fail")
         self.assertIn("nesting is too deep", report["error"])
 
+    def test_update_manifest_help_and_unknown_arguments_do_not_write(self):
+        manifest = ROOT / "Blitz/manifest.json"
+        before = manifest.read_bytes()
+        stale = json.loads(before)
+        stale["files"] = stale["files"][:-1]
+        try:
+            manifest.write_text(json.dumps(stale, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            marker = manifest.read_bytes()
+            helped = run(ROOT / "tools/update_manifest.py", "--help")
+            self.assertEqual(manifest.read_bytes(), marker, "--help rewrote the manifest")
+            self.assertEqual(helped.returncode, 0)
+            self.assertIn("usage:", helped.stdout)
+            mistaken = run(ROOT / "tools/update_manifest.py", "--check")
+            self.assertEqual(manifest.read_bytes(), marker, "an unknown argument rewrote the manifest")
+            self.assertEqual(mistaken.returncode, 2)
+        finally:
+            manifest.write_bytes(before)
+
 
 if __name__ == "__main__":
     unittest.main()
